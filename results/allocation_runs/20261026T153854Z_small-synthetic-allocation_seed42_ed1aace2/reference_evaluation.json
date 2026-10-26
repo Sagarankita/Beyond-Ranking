@@ -1,0 +1,125 @@
+{
+  "status": "illustrative_not_observed",
+  "evaluation": {
+    "decoded": {
+      "research_budget": 8000000.0,
+      "frac_research_phd": 0.5,
+      "frac_research_other": 0.25,
+      "centres_of_excellence_count": 2.0,
+      "industry_collaboration_support_count": 4.0
+    },
+    "repaired": {
+      "research_budget": 8000000.0,
+      "frac_research_phd": 0.5,
+      "frac_research_other": 0.25,
+      "centres_of_excellence_count": 2.0,
+      "industry_collaboration_support_count": 4.0
+    },
+    "repair_actions": [],
+    "model_features": {
+      "faculty_phd": 80,
+      "faculty_other": 40,
+      "teaching_load_per_faculty": 8.0,
+      "diversity_index": 0.6,
+      "student_count": 1000,
+      "num_courses": 60,
+      "research_budget": 8000000.0,
+      "frac_research_phd": 0.5,
+      "frac_research_other": 0.25,
+      "centres_of_excellence_count": 2.0,
+      "industry_collaborations": 4.0
+    },
+    "raw_kpis": {
+      "papers_t1": 17.502496711814274,
+      "citation_percentile_avg": 0.6218368617259364
+    },
+    "uncertainty": {
+      "papers_t1": {
+        "lower": 13.774488490921385,
+        "upper": 21.230504932707163
+      },
+      "citation_percentile_avg": {
+        "lower": 0.6019882892490376,
+        "upper": 0.6416854342028353
+      }
+    },
+    "objective_benefits": {
+      "research": 0.33747411608605793,
+      "innovation": 0.0,
+      "student": 0.0,
+      "societal": 0.0
+    },
+    "objective_scores": {
+      "research": -0.33747411608605793,
+      "innovation": 0.0,
+      "student": 0.0,
+      "societal": 0.0
+    },
+    "objective_supported": {
+      "research": true,
+      "innovation": false,
+      "student": false,
+      "societal": false
+    },
+    "constraint_residuals": {
+      "bounds__research_budget": 0.0,
+      "increment__research_budget": 0.0,
+      "bounds__frac_research_phd": 0.0,
+      "increment__frac_research_phd": 0.0,
+      "bounds__frac_research_other": 0.0,
+      "increment__frac_research_other": 1.7763568394002505e-17,
+      "bounds__centres_of_excellence_count": 0.0,
+      "integrality__centres_of_excellence_count": 0.0,
+      "increment__centres_of_excellence_count": 0.0,
+      "bounds__industry_collaboration_support_count": 0.0,
+      "integrality__industry_collaboration_support_count": 0.0,
+      "increment__industry_collaboration_support_count": 0.0,
+      "budget": -8000000.0,
+      "faculty_time_capacity": -30.0,
+      "teaching_floor": -35.0,
+      "student_support_floor": -35.0,
+      "service_floor": -35.0,
+      "dependency__centre_funding": -6000000.0,
+      "dependency__collaboration_funding": -7600000.0
+    },
+    "normalized_constraint_violations": {
+      "bounds__research_budget": 0.0,
+      "increment__research_budget": 0.0,
+      "bounds__frac_research_phd": 0.0,
+      "increment__frac_research_phd": 0.0,
+      "bounds__frac_research_other": 0.0,
+      "increment__frac_research_other": 0.0,
+      "bounds__centres_of_excellence_count": 0.0,
+      "integrality__centres_of_excellence_count": 0.0,
+      "increment__centres_of_excellence_count": 0.0,
+      "bounds__industry_collaboration_support_count": 0.0,
+      "integrality__industry_collaboration_support_count": 0.0,
+      "increment__industry_collaboration_support_count": 0.0,
+      "budget": 0.0,
+      "faculty_time_capacity": 0.0,
+      "teaching_floor": 0.0,
+      "student_support_floor": 0.0,
+      "service_floor": 0.0,
+      "dependency__centre_funding": 0.0,
+      "dependency__collaboration_funding": 0.0
+    },
+    "normalized_violation": 0.0,
+    "nominal_feasible": true,
+    "robust_feasible": true,
+    "estimated_probability_feasible": 1.0,
+    "feasibility_probability_status": "deterministic_constraints_only",
+    "support_flags": {
+      "out_of_model_support": false,
+      "out_of_support_features": "",
+      "unsupported_objective_families": [
+        "innovation",
+        "student",
+        "societal"
+      ]
+    },
+    "cost": 12000000.0,
+    "budget_remaining": 8000000.0,
+    "dea_efficiency": null,
+    "dea_status": "separate_not_applied_to_candidate_allocations"
+  }
+}

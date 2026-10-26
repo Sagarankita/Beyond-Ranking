@@ -1,0 +1,13 @@
+{
+  "status": "unsupported_by_available_data",
+  "outcomes": [
+    "patent_applications",
+    "technology_transfer",
+    "student_research_outcomes",
+    "placements",
+    "higher_studies",
+    "open_access_outcomes",
+    "societal_sdg_outcomes"
+  ],
+  "reason": "The available fixture contains no labels for these outcomes; no model was trained."
+}

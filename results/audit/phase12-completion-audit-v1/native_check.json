@@ -1,0 +1,8 @@
+{
+  "status": "tested_existing_binary",
+  "path": "libRION/libpso.so",
+  "sha256": "460ad80a2f109e9dde22199885cd5e3e08cfb1e0d97d4f822bbd1f7f6485fc4e",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_missing_library_has_actionable_error (tests.test_native_pso.NativeLoadingTests.test_missing_library_has_actionable_error) ... ok\ntest_callback_exception_is_propagated (tests.test_native_pso.NativePSOTests.test_callback_exception_is_propagated) ... ok\ntest_dimensions_and_lifetime_errors (tests.test_native_pso.NativePSOTests.test_dimensions_and_lifetime_errors) ... ok\ntest_known_sphere_optimum_and_bounds (tests.test_native_pso.NativePSOTests.test_known_sphere_optimum_and_bounds) ... ok\ntest_nonfinite_objective_is_rejected (tests.test_native_pso.NativePSOTests.test_nonfinite_objective_is_rejected) ... ok\ntest_particle_index_reaches_objective (tests.test_native_pso.NativePSOTests.test_particle_index_reaches_objective) ... ok\ntest_seeded_run_is_repeatable (tests.test_native_pso.NativePSOTests.test_seeded_run_is_repeatable) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.132s\n\nOK\n"
+}

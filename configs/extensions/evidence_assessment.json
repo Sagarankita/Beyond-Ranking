@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "assessment_id": "optional-network-dea-multiperiod-evidence-v1",
+  "data_path": "data/department_research_data.csv",
+  "provenance_path": "data/provenance.json",
+  "required_network_dea": {
+    "unit_identifier_candidates": ["department_id", "institution_id", "college_id"],
+    "stage_link_candidates": ["research_projects_started", "research_projects_completed", "research_outputs_intermediate", "technology_transfer_pipeline"],
+    "minimum_comparable_units": 20
+  },
+  "required_multiperiod": {
+    "unit_identifier_candidates": ["department_id", "institution_id", "college_id"],
+    "period_candidates": ["period", "year", "academic_year", "period_start"],
+    "minimum_periods_per_unit": 2,
+    "minimum_distinct_periods": 2
+  },
+  "output_root": "results/extensions/optional-network-dea-multiperiod-assessment-v1"
+}

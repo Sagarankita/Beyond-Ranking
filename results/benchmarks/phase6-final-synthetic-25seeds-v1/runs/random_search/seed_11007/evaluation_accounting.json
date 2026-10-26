@@ -1,0 +1,20 @@
+{
+  "algorithm": "random_search",
+  "cache_hits": 0,
+  "candidate_evaluations_evolution": 0,
+  "candidate_evaluations_initialization": 100,
+  "candidate_evaluations_inner_pso": 0,
+  "candidate_evaluations_total": 100,
+  "configured_evaluations": 100,
+  "generations": 0,
+  "inner_pso_evaluations": 0,
+  "population_size": 100,
+  "requested_by_phase": {
+    "initialization": 100
+  },
+  "requested_total": 100,
+  "unique_shared_evaluator_calls_by_phase": {
+    "initialization": 100
+  },
+  "unique_shared_evaluator_calls_total": 100
+}

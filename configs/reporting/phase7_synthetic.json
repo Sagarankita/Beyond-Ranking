@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "report_id": "phase7-synthetic-strategy-portfolio-v1",
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "reference_status": "illustrative_not_observed",
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "reference_evaluation": "artifacts/allocation/shared_evaluator/reference_evaluation.json",
+  "benchmark_root": "results/benchmarks/phase6-smoke-synthetic-v1",
+  "robustness_root": "results/robustness/phase6b-synthetic-v1",
+  "portfolio_scenario": "budget_base_20m",
+  "robustness_threshold": 0.95,
+  "strategy_rules": {
+    "conservative": "Require Monte Carlo feasibility >= 0.95; maximize research-benefit p10; break ties by lower cost.",
+    "balanced": "Use the declared balanced post-optimization policy weights.",
+    "research_first": "Use the declared research-first post-optimization policy weights.",
+    "innovation_first": "Use the declared innovation-first weights and flag unsupported evidence.",
+    "student_first": "Use the declared student-first weights and flag unsupported evidence.",
+    "compromise": "Minimize normalized distance to the supported-objective ideal; a knee is unavailable when fewer than two supported objectives vary."
+  },
+  "output_root": "results/reporting/phase7-synthetic-v1"
+}

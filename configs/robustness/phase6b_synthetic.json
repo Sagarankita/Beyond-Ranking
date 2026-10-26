@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "analysis_id": "phase6b-synthetic-robustness-v1",
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "algorithm": {
+    "name": "nsga2",
+    "population_size": 20,
+    "generations": 4,
+    "candidate_evaluation_budget": 100,
+    "seeds": [12001, 12002, 12003]
+  },
+  "scenarios": [
+    {"id": "budget_lean_15m", "label": "Lean INR 15m budget", "budget_limit": 15000000.0},
+    {"id": "budget_base_20m", "label": "Base INR 20m budget", "budget_limit": 20000000.0, "selection_baseline": true},
+    {"id": "budget_expanded_25m", "label": "Expanded INR 25m budget", "budget_limit": 25000000.0},
+    {"id": "faculty_capacity_minus_25pct", "label": "25% research-faculty capacity reduction", "budget_limit": 20000000.0, "faculty_capacity_fte": 60.0},
+    {"id": "centre_unit_cost_plus_25pct", "label": "25% centre unit-cost shock", "budget_limit": 20000000.0, "unit_cost_multipliers": {"centres_of_excellence_count": 1.25}},
+    {"id": "patent_cost_plus_25pct", "label": "Requested 25% patent-cost shock", "unit_cost_multipliers": {"patent_ip_support": 1.25}, "expected_status": "unsupported"},
+    {"id": "compute_cost_plus_25pct", "label": "Requested 25% compute-cost shock", "unit_cost_multipliers": {"compute_capacity_units": 1.25}, "expected_status": "unsupported"}
+  ],
+  "policies": {
+    "balanced": {"research": 0.25, "innovation": 0.25, "student": 0.25, "societal": 0.25},
+    "research_first": {"research": 0.70, "innovation": 0.10, "student": 0.10, "societal": 0.10},
+    "innovation_first": {"research": 0.10, "innovation": 0.70, "student": 0.10, "societal": 0.10},
+    "student_first": {"research": 0.10, "innovation": 0.10, "student": 0.70, "societal": 0.10}
+  },
+  "uncertainty": {
+    "draws": 1000,
+    "seed": 20261026,
+    "prediction_distribution": "independent_normal_centered_on_prediction_with_sigma_from_90pct_conformal_half_width",
+    "prediction_interval_z": 1.6448536269514722,
+    "unit_cost_distribution": "shared_lognormal_multiplier_mean_one",
+    "unit_cost_coefficient_of_variation": 0.10,
+    "common_draws_across_strategies_and_scenarios": true
+  },
+  "output_root": "results/robustness/phase6b-synthetic-v1"
+}

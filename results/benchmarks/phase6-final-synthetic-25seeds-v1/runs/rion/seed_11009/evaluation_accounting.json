@@ -1,0 +1,24 @@
+{
+  "algorithm": "rion",
+  "cache_hits": 15833,
+  "candidate_evaluations_evolution": 20,
+  "candidate_evaluations_initialization": 20,
+  "candidate_evaluations_inner_pso": 60,
+  "candidate_evaluations_total": 100,
+  "generations": 1,
+  "inner_pso_evaluation_requests": 300,
+  "inner_pso_evaluations": 32,
+  "population_size": 20,
+  "pso_iterations": 2,
+  "requested_by_phase": {
+    "evolution": 15568,
+    "final_export": 20,
+    "inner_pso": 300
+  },
+  "requested_total": 15888,
+  "unique_shared_evaluator_calls_by_phase": {
+    "evolution": 23,
+    "inner_pso": 32
+  },
+  "unique_shared_evaluator_calls_total": 55
+}

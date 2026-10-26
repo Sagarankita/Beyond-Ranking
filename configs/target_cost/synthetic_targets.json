@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "run_id": "optional-reverse-target-cost-synthetic-v1",
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "cost_semantics": {
+    "optimized_quantity": "total annual allocation cost",
+    "incremental_cost": "optimized total cost minus illustrative baseline total cost",
+    "negative_incremental_cost": "reported as a saving relative to the illustrative baseline"
+  },
+  "optimizer": {
+    "population_size": 20,
+    "generations": 9,
+    "evaluation_budget": 250,
+    "seeds": [13001, 13002, 13003]
+  },
+  "target_sets": [
+    {
+      "id": "research_moderate",
+      "label": "At least 30 tier-1 papers and 0.62 citation percentile",
+      "targets": [
+        {"kind": "kpi", "name": "papers_t1", "direction": "minimum", "value": 30.0},
+        {"kind": "kpi", "name": "citation_percentile_avg", "direction": "minimum", "value": 0.62}
+      ]
+    },
+    {
+      "id": "research_ambitious",
+      "label": "At least 40 tier-1 papers and 0.63 citation percentile",
+      "targets": [
+        {"kind": "kpi", "name": "papers_t1", "direction": "minimum", "value": 40.0},
+        {"kind": "kpi", "name": "citation_percentile_avg", "direction": "minimum", "value": 0.63}
+      ]
+    },
+    {
+      "id": "innovation_student_requested",
+      "label": "Requested innovation and student target demonstration",
+      "targets": [
+        {"kind": "objective_benefit", "name": "innovation", "direction": "minimum", "value": 0.20},
+        {"kind": "objective_benefit", "name": "student", "direction": "minimum", "value": 0.20}
+      ]
+    }
+  ],
+  "output_root": "results/target_cost/optional-reverse-target-cost-synthetic-v1"
+}

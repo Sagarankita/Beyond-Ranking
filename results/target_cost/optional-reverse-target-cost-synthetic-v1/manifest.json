@@ -1,0 +1,25 @@
+{
+  "run_id": "optional-reverse-target-cost-synthetic-v1",
+  "completed_at_utc": "2026-10-26T16:18:10.736150+00:00",
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "config_path": "configs/target_cost/synthetic_targets.json",
+  "config_sha256": "cce76a05b016ace32be881d2dbbade65d3abaa8f01a281c390a9e542023d6dc3",
+  "allocation_config_sha256": "4b41f749c53ef995b1772a026492f7e8caea007b5e92e007b259305fb6a24e8b",
+  "model_manifest_sha256": "e7de55caf9d41e4bec5a017adfe8fb7b76774e99b8caa64839aac4a7929d8e0c",
+  "data_sha256": "a7fdf37913369dbcfa3cdd754a3acfccf7707bfb64fa47ed600c30e36d0ff697",
+  "cost_semantics": {
+    "optimized_quantity": "total annual allocation cost",
+    "incremental_cost": "optimized total cost minus illustrative baseline total cost",
+    "negative_incremental_cost": "reported as a saving relative to the illustrative baseline"
+  },
+  "baseline_status": "illustrative_not_observed",
+  "baseline_total_cost": 12000000.0,
+  "global_optimality": "not_proven_seeded_heuristic",
+  "supported_target_sets": [
+    "research_ambitious",
+    "research_moderate"
+  ],
+  "unsupported_target_sets": [
+    "innovation_student_requested"
+  ]
+}

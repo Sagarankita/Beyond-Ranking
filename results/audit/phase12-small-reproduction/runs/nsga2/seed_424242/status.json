@@ -1,0 +1,16 @@
+{
+  "algorithm": "nsga2",
+  "archive_size": 1,
+  "attempt": 1,
+  "candidate_evaluations": 20,
+  "completed_at_utc": "2026-10-26T16:36:33.180419+00:00",
+  "config_sha256": "75a28159531d8392525fc7a184b0c8a52291e7679aff18f49ec73ff6c48ec6b9",
+  "final_batch_overshoot": 0,
+  "population_size": 4,
+  "runtime_seconds": 0.10184570799901849,
+  "seed": 424242,
+  "started_at_utc": "2026-10-26T16:36:33.076998+00:00",
+  "status": "complete",
+  "target_candidate_evaluations": 20,
+  "unique_shared_evaluator_calls": 14
+}

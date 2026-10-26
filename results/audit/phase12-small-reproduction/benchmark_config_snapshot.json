@@ -1,0 +1,53 @@
+{
+  "algorithms": {
+    "nsga2": {
+      "enabled": true,
+      "generations": 4,
+      "population_size": 4
+    },
+    "random_search": {
+      "enabled": true,
+      "evaluations": 20
+    }
+  },
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "benchmark_id": "phase12-clean-small-reproduction-v1",
+  "budget_definition": "Phase 12 clean reproduction candidate budget",
+  "data_role": "smoke",
+  "evaluation_budget": 20,
+  "hypervolume_reference_point": [
+    1.1,
+    1.1,
+    1.1,
+    1.1
+  ],
+  "minimum_runs_for_inference": 10,
+  "objective_scaling": {
+    "clip": true,
+    "lower": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "objective_order": [
+      "research",
+      "innovation",
+      "student",
+      "societal"
+    ],
+    "status": "frozen_before_reproduction",
+    "upper": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "output_root": "results/phase12-small-reproduction",
+  "reference_front_version": "phase12-clean-small-pooled-v1",
+  "schema_version": 1,
+  "seeds": [
+    424242
+  ]
+}

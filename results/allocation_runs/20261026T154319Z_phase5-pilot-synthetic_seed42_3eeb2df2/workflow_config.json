@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "run_id_prefix": "phase5-pilot-synthetic",
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "seed": 42,
+  "tuning_budget": {
+    "status": "pilot_calibration_only",
+    "excluded_from_final_benchmark": true,
+    "soft_unique_evaluator_call_target_per_algorithm": 100,
+    "selection_basis": "small integration run; no outcome-based hyperparameter tuning"
+  },
+  "algorithms": {
+    "nsga2": {
+      "enabled": true,
+      "population_size": 20,
+      "generations": 4
+    },
+    "nsga3": {
+      "enabled": true,
+      "reference_partitions": 3,
+      "generations": 4
+    },
+    "moead": {
+      "enabled": true,
+      "reference_partitions": 3,
+      "neighborhood_size": 5,
+      "max_replacements": 2,
+      "generations": 4
+    },
+    "mopso": {
+      "enabled": true,
+      "population_size": 20,
+      "generations": 4,
+      "archive_size": 20,
+      "inertia": 0.6,
+      "cognitive": 1.5,
+      "social": 1.5,
+      "maximum_velocity_rate": 0.2
+    },
+    "rion": {
+      "enabled": true,
+      "population_size": 20,
+      "generations": 4,
+      "pso_iterations": 2
+    },
+    "random_search": {
+      "enabled": true,
+      "evaluations": 100
+    }
+  },
+  "output_root": "results/allocation_runs"
+}

@@ -43,12 +43,15 @@ The RION (Research Innovation Societal Optimisation Network) is a hybrid multi-o
 
 
 4. Final output: After all generations:
-    * The final population contains non-dominated, diverse, constraint-satisfying solutions.
-    * These solutions form an approximate Pareto front optimised using both evolutionary and swarm based intelligence principles.
+    * The final population contains bounded candidates selected by Pareto rank and crowding distance.
+    * The feasible rank-zero subset is exported separately as the approximate Pareto front.
 
-## Parallelism 
+## Experimental native backend
 
-The Particle Swarm mutation step is implemented using a Parallel Approach. For any given iteration of the exploration step, all the particles are independent of each other and can effectively carry out the calculations without needing to wait for each other.
+The repository includes an optional, validated OpenMP implementation of the Particle
+Swarm mutation step. It is loaded only when `--pso-backend native` is selected. The
+serial backend remains the portable default. Build, semantics, validation status, and
+timing results are documented in `docs/native_backend.md`.
 
 Since we just require basic for-loop unrolling for the parallelisation, we make use of the `OpenMP` API for the C programming language. To call the parallel optimisation function written in C we make use of an interface called `ctypes` in our Python code. The following is the main driving part of the Python code which calls the optimisation function written in C.
 
@@ -144,10 +147,14 @@ void optimize(PSOParams *params, PSOResult *result) {
     memcpy(result->final_positions, params->positions, num_particles * dim * sizeof(double));
 }
 ```
-Thus parallel optimisation is acheived by using directive programming with `OpenMP` and interfacing with Python using the `ctypes` library.
+The excerpt above illustrates the original interface. The current wrapper adds seeded
+execution, row-aware callbacks, status codes, safe cleanup, and package-relative loading;
+use `libRION/libPSO_parallel.py` as the authoritative interface.
 
-## Building the project
-To build this project, you will require `Python` to be installed on your system along with the tools, `Make` and `GCC`:
+## Running the corrected serial baseline
+
+The default workflow uses the portable Python PSO backend. It does not load or require
+the optional OpenMP shared library. Python 3.10 or newer is recommended.
 
 1. Create a virtual environment and activate it:
 ```sh
@@ -160,79 +167,128 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Build the project using the Makefile provided:
+3. Run the reproducible baseline:
 ```
 make
 ```
 
-## Output
-After building the project, a basic summary of the optimisation is printed to the standard output along with the optimised population being stored to the directory `results/optimized_population.csv`
+To run the focused correctness checks:
 
-```txt
-(.venv) $ make            
-Checking dependencies for libRION/libPSO_parallel.py
-python main.py
-======================================================================
-RION-Opt: Multi-Objective Optimization
-======================================================================
-
-Loading dataset: ./data/department_research_data.csv
-✓ Dropped 'college_id' column
-✓ Dataset loaded: 521 rows × 14 columns
-  Columns: ['faculty_phd', 'faculty_other', 'frac_research_phd', 'frac_research_other', 'research_budget', 'centres_of_excellence_count', 'teaching_load_per_faculty', 'diversity_index', 'industry_collaborations', 'student_count', 'num_courses', 'papers_t1', 'citation_percentile_avg', 'overall_rank']
-
-First row sample:
-   faculty_phd  faculty_other  frac_research_phd  frac_research_other  research_budget  centres_of_excellence_count  teaching_load_per_faculty  diversity_index  industry_collaborations  student_count  num_courses  papers_t1  citation_percentile_avg  overall_rank
-0          112             10           0.333588             0.330874     5.615820e+08                            2                   8.304167         0.992543                       12           1852           87       1123                 0.735653            58
-
-✓ Defined 3 objective functions:
-  1. Research Productivity (papers/FTE)
-  2. Research Quality (impact/FTE)
-  3. Cost Efficiency (budget/impact)
-
-✓ Defined 14 constraints matching dataset columns
-
-======================================================================
-Initializing RION Optimizer
-======================================================================
-Configuration:
-  Generations:     20
-  Population Size: 50
-  PSO Inertia:     0.5
-  PSO Cognitive:   1.5
-  PSO Social:      1.5
-  PSO Iterations:  10
-
-======================================================================
-Running Optimization...
-======================================================================
-
-
-======================================================================
-Optimization Complete!
-======================================================================
-
-✓ Results saved to: ./results/optimized_population.csv
-  Final population size: 50
-
-First few optimized solutions:
-   faculty_phd  faculty_other  frac_research_phd  frac_research_other  ...  num_courses    papers_t1  citation_percentile_avg  overall_rank
-0           16             11             0.1000             0.354428  ...    73.158942  1639.000000                 1.000000     59.000000
-1           16             11             0.1000             0.050000  ...   117.796616  1639.000000                 1.000000     70.232054
-2           16             17             0.1000             0.050000  ...    73.158942     0.000000                 1.000000     68.766880
-3           16             17             0.3963             0.050000  ...    73.158942     1.644396                 0.642289     65.000000
-4           16             11             0.1000             0.174091  ...    73.158942  1639.000000                 0.754973     79.000000
-
-[5 rows x 14 columns]
-
-Objective values for top 5 solutions:
-Solution   Productivity    Quality         Cost/Impact    
--------------------------------------------------------
-1          298.070         298.070         2.02e+02       
-2          762.326         762.326         4.99e+05       
-3          0.000           0.000           1.00e+05       
-4          0.229           0.147           7.74e+08       
-5          466.287         352.034         2.26e+05       
-
-======================================================================
 ```
+make test
+```
+
+Arguments allow small or custom runs, for example:
+
+```sh
+python main.py --seed 42 --generations 3 --population-size 10 --pso-iterations 3
+```
+
+Each run writes to `results/baseline_seed_<seed>/` unless `--output-dir` is supplied:
+
+- `population.csv`: the full final population with objectives, violation, feasibility,
+  Pareto rank, crowding distance, and run seed.
+- `pareto_front.csv`: the feasible rank-zero subset.
+- `config.json`: data path, algorithm settings, objective convention, bounds, integer
+  columns, and zero-impact policy.
+
+The historical `results/optimized_population.csv` is retained unchanged. The corrected
+cost-per-impact objective gives candidates with impact below one a deliberately poor
+finite score (`1e15 + budget`); `--legacy-zero-impact` restores the historical `1e5`
+score for comparison. Objective-range normalization is used only for PSO mutation
+scalarization; Pareto selection always uses the original three objective values.
+
+The `native` Make target is optional. After building it, run the native workflow with
+`python main.py --pso-backend native`. Missing or incompatible native libraries produce
+an actionable error and never prevent importing or using the serial backend.
+
+## Data contracts and audit
+
+Phase 1 data schemas, provenance rules, scenario configuration, and acquisition gaps are
+documented in `docs/data_layer.md`. Run `make data-audit` to reproduce the existing CSV
+audit. Run `make generate-synthetic` to create an explicitly labeled synthetic dataset
+without overwriting the committed legacy fixture.
+
+## DEA methodology fixture
+
+After installing `requirements.txt`, run `make dea` to reproduce the input-oriented VRS
+DEA methodology fixture. Model assumptions, validation rules, interpretation, limitations,
+and Network DEA deferral are documented in `docs/dea_benchmark.md`. Current scores are
+synthetic pipeline evidence and must not be interpreted as institutional efficiency.
+
+## Synthetic KPI response-model fixture
+
+Run `make train-models` to train the Phase 3 mean, linear, and Random Forest candidates,
+select each KPI model on validation data, calibrate residual intervals separately, and
+evaluate on an untouched test split. The versioned prediction interface and limitations
+are documented in `docs/response_models.md`. This track uses only the legacy synthetic
+fixture and is not evidence of real intervention effectiveness.
+
+## Shared allocation evaluator
+
+Run `make allocation-evaluator` after training the synthetic KPI models to reproduce the
+Prompt 6 reference evaluation. The decision vector, repair order, objective definitions,
+constraint residuals, uncertainty policy, unsupported inputs, and method-fixture results
+are documented in `docs/allocation_problem.md`. All future optimizer adapters should call
+this evaluator instead of duplicating prediction or constraint logic.
+
+## End-to-end allocation workflow
+
+Run `make allocation-small` for the Prompt 7 synthetic workflow. Canonical NSGA-II and
+RION use the same evaluator and export separate full populations, feasible nondominated
+archives, independent feasibility checks, evaluation accounting, reference comparisons,
+and run metadata. Commands, artifact schemas, results, and limitations are documented in
+`docs/allocation_workflow.md`. The legacy `python main.py` workflow remains available.
+
+## Phase 5 algorithm integration
+
+Run `make allocation-phase5` to execute canonical NSGA-II, NSGA-III, MOEA/D, genuine
+archive-based MOPSO, RION, and the random-search sanity baseline on the same evaluator.
+Reference directions, decomposition neighborhoods, MOPSO archive behavior, pilot-budget
+accounting, tests, and current synthetic results are documented in
+`docs/phase5_algorithms.md`.
+
+## Phase 6 repeated benchmark
+
+Run `make benchmark-smoke` for the resumable three-seed integration benchmark. All six
+algorithms receive the same 100-candidate budget, including RION's inner PSO work. The
+25-seed final benchmark has been completed and remains resumable through
+`make benchmark-final`. Metric
+definitions, failure and resume behavior, pooled-front limitations, statistics, and
+artifact schemas are documented in `docs/phase6_benchmark.md`.
+
+## Phase 6B scenarios and robustness
+
+Run `make robustness-smoke` to reoptimize three budget levels and supported resource
+shocks, apply four post-optimization policy preferences, and compare held-fixed base
+strategies with scenario-specific reoptimization. The workflow uses shared Monte Carlo
+draws for predictive and unit-cost sensitivity. Unsupported patent, compute, innovation,
+and student effects remain explicit. See `docs/phase6b_robustness.md`.
+
+## Phase 7 strategy portfolio
+
+Run `make strategy-report` to build the decision portfolio and technical report entirely
+from saved benchmark, robustness, reference, and model artifacts. It exports allocation
+and KPI comparisons, resource and constraint checks, concrete actions, scenario and
+algorithm tables, SVG figures, and proposal traceability. Selection rules and synthetic
+evidence limits are documented in `docs/phase7_strategy_report.md`.
+
+## Phase 12 completion audit
+
+Run `make completion-audit` to verify the data/model hash chain, leakage controls,
+feasibility, objective signs, front validity, matched evaluation accounting, uncertainty,
+selection rules, saved-report sources, and optional native status. The command also runs
+a small benchmark in a clean temporary source copy and independently recomputes its
+hypervolume and IGD. See `docs/phase12_completion_audit.md`.
+
+## Optional extensions
+
+Run `make target-cost` for reverse minimum-cost optimization under configured KPI
+targets. It reuses the shared evaluator, reports total and incremental cost, and rejects
+unsupported innovation/student targets without spending evaluations. See
+`docs/optional_target_cost.md`.
+
+Run `make extension-assessment` to evaluate whether the audited data support Network
+DEA or multi-period planning. Both are currently deferred because the synthetic
+cross-section has neither observed stage links nor repeated periods. See
+`docs/optional_advanced_extensions.md`.

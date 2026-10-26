@@ -1,209 +1,177 @@
-# main.py
+"""Command-line entry point for the corrected legacy RION baseline."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from pathlib import Path
 
 import pandas as pd
-import numpy as np
+
 from libRION.libRION import RionOptimiser
 
 
-def define_objective_functions():
+OBJECTIVE_NAMES = ["productivity", "quality", "cost_per_impact"]
+INTEGER_COLUMNS = [
+    "faculty_phd",
+    "faculty_other",
+    "centres_of_excellence_count",
+    "industry_collaborations",
+    "student_count",
+    "num_courses",
+    "papers_t1",
+    "overall_rank",
+]
+
+
+def define_objective_functions(legacy_zero_impact: bool = False):
+    """Return the three versioned legacy research objectives.
+
+    The historical implementation returned 1e5 when impact was below one. That can
+    incorrectly make a zero-impact candidate look cheaper than productive candidates.
+    Corrected runs use a finite, deliberately poor score of 1e15 + budget. The old
+    behavior remains available only through ``legacy_zero_impact=True``.
     """
-    Define three objective functions for RION-Opt.
-    All functions take a pandas Series (row) and return a float.
-    """
-    
-    def objective_1_productivity(individual: pd.Series) -> float:
-        """
-        Objective 1: Minimize -(papers_t1 / research_FTE)
-        Higher productivity is better, so we negate for minimization.
-        """
-        papers_t1 = individual.get('papers_t1', 10)
-        faculty_phd = individual.get('faculty_phd', 20)
-        faculty_other = individual.get('faculty_other', 5)
-        frac_research_phd = individual.get('frac_research_phd', 0.5)
-        frac_research_other = individual.get('frac_research_other', 0.2)
-        
-        research_FTE = faculty_phd * frac_research_phd + faculty_other * frac_research_other
-        research_FTE = max(research_FTE, 1.0)
-        
-        productivity = papers_t1 / research_FTE
-        return -productivity
-    
-    def objective_2_quality(individual: pd.Series) -> float:
-        """
-        Objective 2: Minimize -(citation_percentile_avg * papers_t1 / research_FTE)
-        Higher quality is better, so we negate for minimization.
-        """
-        papers_t1 = individual.get('papers_t1', 10)
-        citation_percentile_avg = individual.get('citation_percentile_avg', 0.5)
-        faculty_phd = individual.get('faculty_phd', 20)
-        faculty_other = individual.get('faculty_other', 5)
-        frac_research_phd = individual.get('frac_research_phd', 0.5)
-        frac_research_other = individual.get('frac_research_other', 0.2)
-        
-        research_FTE = faculty_phd * frac_research_phd + faculty_other * frac_research_other
-        research_FTE = max(research_FTE, 1.0)
-        
-        # Impact score: weighted by citation percentile
-        impact_score = papers_t1 * citation_percentile_avg
-        quality = impact_score / research_FTE
-        return -quality
-    
-    def objective_3_cost_efficiency(individual: pd.Series) -> float:
-        """
-        Objective 3: Minimize (research_budget / impact_score)
-        Lower cost per impact is better.
-        """
-        research_budget = individual.get('research_budget', 1000000)
-        papers_t1 = individual.get('papers_t1', 10)
-        citation_percentile_avg = individual.get('citation_percentile_avg', 0.5)
-        
-        impact_score = papers_t1 * citation_percentile_avg
-        if impact_score < 1.0:
-            return 1e5
-        cost_per_impact = research_budget / (impact_score + 1e-6)
-        return cost_per_impact
-    
+
+    def research_fte(individual):
+        return max(
+            individual["faculty_phd"] * individual["frac_research_phd"]
+            + individual["faculty_other"] * individual["frac_research_other"],
+            1.0,
+        )
+
+    def objective_1_productivity(individual):
+        return -float(individual["papers_t1"]) / research_fte(individual)
+
+    def objective_2_quality(individual):
+        impact = float(individual["papers_t1"] * individual["citation_percentile_avg"])
+        return -impact / research_fte(individual)
+
+    def objective_3_cost_efficiency(individual):
+        budget = float(individual["research_budget"])
+        impact = float(individual["papers_t1"] * individual["citation_percentile_avg"])
+        if impact < 1.0:
+            return 1e5 if legacy_zero_impact else 1e15 + budget
+        return budget / (impact + 1e-6)
+
     return [objective_1_productivity, objective_2_quality, objective_3_cost_efficiency]
 
 
 def define_constraints():
-    """
-    Define constraints as [[min, max], [min, max], ...]
-    One constraint pair for each column in the dataset (excluding college_id).
-    
-    Columns in order:
-    1. faculty_phd
-    2. faculty_other
-    3. frac_research_phd
-    4. frac_research_other
-    5. research_budget
-    6. centres_of_excellence_count
-    7. teaching_load_per_faculty
-    8. diversity_index
-    9. industry_collaborations
-    10. student_count
-    11. num_courses
-    12. papers_t1
-    13. citation_percentile_avg
-    14. overall_rank
-    """
-    
-    constraints = [
-        [5, 250],             # faculty_phd
-        [0, 100],             # faculty_other
-        [0.1, 0.9],           # frac_research_phd
-        [0.05, 0.8],          # frac_research_other
-        [1e5, 5e9],           # research_budget (100K to 5B INR)
-        [0, 15],              # centres_of_excellence_count
-        [2.0, 15.0],          # teaching_load_per_faculty
-        [0.0, 1.0],           # diversity_index
-        [0, 100],             # industry_collaborations
-        [100, 10000],         # student_count
-        [10, 300],            # num_courses
-        [0, 5000],            # papers_t1
-        [0.0, 1.0],           # citation_percentile_avg
-        [1, 200],             # overall_rank
+    """Box constraints in the same order as the legacy CSV columns."""
+    return [
+        [5, 250],
+        [0, 100],
+        [0.1, 0.9],
+        [0.05, 0.8],
+        [1e5, 5e9],
+        [0, 15],
+        [2.0, 15.0],
+        [0.0, 1.0],
+        [0, 100],
+        [100, 10000],
+        [10, 300],
+        [0, 5000],
+        [0.0, 1.0],
+        [1, 200],
     ]
-    
-    return constraints
 
 
-def main():
-    """Main execution function"""
-    
-    print("="*70)
-    print("RION-Opt: Multi-Objective Optimization")
-    print("="*70)
-    
-    # Load dataset
-    data_path = "./data/department_research_data.csv"
-    print(f"\nLoading dataset: {data_path}")
-    
-    try:
-        df = pd.read_csv(data_path)
-        
-        # Drop college_id column if it exists
-        if 'college_id' in df.columns:
-            df = df.drop(columns=['college_id'])
-            print(f"✓ Dropped 'college_id' column")
-        
-        print(f"✓ Dataset loaded: {df.shape[0]} rows × {df.shape[1]} columns")
-        print(f"  Columns: {list(df.columns)}")
-        print(f"\nFirst row sample:")
-        print(df.head(1).to_string())
-    except Exception as e:
-        print(f"✗ Error loading dataset: {e}")
-        return
-    
-    # Define objective functions
-    objective_funcs = define_objective_functions()
-    print(f"\n✓ Defined {len(objective_funcs)} objective functions:")
-    print(f"  1. Research Productivity (papers/FTE)")
-    print(f"  2. Research Quality (impact/FTE)")
-    print(f"  3. Cost Efficiency (budget/impact)")
-    
-    # Define constraints
+def parse_args():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data", default="data/department_research_data.csv")
+    parser.add_argument("--output-dir", default=None)
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--generations", type=int, default=20)
+    parser.add_argument("--population-size", type=int, default=50)
+    parser.add_argument("--pso-iterations", type=int, default=10)
+    parser.add_argument("--pso-backend", choices=["serial", "native"], default="serial")
+    parser.add_argument(
+        "--legacy-zero-impact",
+        action="store_true",
+        help="reproduce the historical 1e5 cost score for impact below one",
+    )
+    return parser.parse_args()
+
+
+def run(args):
+    data_path = Path(args.data)
+    data = pd.read_csv(data_path)
+    if "college_id" in data.columns:
+        data = data.drop(columns=["college_id"])
+
+    objectives = define_objective_functions(args.legacy_zero_impact)
     constraints = define_constraints()
-    print(f"\n✓ Defined {len(constraints)} constraints matching dataset columns")
-    
-    # Initialize RION Optimizer
-    print("\n" + "="*70)
-    print("Initializing RION Optimizer")
-    print("="*70)
-    
+    if len(data.columns) != len(constraints):
+        raise ValueError(
+            f"expected {len(constraints)} optimization columns, got {len(data.columns)}"
+        )
+
     optimizer = RionOptimiser(
-        generations=20,
-        pop_size=50,
+        generations=args.generations,
+        pop_size=args.population_size,
         inertia=0.5,
         self_confidence=1.5,
         cross_confidence=1.5,
-        pso_iterations=10
+        pso_iterations=args.pso_iterations,
+        seed=args.seed,
+        pso_backend=args.pso_backend,
     )
-    
-    print("Configuration:")
-    print(f"  Generations:     20")
-    print(f"  Population Size: 50")
-    print(f"  PSO Inertia:     0.5")
-    print(f"  PSO Cognitive:   1.5")
-    print(f"  PSO Social:      1.5")
-    print(f"  PSO Iterations:  10")
-    
-    # Run optimization
-    print("\n" + "="*70)
-    print("Running Optimization...")
-    print("="*70 + "\n")
-    
-    optimized_population = optimizer.optimise(
-        df=df,
-        optimiser_funcs=objective_funcs,
-        constraints=constraints
+    population = optimizer.optimise(
+        data,
+        objectives,
+        constraints,
+        integer_columns=INTEGER_COLUMNS,
     )
-    
-    # Save results
-    print("\n" + "="*70)
-    print("Optimization Complete!")
-    print("="*70)
-    
-    if optimized_population is not None:
-        output_file = "./results/optimized_population.csv"
-        import os
-        os.makedirs("./results/", exist_ok=True)
-        optimized_population.to_csv(output_file, index=False)
-        print(f"\n✓ Results saved to: {output_file}")
-        print(f"  Final population size: {len(optimized_population)}")
-        print(f"\nFirst few optimized solutions:")
-        print(optimized_population.head())
-        
-        # Calculate and display objective values for top solutions
-        print(f"\nObjective values for top 5 solutions:")
-        print(f"{'Solution':<10s} {'Productivity':<15s} {'Quality':<15s} {'Cost/Impact':<15s}")
-        print("-"*55)
-        for idx in range(min(5, len(optimized_population))):
-            row = optimized_population.iloc[idx]
-            obj_vals = [func(row) for func in objective_funcs]
-            print(f"{idx+1:<10d} {-obj_vals[0]:<15.3f} {-obj_vals[1]:<15.3f} {obj_vals[2]:<15.2e}")
-    
-    print("\n" + "="*70)
+    evaluation = optimizer.evaluate_population(population).rename(
+        columns={f"objective_{i + 1}": name for i, name in enumerate(OBJECTIVE_NAMES)}
+    )
+    annotated = pd.concat([population, evaluation], axis=1)
+    annotated["run_seed"] = args.seed
+    pareto = annotated[(annotated["feasible"]) & (annotated["pareto_rank"] == 0)].copy()
+
+    output_dir = Path(args.output_dir or f"results/baseline_seed_{args.seed}")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    annotated.to_csv(output_dir / "population.csv", index=False)
+    pareto.to_csv(output_dir / "pareto_front.csv", index=False)
+    config = {
+        "seed": args.seed,
+        "generations": args.generations,
+        "population_size": args.population_size,
+        "pso_iterations": args.pso_iterations,
+        "pso_backend": args.pso_backend,
+        "omp_num_threads": os.environ.get("OMP_NUM_THREADS"),
+        "pso_inertia": 0.5,
+        "pso_cognitive": 1.5,
+        "pso_social": 1.5,
+        "crossover_probability": 0.3,
+        "constraint_penalty_weight": 1000.0,
+        "data": str(data_path),
+        "objectives": OBJECTIVE_NAMES,
+        "objective_direction": "minimize",
+        "zero_impact_policy": "legacy_1e5" if args.legacy_zero_impact else "1e15_plus_budget",
+        "integer_columns": INTEGER_COLUMNS,
+        "constraints": dict(zip(data.columns, constraints)),
+    }
+    (output_dir / "config.json").write_text(json.dumps(config, indent=2) + "\n")
+    return annotated, pareto, output_dir
+
+
+def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "allocation":
+        from department_optimizer.allocation.workflow import main as allocation_main
+
+        allocation_main(sys.argv[2:])
+        return
+    args = parse_args()
+    population, pareto, output_dir = run(args)
+    print(f"RION corrected baseline complete ({args.pso_backend} PSO backend)")
+    print(f"Population: {len(population)}")
+    print(f"Feasible: {int(population['feasible'].sum())}")
+    print(f"Feasible Pareto solutions: {len(pareto)}")
+    print(f"Outputs: {output_dir}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scenario_id": "baseline-synthetic-v1",
+  "description": "Illustrative total-allocation scenario; values are assumptions, not observed CE/IT allocations.",
+  "provenance": "assumed",
+  "period_start": "2026-07-01",
+  "period_end": "2027-06-30",
+  "allocation_semantics": "total",
+  "baseline_reference": null,
+  "currency": "INR",
+  "currency_base_year": 2026,
+  "budget_limit": 25000000,
+  "faculty_time_capacity_fte": 20.0,
+  "decision_variables": [
+    {"name": "research_seed_funding", "unit": "INR", "type": "continuous", "lower": 0, "upper": 8000000, "increment": 100000, "cost_mode": "direct_money", "cost_key": "research_seed"},
+    {"name": "conference_support", "unit": "INR", "type": "continuous", "lower": 0, "upper": 4000000, "increment": 50000, "cost_mode": "direct_money", "cost_key": "conference"},
+    {"name": "patent_ip_support", "unit": "INR", "type": "continuous", "lower": 0, "upper": 4000000, "increment": 50000, "cost_mode": "direct_money", "cost_key": "patent_ip"},
+    {"name": "industry_collaboration_funding", "unit": "INR", "type": "continuous", "lower": 0, "upper": 5000000, "increment": 100000, "cost_mode": "direct_money", "cost_key": "industry"},
+    {"name": "student_research_funding", "unit": "INR", "type": "continuous", "lower": 0, "upper": 5000000, "increment": 50000, "cost_mode": "direct_money", "cost_key": "student_research"},
+    {"name": "open_access_funding", "unit": "INR", "type": "continuous", "lower": 0, "upper": 2500000, "increment": 50000, "cost_mode": "direct_money", "cost_key": "open_access"},
+    {"name": "outreach_sdg_funding", "unit": "INR", "type": "continuous", "lower": 0, "upper": 2500000, "increment": 50000, "cost_mode": "direct_money", "cost_key": "outreach_sdg"},
+    {"name": "research_assistant_count", "unit": "annual assistant", "type": "integer", "lower": 0, "upper": 20, "increment": 1, "cost_mode": "unit_cost", "unit_cost": 600000, "cost_key": "research_assistants"},
+    {"name": "compute_capacity_units", "unit": "configured compute unit", "type": "integer", "lower": 0, "upper": 20, "increment": 1, "cost_mode": "unit_cost", "unit_cost": 250000, "cost_key": "compute_capacity"},
+    {"name": "research_faculty_effort", "unit": "annual FTE", "type": "continuous", "lower": 0, "upper": 15, "increment": 0.1, "cost_mode": "non_monetary"},
+    {"name": "student_support_faculty_effort", "unit": "annual FTE", "type": "continuous", "lower": 0, "upper": 10, "increment": 0.1, "cost_mode": "non_monetary"},
+    {"name": "service_faculty_effort", "unit": "annual FTE", "type": "continuous", "lower": 2, "upper": 10, "increment": 0.1, "cost_mode": "non_monetary"}
+  ],
+  "service_thresholds": [
+    {"name": "service_faculty_effort", "unit": "annual FTE", "minimum": 2.0},
+    {"name": "student_support_faculty_effort", "unit": "annual FTE", "minimum": 1.0}
+  ],
+  "response_model": {
+    "status": "unavailable",
+    "required_before_empirical_optimization": true,
+    "synthetic_model_id": "future-scenario-response-v1"
+  }
+}

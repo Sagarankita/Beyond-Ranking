@@ -1,0 +1,30 @@
+{
+  "algorithm": "mopso",
+  "archive_capacity": 20,
+  "archive_pruning": "nondominated_deduplicate_then_crowding",
+  "cache_hits": 5,
+  "candidate_evaluations_evolution": 80,
+  "candidate_evaluations_initialization": 20,
+  "candidate_evaluations_inner_pso": 0,
+  "candidate_evaluations_total": 100,
+  "cognitive": 1.5,
+  "final_archive_size": 1,
+  "generations": 4,
+  "inertia": 0.6,
+  "inner_pso_evaluations": 0,
+  "leader_selection": "binary_tournament_higher_crowding_distance",
+  "maximum_velocity_rate": 0.2,
+  "particle_update_evaluations": 80,
+  "population_size": 20,
+  "requested_by_phase": {
+    "evolution": 80,
+    "initialization": 20
+  },
+  "requested_total": 100,
+  "social": 1.5,
+  "unique_shared_evaluator_calls_by_phase": {
+    "evolution": 75,
+    "initialization": 20
+  },
+  "unique_shared_evaluator_calls_total": 95
+}

@@ -1,0 +1,19 @@
+{
+  "complete_jobs": 2,
+  "configured_jobs": 2,
+  "events_this_invocation": [
+    {
+      "action": "executed",
+      "algorithm": "nsga2",
+      "seed": 424242
+    },
+    {
+      "action": "executed",
+      "algorithm": "random_search",
+      "seed": 424242
+    }
+  ],
+  "failed_jobs": 0,
+  "pooled_reference_front_sha256": "270eedacd5b4599b48159655c61a8548e98f5fef223b6e98e63176a74bd9e586",
+  "refreshed_at_utc": "2026-10-26T16:36:33.336400+00:00"
+}

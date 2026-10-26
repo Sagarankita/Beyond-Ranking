@@ -1,0 +1,240 @@
+{
+  "model_track_id": "legacy-synthetic-response-model-v1",
+  "interface_version": "1.0",
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "interpretation": "Synthetic response-model pipeline evidence only; predictions are not causal intervention estimates.",
+  "data_path": "data/department_research_data.csv",
+  "data_sha256": "a7fdf37913369dbcfa3cdd754a3acfccf7707bfb64fa47ed600c30e36d0ff697",
+  "config_path": "configs/models/legacy_synthetic_response_v1.json",
+  "config_sha256": "a67b0d22f944c562ff36d929e062a8c6e31f01f15fbdf6258582fa9a5e63c588",
+  "feature_columns": [
+    "faculty_phd",
+    "faculty_other",
+    "frac_research_phd",
+    "frac_research_other",
+    "research_budget",
+    "centres_of_excellence_count",
+    "teaching_load_per_faculty",
+    "diversity_index",
+    "industry_collaborations",
+    "student_count",
+    "num_courses"
+  ],
+  "target_columns": [
+    "papers_t1",
+    "citation_percentile_avg"
+  ],
+  "feature_schema": [
+    {
+      "name": "faculty_phd",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "faculty_other",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "frac_research_phd",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "frac_research_other",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "research_budget",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "centres_of_excellence_count",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "teaching_load_per_faculty",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "diversity_index",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "industry_collaborations",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "student_count",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    },
+    {
+      "name": "num_courses",
+      "kind": "number",
+      "missing_handling": "training-fold median imputation"
+    }
+  ],
+  "target_schema": [
+    {
+      "name": "papers_t1",
+      "kind": "number",
+      "bounds": [
+        0.0,
+        null
+      ],
+      "missing_allowed": false
+    },
+    {
+      "name": "citation_percentile_avg",
+      "kind": "number",
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "missing_allowed": false
+    }
+  ],
+  "target_bounds": {
+    "papers_t1": [
+      0.0,
+      null
+    ],
+    "citation_percentile_avg": [
+      0.0,
+      1.0
+    ]
+  },
+  "forbidden_feature_columns": [
+    "papers_t1",
+    "citation_percentile_avg",
+    "overall_rank"
+  ],
+  "split": {
+    "strategy": "deterministic_random_single_period_fixture",
+    "train_fraction": 0.6,
+    "validation_fraction": 0.15,
+    "calibration_fraction": 0.15,
+    "test_fraction": 0.1,
+    "model_seed": 20261026,
+    "counts": {
+      "train": 312,
+      "validation": 78,
+      "calibration": 78,
+      "test": 53
+    },
+    "limitation": "One synthetic period and unique row identifiers prevent meaningful time-aware or repeated-group splitting."
+  },
+  "selected_models": {
+    "papers_t1": {
+      "model_name": "linear",
+      "selection_metric": "validation_rmse",
+      "model_file": "models/papers_t1.joblib"
+    },
+    "citation_percentile_avg": {
+      "model_name": "random_forest",
+      "selection_metric": "validation_rmse",
+      "model_file": "models/citation_percentile_avg.joblib"
+    }
+  },
+  "prediction_interval": {
+    "method": "split_conformal_absolute_residual",
+    "miscoverage_alpha": 0.1
+  },
+  "conformal_radii": {
+    "papers_t1": 3.728008220892889,
+    "citation_percentile_avg": 0.019848572476898863
+  },
+  "test_evaluation": {
+    "papers_t1": {
+      "selected_model": "linear",
+      "mae": 1.6110650751820275,
+      "rmse": 1.9491857527000271,
+      "mean_baseline_mae": 307.37784228350256,
+      "mean_baseline_rmse": 477.9373962034047,
+      "interval_nominal_coverage": 0.9,
+      "interval_observed_coverage": 0.9433962264150944,
+      "interval_mean_width": 7.122874261284933,
+      "coverage_below_nominal": false
+    },
+    "citation_percentile_avg": {
+      "selected_model": "random_forest",
+      "mae": 0.011113838957109375,
+      "rmse": 0.013243367896786273,
+      "mean_baseline_mae": 0.04846450276163321,
+      "mean_baseline_rmse": 0.059006189505646976,
+      "interval_nominal_coverage": 0.9,
+      "interval_observed_coverage": 0.8490566037735849,
+      "interval_mean_width": 0.039697144953797725,
+      "coverage_below_nominal": true
+    }
+  },
+  "training_support": {
+    "faculty_phd": {
+      "minimum": 10.0,
+      "maximum": 149.0
+    },
+    "faculty_other": {
+      "minimum": 5.0,
+      "maximum": 79.0
+    },
+    "frac_research_phd": {
+      "minimum": 0.3001187617879423,
+      "maximum": 0.7996767497829174
+    },
+    "frac_research_other": {
+      "minimum": 0.1001330024481957,
+      "maximum": 0.4973347749434514
+    },
+    "research_budget": {
+      "minimum": 101956.60664611074,
+      "maximum": 997367509.957922
+    },
+    "centres_of_excellence_count": {
+      "minimum": 0.0,
+      "maximum": 9.0
+    },
+    "teaching_load_per_faculty": {
+      "minimum": 6.014738220863114,
+      "maximum": 15.785254683891406
+    },
+    "diversity_index": {
+      "minimum": 0.2005227126090396,
+      "maximum": 0.999646162600351
+    },
+    "industry_collaborations": {
+      "minimum": 0.0,
+      "maximum": 14.0
+    },
+    "student_count": {
+      "minimum": 227.0,
+      "maximum": 2496.0
+    },
+    "num_courses": {
+      "minimum": 10.0,
+      "maximum": 119.0
+    }
+  },
+  "model_training_seed": 20261026,
+  "optimization_randomness": "not_used_during_model_training",
+  "library_versions": {
+    "numpy": "2.5.4",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "artifacts": {
+    "metrics": "metrics.csv",
+    "residual_diagnostics": "residual_diagnostics.csv",
+    "test_predictions": "test_predictions.csv",
+    "splits": "splits.csv",
+    "unsupported_outcomes": "unsupported_outcomes.json",
+    "config_snapshot": "config_snapshot.json"
+  }
+}

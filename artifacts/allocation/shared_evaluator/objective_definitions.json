@@ -1,0 +1,57 @@
+{
+  "objective_direction": "minimize",
+  "objective_order": [
+    "research",
+    "innovation",
+    "student",
+    "societal"
+  ],
+  "families": {
+    "research": {
+      "missing_kpi_policy": "error",
+      "components": [
+        {
+          "kpi": "papers_t1",
+          "direction": "maximize",
+          "weight": 0.6,
+          "normalization": {
+            "method": "minmax",
+            "minimum": 0.0,
+            "maximum": 60.0
+          }
+        },
+        {
+          "kpi": "citation_percentile_avg",
+          "direction": "maximize",
+          "weight": 0.4,
+          "normalization": {
+            "method": "minmax",
+            "minimum": 0.5,
+            "maximum": 0.8
+          }
+        }
+      ]
+    },
+    "innovation": {
+      "missing_kpi_policy": "zero_score",
+      "components": []
+    },
+    "student": {
+      "missing_kpi_policy": "zero_score",
+      "components": []
+    },
+    "societal": {
+      "missing_kpi_policy": "zero_score",
+      "components": []
+    }
+  },
+  "constraint_residual_convention": "residual <= 0 is satisfied; positive values are violations",
+  "normalized_violation": "sum(max(0, residual) / declared constraint scale)",
+  "cost_policy": "hard constraint and reporting field; not an objective",
+  "dea_policy": "separate_not_applied_to_candidate_allocations",
+  "unsupported_decisions": {
+    "research_assistant_count": "The Phase 3 fixture has no RA feature or learned response.",
+    "compute_capacity_units": "The Phase 3 fixture has no compute feature or learned response.",
+    "detailed_funding_categories": "Only aggregate research_budget is present in the training data."
+  }
+}

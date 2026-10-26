@@ -1,0 +1,526 @@
+# DEA peer-gap explanations
+
+These are relative synthetic-fixture comparisons, not causal or empirical recommendations.
+Input gaps compare each row with the convex peer target returned by the VRS model.
+
+- **C001:** efficiency 0.9927; modeled input gaps [teaching_load_per_faculty: 1.4%, research_fte: 0.7%, research_budget: 0.7%]; reference peers: C002 (0.210), C248 (0.194), C255 (0.318), C295 (0.278).
+- **C002:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C002 (1.000).
+- **C003:** efficiency 0.9229; modeled input gaps [teaching_load_per_faculty: 33.2%, research_budget: 7.7%, research_fte: 7.7%]; reference peers: C024 (0.336), C255 (0.022), C312 (0.641).
+- **C004:** efficiency 0.6409; modeled input gaps [teaching_load_per_faculty: 39.5%, research_fte: 35.9%, research_budget: 35.9%]; reference peers: C189 (0.204), C211 (0.484), C347 (0.312).
+- **C005:** efficiency 0.9908; modeled input gaps [teaching_load_per_faculty: 0.9%, research_fte: 0.9%, research_budget: 0.9%]; reference peers: C024 (0.338), C255 (0.435), C473 (0.092), C479 (0.134).
+- **C006:** efficiency 0.9909; modeled input gaps [teaching_load_per_faculty: 42.3%, research_fte: 0.9%, research_budget: 0.9%]; reference peers: C024 (0.043), C255 (0.468), C312 (0.489).
+- **C007:** efficiency 0.9543; modeled input gaps [teaching_load_per_faculty: 34.8%, research_fte: 4.6%, research_budget: 4.6%]; reference peers: C024 (0.429), C159 (0.096), C255 (0.078), C473 (0.397).
+- **C008:** efficiency 0.9467; modeled input gaps [teaching_load_per_faculty: 28.4%, research_fte: 5.3%, research_budget: 5.3%]; reference peers: C189 (0.028), C211 (0.559), C347 (0.413).
+- **C009:** efficiency 0.8822; modeled input gaps [research_fte: 40.4%, teaching_load_per_faculty: 11.8%, research_budget: 11.8%]; reference peers: C266 (0.013), C494 (0.908), C500 (0.079).
+- **C010:** efficiency 0.6736; modeled input gaps [research_budget: 32.6%, teaching_load_per_faculty: 32.6%, research_fte: 32.6%]; reference peers: C189 (0.693), C198 (0.224), C308 (0.039), C404 (0.044).
+- **C011:** efficiency 0.7044; modeled input gaps [teaching_load_per_faculty: 29.6%, research_fte: 29.6%, research_budget: 29.6%]; reference peers: C266 (0.158), C356 (0.160), C404 (0.599), C494 (0.010), C500 (0.072).
+- **C012:** efficiency 0.4624; modeled input gaps [research_budget: 53.8%, teaching_load_per_faculty: 53.8%, research_fte: 53.8%]; reference peers: C189 (0.570), C198 (0.115), C308 (0.220), C404 (0.094).
+- **C013:** efficiency 0.9919; modeled input gaps [research_fte: 37.2%, teaching_load_per_faculty: 32.9%, research_budget: 0.8%]; reference peers: C002 (0.430), C159 (0.086), C295 (0.484).
+- **C014:** efficiency 0.9832; modeled input gaps [research_fte: 53.9%, research_budget: 1.7%, teaching_load_per_faculty: 1.7%]; reference peers: C066 (0.099), C284 (0.506), C308 (0.395).
+- **C015:** efficiency 0.9000; modeled input gaps [teaching_load_per_faculty: 23.4%, research_budget: 10.0%, research_fte: 10.0%]; reference peers: C189 (0.484), C211 (0.516).
+- **C016:** efficiency 0.5978; modeled input gaps [teaching_load_per_faculty: 40.2%, research_budget: 40.2%, research_fte: 40.2%]; reference peers: C036 (0.382), C157 (0.076), C266 (0.160), C429 (0.382).
+- **C017:** efficiency 0.8463; modeled input gaps [teaching_load_per_faculty: 32.6%, research_fte: 15.4%, research_budget: 15.4%]; reference peers: C189 (0.053), C347 (0.402), C412 (0.416), C494 (0.128).
+- **C018:** efficiency 0.7350; modeled input gaps [teaching_load_per_faculty: 57.2%, research_budget: 26.5%, research_fte: 26.5%]; reference peers: C189 (0.734), C211 (0.266).
+- **C019:** efficiency 0.4571; modeled input gaps [teaching_load_per_faculty: 54.3%, research_fte: 54.3%, research_budget: 54.3%]; reference peers: C189 (0.327), C404 (0.445), C469 (0.075), C514 (0.153).
+- **C020:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C020 (1.000).
+- **C021:** efficiency 0.9962; modeled input gaps [teaching_load_per_faculty: 24.8%, research_fte: 0.4%, research_budget: 0.4%]; reference peers: C024 (0.210), C248 (0.200), C255 (0.089), C484 (0.501).
+- **C022:** efficiency 0.9944; modeled input gaps [teaching_load_per_faculty: 44.0%, research_fte: 0.6%, research_budget: 0.6%]; reference peers: C024 (0.103), C255 (0.871), C473 (0.026).
+- **C023:** efficiency 0.8934; modeled input gaps [research_fte: 43.1%, research_budget: 10.7%, teaching_load_per_faculty: 10.7%]; reference peers: C189 (0.516), C308 (0.351), C404 (0.133).
+- **C024:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C024 (1.000).
+- **C025:** efficiency 0.9874; modeled input gaps [teaching_load_per_faculty: 32.4%, research_budget: 1.3%, research_fte: 1.3%]; reference peers: C024 (0.467), C159 (0.040), C255 (0.232), C473 (0.261).
+- **C026:** efficiency 0.8279; modeled input gaps [teaching_load_per_faculty: 17.2%, research_fte: 17.2%, research_budget: 17.2%]; reference peers: C036 (0.271), C157 (0.236), C189 (0.471), C308 (0.022).
+- **C027:** efficiency 0.6298; modeled input gaps [teaching_load_per_faculty: 37.0%, research_fte: 37.0%, research_budget: 37.0%]; reference peers: C266 (0.074), C429 (0.245), C494 (0.285), C500 (0.395).
+- **C028:** efficiency 0.9949; modeled input gaps [research_fte: 35.3%, teaching_load_per_faculty: 35.1%, research_budget: 0.5%]; reference peers: C002 (0.652), C248 (0.110), C295 (0.237).
+- **C029:** efficiency 0.6671; modeled input gaps [teaching_load_per_faculty: 44.4%, research_fte: 33.3%, research_budget: 33.3%]; reference peers: C189 (0.493), C211 (0.217), C347 (0.290).
+- **C030:** efficiency 0.9412; modeled input gaps [teaching_load_per_faculty: 5.9%, research_fte: 5.9%, research_budget: 5.9%]; reference peers: C002 (0.321), C308 (0.585), C473 (0.087), C479 (0.007).
+- **C031:** efficiency 0.7808; modeled input gaps [research_budget: 21.9%, research_fte: 21.9%, teaching_load_per_faculty: 21.9%]; reference peers: C024 (0.082), C473 (0.576), C479 (0.001), C514 (0.341).
+- **C032:** efficiency 0.7732; modeled input gaps [teaching_load_per_faculty: 22.7%, research_fte: 22.7%, research_budget: 22.7%]; reference peers: C036 (0.130), C131 (0.499), C429 (0.341), C511 (0.030).
+- **C033:** efficiency 0.7683; modeled input gaps [research_fte: 23.2%, teaching_load_per_faculty: 23.2%, research_budget: 23.2%]; reference peers: C024 (0.044), C102 (0.012), C157 (0.281), C356 (0.072), C469 (0.591).
+- **C034:** efficiency 0.9546; modeled input gaps [teaching_load_per_faculty: 37.6%, research_budget: 4.5%, research_fte: 4.5%]; reference peers: C024 (0.184), C255 (0.117), C312 (0.699).
+- **C035:** efficiency 0.5807; modeled input gaps [research_budget: 41.9%, research_fte: 41.9%, teaching_load_per_faculty: 41.9%]; reference peers: C189 (0.008), C404 (0.210), C454 (0.696), C500 (0.086).
+- **C036:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C036 (1.000).
+- **C037:** efficiency 0.9839; modeled input gaps [teaching_load_per_faculty: 43.8%, research_fte: 31.3%, research_budget: 1.6%]; reference peers: C002 (0.684), C159 (0.070), C473 (0.247).
+- **C038:** efficiency 0.7616; modeled input gaps [teaching_load_per_faculty: 23.8%, research_fte: 23.8%, research_budget: 23.8%]; reference peers: C024 (0.423), C308 (0.162), C473 (0.301), C479 (0.020), C514 (0.094).
+- **C039:** efficiency 0.6275; modeled input gaps [research_fte: 87.3%, research_budget: 37.2%, teaching_load_per_faculty: 37.2%]; reference peers: C189 (0.987), C308 (0.013).
+- **C040:** efficiency 0.9843; modeled input gaps [teaching_load_per_faculty: 37.7%, research_budget: 1.6%, research_fte: 1.6%]; reference peers: C024 (0.607), C255 (0.364), C312 (0.030).
+- **C041:** efficiency 0.7692; modeled input gaps [teaching_load_per_faculty: 40.7%, research_fte: 23.1%, research_budget: 23.1%]; reference peers: C157 (0.669), C429 (0.100), C511 (0.232).
+- **C042:** efficiency 0.9768; modeled input gaps [teaching_load_per_faculty: 32.0%, research_fte: 2.3%, research_budget: 2.3%]; reference peers: C002 (0.286), C024 (0.390), C159 (0.261), C255 (0.062).
+- **C043:** efficiency 0.9694; modeled input gaps [teaching_load_per_faculty: 24.9%, research_budget: 3.1%, research_fte: 3.1%]; reference peers: C024 (0.630), C255 (0.145), C312 (0.225).
+- **C044:** efficiency 0.8877; modeled input gaps [research_fte: 20.8%, teaching_load_per_faculty: 16.1%, research_budget: 11.2%]; reference peers: C002 (0.332), C024 (0.525), C473 (0.143).
+- **C045:** efficiency 0.6969; modeled input gaps [research_fte: 30.3%, teaching_load_per_faculty: 30.3%, research_budget: 30.3%]; reference peers: C024 (0.826), C180 (0.016), C308 (0.064), C356 (0.077), C479 (0.017).
+- **C046:** efficiency 0.9995; modeled input gaps [research_fte: 38.2%, teaching_load_per_faculty: 10.1%, research_budget: 0.1%]; reference peers: C159 (0.133), C295 (0.733), C474 (0.134).
+- **C047:** efficiency 0.4854; modeled input gaps [teaching_load_per_faculty: 51.5%, research_fte: 51.5%, research_budget: 51.5%]; reference peers: C266 (0.048), C356 (0.260), C404 (0.313), C494 (0.001), C500 (0.377).
+- **C048:** efficiency 0.9700; modeled input gaps [teaching_load_per_faculty: 37.2%, research_fte: 3.0%, research_budget: 3.0%]; reference peers: C024 (0.397), C255 (0.069), C312 (0.459), C484 (0.074).
+- **C049:** efficiency 0.6963; modeled input gaps [research_fte: 30.4%, research_budget: 30.4%, teaching_load_per_faculty: 30.4%]; reference peers: C157 (0.062), C189 (0.895), C198 (0.023), C308 (0.021).
+- **C050:** efficiency 0.4323; modeled input gaps [teaching_load_per_faculty: 56.8%, research_fte: 56.8%, research_budget: 56.8%]; reference peers: C157 (0.072), C189 (0.731), C198 (0.110), C308 (0.087).
+- **C051:** efficiency 0.8122; modeled input gaps [research_budget: 18.8%, research_fte: 18.8%, teaching_load_per_faculty: 18.8%]; reference peers: C036 (0.386), C157 (0.243), C189 (0.307), C308 (0.063).
+- **C052:** efficiency 0.9948; modeled input gaps [research_fte: 9.8%, teaching_load_per_faculty: 7.0%, research_budget: 0.5%]; reference peers: C159 (0.613), C457 (0.387).
+- **C053:** efficiency 0.9993; modeled input gaps [research_fte: 38.3%, teaching_load_per_faculty: 0.1%, research_budget: 0.1%]; reference peers: C248 (0.164), C295 (0.122), C359 (0.153), C474 (0.561).
+- **C054:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C054 (1.000).
+- **C055:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C055 (1.000).
+- **C056:** efficiency 0.9271; modeled input gaps [teaching_load_per_faculty: 14.9%, research_fte: 7.3%, research_budget: 7.3%]; reference peers: C024 (0.922), C255 (0.072), C312 (0.005).
+- **C057:** efficiency 0.4662; modeled input gaps [research_fte: 53.4%, teaching_load_per_faculty: 53.4%, research_budget: 53.4%]; reference peers: C189 (0.290), C308 (0.146), C404 (0.196), C514 (0.368).
+- **C058:** efficiency 0.5235; modeled input gaps [research_fte: 62.9%, teaching_load_per_faculty: 47.7%, research_budget: 47.7%]; reference peers: C189 (0.998), C308 (0.002).
+- **C059:** efficiency 0.8947; modeled input gaps [teaching_load_per_faculty: 30.0%, research_budget: 10.5%, research_fte: 10.5%]; reference peers: C024 (0.853), C255 (0.047), C312 (0.099).
+- **C060:** efficiency 0.8004; modeled input gaps [research_fte: 20.0%, teaching_load_per_faculty: 20.0%, research_budget: 20.0%]; reference peers: C024 (0.435), C180 (0.025), C356 (0.433), C479 (0.107).
+- **C061:** efficiency 0.9952; modeled input gaps [teaching_load_per_faculty: 31.7%, research_fte: 0.5%, research_budget: 0.5%]; reference peers: C024 (0.030), C255 (0.919), C473 (0.052).
+- **C062:** efficiency 0.8106; modeled input gaps [teaching_load_per_faculty: 18.9%, research_fte: 18.9%, research_budget: 18.9%]; reference peers: C157 (0.074), C189 (0.017), C198 (0.620), C500 (0.289).
+- **C063:** efficiency 0.5609; modeled input gaps [teaching_load_per_faculty: 43.9%, research_fte: 43.9%, research_budget: 43.9%]; reference peers: C036 (0.196), C131 (0.708), C157 (0.046), C429 (0.050).
+- **C064:** efficiency 0.7508; modeled input gaps [teaching_load_per_faculty: 26.4%, research_fte: 24.9%, research_budget: 24.9%]; reference peers: C024 (0.579), C255 (0.002), C312 (0.419).
+- **C065:** efficiency 0.9645; modeled input gaps [teaching_load_per_faculty: 3.5%, research_fte: 3.5%, research_budget: 3.5%]; reference peers: C024 (0.596), C180 (0.032), C255 (0.129), C479 (0.243).
+- **C066:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C066 (1.000).
+- **C067:** efficiency 0.7581; modeled input gaps [teaching_load_per_faculty: 34.1%, research_fte: 24.2%, research_budget: 24.2%]; reference peers: C024 (0.616), C255 (0.011), C473 (0.373).
+- **C068:** efficiency 0.9944; modeled input gaps [teaching_load_per_faculty: 0.6%, research_fte: 0.6%, research_budget: 0.6%]; reference peers: C189 (0.243), C198 (0.211), C308 (0.075), C404 (0.471).
+- **C069:** efficiency 0.9740; modeled input gaps [teaching_load_per_faculty: 29.8%, research_fte: 2.6%, research_budget: 2.6%]; reference peers: C002 (0.202), C024 (0.549), C159 (0.009), C255 (0.241).
+- **C070:** efficiency 0.6238; modeled input gaps [teaching_load_per_faculty: 37.6%, research_budget: 37.6%, research_fte: 37.6%]; reference peers: C024 (0.469), C356 (0.141), C370 (0.132), C514 (0.258).
+- **C071:** efficiency 0.7498; modeled input gaps [research_fte: 37.8%, teaching_load_per_faculty: 25.0%, research_budget: 25.0%]; reference peers: C266 (0.218), C494 (0.371), C500 (0.412).
+- **C072:** efficiency 0.8841; modeled input gaps [research_budget: 11.6%, teaching_load_per_faculty: 11.6%, research_fte: 11.6%]; reference peers: C077 (0.017), C248 (0.057), C255 (0.014), C312 (0.795), C479 (0.117).
+- **C073:** efficiency 0.4660; modeled input gaps [research_fte: 87.3%, research_budget: 53.4%, teaching_load_per_faculty: 53.4%]; reference peers: C189 (0.968), C308 (0.032).
+- **C074:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C074 (1.000).
+- **C075:** efficiency 0.9954; modeled input gaps [teaching_load_per_faculty: 39.4%, research_budget: 0.5%, research_fte: 0.5%]; reference peers: C002 (0.656), C159 (0.167), C255 (0.109), C295 (0.068).
+- **C076:** efficiency 0.4997; modeled input gaps [teaching_load_per_faculty: 50.0%, research_fte: 50.0%, research_budget: 50.0%]; reference peers: C024 (0.273), C036 (0.260), C157 (0.245), C308 (0.166), C356 (0.056).
+- **C077:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C077 (1.000).
+- **C078:** efficiency 0.5980; modeled input gaps [teaching_load_per_faculty: 40.2%, research_fte: 40.2%, research_budget: 40.2%]; reference peers: C157 (0.230), C198 (0.192), C266 (0.221), C500 (0.357).
+- **C079:** efficiency 0.9759; modeled input gaps [teaching_load_per_faculty: 32.3%, research_fte: 2.4%, research_budget: 2.4%]; reference peers: C024 (0.502), C255 (0.140), C473 (0.358).
+- **C080:** efficiency 0.4226; modeled input gaps [research_budget: 57.7%, research_fte: 57.7%, teaching_load_per_faculty: 57.7%]; reference peers: C189 (0.456), C198 (0.004), C404 (0.235), C500 (0.304).
+- **C081:** efficiency 0.8079; modeled input gaps [research_budget: 19.2%, teaching_load_per_faculty: 19.2%, research_fte: 19.2%]; reference peers: C157 (0.085), C189 (0.261), C308 (0.091), C356 (0.134), C514 (0.430).
+- **C082:** efficiency 0.9984; modeled input gaps [research_fte: 27.2%, teaching_load_per_faculty: 24.5%, research_budget: 0.2%]; reference peers: C159 (0.222), C295 (0.477), C474 (0.301).
+- **C083:** efficiency 0.9761; modeled input gaps [teaching_load_per_faculty: 36.2%, research_fte: 2.4%, research_budget: 2.4%]; reference peers: C002 (0.280), C024 (0.187), C248 (0.433), C255 (0.100).
+- **C084:** efficiency 0.7893; modeled input gaps [research_fte: 23.5%, teaching_load_per_faculty: 21.1%, research_budget: 21.1%]; reference peers: C024 (0.270), C256 (0.045), C308 (0.436), C381 (0.249).
+- **C085:** efficiency 0.9399; modeled input gaps [teaching_load_per_faculty: 6.0%, research_fte: 6.0%, research_budget: 6.0%]; reference peers: C036 (0.126), C131 (0.249), C157 (0.590), C429 (0.036).
+- **C086:** efficiency 0.9870; modeled input gaps [teaching_load_per_faculty: 47.5%, research_fte: 9.4%, research_budget: 1.3%]; reference peers: C159 (0.629), C473 (0.371).
+- **C087:** efficiency 0.8518; modeled input gaps [research_budget: 14.8%, teaching_load_per_faculty: 14.8%, research_fte: 14.8%]; reference peers: C077 (0.079), C189 (0.453), C308 (0.241), C312 (0.228).
+- **C088:** efficiency 0.9498; modeled input gaps [teaching_load_per_faculty: 5.0%, research_fte: 5.0%, research_budget: 5.0%]; reference peers: C024 (0.429), C180 (0.035), C255 (0.065), C479 (0.472).
+- **C089:** efficiency 0.9781; modeled input gaps [research_budget: 2.2%, research_fte: 2.2%, teaching_load_per_faculty: 2.2%]; reference peers: C024 (0.141), C180 (0.710), C255 (0.095), C312 (0.055).
+- **C090:** efficiency 0.8599; modeled input gaps [research_fte: 24.0%, teaching_load_per_faculty: 20.4%, research_budget: 14.0%]; reference peers: C211 (0.286), C347 (0.714).
+- **C091:** efficiency 0.4892; modeled input gaps [research_fte: 51.1%, teaching_load_per_faculty: 51.1%, research_budget: 51.1%]; reference peers: C189 (0.334), C198 (0.005), C404 (0.288), C469 (0.047), C500 (0.326).
+- **C092:** efficiency 0.8932; modeled input gaps [teaching_load_per_faculty: 40.4%, research_budget: 10.7%, research_fte: 10.7%]; reference peers: C024 (0.195), C255 (0.030), C312 (0.775).
+- **C093:** efficiency 0.7151; modeled input gaps [research_fte: 73.0%, teaching_load_per_faculty: 28.5%, research_budget: 28.5%]; reference peers: C189 (0.971), C308 (0.029).
+- **C094:** efficiency 0.4964; modeled input gaps [research_budget: 50.4%, teaching_load_per_faculty: 50.4%, research_fte: 50.4%]; reference peers: C189 (0.843), C198 (0.031), C308 (0.053), C404 (0.073).
+- **C095:** efficiency 0.9940; modeled input gaps [teaching_load_per_faculty: 44.0%, research_fte: 0.6%, research_budget: 0.6%]; reference peers: C159 (0.043), C255 (0.643), C473 (0.314).
+- **C096:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C096 (1.000).
+- **C097:** efficiency 0.9512; modeled input gaps [teaching_load_per_faculty: 44.5%, research_fte: 4.9%, research_budget: 4.9%]; reference peers: C002 (0.505), C024 (0.399), C159 (0.061), C255 (0.035).
+- **C098:** efficiency 0.9833; modeled input gaps [research_fte: 56.7%, research_budget: 1.7%, teaching_load_per_faculty: 1.7%]; reference peers: C002 (0.156), C308 (0.844).
+- **C099:** efficiency 0.7208; modeled input gaps [research_fte: 27.9%, research_budget: 27.9%, teaching_load_per_faculty: 27.9%]; reference peers: C024 (0.559), C308 (0.208), C356 (0.150), C479 (0.083).
+- **C100:** efficiency 0.9331; modeled input gaps [research_fte: 29.7%, teaching_load_per_faculty: 6.7%, research_budget: 6.7%]; reference peers: C189 (0.286), C308 (0.015), C404 (0.699).
+- **C101:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C101 (1.000).
+- **C102:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C102 (1.000).
+- **C103:** efficiency 0.6976; modeled input gaps [teaching_load_per_faculty: 30.2%, research_fte: 30.2%, research_budget: 30.2%]; reference peers: C157 (0.021), C189 (0.228), C308 (0.292), C356 (0.395), C514 (0.064).
+- **C104:** efficiency 0.9816; modeled input gaps [teaching_load_per_faculty: 15.2%, research_fte: 1.8%, research_budget: 1.8%]; reference peers: C002 (0.195), C024 (0.235), C159 (0.282), C473 (0.288).
+- **C105:** efficiency 0.5246; modeled input gaps [teaching_load_per_faculty: 47.5%, research_fte: 47.5%, research_budget: 47.5%]; reference peers: C036 (0.351), C157 (0.034), C189 (0.459), C308 (0.156).
+- **C106:** efficiency 0.6605; modeled input gaps [research_fte: 37.3%, research_budget: 33.9%, teaching_load_per_faculty: 33.9%]; reference peers: C308 (0.220), C404 (0.432), C473 (0.083), C514 (0.265).
+- **C107:** efficiency 0.6141; modeled input gaps [teaching_load_per_faculty: 38.6%, research_budget: 38.6%, research_fte: 38.6%]; reference peers: C036 (0.554), C054 (0.143), C189 (0.176), C312 (0.128).
+- **C108:** efficiency 0.6159; modeled input gaps [research_fte: 38.4%, teaching_load_per_faculty: 38.4%, research_budget: 38.4%]; reference peers: C189 (0.354), C198 (0.046), C404 (0.279), C500 (0.321).
+- **C109:** efficiency 0.9036; modeled input gaps [research_fte: 56.8%, teaching_load_per_faculty: 9.6%, research_budget: 9.6%]; reference peers: C189 (0.310), C308 (0.690).
+- **C110:** efficiency 0.4395; modeled input gaps [research_fte: 58.5%, teaching_load_per_faculty: 56.0%, research_budget: 56.0%]; reference peers: C189 (0.838), C308 (0.022), C404 (0.140).
+- **C111:** efficiency 0.8395; modeled input gaps [research_fte: 16.0%, teaching_load_per_faculty: 16.0%, research_budget: 16.0%]; reference peers: C036 (0.086), C266 (0.390), C429 (0.074), C500 (0.450).
+- **C112:** efficiency 0.8943; modeled input gaps [teaching_load_per_faculty: 10.6%, research_fte: 10.6%, research_budget: 10.6%]; reference peers: C356 (0.057), C370 (0.354), C412 (0.578), C469 (0.010).
+- **C113:** efficiency 0.4835; modeled input gaps [research_fte: 51.7%, research_budget: 51.7%, teaching_load_per_faculty: 51.7%]; reference peers: C036 (0.112), C157 (0.416), C189 (0.443), C308 (0.029).
+- **C114:** efficiency 0.9531; modeled input gaps [teaching_load_per_faculty: 4.7%, research_fte: 4.7%, research_budget: 4.7%]; reference peers: C024 (0.389), C248 (0.368), C255 (0.064), C312 (0.052), C484 (0.127).
+- **C115:** efficiency 0.9302; modeled input gaps [teaching_load_per_faculty: 7.0%, research_fte: 7.0%, research_budget: 7.0%]; reference peers: C157 (0.193), C189 (0.388), C308 (0.071), C404 (0.297), C514 (0.051).
+- **C116:** efficiency 0.9022; modeled input gaps [teaching_load_per_faculty: 9.9%, research_fte: 9.8%, research_budget: 9.8%]; reference peers: C024 (0.120), C102 (0.695), C356 (0.185).
+- **C117:** efficiency 0.8577; modeled input gaps [teaching_load_per_faculty: 42.7%, research_budget: 14.2%, research_fte: 14.2%]; reference peers: C024 (0.328), C255 (0.023), C312 (0.649).
+- **C118:** efficiency 0.6267; modeled input gaps [teaching_load_per_faculty: 37.3%, research_fte: 37.3%, research_budget: 37.3%]; reference peers: C036 (0.213), C054 (0.039), C189 (0.484), C472 (0.265).
+- **C119:** efficiency 0.9885; modeled input gaps [teaching_load_per_faculty: 38.0%, research_fte: 1.2%, research_budget: 1.2%]; reference peers: C024 (0.262), C159 (0.056), C255 (0.386), C473 (0.296).
+- **C120:** efficiency 0.6358; modeled input gaps [research_fte: 36.4%, teaching_load_per_faculty: 36.4%, research_budget: 36.4%]; reference peers: C024 (0.331), C308 (0.611), C479 (0.014), C514 (0.045).
+- **C121:** efficiency 0.9351; modeled input gaps [teaching_load_per_faculty: 6.5%, research_fte: 6.5%, research_budget: 6.5%]; reference peers: C024 (0.249), C308 (0.546), C356 (0.088), C514 (0.117).
+- **C122:** efficiency 0.7002; modeled input gaps [research_fte: 30.0%, teaching_load_per_faculty: 30.0%, research_budget: 30.0%]; reference peers: C024 (0.095), C180 (0.133), C308 (0.349), C356 (0.354), C479 (0.069).
+- **C123:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C123 (1.000).
+- **C124:** efficiency 0.8585; modeled input gaps [research_budget: 19.7%, research_fte: 14.2%, teaching_load_per_faculty: 14.2%]; reference peers: C002 (0.157), C208 (0.016), C308 (0.828).
+- **C125:** efficiency 0.7822; modeled input gaps [research_fte: 21.8%, teaching_load_per_faculty: 21.8%, research_budget: 21.8%]; reference peers: C024 (0.060), C157 (0.234), C308 (0.088), C469 (0.527), C514 (0.091).
+- **C126:** efficiency 0.9870; modeled input gaps [teaching_load_per_faculty: 1.3%, research_fte: 1.3%, research_budget: 1.3%]; reference peers: C024 (0.434), C255 (0.412), C473 (0.084), C479 (0.069).
+- **C127:** efficiency 0.8444; modeled input gaps [teaching_load_per_faculty: 15.6%, research_fte: 15.6%, research_budget: 15.6%]; reference peers: C266 (0.139), C356 (0.480), C429 (0.344), C469 (0.022), C494 (0.015).
+- **C128:** efficiency 0.8024; modeled input gaps [teaching_load_per_faculty: 33.6%, research_budget: 19.8%, research_fte: 19.8%]; reference peers: C024 (0.815), C255 (0.000), C473 (0.184).
+- **C129:** efficiency 0.9023; modeled input gaps [research_budget: 21.0%, research_fte: 9.8%, teaching_load_per_faculty: 9.8%]; reference peers: C002 (0.040), C208 (0.025), C308 (0.935).
+- **C130:** efficiency 0.7534; modeled input gaps [research_fte: 46.3%, teaching_load_per_faculty: 24.7%, research_budget: 24.7%]; reference peers: C189 (0.534), C211 (0.200), C347 (0.266).
+- **C131:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C131 (1.000).
+- **C132:** efficiency 0.9216; modeled input gaps [teaching_load_per_faculty: 42.1%, research_budget: 7.8%, research_fte: 7.8%]; reference peers: C024 (0.539), C255 (0.075), C473 (0.387).
+- **C133:** efficiency 0.9815; modeled input gaps [teaching_load_per_faculty: 1.8%, research_fte: 1.8%, research_budget: 1.8%]; reference peers: C002 (0.262), C024 (0.020), C159 (0.288), C473 (0.041), C479 (0.389).
+- **C134:** efficiency 0.7450; modeled input gaps [research_fte: 25.5%, teaching_load_per_faculty: 25.5%, research_budget: 25.5%]; reference peers: C024 (0.138), C356 (0.344), C370 (0.007), C469 (0.465), C514 (0.045).
+- **C135:** efficiency 0.9589; modeled input gaps [teaching_load_per_faculty: 25.3%, research_fte: 4.1%, research_budget: 4.1%]; reference peers: C002 (0.125), C024 (0.686), C159 (0.076), C255 (0.113).
+- **C136:** efficiency 0.9956; modeled input gaps [teaching_load_per_faculty: 42.8%, research_fte: 0.8%, research_budget: 0.4%]; reference peers: C159 (0.393), C255 (0.543), C474 (0.064).
+- **C137:** efficiency 0.9925; modeled input gaps [teaching_load_per_faculty: 15.9%, research_fte: 0.7%, research_budget: 0.7%]; reference peers: C024 (0.101), C248 (0.094), C255 (0.231), C484 (0.573).
+- **C138:** efficiency 0.8062; modeled input gaps [research_fte: 28.5%, teaching_load_per_faculty: 19.4%, research_budget: 19.4%]; reference peers: C266 (0.167), C404 (0.191), C494 (0.365), C500 (0.276).
+- **C139:** efficiency 0.9717; modeled input gaps [teaching_load_per_faculty: 37.6%, research_fte: 25.9%, research_budget: 2.8%]; reference peers: C002 (0.798), C159 (0.069), C473 (0.133).
+- **C140:** efficiency 0.7783; modeled input gaps [teaching_load_per_faculty: 22.2%, research_budget: 22.2%, research_fte: 22.2%]; reference peers: C036 (0.672), C157 (0.201), C189 (0.070), C308 (0.057).
+- **C141:** efficiency 0.9979; modeled input gaps [research_fte: 54.0%, teaching_load_per_faculty: 16.5%, research_budget: 0.2%]; reference peers: C159 (0.027), C255 (0.920), C474 (0.053).
+- **C142:** efficiency 0.5615; modeled input gaps [research_fte: 43.8%, research_budget: 43.8%, teaching_load_per_faculty: 43.8%]; reference peers: C157 (0.056), C189 (0.018), C308 (0.590), C404 (0.233), C514 (0.104).
+- **C143:** efficiency 0.8835; modeled input gaps [research_fte: 49.5%, research_budget: 11.7%, teaching_load_per_faculty: 11.7%]; reference peers: C266 (0.215), C494 (0.334), C500 (0.450).
+- **C144:** efficiency 0.9846; modeled input gaps [teaching_load_per_faculty: 21.6%, research_fte: 7.1%, research_budget: 1.5%]; reference peers: C002 (0.048), C248 (0.870), C256 (0.082).
+- **C145:** efficiency 0.4847; modeled input gaps [teaching_load_per_faculty: 51.5%, research_fte: 51.5%, research_budget: 51.5%]; reference peers: C157 (0.167), C189 (0.674), C198 (0.102), C308 (0.057).
+- **C146:** efficiency 0.9981; modeled input gaps [research_fte: 67.5%, teaching_load_per_faculty: 48.8%, research_budget: 0.2%]; reference peers: C255 (0.276), C474 (0.724).
+- **C147:** efficiency 0.9964; modeled input gaps [teaching_load_per_faculty: 23.8%, research_fte: 0.4%, research_budget: 0.4%]; reference peers: C159 (0.019), C255 (0.020), C457 (0.960).
+- **C148:** efficiency 0.9404; modeled input gaps [research_fte: 11.9%, teaching_load_per_faculty: 8.3%, research_budget: 6.0%]; reference peers: C002 (0.372), C159 (0.003), C473 (0.625).
+- **C149:** efficiency 0.9025; modeled input gaps [research_budget: 9.8%, research_fte: 9.8%, teaching_load_per_faculty: 9.8%]; reference peers: C157 (0.035), C189 (0.742), C198 (0.192), C500 (0.031).
+- **C150:** efficiency 0.9068; modeled input gaps [teaching_load_per_faculty: 31.6%, research_budget: 9.3%, research_fte: 9.3%]; reference peers: C024 (0.836), C255 (0.049), C473 (0.116).
+- **C151:** efficiency 0.7091; modeled input gaps [research_fte: 29.1%, teaching_load_per_faculty: 29.1%, research_budget: 29.1%]; reference peers: C157 (0.003), C189 (0.083), C198 (0.044), C500 (0.870).
+- **C152:** efficiency 0.8877; modeled input gaps [research_fte: 11.2%, teaching_load_per_faculty: 11.2%, research_budget: 11.2%]; reference peers: C189 (0.715), C404 (0.185), C412 (0.091), C469 (0.009).
+- **C153:** efficiency 0.9928; modeled input gaps [research_fte: 57.6%, teaching_load_per_faculty: 37.8%, research_budget: 0.7%]; reference peers: C002 (0.126), C248 (0.729), C295 (0.145).
+- **C154:** efficiency 0.4975; modeled input gaps [teaching_load_per_faculty: 50.3%, research_fte: 50.3%, research_budget: 50.3%]; reference peers: C157 (0.039), C189 (0.744), C198 (0.214), C308 (0.003).
+- **C155:** efficiency 0.4980; modeled input gaps [research_budget: 50.2%, teaching_load_per_faculty: 50.2%, research_fte: 50.2%]; reference peers: C036 (0.128), C157 (0.306), C189 (0.462), C308 (0.105).
+- **C156:** efficiency 0.9940; modeled input gaps [teaching_load_per_faculty: 12.3%, research_fte: 0.6%, research_budget: 0.6%]; reference peers: C159 (0.256), C255 (0.540), C457 (0.204).
+- **C157:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C157 (1.000).
+- **C158:** efficiency 0.4951; modeled input gaps [teaching_load_per_faculty: 50.5%, research_fte: 50.5%, research_budget: 50.5%]; reference peers: C356 (0.641), C370 (0.155), C469 (0.005), C514 (0.199).
+- **C159:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C159 (1.000).
+- **C160:** efficiency 0.9491; modeled input gaps [teaching_load_per_faculty: 5.2%, research_budget: 5.1%, research_fte: 5.1%]; reference peers: C054 (0.363), C189 (0.148), C418 (0.489).
+- **C161:** efficiency 0.9980; modeled input gaps [teaching_load_per_faculty: 49.3%, research_fte: 9.4%, research_budget: 0.2%]; reference peers: C002 (0.231), C159 (0.172), C473 (0.597).
+- **C162:** efficiency 0.9966; modeled input gaps [teaching_load_per_faculty: 45.1%, research_fte: 0.3%, research_budget: 0.3%]; reference peers: C159 (0.024), C255 (0.965), C457 (0.012).
+- **C163:** efficiency 0.9907; modeled input gaps [teaching_load_per_faculty: 18.5%, research_fte: 0.9%, research_budget: 0.9%]; reference peers: C002 (0.430), C159 (0.326), C255 (0.167), C295 (0.076).
+- **C164:** efficiency 0.9528; modeled input gaps [research_fte: 18.8%, teaching_load_per_faculty: 11.8%, research_budget: 4.7%]; reference peers: C002 (0.483), C024 (0.296), C473 (0.221).
+- **C165:** efficiency 0.5577; modeled input gaps [teaching_load_per_faculty: 44.2%, research_fte: 44.2%, research_budget: 44.2%]; reference peers: C157 (0.253), C189 (0.191), C198 (0.193), C266 (0.295), C469 (0.068).
+- **C166:** efficiency 0.4152; modeled input gaps [teaching_load_per_faculty: 58.5%, research_fte: 58.5%, research_budget: 58.5%]; reference peers: C157 (0.054), C189 (0.740), C198 (0.193), C308 (0.012).
+- **C167:** efficiency 0.9651; modeled input gaps [teaching_load_per_faculty: 36.2%, research_fte: 3.5%, research_budget: 3.5%]; reference peers: C002 (0.121), C024 (0.687), C159 (0.006), C255 (0.186).
+- **C168:** efficiency 0.9881; modeled input gaps [teaching_load_per_faculty: 1.2%, research_fte: 1.2%, research_budget: 1.2%]; reference peers: C024 (0.082), C180 (0.055), C255 (0.306), C479 (0.557).
+- **C169:** efficiency 0.8168; modeled input gaps [research_fte: 43.6%, research_budget: 18.3%, teaching_load_per_faculty: 18.3%]; reference peers: C308 (0.372), C404 (0.198), C473 (0.336), C514 (0.094).
+- **C170:** efficiency 0.4173; modeled input gaps [teaching_load_per_faculty: 58.3%, research_fte: 58.3%, research_budget: 58.3%]; reference peers: C036 (0.042), C157 (0.075), C189 (0.589), C266 (0.120), C356 (0.174).
+- **C171:** efficiency 0.4552; modeled input gaps [teaching_load_per_faculty: 54.5%, research_fte: 54.5%, research_budget: 54.5%]; reference peers: C189 (0.906), C198 (0.033), C308 (0.001), C404 (0.060).
+- **C172:** efficiency 0.4598; modeled input gaps [research_fte: 71.6%, teaching_load_per_faculty: 54.0%, research_budget: 54.0%]; reference peers: C189 (0.720), C211 (0.280).
+- **C173:** efficiency 0.9739; modeled input gaps [teaching_load_per_faculty: 20.9%, research_fte: 10.0%, research_budget: 2.6%]; reference peers: C002 (0.420), C159 (0.073), C473 (0.507).
+- **C174:** efficiency 0.5427; modeled input gaps [teaching_load_per_faculty: 45.7%, research_fte: 45.7%, research_budget: 45.7%]; reference peers: C024 (0.004), C036 (0.075), C157 (0.231), C308 (0.250), C356 (0.440).
+- **C175:** efficiency 0.9915; modeled input gaps [teaching_load_per_faculty: 36.7%, research_fte: 11.8%, research_budget: 0.9%]; reference peers: C159 (0.875), C473 (0.125).
+- **C176:** efficiency 0.9637; modeled input gaps [teaching_load_per_faculty: 50.7%, research_fte: 12.8%, research_budget: 3.6%]; reference peers: C002 (0.628), C159 (0.084), C473 (0.288).
+- **C177:** efficiency 0.6032; modeled input gaps [research_fte: 57.2%, teaching_load_per_faculty: 39.7%, research_budget: 39.7%]; reference peers: C189 (0.645), C308 (0.033), C404 (0.322).
+- **C178:** efficiency 0.9779; modeled input gaps [research_fte: 8.0%, teaching_load_per_faculty: 2.2%, research_budget: 2.2%]; reference peers: C002 (0.344), C308 (0.656).
+- **C179:** efficiency 0.6503; modeled input gaps [research_budget: 35.0%, teaching_load_per_faculty: 35.0%, research_fte: 35.0%]; reference peers: C024 (0.022), C157 (0.672), C308 (0.114), C511 (0.192).
+- **C180:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C180 (1.000).
+- **C181:** efficiency 0.9023; modeled input gaps [research_budget: 9.8%, research_fte: 9.8%, teaching_load_per_faculty: 9.8%]; reference peers: C024 (0.610), C255 (0.063), C473 (0.111), C479 (0.216).
+- **C182:** efficiency 0.9721; modeled input gaps [teaching_load_per_faculty: 44.2%, research_fte: 2.8%, research_budget: 2.8%]; reference peers: C024 (0.397), C159 (0.142), C255 (0.095), C473 (0.366).
+- **C183:** efficiency 0.9931; modeled input gaps [teaching_load_per_faculty: 24.1%, research_fte: 0.7%, research_budget: 0.7%]; reference peers: C024 (0.130), C248 (0.543), C255 (0.198), C484 (0.129).
+- **C184:** efficiency 0.6625; modeled input gaps [teaching_load_per_faculty: 33.8%, research_fte: 33.8%, research_budget: 33.8%]; reference peers: C024 (0.063), C356 (0.413), C370 (0.348), C469 (0.171), C514 (0.005).
+- **C185:** efficiency 0.9655; modeled input gaps [research_budget: 3.5%, research_fte: 3.5%, teaching_load_per_faculty: 3.5%]; reference peers: C189 (0.169), C347 (0.181), C404 (0.142), C412 (0.508).
+- **C186:** efficiency 0.9226; modeled input gaps [teaching_load_per_faculty: 24.4%, research_fte: 7.7%, research_budget: 7.7%]; reference peers: C024 (0.617), C159 (0.058), C255 (0.052), C473 (0.272).
+- **C187:** efficiency 0.4491; modeled input gaps [teaching_load_per_faculty: 55.1%, research_fte: 55.1%, research_budget: 55.1%]; reference peers: C189 (0.361), C404 (0.154), C454 (0.377), C500 (0.108).
+- **C188:** efficiency 0.8706; modeled input gaps [research_fte: 12.9%, teaching_load_per_faculty: 12.9%, research_budget: 12.9%]; reference peers: C157 (0.418), C189 (0.224), C198 (0.304), C308 (0.054).
+- **C189:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C189 (1.000).
+- **C190:** efficiency 0.9264; modeled input gaps [research_budget: 7.4%, research_fte: 7.4%, teaching_load_per_faculty: 7.4%]; reference peers: C024 (0.549), C248 (0.197), C255 (0.026), C312 (0.180), C484 (0.048).
+- **C191:** efficiency 0.8912; modeled input gaps [teaching_load_per_faculty: 10.9%, research_fte: 10.9%, research_budget: 10.9%]; reference peers: C157 (0.064), C189 (0.407), C198 (0.270), C500 (0.260).
+- **C192:** efficiency 0.9012; modeled input gaps [teaching_load_per_faculty: 36.6%, research_budget: 9.9%, research_fte: 9.9%]; reference peers: C024 (0.252), C255 (0.029), C312 (0.719).
+- **C193:** efficiency 0.9977; modeled input gaps [research_fte: 65.6%, teaching_load_per_faculty: 53.7%, research_budget: 0.2%]; reference peers: C255 (0.778), C474 (0.222).
+- **C194:** efficiency 0.5883; modeled input gaps [research_fte: 84.6%, teaching_load_per_faculty: 41.2%, research_budget: 41.2%]; reference peers: C189 (0.998), C308 (0.002).
+- **C195:** efficiency 0.7084; modeled input gaps [research_fte: 89.2%, research_budget: 29.2%, teaching_load_per_faculty: 29.2%]; reference peers: C189 (0.995), C308 (0.005).
+- **C196:** efficiency 0.6016; modeled input gaps [research_budget: 39.8%, research_fte: 39.8%, teaching_load_per_faculty: 39.8%]; reference peers: C157 (0.110), C189 (0.080), C404 (0.410), C469 (0.020), C514 (0.379).
+- **C197:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C197 (1.000).
+- **C198:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C198 (1.000).
+- **C199:** efficiency 0.5360; modeled input gaps [research_fte: 46.4%, teaching_load_per_faculty: 46.4%, research_budget: 46.4%]; reference peers: C036 (0.201), C157 (0.572), C189 (0.028), C500 (0.199).
+- **C200:** efficiency 0.7169; modeled input gaps [research_fte: 59.7%, teaching_load_per_faculty: 28.3%, research_budget: 28.3%]; reference peers: C055 (0.087), C404 (0.318), C489 (0.021), C494 (0.574).
+- **C201:** efficiency 0.9701; modeled input gaps [teaching_load_per_faculty: 17.7%, research_fte: 3.0%, research_budget: 3.0%]; reference peers: C024 (0.702), C255 (0.114), C312 (0.183).
+- **C202:** efficiency 0.7195; modeled input gaps [research_fte: 31.3%, teaching_load_per_faculty: 28.1%, research_budget: 28.1%]; reference peers: C189 (0.467), C308 (0.400), C404 (0.133).
+- **C203:** efficiency 0.9633; modeled input gaps [teaching_load_per_faculty: 40.7%, research_fte: 3.7%, research_budget: 3.7%]; reference peers: C024 (0.269), C159 (0.038), C255 (0.080), C473 (0.613).
+- **C204:** efficiency 0.9941; modeled input gaps [teaching_load_per_faculty: 0.6%, research_fte: 0.6%, research_budget: 0.6%]; reference peers: C024 (0.082), C255 (0.406), C473 (0.045), C479 (0.467).
+- **C205:** efficiency 0.7608; modeled input gaps [research_budget: 23.9%, research_fte: 23.9%, teaching_load_per_faculty: 23.9%]; reference peers: C189 (0.090), C198 (0.137), C308 (0.061), C404 (0.713).
+- **C206:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C206 (1.000).
+- **C207:** efficiency 0.5958; modeled input gaps [research_fte: 71.3%, teaching_load_per_faculty: 40.4%, research_budget: 40.4%]; reference peers: C189 (0.624), C211 (0.161), C347 (0.215).
+- **C208:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C208 (1.000).
+- **C209:** efficiency 0.9314; modeled input gaps [research_budget: 6.9%, teaching_load_per_faculty: 6.9%, research_fte: 6.9%]; reference peers: C024 (0.058), C180 (0.558), C356 (0.089), C479 (0.296).
+- **C210:** efficiency 0.9948; modeled input gaps [teaching_load_per_faculty: 14.0%, research_fte: 0.5%, research_budget: 0.5%]; reference peers: C024 (0.119), C255 (0.332), C473 (0.549).
+- **C211:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C211 (1.000).
+- **C212:** efficiency 0.7178; modeled input gaps [research_budget: 28.2%, research_fte: 28.2%, teaching_load_per_faculty: 28.2%]; reference peers: C189 (0.514), C198 (0.212), C308 (0.014), C404 (0.261).
+- **C213:** efficiency 0.9231; modeled input gaps [research_fte: 26.7%, teaching_load_per_faculty: 7.7%, research_budget: 7.7%]; reference peers: C198 (0.234), C308 (0.352), C404 (0.242), C514 (0.172).
+- **C214:** efficiency 0.6595; modeled input gaps [teaching_load_per_faculty: 34.1%, research_budget: 34.1%, research_fte: 34.1%]; reference peers: C036 (0.316), C131 (0.341), C157 (0.313), C308 (0.030).
+- **C215:** efficiency 0.4626; modeled input gaps [research_budget: 53.7%, research_fte: 53.7%, teaching_load_per_faculty: 53.7%]; reference peers: C157 (0.042), C189 (0.665), C198 (0.244), C266 (0.042), C500 (0.007).
+- **C216:** efficiency 0.5070; modeled input gaps [teaching_load_per_faculty: 49.3%, research_fte: 49.3%, research_budget: 49.3%]; reference peers: C157 (0.560), C189 (0.339), C198 (0.050), C308 (0.051).
+- **C217:** efficiency 0.6503; modeled input gaps [teaching_load_per_faculty: 35.0%, research_fte: 35.0%, research_budget: 35.0%]; reference peers: C356 (0.342), C370 (0.221), C412 (0.433), C469 (0.004).
+- **C218:** efficiency 0.8883; modeled input gaps [research_fte: 72.2%, research_budget: 11.2%, teaching_load_per_faculty: 11.2%]; reference peers: C189 (0.481), C308 (0.519).
+- **C219:** efficiency 0.9720; modeled input gaps [teaching_load_per_faculty: 51.6%, research_fte: 2.8%, research_budget: 2.8%]; reference peers: C002 (0.148), C024 (0.203), C248 (0.536), C255 (0.113).
+- **C220:** efficiency 0.6395; modeled input gaps [research_budget: 36.1%, teaching_load_per_faculty: 36.1%, research_fte: 36.1%]; reference peers: C024 (0.572), C308 (0.232), C356 (0.002), C514 (0.194).
+- **C221:** efficiency 0.8693; modeled input gaps [teaching_load_per_faculty: 51.3%, research_fte: 13.1%, research_budget: 13.1%]; reference peers: C189 (0.713), C211 (0.287).
+- **C222:** efficiency 0.9768; modeled input gaps [teaching_load_per_faculty: 21.6%, research_budget: 2.3%, research_fte: 2.3%]; reference peers: C024 (0.267), C157 (0.254), C511 (0.478).
+- **C223:** efficiency 0.7998; modeled input gaps [teaching_load_per_faculty: 56.0%, research_fte: 20.0%, research_budget: 20.0%]; reference peers: C189 (0.750), C211 (0.250).
+- **C224:** efficiency 0.9972; modeled input gaps [teaching_load_per_faculty: 21.0%, research_fte: 19.2%, research_budget: 0.3%]; reference peers: C159 (0.282), C457 (0.718).
+- **C225:** efficiency 0.7600; modeled input gaps [research_fte: 24.7%, research_budget: 24.0%, teaching_load_per_faculty: 24.0%]; reference peers: C189 (0.630), C308 (0.019), C404 (0.351).
+- **C226:** efficiency 0.9866; modeled input gaps [teaching_load_per_faculty: 48.3%, research_fte: 11.9%, research_budget: 1.3%]; reference peers: C002 (0.467), C159 (0.054), C473 (0.479).
+- **C227:** efficiency 0.9964; modeled input gaps [teaching_load_per_faculty: 32.0%, research_fte: 5.7%, research_budget: 0.4%]; reference peers: C159 (0.158), C457 (0.842).
+- **C228:** efficiency 0.9894; modeled input gaps [teaching_load_per_faculty: 35.0%, research_budget: 1.1%, research_fte: 1.1%]; reference peers: C024 (0.295), C255 (0.203), C312 (0.403), C484 (0.098).
+- **C229:** efficiency 0.9848; modeled input gaps [teaching_load_per_faculty: 16.7%, research_fte: 12.2%, research_budget: 1.5%]; reference peers: C248 (0.234), C256 (0.424), C484 (0.343).
+- **C230:** efficiency 0.9902; modeled input gaps [teaching_load_per_faculty: 1.0%, research_fte: 1.0%, research_budget: 1.0%]; reference peers: C180 (0.078), C248 (0.110), C255 (0.177), C312 (0.004), C479 (0.631).
+- **C231:** efficiency 0.9976; modeled input gaps [teaching_load_per_faculty: 29.6%, research_fte: 0.2%, research_budget: 0.2%]; reference peers: C159 (0.139), C255 (0.859), C457 (0.002).
+- **C232:** efficiency 0.8930; modeled input gaps [teaching_load_per_faculty: 37.2%, research_fte: 10.7%, research_budget: 10.7%]; reference peers: C024 (0.512), C255 (0.020), C312 (0.468).
+- **C233:** efficiency 0.6242; modeled input gaps [research_budget: 37.6%, teaching_load_per_faculty: 37.6%, research_fte: 37.6%]; reference peers: C024 (0.190), C308 (0.255), C356 (0.466), C479 (0.089).
+- **C234:** efficiency 0.8722; modeled input gaps [research_fte: 12.8%, research_budget: 12.8%, teaching_load_per_faculty: 12.8%]; reference peers: C024 (0.574), C180 (0.150), C255 (0.021), C312 (0.255).
+- **C235:** efficiency 0.9220; modeled input gaps [research_budget: 7.8%, teaching_load_per_faculty: 7.8%, research_fte: 7.8%]; reference peers: C054 (0.059), C189 (0.057), C312 (0.883).
+- **C236:** efficiency 0.8854; modeled input gaps [research_budget: 11.5%, teaching_load_per_faculty: 11.5%, research_fte: 11.5%]; reference peers: C024 (0.412), C248 (0.045), C308 (0.168), C312 (0.123), C479 (0.252).
+- **C237:** efficiency 0.8499; modeled input gaps [teaching_load_per_faculty: 38.4%, research_fte: 15.0%, research_budget: 15.0%]; reference peers: C024 (0.250), C102 (0.510), C312 (0.239).
+- **C238:** efficiency 0.4802; modeled input gaps [research_fte: 66.6%, research_budget: 52.0%, teaching_load_per_faculty: 52.0%]; reference peers: C189 (0.966), C308 (0.034).
+- **C239:** efficiency 0.6674; modeled input gaps [teaching_load_per_faculty: 33.3%, research_fte: 33.3%, research_budget: 33.3%]; reference peers: C189 (0.368), C418 (0.316), C429 (0.263), C500 (0.053).
+- **C240:** efficiency 0.5770; modeled input gaps [research_fte: 87.7%, research_budget: 42.3%, teaching_load_per_faculty: 42.3%]; reference peers: C189 (0.999), C308 (0.001).
+- **C241:** efficiency 0.4962; modeled input gaps [research_fte: 50.4%, teaching_load_per_faculty: 50.4%, research_budget: 50.4%]; reference peers: C157 (0.077), C189 (0.692), C308 (0.019), C404 (0.156), C514 (0.056).
+- **C242:** efficiency 0.7171; modeled input gaps [research_fte: 36.6%, teaching_load_per_faculty: 28.3%, research_budget: 28.3%]; reference peers: C189 (0.527), C308 (0.000), C404 (0.473).
+- **C243:** efficiency 0.7550; modeled input gaps [research_budget: 24.5%, teaching_load_per_faculty: 24.5%, research_fte: 24.5%]; reference peers: C024 (0.546), C180 (0.167), C255 (0.004), C312 (0.282).
+- **C244:** efficiency 0.6220; modeled input gaps [research_budget: 37.8%, research_fte: 37.8%, teaching_load_per_faculty: 37.8%]; reference peers: C157 (0.314), C189 (0.082), C198 (0.026), C266 (0.070), C500 (0.508).
+- **C245:** efficiency 0.9859; modeled input gaps [teaching_load_per_faculty: 14.5%, research_fte: 1.4%, research_budget: 1.4%]; reference peers: C024 (0.396), C255 (0.208), C312 (0.395).
+- **C246:** efficiency 0.7300; modeled input gaps [teaching_load_per_faculty: 44.8%, research_fte: 27.0%, research_budget: 27.0%]; reference peers: C189 (0.724), C356 (0.187), C370 (0.090).
+- **C247:** efficiency 0.4040; modeled input gaps [research_budget: 59.6%, teaching_load_per_faculty: 59.6%, research_fte: 59.6%]; reference peers: C157 (0.084), C189 (0.501), C198 (0.049), C500 (0.366).
+- **C248:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C248 (1.000).
+- **C249:** efficiency 0.8957; modeled input gaps [teaching_load_per_faculty: 28.5%, research_fte: 10.4%, research_budget: 10.4%]; reference peers: C024 (0.677), C255 (0.016), C312 (0.307).
+- **C250:** efficiency 0.8216; modeled input gaps [research_fte: 75.4%, teaching_load_per_faculty: 17.8%, research_budget: 17.8%]; reference peers: C266 (0.016), C494 (0.316), C500 (0.668).
+- **C251:** efficiency 0.9838; modeled input gaps [teaching_load_per_faculty: 9.9%, research_fte: 1.6%, research_budget: 1.6%]; reference peers: C024 (0.562), C255 (0.347), C312 (0.092).
+- **C252:** efficiency 0.9939; modeled input gaps [research_fte: 6.9%, teaching_load_per_faculty: 0.6%, research_budget: 0.6%]; reference peers: C002 (0.684), C208 (0.014), C255 (0.299), C473 (0.004).
+- **C253:** efficiency 0.6766; modeled input gaps [research_fte: 32.3%, teaching_load_per_faculty: 32.3%, research_budget: 32.3%]; reference peers: C157 (0.266), C189 (0.487), C198 (0.159), C308 (0.087).
+- **C254:** efficiency 0.6065; modeled input gaps [teaching_load_per_faculty: 39.3%, research_budget: 39.3%, research_fte: 39.3%]; reference peers: C036 (0.639), C157 (0.112), C189 (0.175), C308 (0.074).
+- **C255:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C255 (1.000).
+- **C256:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C256 (1.000).
+- **C257:** efficiency 0.7418; modeled input gaps [teaching_load_per_faculty: 30.4%, research_budget: 25.8%, research_fte: 25.8%]; reference peers: C024 (0.789), C255 (0.003), C312 (0.207).
+- **C258:** efficiency 0.9819; modeled input gaps [teaching_load_per_faculty: 1.8%, research_fte: 1.8%, research_budget: 1.8%]; reference peers: C024 (0.103), C255 (0.192), C473 (0.212), C479 (0.493).
+- **C259:** efficiency 0.5466; modeled input gaps [teaching_load_per_faculty: 45.3%, research_fte: 45.3%, research_budget: 45.3%]; reference peers: C024 (0.018), C356 (0.648), C370 (0.098), C469 (0.093), C514 (0.143).
+- **C260:** efficiency 0.8395; modeled input gaps [research_fte: 48.4%, research_budget: 16.0%, teaching_load_per_faculty: 16.0%]; reference peers: C024 (0.420), C157 (0.400), C284 (0.039), C308 (0.141).
+- **C261:** efficiency 0.4881; modeled input gaps [research_budget: 51.2%, research_fte: 51.2%, teaching_load_per_faculty: 51.2%]; reference peers: C157 (0.161), C189 (0.542), C198 (0.201), C500 (0.096).
+- **C262:** efficiency 0.9742; modeled input gaps [teaching_load_per_faculty: 8.4%, research_fte: 2.6%, research_budget: 2.6%]; reference peers: C002 (0.220), C024 (0.289), C248 (0.390), C255 (0.101).
+- **C263:** efficiency 0.8360; modeled input gaps [research_fte: 16.4%, teaching_load_per_faculty: 16.4%, research_budget: 16.4%]; reference peers: C077 (0.112), C189 (0.323), C308 (0.407), C312 (0.159).
+- **C264:** efficiency 0.9435; modeled input gaps [research_fte: 5.7%, teaching_load_per_faculty: 5.7%, research_budget: 5.7%]; reference peers: C024 (0.067), C180 (0.217), C308 (0.170), C356 (0.147), C479 (0.399).
+- **C265:** efficiency 0.9112; modeled input gaps [teaching_load_per_faculty: 8.9%, research_fte: 8.9%, research_budget: 8.9%]; reference peers: C189 (0.371), C308 (0.074), C404 (0.455), C514 (0.100).
+- **C266:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C266 (1.000).
+- **C267:** efficiency 0.5279; modeled input gaps [research_fte: 47.2%, teaching_load_per_faculty: 47.2%, research_budget: 47.2%]; reference peers: C036 (0.382), C189 (0.178), C308 (0.278), C312 (0.162).
+- **C268:** efficiency 0.9639; modeled input gaps [teaching_load_per_faculty: 47.5%, research_fte: 3.6%, research_budget: 3.6%]; reference peers: C002 (0.008), C024 (0.238), C248 (0.728), C255 (0.026).
+- **C269:** efficiency 0.8619; modeled input gaps [teaching_load_per_faculty: 36.6%, research_budget: 13.8%, research_fte: 13.8%]; reference peers: C024 (0.351), C102 (0.006), C312 (0.643).
+- **C270:** efficiency 0.7855; modeled input gaps [research_fte: 24.8%, teaching_load_per_faculty: 21.4%, research_budget: 21.4%]; reference peers: C347 (0.587), C404 (0.413).
+- **C271:** efficiency 0.9974; modeled input gaps [research_fte: 0.3%, teaching_load_per_faculty: 0.3%, research_budget: 0.3%]; reference peers: C077 (0.541), C248 (0.005), C255 (0.250), C484 (0.204).
+- **C272:** efficiency 0.8456; modeled input gaps [research_budget: 15.4%, teaching_load_per_faculty: 15.4%, research_fte: 15.4%]; reference peers: C055 (0.098), C404 (0.028), C412 (0.827), C489 (0.034), C494 (0.013).
+- **C273:** efficiency 0.9961; modeled input gaps [research_fte: 20.5%, research_budget: 0.4%, teaching_load_per_faculty: 0.4%]; reference peers: C002 (0.115), C159 (0.383), C295 (0.191), C474 (0.312).
+- **C274:** efficiency 0.9536; modeled input gaps [research_fte: 55.8%, research_budget: 4.6%, teaching_load_per_faculty: 4.6%]; reference peers: C211 (0.251), C404 (0.216), C454 (0.533).
+- **C275:** efficiency 0.9525; modeled input gaps [teaching_load_per_faculty: 13.3%, research_fte: 4.8%, research_budget: 4.8%]; reference peers: C024 (0.421), C248 (0.186), C255 (0.008), C484 (0.385).
+- **C276:** efficiency 0.5944; modeled input gaps [teaching_load_per_faculty: 40.6%, research_fte: 40.6%, research_budget: 40.6%]; reference peers: C189 (0.015), C356 (0.031), C404 (0.550), C494 (0.181), C500 (0.223).
+- **C277:** efficiency 0.9921; modeled input gaps [teaching_load_per_faculty: 14.7%, research_fte: 0.8%, research_budget: 0.8%]; reference peers: C159 (0.839), C255 (0.042), C473 (0.119).
+- **C278:** efficiency 0.6960; modeled input gaps [teaching_load_per_faculty: 30.4%, research_fte: 30.4%, research_budget: 30.4%]; reference peers: C036 (0.090), C102 (0.052), C308 (0.437), C312 (0.106), C356 (0.315).
+- **C279:** efficiency 0.8614; modeled input gaps [research_budget: 13.9%, teaching_load_per_faculty: 13.9%, research_fte: 13.9%]; reference peers: C074 (0.529), C266 (0.071), C429 (0.201), C494 (0.199).
+- **C280:** efficiency 0.4373; modeled input gaps [research_fte: 69.2%, research_budget: 56.3%, teaching_load_per_faculty: 56.3%]; reference peers: C189 (0.879), C308 (0.121).
+- **C281:** efficiency 0.9441; modeled input gaps [teaching_load_per_faculty: 5.6%, research_fte: 5.6%, research_budget: 5.6%]; reference peers: C356 (0.167), C370 (0.119), C429 (0.022), C469 (0.212), C489 (0.481).
+- **C282:** efficiency 0.6329; modeled input gaps [teaching_load_per_faculty: 36.7%, research_fte: 36.7%, research_budget: 36.7%]; reference peers: C356 (0.184), C429 (0.337), C469 (0.042), C489 (0.029), C494 (0.409).
+- **C283:** efficiency 0.9977; modeled input gaps [teaching_load_per_faculty: 46.4%, research_budget: 0.2%, research_fte: 0.2%]; reference peers: C197 (0.239), C255 (0.605), C312 (0.156).
+- **C284:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C284 (1.000).
+- **C285:** efficiency 0.9800; modeled input gaps [teaching_load_per_faculty: 29.1%, research_fte: 11.3%, research_budget: 2.0%]; reference peers: C002 (0.250), C159 (0.239), C473 (0.511).
+- **C286:** efficiency 0.9096; modeled input gaps [teaching_load_per_faculty: 18.6%, research_fte: 9.0%, research_budget: 9.0%]; reference peers: C024 (0.522), C255 (0.023), C473 (0.456).
+- **C287:** efficiency 0.9305; modeled input gaps [teaching_load_per_faculty: 28.2%, research_fte: 7.0%, research_budget: 7.0%]; reference peers: C024 (0.925), C255 (0.046), C473 (0.029).
+- **C288:** efficiency 0.4126; modeled input gaps [research_fte: 58.7%, research_budget: 58.7%, teaching_load_per_faculty: 58.7%]; reference peers: C189 (0.892), C198 (0.055), C404 (0.027), C500 (0.026).
+- **C289:** efficiency 0.9026; modeled input gaps [teaching_load_per_faculty: 9.7%, research_fte: 9.7%, research_budget: 9.7%]; reference peers: C157 (0.231), C189 (0.510), C198 (0.034), C266 (0.064), C469 (0.161).
+- **C290:** efficiency 0.9544; modeled input gaps [teaching_load_per_faculty: 8.2%, research_fte: 4.6%, research_budget: 4.6%]; reference peers: C024 (0.428), C255 (0.139), C312 (0.433).
+- **C291:** efficiency 0.9953; modeled input gaps [teaching_load_per_faculty: 21.8%, research_fte: 10.3%, research_budget: 0.5%]; reference peers: C159 (0.206), C255 (0.029), C457 (0.765).
+- **C292:** efficiency 0.7170; modeled input gaps [research_budget: 28.3%, teaching_load_per_faculty: 28.3%, research_fte: 28.3%]; reference peers: C036 (0.089), C157 (0.026), C266 (0.582), C429 (0.092), C469 (0.211).
+- **C293:** efficiency 0.9034; modeled input gaps [teaching_load_per_faculty: 9.7%, research_fte: 9.7%, research_budget: 9.7%]; reference peers: C024 (0.035), C356 (0.430), C370 (0.044), C469 (0.297), C514 (0.195).
+- **C294:** efficiency 0.5986; modeled input gaps [teaching_load_per_faculty: 40.1%, research_fte: 40.1%, research_budget: 40.1%]; reference peers: C024 (0.462), C308 (0.230), C356 (0.303), C479 (0.005).
+- **C295:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C295 (1.000).
+- **C296:** efficiency 0.4474; modeled input gaps [teaching_load_per_faculty: 55.3%, research_fte: 55.3%, research_budget: 55.3%]; reference peers: C157 (0.029), C189 (0.385), C356 (0.401), C469 (0.096), C514 (0.089).
+- **C297:** efficiency 0.4829; modeled input gaps [teaching_load_per_faculty: 51.7%, research_fte: 51.7%, research_budget: 51.7%]; reference peers: C024 (0.080), C036 (0.265), C157 (0.000), C308 (0.170), C356 (0.485).
+- **C298:** efficiency 0.9840; modeled input gaps [teaching_load_per_faculty: 39.4%, research_fte: 1.6%, research_budget: 1.6%]; reference peers: C024 (0.343), C255 (0.392), C473 (0.265).
+- **C299:** efficiency 0.9804; modeled input gaps [teaching_load_per_faculty: 16.3%, research_budget: 2.0%, research_fte: 2.0%]; reference peers: C189 (0.121), C211 (0.805), C347 (0.074).
+- **C300:** efficiency 0.9716; modeled input gaps [teaching_load_per_faculty: 40.4%, research_fte: 2.8%, research_budget: 2.8%]; reference peers: C189 (0.593), C370 (0.124), C412 (0.284).
+- **C301:** efficiency 0.9539; modeled input gaps [research_budget: 4.6%, teaching_load_per_faculty: 4.6%, research_fte: 4.6%]; reference peers: C024 (0.120), C248 (0.153), C308 (0.381), C312 (0.295), C479 (0.051).
+- **C302:** efficiency 0.9855; modeled input gaps [teaching_load_per_faculty: 30.2%, research_fte: 1.5%, research_budget: 1.5%]; reference peers: C024 (0.479), C255 (0.460), C473 (0.061).
+- **C303:** efficiency 0.8177; modeled input gaps [teaching_load_per_faculty: 18.2%, research_fte: 18.2%, research_budget: 18.2%]; reference peers: C157 (0.266), C198 (0.042), C266 (0.034), C500 (0.659).
+- **C304:** efficiency 0.6594; modeled input gaps [research_budget: 34.1%, teaching_load_per_faculty: 34.1%, research_fte: 34.1%]; reference peers: C024 (0.438), C308 (0.328), C356 (0.166), C514 (0.068).
+- **C305:** efficiency 0.7847; modeled input gaps [teaching_load_per_faculty: 21.5%, research_fte: 21.5%, research_budget: 21.5%]; reference peers: C036 (0.075), C189 (0.490), C308 (0.195), C312 (0.240).
+- **C306:** efficiency 0.8818; modeled input gaps [research_fte: 21.4%, teaching_load_per_faculty: 11.8%, research_budget: 11.8%]; reference peers: C024 (0.026), C308 (0.737), C381 (0.178), C469 (0.059).
+- **C307:** efficiency 0.9493; modeled input gaps [research_budget: 5.1%, teaching_load_per_faculty: 5.1%, research_fte: 5.1%]; reference peers: C002 (0.357), C024 (0.173), C256 (0.049), C308 (0.316), C381 (0.104).
+- **C308:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C308 (1.000).
+- **C309:** efficiency 0.7107; modeled input gaps [teaching_load_per_faculty: 28.9%, research_budget: 28.9%, research_fte: 28.9%]; reference peers: C024 (0.590), C308 (0.108), C356 (0.135), C514 (0.167).
+- **C310:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C310 (1.000).
+- **C311:** efficiency 0.9749; modeled input gaps [research_fte: 28.8%, teaching_load_per_faculty: 4.5%, research_budget: 2.5%]; reference peers: C002 (0.107), C024 (0.492), C256 (0.402).
+- **C312:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C312 (1.000).
+- **C313:** efficiency 0.9907; modeled input gaps [teaching_load_per_faculty: 0.9%, research_fte: 0.9%, research_budget: 0.9%]; reference peers: C024 (0.073), C255 (0.248), C473 (0.381), C479 (0.298).
+- **C314:** efficiency 0.9825; modeled input gaps [research_fte: 81.0%, teaching_load_per_faculty: 1.8%, research_budget: 1.8%]; reference peers: C189 (0.993), C308 (0.007).
+- **C315:** efficiency 0.9866; modeled input gaps [teaching_load_per_faculty: 1.3%, research_fte: 1.3%, research_budget: 1.3%]; reference peers: C024 (0.135), C159 (0.226), C255 (0.069), C473 (0.095), C479 (0.475).
+- **C316:** efficiency 0.9915; modeled input gaps [teaching_load_per_faculty: 52.0%, research_fte: 0.9%, research_budget: 0.9%]; reference peers: C002 (0.634), C159 (0.313), C295 (0.053).
+- **C317:** efficiency 0.7246; modeled input gaps [research_budget: 27.5%, research_fte: 27.5%, teaching_load_per_faculty: 27.5%]; reference peers: C157 (0.230), C189 (0.548), C198 (0.183), C308 (0.039).
+- **C318:** efficiency 0.6341; modeled input gaps [research_budget: 44.9%, teaching_load_per_faculty: 36.6%, research_fte: 36.6%]; reference peers: C189 (0.490), C308 (0.510).
+- **C319:** efficiency 0.8569; modeled input gaps [research_fte: 43.2%, teaching_load_per_faculty: 14.3%, research_budget: 14.3%]; reference peers: C198 (0.068), C308 (0.632), C404 (0.300).
+- **C320:** efficiency 0.8554; modeled input gaps [teaching_load_per_faculty: 14.5%, research_fte: 14.5%, research_budget: 14.5%]; reference peers: C157 (0.092), C198 (0.043), C266 (0.460), C500 (0.406).
+- **C321:** efficiency 0.7524; modeled input gaps [research_fte: 24.8%, teaching_load_per_faculty: 24.8%, research_budget: 24.8%]; reference peers: C131 (0.017), C157 (0.664), C429 (0.089), C511 (0.230).
+- **C322:** efficiency 0.6855; modeled input gaps [teaching_load_per_faculty: 42.6%, research_fte: 31.5%, research_budget: 31.5%]; reference peers: C189 (0.746), C211 (0.179), C347 (0.002), C418 (0.073).
+- **C323:** efficiency 0.7390; modeled input gaps [teaching_load_per_faculty: 26.1%, research_fte: 26.1%, research_budget: 26.1%]; reference peers: C157 (0.203), C189 (0.113), C198 (0.588), C266 (0.079), C500 (0.016).
+- **C324:** efficiency 0.9928; modeled input gaps [research_fte: 0.7%, research_budget: 0.7%, teaching_load_per_faculty: 0.7%]; reference peers: C002 (0.038), C024 (0.023), C248 (0.079), C255 (0.122), C479 (0.739).
+- **C325:** efficiency 0.7118; modeled input gaps [teaching_load_per_faculty: 28.8%, research_fte: 28.8%, research_budget: 28.8%]; reference peers: C024 (0.054), C356 (0.565), C370 (0.014), C469 (0.242), C514 (0.125).
+- **C326:** efficiency 0.9761; modeled input gaps [teaching_load_per_faculty: 20.9%, research_fte: 2.4%, research_budget: 2.4%]; reference peers: C024 (0.046), C255 (0.184), C473 (0.770).
+- **C327:** efficiency 0.8916; modeled input gaps [teaching_load_per_faculty: 10.8%, research_fte: 10.8%, research_budget: 10.8%]; reference peers: C024 (0.210), C308 (0.348), C473 (0.194), C479 (0.040), C514 (0.208).
+- **C328:** efficiency 0.9800; modeled input gaps [teaching_load_per_faculty: 39.8%, research_fte: 2.0%, research_budget: 2.0%]; reference peers: C024 (0.560), C255 (0.354), C312 (0.086).
+- **C329:** efficiency 0.7928; modeled input gaps [research_fte: 20.7%, teaching_load_per_faculty: 20.7%, research_budget: 20.7%]; reference peers: C024 (0.644), C473 (0.012), C479 (0.134), C514 (0.210).
+- **C330:** efficiency 0.7747; modeled input gaps [teaching_load_per_faculty: 35.0%, research_fte: 22.5%, research_budget: 22.5%]; reference peers: C189 (0.476), C211 (0.510), C347 (0.013).
+- **C331:** efficiency 0.9404; modeled input gaps [teaching_load_per_faculty: 30.4%, research_budget: 6.0%, research_fte: 6.0%]; reference peers: C002 (0.410), C024 (0.161), C159 (0.022), C473 (0.406).
+- **C332:** efficiency 0.6790; modeled input gaps [research_fte: 77.8%, teaching_load_per_faculty: 32.1%, research_budget: 32.1%]; reference peers: C189 (0.696), C211 (0.273), C347 (0.027), C404 (0.003).
+- **C333:** efficiency 0.7541; modeled input gaps [research_budget: 24.6%, teaching_load_per_faculty: 24.6%, research_fte: 24.6%]; reference peers: C024 (0.449), C308 (0.268), C356 (0.144), C514 (0.139).
+- **C334:** efficiency 0.9931; modeled input gaps [teaching_load_per_faculty: 37.4%, research_fte: 0.7%, research_budget: 0.7%]; reference peers: C024 (0.230), C255 (0.559), C312 (0.080), C484 (0.130).
+- **C335:** efficiency 0.4672; modeled input gaps [research_budget: 53.3%, research_fte: 53.3%, teaching_load_per_faculty: 53.3%]; reference peers: C189 (0.494), C198 (0.136), C308 (0.003), C404 (0.367).
+- **C336:** efficiency 0.7855; modeled input gaps [teaching_load_per_faculty: 21.5%, research_fte: 21.5%, research_budget: 21.5%]; reference peers: C189 (0.054), C198 (0.093), C308 (0.359), C404 (0.494).
+- **C337:** efficiency 0.9229; modeled input gaps [teaching_load_per_faculty: 9.6%, research_fte: 7.7%, research_budget: 7.7%]; reference peers: C024 (0.704), C255 (0.076), C473 (0.221).
+- **C338:** efficiency 0.9888; modeled input gaps [teaching_load_per_faculty: 32.2%, research_fte: 1.1%, research_budget: 1.1%]; reference peers: C024 (0.037), C159 (0.131), C255 (0.288), C473 (0.544).
+- **C339:** efficiency 0.9069; modeled input gaps [teaching_load_per_faculty: 35.2%, research_fte: 9.3%, research_budget: 9.3%]; reference peers: C024 (0.509), C255 (0.038), C312 (0.453).
+- **C340:** efficiency 0.6723; modeled input gaps [research_budget: 32.8%, research_fte: 32.8%, teaching_load_per_faculty: 32.8%]; reference peers: C020 (0.010), C036 (0.228), C356 (0.073), C429 (0.265), C469 (0.424).
+- **C341:** efficiency 0.9818; modeled input gaps [teaching_load_per_faculty: 26.5%, research_fte: 1.8%, research_budget: 1.8%]; reference peers: C197 (0.117), C312 (0.847), C484 (0.036).
+- **C342:** efficiency 0.8515; modeled input gaps [teaching_load_per_faculty: 14.9%, research_fte: 14.9%, research_budget: 14.9%]; reference peers: C157 (0.184), C189 (0.521), C198 (0.203), C308 (0.092).
+- **C343:** efficiency 0.9648; modeled input gaps [teaching_load_per_faculty: 48.4%, research_fte: 4.0%, research_budget: 3.5%]; reference peers: C002 (0.656), C159 (0.047), C473 (0.297).
+- **C344:** efficiency 0.9996; modeled input gaps [research_fte: 58.0%, teaching_load_per_faculty: 0.0%, research_budget: 0.0%]; reference peers: C002 (0.203), C159 (0.215), C255 (0.435), C474 (0.147).
+- **C345:** efficiency 0.9589; modeled input gaps [teaching_load_per_faculty: 30.3%, research_fte: 4.1%, research_budget: 4.1%]; reference peers: C002 (0.811), C024 (0.084), C248 (0.092), C255 (0.013).
+- **C346:** efficiency 0.9797; modeled input gaps [teaching_load_per_faculty: 2.0%, research_fte: 2.0%, research_budget: 2.0%]; reference peers: C024 (0.097), C180 (0.123), C248 (0.368), C255 (0.254), C479 (0.158).
+- **C347:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C347 (1.000).
+- **C348:** efficiency 0.9442; modeled input gaps [research_fte: 5.6%, teaching_load_per_faculty: 5.6%, research_budget: 5.6%]; reference peers: C024 (0.243), C255 (0.010), C473 (0.073), C479 (0.675).
+- **C349:** efficiency 0.9907; modeled input gaps [research_fte: 55.6%, teaching_load_per_faculty: 25.5%, research_budget: 0.9%]; reference peers: C002 (0.442), C248 (0.390), C295 (0.167).
+- **C350:** efficiency 0.7080; modeled input gaps [teaching_load_per_faculty: 51.6%, research_fte: 29.2%, research_budget: 29.2%]; reference peers: C189 (0.640), C211 (0.277), C418 (0.083).
+- **C351:** efficiency 0.9835; modeled input gaps [teaching_load_per_faculty: 1.6%, research_fte: 1.6%, research_budget: 1.6%]; reference peers: C024 (0.291), C255 (0.292), C473 (0.003), C479 (0.414).
+- **C352:** efficiency 0.5488; modeled input gaps [research_fte: 67.9%, teaching_load_per_faculty: 45.1%, research_budget: 45.1%]; reference peers: C189 (0.936), C308 (0.064).
+- **C353:** efficiency 0.8748; modeled input gaps [research_fte: 12.5%, teaching_load_per_faculty: 12.5%, research_budget: 12.5%]; reference peers: C024 (0.360), C180 (0.330), C255 (0.006), C479 (0.304).
+- **C354:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C354 (1.000).
+- **C355:** efficiency 0.9577; modeled input gaps [teaching_load_per_faculty: 39.7%, research_fte: 4.2%, research_budget: 4.2%]; reference peers: C024 (0.405), C255 (0.032), C473 (0.564).
+- **C356:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C356 (1.000).
+- **C357:** efficiency 0.8648; modeled input gaps [teaching_load_per_faculty: 13.5%, research_fte: 13.5%, research_budget: 13.5%]; reference peers: C024 (0.579), C308 (0.074), C479 (0.196), C514 (0.151).
+- **C358:** efficiency 0.8057; modeled input gaps [teaching_load_per_faculty: 19.4%, research_fte: 19.4%, research_budget: 19.4%]; reference peers: C024 (0.600), C308 (0.195), C479 (0.090), C514 (0.115).
+- **C359:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C359 (1.000).
+- **C360:** efficiency 0.7141; modeled input gaps [teaching_load_per_faculty: 28.6%, research_fte: 28.6%, research_budget: 28.6%]; reference peers: C024 (0.401), C356 (0.221), C370 (0.096), C514 (0.283).
+- **C361:** efficiency 0.7118; modeled input gaps [research_budget: 28.8%, teaching_load_per_faculty: 28.8%, research_fte: 28.8%]; reference peers: C189 (0.719), C198 (0.104), C308 (0.161), C404 (0.017).
+- **C362:** efficiency 0.9880; modeled input gaps [research_fte: 4.4%, research_budget: 1.6%, teaching_load_per_faculty: 1.2%]; reference peers: C002 (0.904), C208 (0.096).
+- **C363:** efficiency 0.6008; modeled input gaps [teaching_load_per_faculty: 39.9%, research_fte: 39.9%, research_budget: 39.9%]; reference peers: C036 (0.587), C131 (0.247), C312 (0.060), C511 (0.106).
+- **C364:** efficiency 0.8481; modeled input gaps [teaching_load_per_faculty: 15.2%, research_fte: 15.2%, research_budget: 15.2%]; reference peers: C024 (0.645), C255 (0.019), C473 (0.268), C479 (0.068).
+- **C365:** efficiency 0.9109; modeled input gaps [teaching_load_per_faculty: 32.0%, research_budget: 8.9%, research_fte: 8.9%]; reference peers: C024 (0.568), C255 (0.029), C312 (0.402).
+- **C366:** efficiency 0.9886; modeled input gaps [teaching_load_per_faculty: 37.0%, research_fte: 1.1%, research_budget: 1.1%]; reference peers: C024 (0.412), C248 (0.081), C255 (0.367), C484 (0.140).
+- **C367:** efficiency 0.8126; modeled input gaps [teaching_load_per_faculty: 23.9%, research_budget: 18.7%, research_fte: 18.7%]; reference peers: C024 (0.910), C255 (0.015), C473 (0.075).
+- **C368:** efficiency 0.8003; modeled input gaps [teaching_load_per_faculty: 20.0%, research_budget: 20.0%, research_fte: 20.0%]; reference peers: C024 (0.456), C473 (0.126), C479 (0.023), C514 (0.396).
+- **C369:** efficiency 0.6647; modeled input gaps [research_budget: 33.5%, research_fte: 33.5%, teaching_load_per_faculty: 33.5%]; reference peers: C157 (0.042), C189 (0.531), C198 (0.054), C500 (0.373).
+- **C370:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C370 (1.000).
+- **C371:** efficiency 0.8238; modeled input gaps [teaching_load_per_faculty: 17.6%, research_fte: 17.6%, research_budget: 17.6%]; reference peers: C356 (0.004), C429 (0.026), C469 (0.178), C489 (0.309), C494 (0.483).
+- **C372:** efficiency 0.8889; modeled input gaps [teaching_load_per_faculty: 11.1%, research_fte: 11.1%, research_budget: 11.1%]; reference peers: C157 (0.010), C189 (0.149), C198 (0.026), C266 (0.426), C500 (0.390).
+- **C373:** efficiency 0.8264; modeled input gaps [teaching_load_per_faculty: 29.5%, research_fte: 17.4%, research_budget: 17.4%]; reference peers: C002 (0.206), C024 (0.780), C248 (0.001), C255 (0.013).
+- **C374:** efficiency 0.9597; modeled input gaps [teaching_load_per_faculty: 44.6%, research_fte: 4.0%, research_budget: 4.0%]; reference peers: C024 (0.178), C255 (0.085), C312 (0.736).
+- **C375:** efficiency 0.6822; modeled input gaps [teaching_load_per_faculty: 31.8%, research_budget: 31.8%, research_fte: 31.8%]; reference peers: C036 (0.270), C102 (0.032), C308 (0.127), C312 (0.550), C356 (0.019).
+- **C376:** efficiency 0.9908; modeled input gaps [research_budget: 0.9%, teaching_load_per_faculty: 0.9%, research_fte: 0.9%]; reference peers: C077 (0.630), C189 (0.034), C255 (0.154), C312 (0.171), C479 (0.011).
+- **C377:** efficiency 0.9961; modeled input gaps [research_fte: 37.4%, teaching_load_per_faculty: 30.2%, research_budget: 0.4%]; reference peers: C255 (0.838), C474 (0.162).
+- **C378:** efficiency 0.9708; modeled input gaps [teaching_load_per_faculty: 37.3%, research_fte: 2.9%, research_budget: 2.9%]; reference peers: C024 (0.364), C255 (0.196), C312 (0.440).
+- **C379:** efficiency 0.9188; modeled input gaps [teaching_load_per_faculty: 47.3%, research_budget: 8.1%, research_fte: 8.1%]; reference peers: C024 (0.310), C255 (0.044), C473 (0.646).
+- **C380:** efficiency 0.7913; modeled input gaps [research_fte: 21.1%, research_budget: 20.9%, teaching_load_per_faculty: 20.9%]; reference peers: C002 (0.046), C256 (0.031), C308 (0.635), C381 (0.287).
+- **C381:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C381 (1.000).
+- **C382:** efficiency 0.6419; modeled input gaps [teaching_load_per_faculty: 55.7%, research_fte: 35.8%, research_budget: 35.8%]; reference peers: C189 (0.253), C370 (0.005), C412 (0.742).
+- **C383:** efficiency 0.6733; modeled input gaps [teaching_load_per_faculty: 32.7%, research_fte: 32.7%, research_budget: 32.7%]; reference peers: C036 (0.624), C157 (0.103), C189 (0.025), C308 (0.249).
+- **C384:** efficiency 0.9855; modeled input gaps [teaching_load_per_faculty: 36.5%, research_fte: 1.5%, research_budget: 1.5%]; reference peers: C024 (0.161), C255 (0.467), C473 (0.372).
+- **C385:** efficiency 0.9803; modeled input gaps [teaching_load_per_faculty: 38.1%, research_budget: 2.0%, research_fte: 2.0%]; reference peers: C024 (0.496), C255 (0.160), C312 (0.121), C484 (0.223).
+- **C386:** efficiency 0.9119; modeled input gaps [research_fte: 59.3%, research_budget: 8.8%, teaching_load_per_faculty: 8.8%]; reference peers: C189 (0.640), C308 (0.075), C404 (0.285).
+- **C387:** efficiency 0.5047; modeled input gaps [research_fte: 49.5%, teaching_load_per_faculty: 49.5%, research_budget: 49.5%]; reference peers: C036 (0.225), C157 (0.406), C189 (0.025), C308 (0.344).
+- **C388:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C388 (1.000).
+- **C389:** efficiency 0.6236; modeled input gaps [research_fte: 81.5%, research_budget: 37.6%, teaching_load_per_faculty: 37.6%]; reference peers: C189 (0.998), C308 (0.002).
+- **C390:** efficiency 0.5238; modeled input gaps [teaching_load_per_faculty: 47.6%, research_fte: 47.6%, research_budget: 47.6%]; reference peers: C036 (0.895), C054 (0.022), C312 (0.069), C511 (0.015).
+- **C391:** efficiency 0.9918; modeled input gaps [teaching_load_per_faculty: 26.7%, research_fte: 0.8%, research_budget: 0.8%]; reference peers: C024 (0.065), C255 (0.270), C312 (0.665).
+- **C392:** efficiency 0.8986; modeled input gaps [teaching_load_per_faculty: 38.9%, research_fte: 10.1%, research_budget: 10.1%]; reference peers: C157 (0.505), C429 (0.055), C511 (0.440).
+- **C393:** efficiency 0.5248; modeled input gaps [research_fte: 86.8%, teaching_load_per_faculty: 47.5%, research_budget: 47.5%]; reference peers: C189 (1.000), C308 (0.000).
+- **C394:** efficiency 0.8527; modeled input gaps [research_budget: 14.7%, teaching_load_per_faculty: 14.7%, research_fte: 14.7%]; reference peers: C024 (0.332), C308 (0.581), C479 (0.074), C514 (0.012).
+- **C395:** efficiency 0.9827; modeled input gaps [teaching_load_per_faculty: 14.7%, research_budget: 1.7%, research_fte: 1.7%]; reference peers: C159 (0.297), C255 (0.136), C473 (0.567).
+- **C396:** efficiency 0.8669; modeled input gaps [research_fte: 13.3%, teaching_load_per_faculty: 13.3%, research_budget: 13.3%]; reference peers: C024 (0.007), C180 (0.830), C356 (0.130), C479 (0.034).
+- **C397:** efficiency 0.7144; modeled input gaps [research_budget: 28.6%, teaching_load_per_faculty: 28.6%, research_fte: 28.6%]; reference peers: C189 (0.194), C198 (0.107), C266 (0.374), C469 (0.200), C500 (0.125).
+- **C398:** efficiency 0.9127; modeled input gaps [teaching_load_per_faculty: 8.7%, research_fte: 8.7%, research_budget: 8.7%]; reference peers: C157 (0.510), C189 (0.083), C198 (0.158), C308 (0.249).
+- **C399:** efficiency 0.9261; modeled input gaps [teaching_load_per_faculty: 10.4%, research_fte: 7.4%, research_budget: 7.4%]; reference peers: C024 (0.087), C102 (0.585), C312 (0.328).
+- **C400:** efficiency 0.8591; modeled input gaps [research_fte: 14.1%, teaching_load_per_faculty: 14.1%, research_budget: 14.1%]; reference peers: C024 (0.561), C308 (0.229), C479 (0.150), C514 (0.060).
+- **C401:** efficiency 0.9644; modeled input gaps [teaching_load_per_faculty: 52.7%, research_fte: 7.9%, research_budget: 3.6%]; reference peers: C002 (0.909), C159 (0.088), C295 (0.004).
+- **C402:** efficiency 0.5236; modeled input gaps [teaching_load_per_faculty: 47.6%, research_budget: 47.6%, research_fte: 47.6%]; reference peers: C189 (0.041), C404 (0.208), C454 (0.115), C500 (0.635).
+- **C403:** efficiency 0.9899; modeled input gaps [teaching_load_per_faculty: 39.1%, research_fte: 1.0%, research_budget: 1.0%]; reference peers: C002 (0.097), C024 (0.012), C159 (0.740), C473 (0.151).
+- **C404:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C404 (1.000).
+- **C405:** efficiency 0.7430; modeled input gaps [teaching_load_per_faculty: 25.7%, research_fte: 25.7%, research_budget: 25.7%]; reference peers: C157 (0.076), C189 (0.398), C198 (0.284), C308 (0.242).
+- **C406:** efficiency 0.8759; modeled input gaps [research_fte: 46.7%, teaching_load_per_faculty: 12.4%, research_budget: 12.4%]; reference peers: C347 (0.496), C404 (0.038), C418 (0.151), C454 (0.315).
+- **C407:** efficiency 0.7123; modeled input gaps [research_fte: 28.8%, teaching_load_per_faculty: 28.8%, research_budget: 28.8%]; reference peers: C024 (0.244), C308 (0.071), C356 (0.416), C514 (0.269).
+- **C408:** efficiency 0.9944; modeled input gaps [research_fte: 63.5%, teaching_load_per_faculty: 0.6%, research_budget: 0.6%]; reference peers: C002 (0.085), C308 (0.915).
+- **C409:** efficiency 0.8371; modeled input gaps [teaching_load_per_faculty: 32.9%, research_budget: 16.3%, research_fte: 16.3%]; reference peers: C020 (0.153), C024 (0.221), C312 (0.526), C511 (0.100).
+- **C410:** efficiency 0.4505; modeled input gaps [research_fte: 54.9%, teaching_load_per_faculty: 54.9%, research_budget: 54.9%]; reference peers: C189 (0.223), C198 (0.145), C404 (0.318), C500 (0.314).
+- **C411:** efficiency 0.9239; modeled input gaps [teaching_load_per_faculty: 24.3%, research_budget: 7.6%, research_fte: 7.6%]; reference peers: C024 (0.462), C255 (0.024), C473 (0.514).
+- **C412:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C412 (1.000).
+- **C413:** efficiency 0.9850; modeled input gaps [teaching_load_per_faculty: 37.2%, research_fte: 1.5%, research_budget: 1.5%]; reference peers: C024 (0.284), C255 (0.111), C312 (0.606).
+- **C414:** efficiency 0.9994; modeled input gaps [teaching_load_per_faculty: 38.1%, research_budget: 0.1%, research_fte: 0.1%]; reference peers: C159 (0.412), C255 (0.459), C473 (0.129).
+- **C415:** efficiency 0.4569; modeled input gaps [research_budget: 54.3%, research_fte: 54.3%, teaching_load_per_faculty: 54.3%]; reference peers: C036 (0.136), C157 (0.390), C189 (0.237), C500 (0.238).
+- **C416:** efficiency 0.6143; modeled input gaps [research_fte: 38.6%, teaching_load_per_faculty: 38.6%, research_budget: 38.6%]; reference peers: C020 (0.045), C131 (0.116), C308 (0.281), C312 (0.325), C429 (0.233).
+- **C417:** efficiency 0.4600; modeled input gaps [teaching_load_per_faculty: 54.0%, research_fte: 54.0%, research_budget: 54.0%]; reference peers: C157 (0.138), C189 (0.107), C356 (0.303), C469 (0.079), C514 (0.374).
+- **C418:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C418 (1.000).
+- **C419:** efficiency 0.9896; modeled input gaps [teaching_load_per_faculty: 1.0%, research_fte: 1.0%, research_budget: 1.0%]; reference peers: C024 (0.179), C308 (0.316), C356 (0.498), C514 (0.007).
+- **C420:** efficiency 0.9555; modeled input gaps [teaching_load_per_faculty: 22.3%, research_fte: 4.4%, research_budget: 4.4%]; reference peers: C024 (0.686), C255 (0.147), C473 (0.166).
+- **C421:** efficiency 0.7913; modeled input gaps [teaching_load_per_faculty: 20.9%, research_fte: 20.9%, research_budget: 20.9%]; reference peers: C024 (0.649), C473 (0.170), C479 (0.139), C514 (0.043).
+- **C422:** efficiency 0.4833; modeled input gaps [research_fte: 51.7%, research_budget: 51.7%, teaching_load_per_faculty: 51.7%]; reference peers: C189 (0.336), C404 (0.109), C454 (0.101), C500 (0.455).
+- **C423:** efficiency 0.9867; modeled input gaps [teaching_load_per_faculty: 1.3%, research_fte: 1.3%, research_budget: 1.3%]; reference peers: C077 (0.030), C248 (0.342), C255 (0.199), C312 (0.088), C484 (0.340).
+- **C424:** efficiency 0.8889; modeled input gaps [research_fte: 11.1%, teaching_load_per_faculty: 11.1%, research_budget: 11.1%]; reference peers: C024 (0.142), C308 (0.215), C381 (0.240), C473 (0.367), C514 (0.037).
+- **C425:** efficiency 0.9741; modeled input gaps [teaching_load_per_faculty: 32.1%, research_fte: 2.6%, research_budget: 2.6%]; reference peers: C024 (0.724), C255 (0.246), C312 (0.030).
+- **C426:** efficiency 0.7194; modeled input gaps [research_fte: 28.1%, teaching_load_per_faculty: 28.1%, research_budget: 28.1%]; reference peers: C024 (0.661), C473 (0.246), C479 (0.073), C514 (0.021).
+- **C427:** efficiency 0.6549; modeled input gaps [research_fte: 34.5%, teaching_load_per_faculty: 34.5%, research_budget: 34.5%]; reference peers: C024 (0.693), C308 (0.036), C479 (0.080), C514 (0.191).
+- **C428:** efficiency 0.4745; modeled input gaps [teaching_load_per_faculty: 52.6%, research_fte: 52.6%, research_budget: 52.6%]; reference peers: C189 (0.330), C356 (0.058), C404 (0.278), C494 (0.077), C500 (0.257).
+- **C429:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C429 (1.000).
+- **C430:** efficiency 0.9923; modeled input gaps [teaching_load_per_faculty: 39.3%, research_fte: 0.8%, research_budget: 0.8%]; reference peers: C159 (0.286), C255 (0.529), C457 (0.186).
+- **C431:** efficiency 0.4160; modeled input gaps [teaching_load_per_faculty: 58.4%, research_fte: 58.4%, research_budget: 58.4%]; reference peers: C157 (0.026), C189 (0.364), C198 (0.275), C500 (0.335).
+- **C432:** efficiency 0.9945; modeled input gaps [teaching_load_per_faculty: 37.8%, research_budget: 0.5%, research_fte: 0.5%]; reference peers: C159 (0.197), C255 (0.657), C457 (0.145).
+- **C433:** efficiency 0.8878; modeled input gaps [research_budget: 28.8%, teaching_load_per_faculty: 16.1%, research_fte: 11.2%]; reference peers: C054 (0.333), C312 (0.667).
+- **C434:** efficiency 0.8040; modeled input gaps [research_fte: 80.8%, teaching_load_per_faculty: 19.6%, research_budget: 19.6%]; reference peers: C189 (0.976), C308 (0.024).
+- **C435:** efficiency 0.5664; modeled input gaps [research_fte: 90.9%, research_budget: 43.4%, teaching_load_per_faculty: 43.4%]; reference peers: C189 (0.995), C308 (0.005).
+- **C436:** efficiency 0.4729; modeled input gaps [research_fte: 52.7%, teaching_load_per_faculty: 52.7%, research_budget: 52.7%]; reference peers: C157 (0.078), C189 (0.432), C198 (0.066), C500 (0.425).
+- **C437:** efficiency 0.9921; modeled input gaps [teaching_load_per_faculty: 12.7%, research_fte: 0.8%, research_budget: 0.8%]; reference peers: C024 (0.068), C159 (0.387), C255 (0.347), C473 (0.198).
+- **C438:** efficiency 0.7551; modeled input gaps [research_fte: 24.9%, research_budget: 24.5%, teaching_load_per_faculty: 24.5%]; reference peers: C198 (0.173), C308 (0.430), C404 (0.397).
+- **C439:** efficiency 0.6634; modeled input gaps [research_fte: 76.6%, teaching_load_per_faculty: 33.7%, research_budget: 33.7%]; reference peers: C189 (0.627), C308 (0.325), C404 (0.048).
+- **C440:** efficiency 0.8978; modeled input gaps [teaching_load_per_faculty: 10.2%, research_budget: 10.2%, research_fte: 10.2%]; reference peers: C024 (0.049), C036 (0.232), C102 (0.330), C157 (0.307), C356 (0.082).
+- **C441:** efficiency 0.7766; modeled input gaps [research_budget: 22.3%, research_fte: 22.3%, teaching_load_per_faculty: 22.3%]; reference peers: C189 (0.340), C356 (0.058), C404 (0.308), C469 (0.241), C500 (0.053).
+- **C442:** efficiency 0.7817; modeled input gaps [teaching_load_per_faculty: 21.8%, research_budget: 21.8%, research_fte: 21.8%]; reference peers: C024 (0.327), C308 (0.089), C479 (0.035), C514 (0.548).
+- **C443:** efficiency 0.5220; modeled input gaps [research_fte: 47.8%, research_budget: 47.8%, teaching_load_per_faculty: 47.8%]; reference peers: C418 (0.065), C429 (0.111), C494 (0.188), C500 (0.636).
+- **C444:** efficiency 0.9827; modeled input gaps [teaching_load_per_faculty: 39.3%, research_fte: 1.7%, research_budget: 1.7%]; reference peers: C024 (0.010), C159 (0.145), C255 (0.147), C473 (0.698).
+- **C445:** efficiency 0.8704; modeled input gaps [teaching_load_per_faculty: 13.0%, research_budget: 13.0%, research_fte: 13.0%]; reference peers: C024 (0.072), C036 (0.350), C157 (0.347), C308 (0.154), C356 (0.077).
+- **C446:** efficiency 0.9666; modeled input gaps [teaching_load_per_faculty: 3.3%, research_fte: 3.3%, research_budget: 3.3%]; reference peers: C024 (0.027), C157 (0.030), C308 (0.245), C356 (0.377), C514 (0.321).
+- **C447:** efficiency 0.7521; modeled input gaps [research_budget: 24.8%, research_fte: 24.8%, teaching_load_per_faculty: 24.8%]; reference peers: C024 (0.615), C157 (0.001), C284 (0.121), C308 (0.263).
+- **C448:** efficiency 0.6886; modeled input gaps [teaching_load_per_faculty: 31.1%, research_fte: 31.1%, research_budget: 31.1%]; reference peers: C024 (0.091), C157 (0.051), C308 (0.318), C356 (0.153), C514 (0.386).
+- **C449:** efficiency 0.9986; modeled input gaps [teaching_load_per_faculty: 46.4%, research_fte: 29.5%, research_budget: 0.1%]; reference peers: C255 (0.481), C474 (0.519).
+- **C450:** efficiency 0.7178; modeled input gaps [research_fte: 28.2%, teaching_load_per_faculty: 28.2%, research_budget: 28.2%]; reference peers: C024 (0.545), C308 (0.277), C479 (0.065), C514 (0.113).
+- **C451:** efficiency 0.4708; modeled input gaps [research_fte: 62.1%, research_budget: 52.9%, teaching_load_per_faculty: 52.9%]; reference peers: C189 (0.440), C211 (0.187), C404 (0.373).
+- **C452:** efficiency 0.9044; modeled input gaps [research_budget: 9.6%, research_fte: 9.6%, teaching_load_per_faculty: 9.6%]; reference peers: C002 (0.132), C256 (0.236), C308 (0.168), C312 (0.446), C510 (0.018).
+- **C453:** efficiency 0.4706; modeled input gaps [research_fte: 83.0%, research_budget: 52.9%, teaching_load_per_faculty: 52.9%]; reference peers: C189 (0.988), C308 (0.012).
+- **C454:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C454 (1.000).
+- **C455:** efficiency 0.9982; modeled input gaps [research_fte: 45.6%, teaching_load_per_faculty: 23.0%, research_budget: 0.2%]; reference peers: C002 (0.089), C159 (0.074), C295 (0.838).
+- **C456:** efficiency 0.9928; modeled input gaps [teaching_load_per_faculty: 25.4%, research_budget: 0.7%, research_fte: 0.7%]; reference peers: C024 (0.268), C255 (0.093), C312 (0.224), C484 (0.415).
+- **C457:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C457 (1.000).
+- **C458:** efficiency 0.8341; modeled input gaps [teaching_load_per_faculty: 16.6%, research_budget: 16.6%, research_fte: 16.6%]; reference peers: C024 (0.220), C308 (0.672), C479 (0.003), C514 (0.105).
+- **C459:** efficiency 0.7912; modeled input gaps [research_fte: 21.7%, research_budget: 20.9%, teaching_load_per_faculty: 20.9%]; reference peers: C308 (0.171), C404 (0.122), C473 (0.394), C514 (0.313).
+- **C460:** efficiency 0.7905; modeled input gaps [research_budget: 21.0%, research_fte: 21.0%, teaching_load_per_faculty: 21.0%]; reference peers: C054 (0.048), C189 (0.111), C418 (0.142), C472 (0.699).
+- **C461:** efficiency 0.7757; modeled input gaps [research_fte: 22.4%, teaching_load_per_faculty: 22.4%, research_budget: 22.4%]; reference peers: C036 (0.196), C157 (0.231), C189 (0.363), C500 (0.210).
+- **C462:** efficiency 0.9923; modeled input gaps [teaching_load_per_faculty: 39.8%, research_budget: 0.8%, research_fte: 0.8%]; reference peers: C002 (0.237), C248 (0.580), C255 (0.067), C295 (0.116).
+- **C463:** efficiency 0.7027; modeled input gaps [teaching_load_per_faculty: 29.7%, research_fte: 29.7%, research_budget: 29.7%]; reference peers: C157 (0.066), C189 (0.097), C198 (0.129), C308 (0.206), C404 (0.501).
+- **C464:** efficiency 0.9815; modeled input gaps [teaching_load_per_faculty: 30.2%, research_budget: 1.9%, research_fte: 1.9%]; reference peers: C002 (0.291), C024 (0.400), C159 (0.235), C255 (0.074).
+- **C465:** efficiency 0.9629; modeled input gaps [teaching_load_per_faculty: 40.1%, research_fte: 3.7%, research_budget: 3.7%]; reference peers: C002 (0.235), C024 (0.413), C248 (0.329), C255 (0.023).
+- **C466:** efficiency 0.4414; modeled input gaps [research_budget: 55.9%, teaching_load_per_faculty: 55.9%, research_fte: 55.9%]; reference peers: C189 (0.590), C198 (0.046), C308 (0.012), C404 (0.352).
+- **C467:** efficiency 0.6747; modeled input gaps [research_budget: 32.5%, teaching_load_per_faculty: 32.5%, research_fte: 32.5%]; reference peers: C024 (0.571), C180 (0.005), C308 (0.336), C356 (0.070), C479 (0.018).
+- **C468:** efficiency 0.9493; modeled input gaps [research_budget: 5.1%, research_fte: 5.1%, teaching_load_per_faculty: 5.1%]; reference peers: C002 (0.357), C024 (0.246), C248 (0.111), C308 (0.133), C479 (0.153).
+- **C469:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C469 (1.000).
+- **C470:** efficiency 0.9749; modeled input gaps [teaching_load_per_faculty: 23.8%, research_fte: 2.5%, research_budget: 2.5%]; reference peers: C024 (0.656), C255 (0.221), C312 (0.123).
+- **C471:** efficiency 0.7990; modeled input gaps [research_fte: 20.1%, teaching_load_per_faculty: 20.1%, research_budget: 20.1%]; reference peers: C024 (0.308), C308 (0.562), C479 (0.070), C514 (0.061).
+- **C472:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C472 (1.000).
+- **C473:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C473 (1.000).
+- **C474:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C474 (1.000).
+- **C475:** efficiency 0.9601; modeled input gaps [research_budget: 4.0%, teaching_load_per_faculty: 4.0%, research_fte: 4.0%]; reference peers: C189 (0.294), C198 (0.221), C308 (0.019), C404 (0.467).
+- **C476:** efficiency 0.9692; modeled input gaps [teaching_load_per_faculty: 49.8%, research_budget: 3.1%, research_fte: 3.1%]; reference peers: C024 (0.000), C255 (0.186), C312 (0.814).
+- **C477:** efficiency 0.7288; modeled input gaps [teaching_load_per_faculty: 27.1%, research_fte: 27.1%, research_budget: 27.1%]; reference peers: C157 (0.114), C189 (0.685), C404 (0.108), C469 (0.055), C514 (0.038).
+- **C478:** efficiency 0.9785; modeled input gaps [teaching_load_per_faculty: 32.4%, research_fte: 2.2%, research_budget: 2.2%]; reference peers: C002 (0.566), C024 (0.283), C159 (0.101), C255 (0.050).
+- **C479:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C479 (1.000).
+- **C480:** efficiency 0.4797; modeled input gaps [research_fte: 70.9%, teaching_load_per_faculty: 52.0%, research_budget: 52.0%]; reference peers: C189 (0.912), C308 (0.088).
+- **C481:** efficiency 0.6618; modeled input gaps [research_fte: 33.8%, teaching_load_per_faculty: 33.8%, research_budget: 33.8%]; reference peers: C157 (0.407), C189 (0.506), C198 (0.041), C308 (0.045).
+- **C482:** efficiency 0.9690; modeled input gaps [teaching_load_per_faculty: 52.1%, research_fte: 3.1%, research_budget: 3.1%]; reference peers: C024 (0.116), C159 (0.110), C255 (0.084), C473 (0.690).
+- **C483:** efficiency 0.5399; modeled input gaps [teaching_load_per_faculty: 46.0%, research_fte: 46.0%, research_budget: 46.0%]; reference peers: C024 (0.350), C157 (0.405), C308 (0.100), C356 (0.037), C514 (0.108).
+- **C484:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C484 (1.000).
+- **C485:** efficiency 0.4053; modeled input gaps [research_fte: 72.7%, teaching_load_per_faculty: 59.5%, research_budget: 59.5%]; reference peers: C189 (0.812), C308 (0.007), C404 (0.180).
+- **C486:** efficiency 0.9866; modeled input gaps [teaching_load_per_faculty: 50.7%, research_fte: 1.3%, research_budget: 1.3%]; reference peers: C002 (0.406), C024 (0.167), C159 (0.371), C255 (0.057).
+- **C487:** efficiency 0.8804; modeled input gaps [teaching_load_per_faculty: 22.7%, research_fte: 12.0%, research_budget: 12.0%]; reference peers: C024 (0.905), C255 (0.062), C312 (0.033).
+- **C488:** efficiency 0.9872; modeled input gaps [teaching_load_per_faculty: 37.6%, research_fte: 1.3%, research_budget: 1.3%]; reference peers: C002 (0.034), C024 (0.496), C159 (0.025), C255 (0.445).
+- **C489:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C489 (1.000).
+- **C490:** efficiency 0.9675; modeled input gaps [research_fte: 10.7%, teaching_load_per_faculty: 6.5%, research_budget: 3.2%]; reference peers: C002 (0.023), C024 (0.372), C256 (0.605).
+- **C491:** efficiency 0.9030; modeled input gaps [research_budget: 15.4%, teaching_load_per_faculty: 9.7%, research_fte: 9.7%]; reference peers: C189 (0.023), C208 (0.035), C308 (0.941).
+- **C492:** efficiency 0.8789; modeled input gaps [research_fte: 12.1%, teaching_load_per_faculty: 12.1%, research_budget: 12.1%]; reference peers: C157 (0.491), C189 (0.325), C198 (0.036), C308 (0.149).
+- **C493:** efficiency 0.6879; modeled input gaps [teaching_load_per_faculty: 37.9%, research_budget: 31.2%, research_fte: 31.2%]; reference peers: C024 (0.468), C102 (0.410), C312 (0.121).
+- **C494:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C494 (1.000).
+- **C495:** efficiency 0.9677; modeled input gaps [teaching_load_per_faculty: 21.1%, research_budget: 3.2%, research_fte: 3.2%]; reference peers: C024 (0.817), C255 (0.097), C312 (0.086).
+- **C496:** efficiency 0.7459; modeled input gaps [research_budget: 25.4%, teaching_load_per_faculty: 25.4%, research_fte: 25.4%]; reference peers: C024 (0.724), C180 (0.202), C356 (0.029), C479 (0.045).
+- **C497:** efficiency 0.6118; modeled input gaps [teaching_load_per_faculty: 50.5%, research_budget: 38.8%, research_fte: 38.8%]; reference peers: C189 (0.770), C211 (0.016), C418 (0.214).
+- **C498:** efficiency 0.8457; modeled input gaps [teaching_load_per_faculty: 32.9%, research_budget: 15.4%, research_fte: 15.4%]; reference peers: C024 (0.855), C255 (0.042), C473 (0.103).
+- **C499:** efficiency 0.8215; modeled input gaps [teaching_load_per_faculty: 17.8%, research_budget: 17.8%, research_fte: 17.8%]; reference peers: C024 (0.146), C308 (0.658), C356 (0.093), C514 (0.103).
+- **C500:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C500 (1.000).
+- **C501:** efficiency 0.9975; modeled input gaps [teaching_load_per_faculty: 34.2%, research_fte: 0.3%, research_budget: 0.3%]; reference peers: C159 (0.064), C255 (0.797), C473 (0.138).
+- **C502:** efficiency 0.9973; modeled input gaps [research_fte: 34.1%, teaching_load_per_faculty: 0.3%, research_budget: 0.3%]; reference peers: C002 (0.121), C159 (0.404), C255 (0.471), C473 (0.004).
+- **C503:** efficiency 0.9756; modeled input gaps [research_fte: 2.9%, research_budget: 2.4%, teaching_load_per_faculty: 2.4%]; reference peers: C002 (0.015), C308 (0.804), C473 (0.181).
+- **C504:** efficiency 0.6334; modeled input gaps [research_fte: 51.2%, teaching_load_per_faculty: 36.7%, research_budget: 36.7%]; reference peers: C189 (0.696), C308 (0.006), C404 (0.298).
+- **C505:** efficiency 0.9739; modeled input gaps [teaching_load_per_faculty: 43.5%, research_budget: 2.6%, research_fte: 2.6%]; reference peers: C024 (0.081), C255 (0.099), C312 (0.820).
+- **C506:** efficiency 0.6927; modeled input gaps [research_budget: 30.7%, teaching_load_per_faculty: 30.7%, research_fte: 30.7%]; reference peers: C024 (0.219), C102 (0.094), C189 (0.322), C312 (0.365).
+- **C507:** efficiency 0.6861; modeled input gaps [teaching_load_per_faculty: 31.4%, research_fte: 31.4%, research_budget: 31.4%]; reference peers: C189 (0.336), C404 (0.227), C469 (0.092), C514 (0.346).
+- **C508:** efficiency 0.6853; modeled input gaps [research_budget: 31.5%, teaching_load_per_faculty: 31.5%, research_fte: 31.5%]; reference peers: C024 (0.130), C102 (0.454), C189 (0.058), C312 (0.358).
+- **C509:** efficiency 0.8918; modeled input gaps [teaching_load_per_faculty: 10.8%, research_fte: 10.8%, research_budget: 10.8%]; reference peers: C024 (0.220), C308 (0.228), C381 (0.102), C473 (0.332), C514 (0.118).
+- **C510:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C510 (1.000).
+- **C511:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C511 (1.000).
+- **C512:** efficiency 0.8567; modeled input gaps [teaching_load_per_faculty: 36.7%, research_budget: 14.3%, research_fte: 14.3%]; reference peers: C024 (0.279), C255 (0.007), C473 (0.714).
+- **C513:** efficiency 0.9921; modeled input gaps [teaching_load_per_faculty: 39.3%, research_fte: 0.8%, research_budget: 0.8%]; reference peers: C159 (0.882), C255 (0.058), C473 (0.059).
+- **C514:** efficiency 1.0000; modeled input gaps [research_budget: 0.0%, research_fte: 0.0%, teaching_load_per_faculty: 0.0%]; reference peers: C514 (1.000).
+- **C515:** efficiency 0.9468; modeled input gaps [teaching_load_per_faculty: 28.6%, research_fte: 5.3%, research_budget: 5.3%]; reference peers: C024 (0.766), C255 (0.076), C473 (0.158).
+- **C516:** efficiency 0.9963; modeled input gaps [teaching_load_per_faculty: 31.0%, research_fte: 16.4%, research_budget: 0.4%]; reference peers: C002 (0.485), C159 (0.255), C295 (0.261).
+- **C517:** efficiency 0.6660; modeled input gaps [research_fte: 33.4%, teaching_load_per_faculty: 33.4%, research_budget: 33.4%]; reference peers: C024 (0.143), C036 (0.059), C102 (0.296), C308 (0.427), C356 (0.076).
+- **C518:** efficiency 0.6504; modeled input gaps [research_budget: 35.0%, teaching_load_per_faculty: 35.0%, research_fte: 35.0%]; reference peers: C024 (0.312), C308 (0.188), C356 (0.227), C514 (0.273).
+- **C519:** efficiency 0.8869; modeled input gaps [teaching_load_per_faculty: 23.0%, research_fte: 11.3%, research_budget: 11.3%]; reference peers: C024 (0.966), C255 (0.019), C473 (0.015).
+- **C520:** efficiency 0.7952; modeled input gaps [research_fte: 20.5%, teaching_load_per_faculty: 20.5%, research_budget: 20.5%]; reference peers: C024 (0.597), C308 (0.061), C356 (0.170), C479 (0.171).
+- **C521:** efficiency 0.9677; modeled input gaps [teaching_load_per_faculty: 26.4%, research_fte: 3.2%, research_budget: 3.2%]; reference peers: C024 (0.379), C248 (0.395), C255 (0.133), C484 (0.093).

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "audit_id": "phase12-completion-audit-v1",
+  "data_path": "data/department_research_data.csv",
+  "provenance_path": "data/provenance.json",
+  "data_audit_path": "artifacts/data_audit/legacy_synthetic/audit.json",
+  "model_manifest": "artifacts/models/legacy_synthetic_response_v1/manifest.json",
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "benchmark_root": "results/benchmarks/phase6-smoke-synthetic-v1",
+  "final_benchmark_root": "results/benchmarks/phase6-final-synthetic-25seeds-v1",
+  "robustness_root": "results/robustness/phase6b-synthetic-v1",
+  "reporting_root": "results/reporting/phase7-synthetic-v1",
+  "native_library": "libRION/libpso.so",
+  "temporary_reproduction_seed": 424242,
+  "temporary_reproduction_budget": 20,
+  "saved_reproduction_root": "results/audit/phase12-small-reproduction",
+  "output_root": "results/audit/phase12-completion-audit-v1"
+}

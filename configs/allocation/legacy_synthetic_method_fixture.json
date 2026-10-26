@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "problem_id": "legacy-synthetic-allocation-problem-v1",
+  "description": "Method fixture connecting supported legacy decisions to the synthetic Phase 3 predictor.",
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "model_bundle": "artifacts/models/legacy_synthetic_response_v1",
+  "allocation_semantics": "total",
+  "currency": "INR",
+  "currency_base_year": 2026,
+  "budget_limit": 20000000.0,
+  "fixed_context": {
+    "faculty_phd": 80,
+    "faculty_other": 40,
+    "teaching_load_per_faculty": 8.0,
+    "diversity_index": 0.6,
+    "student_count": 1000,
+    "num_courses": 60
+  },
+  "decision_variables": [
+    {
+      "name": "research_budget",
+      "model_feature": "research_budget",
+      "unit": "synthetic nominal INR",
+      "type": "continuous",
+      "lower": 1000000.0,
+      "upper": 20000000.0,
+      "increment": 100000.0,
+      "cost_mode": "direct_money",
+      "repair_priority": 4
+    },
+    {
+      "name": "frac_research_phd",
+      "model_feature": "frac_research_phd",
+      "unit": "fraction of annual faculty effort",
+      "type": "continuous",
+      "lower": 0.31,
+      "upper": 0.79,
+      "increment": 0.01,
+      "cost_mode": "non_monetary",
+      "repair_priority": 3
+    },
+    {
+      "name": "frac_research_other",
+      "model_feature": "frac_research_other",
+      "unit": "fraction of annual faculty effort",
+      "type": "continuous",
+      "lower": 0.11,
+      "upper": 0.49,
+      "increment": 0.01,
+      "cost_mode": "non_monetary",
+      "repair_priority": 2
+    },
+    {
+      "name": "centres_of_excellence_count",
+      "model_feature": "centres_of_excellence_count",
+      "unit": "supported centre",
+      "type": "integer",
+      "lower": 0,
+      "upper": 5,
+      "increment": 1,
+      "cost_mode": "unit_cost",
+      "unit_cost": 1500000.0,
+      "repair_priority": 1
+    },
+    {
+      "name": "industry_collaboration_support_count",
+      "model_feature": "industry_collaborations",
+      "unit": "supported collaboration",
+      "type": "integer",
+      "lower": 0,
+      "upper": 10,
+      "increment": 1,
+      "cost_mode": "unit_cost",
+      "unit_cost": 250000.0,
+      "repair_priority": 0
+    }
+  ],
+  "faculty_time": {
+    "capacity_fte": 80.0,
+    "minimum_teaching_fte": 25.0,
+    "minimum_student_support_fte": 5.0,
+    "minimum_service_fte": 5.0
+  },
+  "dependencies": [
+    {
+      "name": "centre_funding",
+      "count_variable": "centres_of_excellence_count",
+      "funding_variable": "research_budget",
+      "minimum_funding_per_unit": 1000000.0
+    },
+    {
+      "name": "collaboration_funding",
+      "count_variable": "industry_collaboration_support_count",
+      "funding_variable": "research_budget",
+      "minimum_funding_per_unit": 100000.0
+    }
+  ],
+  "objective_families": {
+    "research": {
+      "missing_kpi_policy": "error",
+      "components": [
+        {
+          "kpi": "papers_t1",
+          "direction": "maximize",
+          "weight": 0.6,
+          "normalization": {"method": "minmax", "minimum": 0.0, "maximum": 60.0}
+        },
+        {
+          "kpi": "citation_percentile_avg",
+          "direction": "maximize",
+          "weight": 0.4,
+          "normalization": {"method": "minmax", "minimum": 0.5, "maximum": 0.8}
+        }
+      ]
+    },
+    "innovation": {"missing_kpi_policy": "zero_score", "components": []},
+    "student": {"missing_kpi_policy": "zero_score", "components": []},
+    "societal": {"missing_kpi_policy": "zero_score", "components": []}
+  },
+  "uncertain_service_constraints": [],
+  "unsupported_decisions": {
+    "research_assistant_count": "The Phase 3 fixture has no RA feature or learned response.",
+    "compute_capacity_units": "The Phase 3 fixture has no compute feature or learned response.",
+    "detailed_funding_categories": "Only aggregate research_budget is present in the training data."
+  },
+  "dea_reporting": "separate_not_applied_to_candidate_allocations",
+  "reference_allocation": {
+    "status": "illustrative_not_observed",
+    "values": {
+      "research_budget": 8000000.0,
+      "frac_research_phd": 0.5,
+      "frac_research_other": 0.25,
+      "centres_of_excellence_count": 2,
+      "industry_collaboration_support_count": 4
+    }
+  }
+}

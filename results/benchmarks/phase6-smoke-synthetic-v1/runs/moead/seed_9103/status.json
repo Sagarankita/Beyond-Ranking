@@ -1,0 +1,16 @@
+{
+  "algorithm": "moead",
+  "archive_size": 1,
+  "attempt": 1,
+  "candidate_evaluations": 100,
+  "completed_at_utc": "2026-10-26T15:59:23.554996+00:00",
+  "config_sha256": "2e38c858ff01c7ea1e8ce07d7da7cff788b341f55fed41b0301c6f11ea582241",
+  "final_batch_overshoot": 0,
+  "population_size": 20,
+  "runtime_seconds": 0.4698795419990347,
+  "seed": 9103,
+  "started_at_utc": "2026-10-26T15:59:23.083483+00:00",
+  "status": "complete",
+  "target_candidate_evaluations": 100,
+  "unique_shared_evaluator_calls": 70
+}

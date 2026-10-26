@@ -1,0 +1,3 @@
+algorithm,archive_size,attempt,candidate_evaluations,completed_at_utc,config_sha256,final_batch_overshoot,population_size,runtime_seconds,seed,started_at_utc,status,target_candidate_evaluations,unique_shared_evaluator_calls,run_directory
+nsga2,1,1,20,2026-10-26T16:36:33.180419+00:00,75a28159531d8392525fc7a184b0c8a52291e7679aff18f49ec73ff6c48ec6b9,0,4,0.10184570799901849,424242,2026-10-26T16:36:33.076998+00:00,complete,20,14,results/phase12-small-reproduction/runs/nsga2/seed_424242
+random_search,1,1,20,2026-10-26T16:36:33.319190+00:00,75a28159531d8392525fc7a184b0c8a52291e7679aff18f49ec73ff6c48ec6b9,0,20,0.13612416599971766,424242,2026-10-26T16:36:33.180712+00:00,complete,20,20,results/phase12-small-reproduction/runs/random_search/seed_424242

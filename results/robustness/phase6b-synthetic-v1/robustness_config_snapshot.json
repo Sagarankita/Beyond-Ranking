@@ -1,0 +1,101 @@
+{
+  "algorithm": {
+    "candidate_evaluation_budget": 100,
+    "generations": 4,
+    "name": "nsga2",
+    "population_size": 20,
+    "seeds": [
+      12001,
+      12002,
+      12003
+    ]
+  },
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "analysis_id": "phase6b-synthetic-robustness-v1",
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "output_root": "results/robustness/phase6b-synthetic-v1",
+  "policies": {
+    "balanced": {
+      "innovation": 0.25,
+      "research": 0.25,
+      "societal": 0.25,
+      "student": 0.25
+    },
+    "innovation_first": {
+      "innovation": 0.7,
+      "research": 0.1,
+      "societal": 0.1,
+      "student": 0.1
+    },
+    "research_first": {
+      "innovation": 0.1,
+      "research": 0.7,
+      "societal": 0.1,
+      "student": 0.1
+    },
+    "student_first": {
+      "innovation": 0.1,
+      "research": 0.1,
+      "societal": 0.1,
+      "student": 0.7
+    }
+  },
+  "scenarios": [
+    {
+      "budget_limit": 15000000.0,
+      "id": "budget_lean_15m",
+      "label": "Lean INR 15m budget"
+    },
+    {
+      "budget_limit": 20000000.0,
+      "id": "budget_base_20m",
+      "label": "Base INR 20m budget",
+      "selection_baseline": true
+    },
+    {
+      "budget_limit": 25000000.0,
+      "id": "budget_expanded_25m",
+      "label": "Expanded INR 25m budget"
+    },
+    {
+      "budget_limit": 20000000.0,
+      "faculty_capacity_fte": 60.0,
+      "id": "faculty_capacity_minus_25pct",
+      "label": "25% research-faculty capacity reduction"
+    },
+    {
+      "budget_limit": 20000000.0,
+      "id": "centre_unit_cost_plus_25pct",
+      "label": "25% centre unit-cost shock",
+      "unit_cost_multipliers": {
+        "centres_of_excellence_count": 1.25
+      }
+    },
+    {
+      "expected_status": "unsupported",
+      "id": "patent_cost_plus_25pct",
+      "label": "Requested 25% patent-cost shock",
+      "unit_cost_multipliers": {
+        "patent_ip_support": 1.25
+      }
+    },
+    {
+      "expected_status": "unsupported",
+      "id": "compute_cost_plus_25pct",
+      "label": "Requested 25% compute-cost shock",
+      "unit_cost_multipliers": {
+        "compute_capacity_units": 1.25
+      }
+    }
+  ],
+  "schema_version": 1,
+  "uncertainty": {
+    "common_draws_across_strategies_and_scenarios": true,
+    "draws": 1000,
+    "prediction_distribution": "independent_normal_centered_on_prediction_with_sigma_from_90pct_conformal_half_width",
+    "prediction_interval_z": 1.6448536269514722,
+    "seed": 20261026,
+    "unit_cost_coefficient_of_variation": 0.1,
+    "unit_cost_distribution": "shared_lognormal_multiplier_mean_one"
+  }
+}

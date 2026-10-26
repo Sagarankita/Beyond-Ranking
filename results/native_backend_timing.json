@@ -1,0 +1,50 @@
+{
+  "purpose": "diagnostic timing; not a speedup or scientific-performance claim",
+  "omp_num_threads": "4",
+  "cheap_objective": {
+    "particles": 100,
+    "dimensions": 10,
+    "iterations": 20,
+    "serial": {
+      "seconds": [
+        0.012235874999987573,
+        0.012531207999927574,
+        0.01201429200000348
+      ],
+      "median_seconds": 0.012235874999987573,
+      "objective_evaluations_per_run": 2100,
+      "median_seconds_per_objective_evaluation": 5.826607142851225e-06
+    },
+    "native": {
+      "seconds": [
+        0.01677816699975665,
+        0.018817957999999635,
+        0.014247666999835928
+      ],
+      "median_seconds": 0.01677816699975665,
+      "objective_evaluations_per_run": 2100,
+      "median_seconds_per_objective_evaluation": 7.989603333217453e-06
+    }
+  },
+  "rion_workflow": {
+    "generations": 2,
+    "population_size": 20,
+    "pso_iterations": 5,
+    "serial": {
+      "seconds": [
+        0.24765516700017542,
+        0.24085387500008437,
+        0.24285870799985787
+      ],
+      "median_seconds": 0.24285870799985787
+    },
+    "native": {
+      "seconds": [
+        0.24910141600003044,
+        0.24596229200005837,
+        0.24140716700003395
+      ],
+      "median_seconds": 0.24596229200005837
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "requested_by_phase": {
+    "evolution": 59008,
+    "final_export": 20,
+    "inner_pso": 1200
+  },
+  "unique_shared_evaluator_calls_by_phase": {
+    "evolution": 46,
+    "inner_pso": 50
+  },
+  "requested_total": 60228,
+  "unique_shared_evaluator_calls_total": 96,
+  "cache_hits": 60132,
+  "algorithm": "rion",
+  "population_size": 20,
+  "generations": 4,
+  "pso_iterations": 2,
+  "inner_pso_evaluations": 50,
+  "inner_pso_evaluation_requests": 1200
+}

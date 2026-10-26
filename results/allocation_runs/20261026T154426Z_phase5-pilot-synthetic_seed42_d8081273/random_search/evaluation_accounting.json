@@ -1,0 +1,16 @@
+{
+  "requested_by_phase": {
+    "initialization": 100
+  },
+  "unique_shared_evaluator_calls_by_phase": {
+    "initialization": 100
+  },
+  "requested_total": 100,
+  "unique_shared_evaluator_calls_total": 100,
+  "cache_hits": 0,
+  "algorithm": "random_search",
+  "population_size": 100,
+  "generations": 0,
+  "configured_evaluations": 100,
+  "inner_pso_evaluations": 0
+}

@@ -1,0 +1,8 @@
+requirement,artifact,status
+policy portfolio,strategy_portfolio.csv,complete_with_unsupported_family_flags
+current comparison,current_vs_strategy_allocations.csv,illustrative_reference
+prediction uncertainty,current_vs_strategy_kpis.csv,synthetic_noncausal
+constraints and utilization,constraint_checks.csv; resource_utilization.csv,complete
+trade-off plots,pareto_tradeoff.svg; scenario_robustness.svg,one_supported_objective
+algorithm comparison,algorithm_comparison.csv,three_seed_smoke_only
+scenario robustness,scenario_robustness.csv; assumption_sensitivity.csv,complete_for_supported_inputs

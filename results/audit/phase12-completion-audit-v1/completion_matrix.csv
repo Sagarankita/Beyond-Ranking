@@ -1,0 +1,13 @@
+phase,deliverable,status
+Phase 0,Corrected serial baseline and optional native checks,complete
+Phase 1,"Schema, provenance, scenarios, synthetic data audit",complete_synthetic_track
+Phase 2,DEA mathematical fixture and outputs,complete_method_fixture
+Phase 3,Versioned KPI predictor and uncertainty,complete_synthetic_track
+Phase 4,Shared evaluator and first feasible workflow,complete
+Phase 5,Six common-contract optimization tracks,complete_pilot
+Phase 6A,Three-seed matched-budget smoke benchmark,complete_smoke
+Phase 6A,Configured 25-seed final benchmark,complete
+Phase 6B,Five supported scenarios and uncertainty sensitivity,complete_synthetic_track
+Phase 6B,Patent and compute shocks,unsupported_by_current_decision_model
+Phase 7,Saved-artifact strategy portfolio and report,complete_synthetic_track
+Evidence,Observed departmental allocation/outcome validation,not_available

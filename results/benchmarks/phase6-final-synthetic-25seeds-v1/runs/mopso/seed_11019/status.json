@@ -1,0 +1,16 @@
+{
+  "algorithm": "mopso",
+  "archive_size": 1,
+  "attempt": 1,
+  "candidate_evaluations": 100,
+  "completed_at_utc": "2026-10-26T16:34:57.582388+00:00",
+  "config_sha256": "944a4576e3dc37ccf7c70cf819a4f443a2cef341a403f99b2638e0f3372ac144",
+  "final_batch_overshoot": 0,
+  "population_size": 20,
+  "runtime_seconds": 0.6613987910004653,
+  "seed": 11019,
+  "started_at_utc": "2026-10-26T16:34:56.919599+00:00",
+  "status": "complete",
+  "target_candidate_evaluations": 100,
+  "unique_shared_evaluator_calls": 98
+}

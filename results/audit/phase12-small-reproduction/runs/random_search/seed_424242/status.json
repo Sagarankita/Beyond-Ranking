@@ -1,0 +1,16 @@
+{
+  "algorithm": "random_search",
+  "archive_size": 1,
+  "attempt": 1,
+  "candidate_evaluations": 20,
+  "completed_at_utc": "2026-10-26T16:36:33.319190+00:00",
+  "config_sha256": "75a28159531d8392525fc7a184b0c8a52291e7679aff18f49ec73ff6c48ec6b9",
+  "final_batch_overshoot": 0,
+  "population_size": 20,
+  "runtime_seconds": 0.13612416599971766,
+  "seed": 424242,
+  "started_at_utc": "2026-10-26T16:36:33.180712+00:00",
+  "status": "complete",
+  "target_candidate_evaluations": 20,
+  "unique_shared_evaluator_calls": 20
+}

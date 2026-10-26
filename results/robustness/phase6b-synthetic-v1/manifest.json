@@ -1,0 +1,64 @@
+{
+  "algorithm": {
+    "candidate_evaluation_budget": 100,
+    "generations": 4,
+    "name": "nsga2",
+    "population_size": 20,
+    "seeds": [
+      12001,
+      12002,
+      12003
+    ]
+  },
+  "allocation_config_path": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "allocation_config_sha256": "4b41f749c53ef995b1772a026492f7e8caea007b5e92e007b259305fb6a24e8b",
+  "analysis_id": "phase6b-synthetic-robustness-v1",
+  "completed_at_utc": "2026-10-26T16:05:35.710775+00:00",
+  "config_path": "configs/robustness/phase6b_synthetic.json",
+  "config_sha256": "b94479e8d01c2559e8f05940543d82d01ac857d9b5c1286cf709e8926015785d",
+  "data_path": "data/department_research_data.csv",
+  "data_sha256": "a7fdf37913369dbcfa3cdd754a3acfccf7707bfb64fa47ed600c30e36d0ff697",
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "2.2.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]"
+  },
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "interpretation": "Monte Carlo distributions are explicit sensitivity assumptions over a synthetic response model. They are not causal or calibrated joint probabilities.",
+  "model_manifest_sha256": "e7de55caf9d41e4bec5a017adfe8fb7b76774e99b8caa64839aac4a7929d8e0c",
+  "model_track_id": "legacy-synthetic-response-model-v1",
+  "started_at_utc": "2026-10-26T16:05:34.670252+00:00",
+  "supported_objective_families": {
+    "innovation": false,
+    "research": true,
+    "societal": false,
+    "student": false
+  },
+  "supported_scenarios": [
+    "budget_base_20m",
+    "budget_expanded_25m",
+    "budget_lean_15m",
+    "centre_unit_cost_plus_25pct",
+    "faculty_capacity_minus_25pct"
+  ],
+  "uncertainty": {
+    "common_draws_across_strategies_and_scenarios": true,
+    "draws": 1000,
+    "prediction_distribution": "independent_normal_centered_on_prediction_with_sigma_from_90pct_conformal_half_width",
+    "prediction_interval_z": 1.6448536269514722,
+    "seed": 20261026,
+    "unit_cost_coefficient_of_variation": 0.1,
+    "unit_cost_distribution": "shared_lognormal_multiplier_mean_one"
+  },
+  "unsupported_scenarios": [
+    {
+      "reason": "missing unit-cost decision variables: patent_ip_support",
+      "scenario_id": "patent_cost_plus_25pct"
+    },
+    {
+      "reason": "missing unit-cost decision variables: compute_capacity_units",
+      "scenario_id": "compute_cost_plus_25pct"
+    }
+  ]
+}

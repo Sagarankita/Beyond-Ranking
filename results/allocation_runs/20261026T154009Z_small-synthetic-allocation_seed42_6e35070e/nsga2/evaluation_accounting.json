@@ -1,0 +1,17 @@
+{
+  "requested_by_phase": {
+    "evolution": 80,
+    "initialization": 20
+  },
+  "unique_shared_evaluator_calls_by_phase": {
+    "evolution": 67,
+    "initialization": 20
+  },
+  "requested_total": 100,
+  "unique_shared_evaluator_calls_total": 87,
+  "cache_hits": 13,
+  "algorithm": "nsga2",
+  "population_size": 20,
+  "generations": 4,
+  "inner_pso_evaluations": 0
+}

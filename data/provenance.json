@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    {
+      "dataset_id": "legacy-department-research-v1",
+      "path": "data/department_research_data.csv",
+      "provenance": "synthetic",
+      "generator": "data/datagen.py",
+      "generator_version": "legacy-research-v1",
+      "seed": 42,
+      "record_count": 521,
+      "observation_unit": "synthetic institution-like row; not a verified department-period",
+      "intended_use": "legacy optimizer smoke tests and pipeline development",
+      "prohibited_interpretation": "empirical evidence about VJTI CE/IT or peer institutions",
+      "response_model_id": "legacy-hand-authored-response-v1",
+      "known_gaps": [
+        "no time periods",
+        "no observed allocation categories",
+        "no patents or technology-transfer outcomes",
+        "no student-development outcomes",
+        "no societal/SDG/outreach outcomes",
+        "rank is synthetic and not decision-ready"
+      ]
+    }
+  ]
+}

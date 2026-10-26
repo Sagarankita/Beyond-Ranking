@@ -1,0 +1,89 @@
+{
+  "seed": 42,
+  "generations": 2,
+  "population_size": 10,
+  "pso_iterations": 3,
+  "pso_backend": "native",
+  "omp_num_threads": "4",
+  "pso_inertia": 0.5,
+  "pso_cognitive": 1.5,
+  "pso_social": 1.5,
+  "crossover_probability": 0.3,
+  "constraint_penalty_weight": 1000.0,
+  "data": "data/department_research_data.csv",
+  "objectives": [
+    "productivity",
+    "quality",
+    "cost_per_impact"
+  ],
+  "objective_direction": "minimize",
+  "zero_impact_policy": "1e15_plus_budget",
+  "integer_columns": [
+    "faculty_phd",
+    "faculty_other",
+    "centres_of_excellence_count",
+    "industry_collaborations",
+    "student_count",
+    "num_courses",
+    "papers_t1",
+    "overall_rank"
+  ],
+  "constraints": {
+    "faculty_phd": [
+      5,
+      250
+    ],
+    "faculty_other": [
+      0,
+      100
+    ],
+    "frac_research_phd": [
+      0.1,
+      0.9
+    ],
+    "frac_research_other": [
+      0.05,
+      0.8
+    ],
+    "research_budget": [
+      100000.0,
+      5000000000.0
+    ],
+    "centres_of_excellence_count": [
+      0,
+      15
+    ],
+    "teaching_load_per_faculty": [
+      2.0,
+      15.0
+    ],
+    "diversity_index": [
+      0.0,
+      1.0
+    ],
+    "industry_collaborations": [
+      0,
+      100
+    ],
+    "student_count": [
+      100,
+      10000
+    ],
+    "num_courses": [
+      10,
+      300
+    ],
+    "papers_t1": [
+      0,
+      5000
+    ],
+    "citation_percentile_avg": [
+      0.0,
+      1.0
+    ],
+    "overall_rank": [
+      1,
+      200
+    ]
+  }
+}

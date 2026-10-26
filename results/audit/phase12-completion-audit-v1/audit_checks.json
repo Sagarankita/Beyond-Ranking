@@ -1,0 +1,170 @@
+[
+  {
+    "check_id": "required_artifacts_exist",
+    "category": "setup",
+    "status": "pass",
+    "evidence": "data/department_research_data.csv; data/provenance.json; artifacts/data_audit/legacy_synthetic/audit.json; artifacts/models/legacy_synthetic_response_v1/manifest.json; configs/allocation/legacy_synthetic_method_fixture.json; results/benchmarks/phase6-smoke-synthetic-v1; results/robustness/phase6b-synthetic-v1; results/reporting/phase7-synthetic-v1",
+    "details": ""
+  },
+  {
+    "check_id": "data_hash_chain",
+    "category": "provenance",
+    "status": "pass",
+    "evidence": "a7fdf37913369dbcfa3cdd754a3acfccf7707bfb64fa47ed600c30e36d0ff697",
+    "details": ""
+  },
+  {
+    "check_id": "synthetic_provenance_and_immutability",
+    "category": "provenance",
+    "status": "pass",
+    "evidence": "data/provenance.json",
+    "details": ""
+  },
+  {
+    "check_id": "target_leakage_contract",
+    "category": "model",
+    "status": "pass",
+    "evidence": "artifacts/models/legacy_synthetic_response_v1/manifest.json",
+    "details": ""
+  },
+  {
+    "check_id": "model_version_metrics_uncertainty",
+    "category": "model",
+    "status": "pass",
+    "evidence": "artifacts/models/legacy_synthetic_response_v1/manifest.json",
+    "details": ""
+  },
+  {
+    "check_id": "smoke_benchmark_complete",
+    "category": "benchmark",
+    "status": "pass",
+    "evidence": "results/benchmarks/phase6-smoke-synthetic-v1/completion.json",
+    "details": ""
+  },
+  {
+    "check_id": "algorithm_coverage",
+    "category": "benchmark",
+    "status": "pass",
+    "evidence": "moead, mopso, nsga2, nsga3, random_search, rion",
+    "details": ""
+  },
+  {
+    "check_id": "matched_evaluation_accounting",
+    "category": "benchmark",
+    "status": "pass",
+    "evidence": "18 smoke job status/accounting pairs",
+    "details": ""
+  },
+  {
+    "check_id": "metrics_independent_recompute",
+    "category": "benchmark",
+    "status": "pass",
+    "evidence": "results/benchmarks/phase6-smoke-synthetic-v1/per_seed_metrics.csv",
+    "details": ""
+  },
+  {
+    "check_id": "archive_independent_validation",
+    "category": "optimization",
+    "status": "pass",
+    "evidence": "18 archived candidates independently evaluated",
+    "details": ""
+  },
+  {
+    "check_id": "scenario_coverage",
+    "category": "robustness",
+    "status": "pass",
+    "evidence": "results/robustness/phase6b-synthetic-v1/scenario_catalog.csv",
+    "details": ""
+  },
+  {
+    "check_id": "common_uncertainty_draws",
+    "category": "robustness",
+    "status": "pass",
+    "evidence": "results/robustness/phase6b-synthetic-v1/common_uncertainty_draws.csv",
+    "details": ""
+  },
+  {
+    "check_id": "fixed_vs_reoptimized_separation",
+    "category": "robustness",
+    "status": "pass",
+    "evidence": "results/robustness/phase6b-synthetic-v1/strategy_scenario_assessments.csv",
+    "details": ""
+  },
+  {
+    "check_id": "unsupported_shocks_disclosed",
+    "category": "robustness",
+    "status": "pass",
+    "evidence": "compute_cost_plus_25pct, patent_cost_plus_25pct",
+    "details": ""
+  },
+  {
+    "check_id": "report_source_hashes",
+    "category": "reporting",
+    "status": "pass",
+    "evidence": "results/reporting/phase7-synthetic-v1/manifest.json",
+    "details": ""
+  },
+  {
+    "check_id": "strategy_duplicate_disclosure",
+    "category": "reporting",
+    "status": "pass",
+    "evidence": "results/reporting/phase7-synthetic-v1/strategy_portfolio.csv",
+    "details": ""
+  },
+  {
+    "check_id": "reported_strategy_constraints",
+    "category": "reporting",
+    "status": "pass",
+    "evidence": "results/reporting/phase7-synthetic-v1/constraint_checks.csv",
+    "details": ""
+  },
+  {
+    "check_id": "final_25_seed_benchmark",
+    "category": "completion",
+    "status": "pass",
+    "evidence": "results/benchmarks/phase6-final-synthetic-25seeds-v1/completion.json",
+    "details": ""
+  },
+  {
+    "check_id": "final_matched_evaluation_accounting",
+    "category": "benchmark",
+    "status": "pass",
+    "evidence": "150 final job status/accounting pairs",
+    "details": ""
+  },
+  {
+    "check_id": "final_metrics_independent_recompute",
+    "category": "benchmark",
+    "status": "pass",
+    "evidence": "results/benchmarks/phase6-final-synthetic-25seeds-v1/per_seed_metrics.csv",
+    "details": ""
+  },
+  {
+    "check_id": "empirical_departmental_evidence",
+    "category": "completion",
+    "status": "gap",
+    "evidence": "data/provenance.json",
+    "details": "only synthetic data and an illustrative reference allocation are available"
+  },
+  {
+    "check_id": "clean_temporary_reproduction",
+    "category": "reproduction",
+    "status": "pass",
+    "evidence": "results/audit/phase12-small-reproduction",
+    "details": ""
+  },
+  {
+    "check_id": "full_test_suite",
+    "category": "tests",
+    "status": "pass",
+    "evidence": "python -m unittest discover -s tests -v",
+    "details": ""
+  },
+  {
+    "check_id": "optional_native_backend",
+    "category": "native",
+    "status": "pass",
+    "evidence": "libRION/libpso.so sha256=460ad80a2f109e9dde22199885cd5e3e08cfb1e0d97d4f822bbd1f7f6485fc4e",
+    "details": ""
+  }
+]

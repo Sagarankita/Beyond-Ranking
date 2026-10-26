@@ -1,0 +1,8 @@
+scenario_id,label,status,reason,selection_baseline,budget_limit,faculty_capacity_fte,unit_cost_multipliers
+budget_lean_15m,Lean INR 15m budget,supported,,False,15000000.0,,{}
+budget_base_20m,Base INR 20m budget,supported,,True,20000000.0,,{}
+budget_expanded_25m,Expanded INR 25m budget,supported,,False,25000000.0,,{}
+faculty_capacity_minus_25pct,25% research-faculty capacity reduction,supported,,False,20000000.0,60.0,{}
+centre_unit_cost_plus_25pct,25% centre unit-cost shock,supported,,False,20000000.0,,"{""centres_of_excellence_count"": 1.25}"
+patent_cost_plus_25pct,Requested 25% patent-cost shock,unsupported,missing unit-cost decision variables: patent_ip_support,False,,,"{""patent_ip_support"": 1.25}"
+compute_cost_plus_25pct,Requested 25% compute-cost shock,unsupported,missing unit-cost decision variables: compute_capacity_units,False,,,"{""compute_capacity_units"": 1.25}"

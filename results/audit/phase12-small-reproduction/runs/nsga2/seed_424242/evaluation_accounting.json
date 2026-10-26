@@ -1,0 +1,21 @@
+{
+  "algorithm": "nsga2",
+  "cache_hits": 6,
+  "candidate_evaluations_evolution": 16,
+  "candidate_evaluations_initialization": 4,
+  "candidate_evaluations_inner_pso": 0,
+  "candidate_evaluations_total": 20,
+  "generations": 4,
+  "inner_pso_evaluations": 0,
+  "population_size": 4,
+  "requested_by_phase": {
+    "evolution": 16,
+    "initialization": 4
+  },
+  "requested_total": 20,
+  "unique_shared_evaluator_calls_by_phase": {
+    "evolution": 10,
+    "initialization": 4
+  },
+  "unique_shared_evaluator_calls_total": 14
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "phase6-final-synthetic-25seeds-v1",
+  "data_role": "final_benchmark",
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "seeds": [11001, 11002, 11003, 11004, 11005, 11006, 11007, 11008, 11009, 11010, 11011, 11012, 11013, 11014, 11015, 11016, 11017, 11018, 11019, 11020, 11021, 11022, 11023, 11024, 11025],
+  "evaluation_budget": 100,
+  "budget_definition": "Candidate evaluations including initialization, offspring batches, and every RION inner-PSO initialization/iteration batch. Cached model calls and final export are reported separately. The final indivisible batch may overshoot and is recorded.",
+  "minimum_runs_for_inference": 10,
+  "reference_front_version": "phase6-final-synthetic-pooled-v1",
+  "objective_scaling": {
+    "objective_order": ["research", "innovation", "student", "societal"],
+    "lower": [-1.0, -1.0, -1.0, -1.0],
+    "upper": [0.0, 0.0, 0.0, 0.0],
+    "clip": true,
+    "status": "frozen_before_benchmark_execution"
+  },
+  "hypervolume_reference_point": [1.1, 1.1, 1.1, 1.1],
+  "algorithms": {
+    "nsga2": {"enabled": true, "population_size": 20, "generations": 4},
+    "nsga3": {"enabled": true, "reference_partitions": 3, "generations": 4},
+    "moead": {"enabled": true, "reference_partitions": 3, "neighborhood_size": 5, "max_replacements": 2, "generations": 4},
+    "mopso": {"enabled": true, "population_size": 20, "generations": 4, "archive_size": 20, "inertia": 0.6, "cognitive": 1.5, "social": 1.5, "maximum_velocity_rate": 0.2},
+    "rion": {"enabled": true, "population_size": 20, "generations": 1, "pso_iterations": 2},
+    "random_search": {"enabled": true, "evaluations": 100}
+  },
+  "output_root": "results/benchmarks/phase6-final-synthetic-25seeds-v1"
+}

@@ -1,0 +1,66 @@
+{
+  "assessment_id": "optional-network-dea-multiperiod-evidence-v1",
+  "completed_at_utc": "2026-10-26T16:18:10.957064+00:00",
+  "data_path": "data/department_research_data.csv",
+  "data_sha256": "a7fdf37913369dbcfa3cdd754a3acfccf7707bfb64fa47ed600c30e36d0ff697",
+  "provenance_path": "data/provenance.json",
+  "provenance_sha256": "d3255632b0b34b247a9ab21d47b02189e4333d3bbf99e0abf3517154fa96580b",
+  "row_count": 521,
+  "columns": [
+    "college_id",
+    "faculty_phd",
+    "faculty_other",
+    "frac_research_phd",
+    "frac_research_other",
+    "research_budget",
+    "centres_of_excellence_count",
+    "teaching_load_per_faculty",
+    "diversity_index",
+    "industry_collaborations",
+    "student_count",
+    "num_courses",
+    "papers_t1",
+    "citation_percentile_avg",
+    "overall_rank"
+  ],
+  "assessment": {
+    "network_dea": {
+      "status": "deferred_evidence_gap",
+      "implementation_performed": false,
+      "implementation_authorized_by_evidence": false,
+      "unit_identifier_columns": [
+        "college_id"
+      ],
+      "stage_link_columns": [],
+      "reasons": [
+        "rows are synthetic and not a documented comparable peer cohort",
+        "no observed intermediate stage-link variables"
+      ],
+      "required_before_implementation": [
+        "documented comparable DMUs",
+        "observed stage inputs, intermediate links, and final outputs",
+        "defensible stage-link assumptions without double counting"
+      ]
+    },
+    "multi_period_planning": {
+      "status": "deferred_evidence_gap",
+      "implementation_performed": false,
+      "implementation_authorized_by_evidence": false,
+      "unit_identifier_columns": [
+        "college_id"
+      ],
+      "period_columns": [],
+      "distinct_periods": 0,
+      "minimum_observed_periods_per_unit": 0,
+      "reasons": [
+        "rows are synthetic rather than observed longitudinal records",
+        "no period/year column"
+      ],
+      "required_before_implementation": [
+        "stable departmental identifiers",
+        "at least two ordered observed periods per unit",
+        "documented carry-over resources and outcome time lags"
+      ]
+    }
+  }
+}

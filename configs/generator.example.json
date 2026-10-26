@@ -1,0 +1,9 @@
+{
+  "n_records": 521,
+  "seed": 42,
+  "include_metadata": true,
+  "scenario_id": "legacy-synthetic-research-v1",
+  "period_start": "2025-07-01",
+  "period_end": "2026-06-30",
+  "output": "data/synthetic/department_research_data_seed_42.csv"
+}

@@ -1,0 +1,17 @@
+algorithm,metric,successful_runs,failed_or_incomplete_runs,observations,median,q1,q3,iqr
+nsga2,hypervolume,1,0,1,0.000553420818289329,0.000553420818289329,0.000553420818289329,0.0
+nsga2,igd,1,0,1,0.07298011549347838,0.07298011549347838,0.07298011549347838,0.0
+nsga2,spacing,1,0,1,0.0,0.0,0.0,0.0
+nsga2,feasible_solution_rate,1,0,1,1.0,1.0,1.0,0.0
+nsga2,runtime_seconds,1,0,1,0.10184570799901849,0.10184570799901849,0.10184570799901849,0.0
+nsga2,candidate_evaluations,1,0,1,20.0,20.0,20.0,0.0
+nsga2,final_batch_overshoot,1,0,1,0.0,0.0,0.0,0.0
+nsga2,unique_shared_evaluator_calls,1,0,1,14.0,14.0,14.0,0.0
+random_search,hypervolume,1,0,1,0.0006264009337828075,0.0006264009337828075,0.0006264009337828075,0.0
+random_search,igd,1,0,1,0.0,0.0,0.0,0.0
+random_search,spacing,1,0,1,0.0,0.0,0.0,0.0
+random_search,feasible_solution_rate,1,0,1,1.0,1.0,1.0,0.0
+random_search,runtime_seconds,1,0,1,0.13612416599971766,0.13612416599971766,0.13612416599971766,0.0
+random_search,candidate_evaluations,1,0,1,20.0,20.0,20.0,0.0
+random_search,final_batch_overshoot,1,0,1,0.0,0.0,0.0,0.0
+random_search,unique_shared_evaluator_calls,1,0,1,20.0,20.0,20.0,0.0

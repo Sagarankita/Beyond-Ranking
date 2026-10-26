@@ -1,0 +1,1012 @@
+{
+  "run_directory": "results/allocation_runs/20261026T154426Z_phase5-pilot-synthetic_seed42_d8081273",
+  "started_at_utc": "2026-10-26T15:44:26.209543+00:00",
+  "completed_at_utc": "2026-10-26T15:44:32.371941+00:00",
+  "duration_seconds": 6.162398,
+  "seed": 42,
+  "evidence_status": "synthetic_method_fixture_not_empirical",
+  "reference_status": "illustrative_not_observed",
+  "workflow_config_path": "configs/optimization/phase5_pilot_synthetic.json",
+  "workflow_config_sha256": "65aee02dfbc9a1ee5adb9d9ce83d100647036f25f67c47a7cc720c91e375f0c3",
+  "allocation_config_path": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "allocation_config_sha256": "4b41f749c53ef995b1772a026492f7e8caea007b5e92e007b259305fb6a24e8b",
+  "model_manifest_sha256": "e7de55caf9d41e4bec5a017adfe8fb7b76774e99b8caa64839aac4a7929d8e0c",
+  "data_sha256": "a7fdf37913369dbcfa3cdd754a3acfccf7707bfb64fa47ed600c30e36d0ff697",
+  "model_track_id": "legacy-synthetic-response-model-v1",
+  "model_interface_version": "1.0",
+  "tuning_budget": {
+    "status": "pilot_calibration_only",
+    "excluded_from_final_benchmark": true,
+    "soft_unique_evaluator_call_target_per_algorithm": 100,
+    "selection_basis": "small integration run; no outcome-based hyperparameter tuning"
+  },
+  "algorithm_api_review": {
+    "reviewed_on": "2026-10-26",
+    "external_library_reviewed": "pymoo official 0.6.2 documentation",
+    "official_pages": [
+      "https://pymoo.org/algorithms/moo/nsga3.html",
+      "https://pymoo.org/algorithms/moo/moead.html",
+      "https://pymoo.org/algorithms/moo/mopso_cd.html",
+      "https://pymoo.org/customization/mixed.html"
+    ],
+    "decision": "repository_native_adapters",
+    "reason": "Preserve the existing shared mixed-variable repair, feasibility-first dominance, evaluation cache, and result schema without a second problem translation layer."
+  },
+  "algorithms": [
+    {
+      "algorithm": "nsga2",
+      "population_size": 20,
+      "archive_size": 1,
+      "all_recommendations_independently_feasible": true,
+      "accounting": {
+        "requested_by_phase": {
+          "evolution": 80,
+          "initialization": 20
+        },
+        "unique_shared_evaluator_calls_by_phase": {
+          "evolution": 67,
+          "initialization": 20
+        },
+        "requested_total": 100,
+        "unique_shared_evaluator_calls_total": 87,
+        "cache_hits": 13,
+        "algorithm": "nsga2",
+        "population_size": 20,
+        "generations": 4,
+        "inner_pso_evaluations": 0
+      },
+      "recommendation": {
+        "research_budget": 20000000.0,
+        "frac_research_phd": 0.76,
+        "frac_research_other": 0.41,
+        "centres_of_excellence_count": 0.0,
+        "industry_collaboration_support_count": 0.0,
+        "kpi__papers_t1": 41.43425119139968,
+        "kpi__citation_percentile_avg": 0.6318324894791728,
+        "lower__papers_t1": 37.70624297050679,
+        "upper__papers_t1": 45.16225941229257,
+        "lower__citation_percentile_avg": 0.611983917002274,
+        "upper__citation_percentile_avg": 0.6516810619560717,
+        "objective_benefit__research": 0.5901191645528938,
+        "objective_benefit__innovation": 0.0,
+        "objective_benefit__student": 0.0,
+        "objective_benefit__societal": 0.0,
+        "objective__research": -0.5901191645528938,
+        "objective__innovation": 0.0,
+        "objective__student": 0.0,
+        "objective__societal": 0.0,
+        "constraint__bounds__research_budget": 0.0,
+        "constraint__increment__research_budget": 0.0,
+        "constraint__bounds__frac_research_phd": 0.0,
+        "constraint__increment__frac_research_phd": 0.0,
+        "constraint__bounds__frac_research_other": 0.0,
+        "constraint__increment__frac_research_other": 0.0,
+        "constraint__bounds__centres_of_excellence_count": 0.0,
+        "constraint__integrality__centres_of_excellence_count": 0.0,
+        "constraint__increment__centres_of_excellence_count": 0.0,
+        "constraint__bounds__industry_collaboration_support_count": 0.0,
+        "constraint__integrality__industry_collaboration_support_count": 0.0,
+        "constraint__increment__industry_collaboration_support_count": 0.0,
+        "constraint__budget": 0.0,
+        "constraint__faculty_time_capacity": -2.8000000000000114,
+        "constraint__teaching_floor": -7.800000000000011,
+        "constraint__student_support_floor": -7.800000000000011,
+        "constraint__service_floor": -7.800000000000011,
+        "constraint__dependency__centre_funding": -20000000.0,
+        "constraint__dependency__collaboration_funding": -20000000.0,
+        "normalized_constraint__bounds__research_budget": 0.0,
+        "normalized_constraint__increment__research_budget": 0.0,
+        "normalized_constraint__bounds__frac_research_phd": 0.0,
+        "normalized_constraint__increment__frac_research_phd": 0.0,
+        "normalized_constraint__bounds__frac_research_other": 0.0,
+        "normalized_constraint__increment__frac_research_other": 0.0,
+        "normalized_constraint__bounds__centres_of_excellence_count": 0.0,
+        "normalized_constraint__integrality__centres_of_excellence_count": 0.0,
+        "normalized_constraint__increment__centres_of_excellence_count": 0.0,
+        "normalized_constraint__bounds__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__integrality__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__increment__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__budget": 0.0,
+        "normalized_constraint__faculty_time_capacity": 0.0,
+        "normalized_constraint__teaching_floor": 0.0,
+        "normalized_constraint__student_support_floor": 0.0,
+        "normalized_constraint__service_floor": 0.0,
+        "normalized_constraint__dependency__centre_funding": 0.0,
+        "normalized_constraint__dependency__collaboration_funding": 0.0,
+        "normalized_violation": 0.0,
+        "feasible": true,
+        "robust_feasible": true,
+        "out_of_model_support": false,
+        "out_of_support_features": "",
+        "cost": 20000000.0,
+        "budget_remaining": 0.0,
+        "pareto_rank": 0,
+        "crowding_distance": null,
+        "algorithm": "nsga2",
+        "run_seed": 42
+      }
+    },
+    {
+      "algorithm": "nsga3",
+      "population_size": 20,
+      "archive_size": 1,
+      "all_recommendations_independently_feasible": true,
+      "accounting": {
+        "requested_by_phase": {
+          "evolution": 80,
+          "initialization": 20
+        },
+        "unique_shared_evaluator_calls_by_phase": {
+          "evolution": 59,
+          "initialization": 20
+        },
+        "requested_total": 100,
+        "unique_shared_evaluator_calls_total": 79,
+        "cache_hits": 21,
+        "algorithm": "nsga3",
+        "population_size": 20,
+        "generations": 4,
+        "reference_partitions": 3,
+        "reference_direction_count": 20,
+        "reference_directions": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.3333333333333333,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.0,
+            0.6666666666666666,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.0,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.6666666666666666,
+            0.0
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.3333333333333333,
+            0.0,
+            0.0,
+            0.6666666666666666
+          ],
+          [
+            0.3333333333333333,
+            0.0,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.3333333333333333,
+            0.0,
+            0.6666666666666666,
+            0.0
+          ],
+          [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.0,
+            0.3333333333333333
+          ],
+          [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.3333333333333333,
+            0.6666666666666666,
+            0.0,
+            0.0
+          ],
+          [
+            0.6666666666666666,
+            0.0,
+            0.0,
+            0.3333333333333333
+          ],
+          [
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.6666666666666666,
+            0.3333333333333333,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "inner_pso_evaluations": 0
+      },
+      "recommendation": {
+        "research_budget": 20000000.0,
+        "frac_research_phd": 0.76,
+        "frac_research_other": 0.43,
+        "centres_of_excellence_count": 0.0,
+        "industry_collaboration_support_count": 0.0,
+        "kpi__papers_t1": 41.46303876531343,
+        "kpi__citation_percentile_avg": 0.6320225178957282,
+        "lower__papers_t1": 37.73503054442054,
+        "upper__papers_t1": 45.19104698620632,
+        "lower__citation_percentile_avg": 0.6121739454188293,
+        "upper__citation_percentile_avg": 0.651871090372627,
+        "objective_benefit__research": 0.5906604115141052,
+        "objective_benefit__innovation": 0.0,
+        "objective_benefit__student": 0.0,
+        "objective_benefit__societal": 0.0,
+        "objective__research": -0.5906604115141052,
+        "objective__innovation": 0.0,
+        "objective__student": 0.0,
+        "objective__societal": 0.0,
+        "constraint__bounds__research_budget": 0.0,
+        "constraint__increment__research_budget": 0.0,
+        "constraint__bounds__frac_research_phd": 0.0,
+        "constraint__increment__frac_research_phd": 0.0,
+        "constraint__bounds__frac_research_other": 0.0,
+        "constraint__increment__frac_research_other": 0.0,
+        "constraint__bounds__centres_of_excellence_count": 0.0,
+        "constraint__integrality__centres_of_excellence_count": 0.0,
+        "constraint__increment__centres_of_excellence_count": 0.0,
+        "constraint__bounds__industry_collaboration_support_count": 0.0,
+        "constraint__integrality__industry_collaboration_support_count": 0.0,
+        "constraint__increment__industry_collaboration_support_count": 0.0,
+        "constraint__budget": 0.0,
+        "constraint__faculty_time_capacity": -2.0,
+        "constraint__teaching_floor": -7.0,
+        "constraint__student_support_floor": -7.0,
+        "constraint__service_floor": -7.0,
+        "constraint__dependency__centre_funding": -20000000.0,
+        "constraint__dependency__collaboration_funding": -20000000.0,
+        "normalized_constraint__bounds__research_budget": 0.0,
+        "normalized_constraint__increment__research_budget": 0.0,
+        "normalized_constraint__bounds__frac_research_phd": 0.0,
+        "normalized_constraint__increment__frac_research_phd": 0.0,
+        "normalized_constraint__bounds__frac_research_other": 0.0,
+        "normalized_constraint__increment__frac_research_other": 0.0,
+        "normalized_constraint__bounds__centres_of_excellence_count": 0.0,
+        "normalized_constraint__integrality__centres_of_excellence_count": 0.0,
+        "normalized_constraint__increment__centres_of_excellence_count": 0.0,
+        "normalized_constraint__bounds__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__integrality__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__increment__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__budget": 0.0,
+        "normalized_constraint__faculty_time_capacity": 0.0,
+        "normalized_constraint__teaching_floor": 0.0,
+        "normalized_constraint__student_support_floor": 0.0,
+        "normalized_constraint__service_floor": 0.0,
+        "normalized_constraint__dependency__centre_funding": 0.0,
+        "normalized_constraint__dependency__collaboration_funding": 0.0,
+        "normalized_violation": 0.0,
+        "feasible": true,
+        "robust_feasible": true,
+        "out_of_model_support": false,
+        "out_of_support_features": "",
+        "cost": 20000000.0,
+        "budget_remaining": 0.0,
+        "pareto_rank": 0,
+        "crowding_distance": null,
+        "algorithm": "nsga3",
+        "run_seed": 42
+      }
+    },
+    {
+      "algorithm": "moead",
+      "population_size": 20,
+      "archive_size": 1,
+      "all_recommendations_independently_feasible": true,
+      "accounting": {
+        "requested_by_phase": {
+          "evolution": 80,
+          "initialization": 20
+        },
+        "unique_shared_evaluator_calls_by_phase": {
+          "evolution": 63,
+          "initialization": 20
+        },
+        "requested_total": 100,
+        "unique_shared_evaluator_calls_total": 83,
+        "cache_hits": 17,
+        "algorithm": "moead",
+        "population_size": 20,
+        "generations": 4,
+        "decomposition": "weighted_tchebycheff",
+        "reference_partitions": 3,
+        "reference_direction_count": 20,
+        "reference_directions": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.3333333333333333,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.0,
+            0.6666666666666666,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.0,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.6666666666666666,
+            0.0
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.3333333333333333,
+            0.0,
+            0.0,
+            0.6666666666666666
+          ],
+          [
+            0.3333333333333333,
+            0.0,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.3333333333333333,
+            0.0,
+            0.6666666666666666,
+            0.0
+          ],
+          [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.0,
+            0.3333333333333333
+          ],
+          [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.3333333333333333,
+            0.6666666666666666,
+            0.0,
+            0.0
+          ],
+          [
+            0.6666666666666666,
+            0.0,
+            0.0,
+            0.3333333333333333
+          ],
+          [
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.6666666666666666,
+            0.3333333333333333,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "neighborhood_size": 5,
+        "neighborhoods": [
+          [
+            0,
+            1,
+            4,
+            10,
+            13
+          ],
+          [
+            1,
+            0,
+            2,
+            4,
+            5
+          ],
+          [
+            2,
+            1,
+            3,
+            5,
+            6
+          ],
+          [
+            3,
+            2,
+            12,
+            6,
+            14
+          ],
+          [
+            4,
+            0,
+            1,
+            5,
+            7
+          ],
+          [
+            5,
+            1,
+            2,
+            4,
+            6
+          ],
+          [
+            6,
+            8,
+            2,
+            3,
+            14
+          ],
+          [
+            7,
+            9,
+            15,
+            4,
+            5
+          ],
+          [
+            8,
+            15,
+            14,
+            7,
+            6
+          ],
+          [
+            9,
+            15,
+            7,
+            8,
+            5
+          ],
+          [
+            10,
+            0,
+            1,
+            4,
+            16
+          ],
+          [
+            11,
+            1,
+            2,
+            17,
+            5
+          ],
+          [
+            12,
+            17,
+            14,
+            2,
+            3
+          ],
+          [
+            13,
+            16,
+            4,
+            5,
+            15
+          ],
+          [
+            14,
+            17,
+            15,
+            5,
+            6
+          ],
+          [
+            15,
+            9,
+            7,
+            8,
+            18
+          ],
+          [
+            16,
+            19,
+            17,
+            13,
+            18
+          ],
+          [
+            17,
+            14,
+            12,
+            11,
+            18
+          ],
+          [
+            18,
+            19,
+            17,
+            16,
+            15
+          ],
+          [
+            19,
+            18,
+            17,
+            16,
+            11
+          ]
+        ],
+        "maximum_replacements_per_offspring": 2,
+        "inner_pso_evaluations": 0
+      },
+      "recommendation": {
+        "research_budget": 20000000.0,
+        "frac_research_phd": 0.75,
+        "frac_research_other": 0.41,
+        "centres_of_excellence_count": 0.0,
+        "industry_collaboration_support_count": 0.0,
+        "kpi__papers_t1": 41.392093291329445,
+        "kpi__citation_percentile_avg": 0.6318324894791728,
+        "lower__papers_t1": 37.664085070436556,
+        "upper__papers_t1": 45.120101512222334,
+        "lower__citation_percentile_avg": 0.611983917002274,
+        "upper__citation_percentile_avg": 0.6516810619560717,
+        "objective_benefit__research": 0.5896975855521915,
+        "objective_benefit__innovation": 0.0,
+        "objective_benefit__student": 0.0,
+        "objective_benefit__societal": 0.0,
+        "objective__research": -0.5896975855521915,
+        "objective__innovation": 0.0,
+        "objective__student": 0.0,
+        "objective__societal": 0.0,
+        "constraint__bounds__research_budget": 0.0,
+        "constraint__increment__research_budget": 0.0,
+        "constraint__bounds__frac_research_phd": 0.0,
+        "constraint__increment__frac_research_phd": 0.0,
+        "constraint__bounds__frac_research_other": 0.0,
+        "constraint__increment__frac_research_other": 0.0,
+        "constraint__bounds__centres_of_excellence_count": 0.0,
+        "constraint__integrality__centres_of_excellence_count": 0.0,
+        "constraint__increment__centres_of_excellence_count": 0.0,
+        "constraint__bounds__industry_collaboration_support_count": 0.0,
+        "constraint__integrality__industry_collaboration_support_count": 0.0,
+        "constraint__increment__industry_collaboration_support_count": 0.0,
+        "constraint__budget": 0.0,
+        "constraint__faculty_time_capacity": -3.5999999999999943,
+        "constraint__teaching_floor": -8.599999999999994,
+        "constraint__student_support_floor": -8.599999999999994,
+        "constraint__service_floor": -8.599999999999994,
+        "constraint__dependency__centre_funding": -20000000.0,
+        "constraint__dependency__collaboration_funding": -20000000.0,
+        "normalized_constraint__bounds__research_budget": 0.0,
+        "normalized_constraint__increment__research_budget": 0.0,
+        "normalized_constraint__bounds__frac_research_phd": 0.0,
+        "normalized_constraint__increment__frac_research_phd": 0.0,
+        "normalized_constraint__bounds__frac_research_other": 0.0,
+        "normalized_constraint__increment__frac_research_other": 0.0,
+        "normalized_constraint__bounds__centres_of_excellence_count": 0.0,
+        "normalized_constraint__integrality__centres_of_excellence_count": 0.0,
+        "normalized_constraint__increment__centres_of_excellence_count": 0.0,
+        "normalized_constraint__bounds__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__integrality__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__increment__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__budget": 0.0,
+        "normalized_constraint__faculty_time_capacity": 0.0,
+        "normalized_constraint__teaching_floor": 0.0,
+        "normalized_constraint__student_support_floor": 0.0,
+        "normalized_constraint__service_floor": 0.0,
+        "normalized_constraint__dependency__centre_funding": 0.0,
+        "normalized_constraint__dependency__collaboration_funding": 0.0,
+        "normalized_violation": 0.0,
+        "feasible": true,
+        "robust_feasible": true,
+        "out_of_model_support": false,
+        "out_of_support_features": "",
+        "cost": 20000000.0,
+        "budget_remaining": 0.0,
+        "pareto_rank": 0,
+        "crowding_distance": null,
+        "algorithm": "moead",
+        "run_seed": 42
+      }
+    },
+    {
+      "algorithm": "mopso",
+      "population_size": 20,
+      "archive_size": 1,
+      "all_recommendations_independently_feasible": true,
+      "accounting": {
+        "requested_by_phase": {
+          "evolution": 80,
+          "initialization": 20
+        },
+        "unique_shared_evaluator_calls_by_phase": {
+          "evolution": 67,
+          "initialization": 20
+        },
+        "requested_total": 100,
+        "unique_shared_evaluator_calls_total": 87,
+        "cache_hits": 13,
+        "algorithm": "mopso",
+        "population_size": 20,
+        "generations": 4,
+        "archive_capacity": 20,
+        "final_archive_size": 1,
+        "leader_selection": "binary_tournament_higher_crowding_distance",
+        "archive_pruning": "nondominated_deduplicate_then_crowding",
+        "inertia": 0.6,
+        "cognitive": 1.5,
+        "social": 1.5,
+        "maximum_velocity_rate": 0.2,
+        "particle_update_evaluations": 80,
+        "inner_pso_evaluations": 0
+      },
+      "recommendation": {
+        "research_budget": 20000000.0,
+        "frac_research_phd": 0.79,
+        "frac_research_other": 0.42,
+        "centres_of_excellence_count": 0.0,
+        "industry_collaboration_support_count": 0.0,
+        "kpi__papers_t1": 41.57511867856729,
+        "kpi__citation_percentile_avg": 0.6316977630515552,
+        "lower__papers_t1": 37.847110457674404,
+        "upper__papers_t1": 45.30312689946018,
+        "lower__citation_percentile_avg": 0.6118491905746564,
+        "upper__citation_percentile_avg": 0.6515463355284541,
+        "objective_benefit__research": 0.5913482041877465,
+        "objective_benefit__innovation": 0.0,
+        "objective_benefit__student": 0.0,
+        "objective_benefit__societal": 0.0,
+        "objective__research": -0.5913482041877465,
+        "objective__innovation": 0.0,
+        "objective__student": 0.0,
+        "objective__societal": 0.0,
+        "constraint__bounds__research_budget": 0.0,
+        "constraint__increment__research_budget": 0.0,
+        "constraint__bounds__frac_research_phd": 0.0,
+        "constraint__increment__frac_research_phd": 0.0,
+        "constraint__bounds__frac_research_other": 0.0,
+        "constraint__increment__frac_research_other": 0.0,
+        "constraint__bounds__centres_of_excellence_count": 0.0,
+        "constraint__integrality__centres_of_excellence_count": 0.0,
+        "constraint__increment__centres_of_excellence_count": 0.0,
+        "constraint__bounds__industry_collaboration_support_count": 0.0,
+        "constraint__integrality__industry_collaboration_support_count": 0.0,
+        "constraint__increment__industry_collaboration_support_count": 0.0,
+        "constraint__budget": 0.0,
+        "constraint__faculty_time_capacity": 0.0,
+        "constraint__teaching_floor": -5.0,
+        "constraint__student_support_floor": -5.0,
+        "constraint__service_floor": -5.0,
+        "constraint__dependency__centre_funding": -20000000.0,
+        "constraint__dependency__collaboration_funding": -20000000.0,
+        "normalized_constraint__bounds__research_budget": 0.0,
+        "normalized_constraint__increment__research_budget": 0.0,
+        "normalized_constraint__bounds__frac_research_phd": 0.0,
+        "normalized_constraint__increment__frac_research_phd": 0.0,
+        "normalized_constraint__bounds__frac_research_other": 0.0,
+        "normalized_constraint__increment__frac_research_other": 0.0,
+        "normalized_constraint__bounds__centres_of_excellence_count": 0.0,
+        "normalized_constraint__integrality__centres_of_excellence_count": 0.0,
+        "normalized_constraint__increment__centres_of_excellence_count": 0.0,
+        "normalized_constraint__bounds__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__integrality__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__increment__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__budget": 0.0,
+        "normalized_constraint__faculty_time_capacity": 0.0,
+        "normalized_constraint__teaching_floor": 0.0,
+        "normalized_constraint__student_support_floor": 0.0,
+        "normalized_constraint__service_floor": 0.0,
+        "normalized_constraint__dependency__centre_funding": 0.0,
+        "normalized_constraint__dependency__collaboration_funding": 0.0,
+        "normalized_violation": 0.0,
+        "feasible": true,
+        "robust_feasible": true,
+        "out_of_model_support": false,
+        "out_of_support_features": "",
+        "cost": 20000000.0,
+        "budget_remaining": 0.0,
+        "pareto_rank": 0,
+        "crowding_distance": null,
+        "algorithm": "mopso",
+        "run_seed": 42
+      }
+    },
+    {
+      "algorithm": "rion",
+      "population_size": 20,
+      "archive_size": 1,
+      "all_recommendations_independently_feasible": true,
+      "accounting": {
+        "requested_by_phase": {
+          "evolution": 59008,
+          "final_export": 20,
+          "inner_pso": 1200
+        },
+        "unique_shared_evaluator_calls_by_phase": {
+          "evolution": 46,
+          "inner_pso": 50
+        },
+        "requested_total": 60228,
+        "unique_shared_evaluator_calls_total": 96,
+        "cache_hits": 60132,
+        "algorithm": "rion",
+        "population_size": 20,
+        "generations": 4,
+        "pso_iterations": 2,
+        "inner_pso_evaluations": 50,
+        "inner_pso_evaluation_requests": 1200
+      },
+      "recommendation": {
+        "research_budget": 20000000.0,
+        "frac_research_phd": 0.74,
+        "frac_research_other": 0.21000000000000002,
+        "centres_of_excellence_count": 0.0,
+        "industry_collaboration_support_count": 0.0,
+        "kpi__papers_t1": 41.06205965212186,
+        "kpi__citation_percentile_avg": 0.6312001983747844,
+        "lower__papers_t1": 37.33405143122897,
+        "upper__papers_t1": 44.79006787301475,
+        "lower__citation_percentile_avg": 0.6113516258978855,
+        "upper__citation_percentile_avg": 0.6510487708516832,
+        "objective_benefit__research": 0.5855541943542644,
+        "objective_benefit__innovation": 0.0,
+        "objective_benefit__student": 0.0,
+        "objective_benefit__societal": 0.0,
+        "objective__research": -0.5855541943542644,
+        "objective__innovation": 0.0,
+        "objective__student": 0.0,
+        "objective__societal": 0.0,
+        "constraint__bounds__research_budget": 0.0,
+        "constraint__increment__research_budget": 0.0,
+        "constraint__bounds__frac_research_phd": 0.0,
+        "constraint__increment__frac_research_phd": 0.0,
+        "constraint__bounds__frac_research_other": 0.0,
+        "constraint__increment__frac_research_other": 1.7763568394002505e-17,
+        "constraint__bounds__centres_of_excellence_count": 0.0,
+        "constraint__integrality__centres_of_excellence_count": 0.0,
+        "constraint__increment__centres_of_excellence_count": 0.0,
+        "constraint__bounds__industry_collaboration_support_count": 0.0,
+        "constraint__integrality__industry_collaboration_support_count": 0.0,
+        "constraint__increment__industry_collaboration_support_count": 0.0,
+        "constraint__budget": 0.0,
+        "constraint__faculty_time_capacity": -12.399999999999991,
+        "constraint__teaching_floor": -17.39999999999999,
+        "constraint__student_support_floor": -17.39999999999999,
+        "constraint__service_floor": -17.39999999999999,
+        "constraint__dependency__centre_funding": -20000000.0,
+        "constraint__dependency__collaboration_funding": -20000000.0,
+        "normalized_constraint__bounds__research_budget": 0.0,
+        "normalized_constraint__increment__research_budget": 0.0,
+        "normalized_constraint__bounds__frac_research_phd": 0.0,
+        "normalized_constraint__increment__frac_research_phd": 0.0,
+        "normalized_constraint__bounds__frac_research_other": 0.0,
+        "normalized_constraint__increment__frac_research_other": 0.0,
+        "normalized_constraint__bounds__centres_of_excellence_count": 0.0,
+        "normalized_constraint__integrality__centres_of_excellence_count": 0.0,
+        "normalized_constraint__increment__centres_of_excellence_count": 0.0,
+        "normalized_constraint__bounds__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__integrality__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__increment__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__budget": 0.0,
+        "normalized_constraint__faculty_time_capacity": 0.0,
+        "normalized_constraint__teaching_floor": 0.0,
+        "normalized_constraint__student_support_floor": 0.0,
+        "normalized_constraint__service_floor": 0.0,
+        "normalized_constraint__dependency__centre_funding": 0.0,
+        "normalized_constraint__dependency__collaboration_funding": 0.0,
+        "normalized_violation": 0.0,
+        "feasible": true,
+        "robust_feasible": true,
+        "out_of_model_support": false,
+        "out_of_support_features": "",
+        "cost": 20000000.0,
+        "budget_remaining": 0.0,
+        "pareto_rank": 0,
+        "crowding_distance": null,
+        "algorithm": "rion",
+        "run_seed": 42
+      }
+    },
+    {
+      "algorithm": "random_search",
+      "population_size": 100,
+      "archive_size": 1,
+      "all_recommendations_independently_feasible": true,
+      "accounting": {
+        "requested_by_phase": {
+          "initialization": 100
+        },
+        "unique_shared_evaluator_calls_by_phase": {
+          "initialization": 100
+        },
+        "requested_total": 100,
+        "unique_shared_evaluator_calls_total": 100,
+        "cache_hits": 0,
+        "algorithm": "random_search",
+        "population_size": 100,
+        "generations": 0,
+        "configured_evaluations": 100,
+        "inner_pso_evaluations": 0
+      },
+      "recommendation": {
+        "research_budget": 19700000.0,
+        "frac_research_phd": 0.65,
+        "frac_research_other": 0.47,
+        "centres_of_excellence_count": 0.0,
+        "industry_collaboration_support_count": 0.0,
+        "kpi__papers_t1": 40.45689268261498,
+        "kpi__citation_percentile_avg": 0.631955256112265,
+        "lower__papers_t1": 36.72888446172209,
+        "upper__papers_t1": 44.18490090350787,
+        "lower__citation_percentile_avg": 0.6121066836353661,
+        "upper__citation_percentile_avg": 0.6518038285891639,
+        "objective_benefit__research": 0.5805092683091697,
+        "objective_benefit__innovation": 0.0,
+        "objective_benefit__student": 0.0,
+        "objective_benefit__societal": 0.0,
+        "objective__research": -0.5805092683091697,
+        "objective__innovation": 0.0,
+        "objective__student": 0.0,
+        "objective__societal": 0.0,
+        "constraint__bounds__research_budget": 0.0,
+        "constraint__increment__research_budget": 0.0,
+        "constraint__bounds__frac_research_phd": 0.0,
+        "constraint__increment__frac_research_phd": 0.0,
+        "constraint__bounds__frac_research_other": 0.0,
+        "constraint__increment__frac_research_other": 0.0,
+        "constraint__bounds__centres_of_excellence_count": 0.0,
+        "constraint__integrality__centres_of_excellence_count": 0.0,
+        "constraint__increment__centres_of_excellence_count": 0.0,
+        "constraint__bounds__industry_collaboration_support_count": 0.0,
+        "constraint__integrality__industry_collaboration_support_count": 0.0,
+        "constraint__increment__industry_collaboration_support_count": 0.0,
+        "constraint__budget": -300000.0,
+        "constraint__faculty_time_capacity": -9.200000000000003,
+        "constraint__teaching_floor": -14.200000000000003,
+        "constraint__student_support_floor": -14.200000000000003,
+        "constraint__service_floor": -14.200000000000003,
+        "constraint__dependency__centre_funding": -19700000.0,
+        "constraint__dependency__collaboration_funding": -19700000.0,
+        "normalized_constraint__bounds__research_budget": 0.0,
+        "normalized_constraint__increment__research_budget": 0.0,
+        "normalized_constraint__bounds__frac_research_phd": 0.0,
+        "normalized_constraint__increment__frac_research_phd": 0.0,
+        "normalized_constraint__bounds__frac_research_other": 0.0,
+        "normalized_constraint__increment__frac_research_other": 0.0,
+        "normalized_constraint__bounds__centres_of_excellence_count": 0.0,
+        "normalized_constraint__integrality__centres_of_excellence_count": 0.0,
+        "normalized_constraint__increment__centres_of_excellence_count": 0.0,
+        "normalized_constraint__bounds__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__integrality__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__increment__industry_collaboration_support_count": 0.0,
+        "normalized_constraint__budget": 0.0,
+        "normalized_constraint__faculty_time_capacity": 0.0,
+        "normalized_constraint__teaching_floor": 0.0,
+        "normalized_constraint__student_support_floor": 0.0,
+        "normalized_constraint__service_floor": 0.0,
+        "normalized_constraint__dependency__centre_funding": 0.0,
+        "normalized_constraint__dependency__collaboration_funding": 0.0,
+        "normalized_violation": 0.0,
+        "feasible": true,
+        "robust_feasible": true,
+        "out_of_model_support": false,
+        "out_of_support_features": "",
+        "cost": 19700000.0,
+        "budget_remaining": 300000.0,
+        "pareto_rank": 0,
+        "crowding_distance": null,
+        "algorithm": "random_search",
+        "run_seed": 42
+      }
+    }
+  ],
+  "git": {
+    "commit": "81117fd9fe3352f9142377534e57a2af9a656481",
+    "branch": "main",
+    "dirty": true
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "numpy": "2.5.4",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  }
+}

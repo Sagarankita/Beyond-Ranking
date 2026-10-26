@@ -1,0 +1,5 @@
+metric,algorithm_first,algorithm_second,paired_runs,status
+hypervolume,nsga2,random_search,1,not_performed_insufficient_paired_runs
+igd,nsga2,random_search,1,not_performed_insufficient_paired_runs
+spacing,nsga2,random_search,1,not_performed_insufficient_paired_runs
+feasible_solution_rate,nsga2,random_search,1,not_performed_insufficient_paired_runs

@@ -1,0 +1,31 @@
+strategy,variable,action
+conservative,research_budget,"Increase research funding by INR 11,900,000 to INR 19,900,000."
+conservative,frac_research_phd,Increase frac_research_phd by 0.25 fraction of annual faculty effort to 0.75.
+conservative,frac_research_other,Increase frac_research_other by 0.23 fraction of annual faculty effort to 0.48.
+conservative,centres_of_excellence_count,Remove centres_of_excellence_count by 2 supported centre to 0.
+conservative,industry_collaboration_support_count,Remove industry_collaboration_support_count by 4 supported collaboration to 0.
+balanced,research_budget,"Increase research funding by INR 11,900,000 to INR 19,900,000."
+balanced,frac_research_phd,Increase frac_research_phd by 0.25 fraction of annual faculty effort to 0.75.
+balanced,frac_research_other,Increase frac_research_other by 0.23 fraction of annual faculty effort to 0.48.
+balanced,centres_of_excellence_count,Remove centres_of_excellence_count by 2 supported centre to 0.
+balanced,industry_collaboration_support_count,Remove industry_collaboration_support_count by 4 supported collaboration to 0.
+research_first,research_budget,"Increase research funding by INR 11,900,000 to INR 19,900,000."
+research_first,frac_research_phd,Increase frac_research_phd by 0.25 fraction of annual faculty effort to 0.75.
+research_first,frac_research_other,Increase frac_research_other by 0.23 fraction of annual faculty effort to 0.48.
+research_first,centres_of_excellence_count,Remove centres_of_excellence_count by 2 supported centre to 0.
+research_first,industry_collaboration_support_count,Remove industry_collaboration_support_count by 4 supported collaboration to 0.
+innovation_first,research_budget,"Increase research funding by INR 11,900,000 to INR 19,900,000."
+innovation_first,frac_research_phd,Increase frac_research_phd by 0.25 fraction of annual faculty effort to 0.75.
+innovation_first,frac_research_other,Increase frac_research_other by 0.23 fraction of annual faculty effort to 0.48.
+innovation_first,centres_of_excellence_count,Remove centres_of_excellence_count by 2 supported centre to 0.
+innovation_first,industry_collaboration_support_count,Remove industry_collaboration_support_count by 4 supported collaboration to 0.
+student_first,research_budget,"Increase research funding by INR 11,900,000 to INR 19,900,000."
+student_first,frac_research_phd,Increase frac_research_phd by 0.25 fraction of annual faculty effort to 0.75.
+student_first,frac_research_other,Increase frac_research_other by 0.23 fraction of annual faculty effort to 0.48.
+student_first,centres_of_excellence_count,Remove centres_of_excellence_count by 2 supported centre to 0.
+student_first,industry_collaboration_support_count,Remove industry_collaboration_support_count by 4 supported collaboration to 0.
+compromise,research_budget,"Increase research funding by INR 11,900,000 to INR 19,900,000."
+compromise,frac_research_phd,Increase frac_research_phd by 0.25 fraction of annual faculty effort to 0.75.
+compromise,frac_research_other,Increase frac_research_other by 0.23 fraction of annual faculty effort to 0.48.
+compromise,centres_of_excellence_count,Remove centres_of_excellence_count by 2 supported centre to 0.
+compromise,industry_collaboration_support_count,Remove industry_collaboration_support_count by 4 supported collaboration to 0.

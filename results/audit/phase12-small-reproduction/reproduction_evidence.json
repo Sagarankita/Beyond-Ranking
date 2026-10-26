@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/ankitasagar/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-m",
+    "department_optimizer.benchmark.run",
+    "--config",
+    "configs/audit-clean-benchmark.json"
+  ],
+  "stdout": "Benchmark results/phase12-small-reproduction: 2/2 complete, 0 failed\n",
+  "stderr": "",
+  "returncode": 0,
+  "jobs": 2,
+  "metric_mismatches": []
+}

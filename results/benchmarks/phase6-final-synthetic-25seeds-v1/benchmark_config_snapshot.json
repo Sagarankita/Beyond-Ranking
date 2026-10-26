@@ -1,0 +1,105 @@
+{
+  "algorithms": {
+    "moead": {
+      "enabled": true,
+      "generations": 4,
+      "max_replacements": 2,
+      "neighborhood_size": 5,
+      "reference_partitions": 3
+    },
+    "mopso": {
+      "archive_size": 20,
+      "cognitive": 1.5,
+      "enabled": true,
+      "generations": 4,
+      "inertia": 0.6,
+      "maximum_velocity_rate": 0.2,
+      "population_size": 20,
+      "social": 1.5
+    },
+    "nsga2": {
+      "enabled": true,
+      "generations": 4,
+      "population_size": 20
+    },
+    "nsga3": {
+      "enabled": true,
+      "generations": 4,
+      "reference_partitions": 3
+    },
+    "random_search": {
+      "enabled": true,
+      "evaluations": 100
+    },
+    "rion": {
+      "enabled": true,
+      "generations": 1,
+      "population_size": 20,
+      "pso_iterations": 2
+    }
+  },
+  "allocation_config": "configs/allocation/legacy_synthetic_method_fixture.json",
+  "benchmark_id": "phase6-final-synthetic-25seeds-v1",
+  "budget_definition": "Candidate evaluations including initialization, offspring batches, and every RION inner-PSO initialization/iteration batch. Cached model calls and final export are reported separately. The final indivisible batch may overshoot and is recorded.",
+  "data_role": "final_benchmark",
+  "evaluation_budget": 100,
+  "hypervolume_reference_point": [
+    1.1,
+    1.1,
+    1.1,
+    1.1
+  ],
+  "minimum_runs_for_inference": 10,
+  "objective_scaling": {
+    "clip": true,
+    "lower": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "objective_order": [
+      "research",
+      "innovation",
+      "student",
+      "societal"
+    ],
+    "status": "frozen_before_benchmark_execution",
+    "upper": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "output_root": "results/benchmarks/phase6-final-synthetic-25seeds-v1",
+  "reference_front_version": "phase6-final-synthetic-pooled-v1",
+  "schema_version": 1,
+  "seeds": [
+    11001,
+    11002,
+    11003,
+    11004,
+    11005,
+    11006,
+    11007,
+    11008,
+    11009,
+    11010,
+    11011,
+    11012,
+    11013,
+    11014,
+    11015,
+    11016,
+    11017,
+    11018,
+    11019,
+    11020,
+    11021,
+    11022,
+    11023,
+    11024,
+    11025
+  ]
+}

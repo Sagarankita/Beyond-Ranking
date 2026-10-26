@@ -1,0 +1,99 @@
+{
+  "complete_jobs": 18,
+  "configured_jobs": 18,
+  "events_this_invocation": [
+    {
+      "action": "skipped_complete",
+      "algorithm": "nsga2",
+      "seed": 9101
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "nsga3",
+      "seed": 9101
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "moead",
+      "seed": 9101
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "mopso",
+      "seed": 9101
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "rion",
+      "seed": 9101
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "random_search",
+      "seed": 9101
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "nsga2",
+      "seed": 9102
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "nsga3",
+      "seed": 9102
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "moead",
+      "seed": 9102
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "mopso",
+      "seed": 9102
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "rion",
+      "seed": 9102
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "random_search",
+      "seed": 9102
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "nsga2",
+      "seed": 9103
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "nsga3",
+      "seed": 9103
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "moead",
+      "seed": 9103
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "mopso",
+      "seed": 9103
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "rion",
+      "seed": 9103
+    },
+    {
+      "action": "skipped_complete",
+      "algorithm": "random_search",
+      "seed": 9103
+    }
+  ],
+  "failed_jobs": 0,
+  "pooled_reference_front_sha256": "486232c131114c1b0f09d109984a0b760397fd7b1fe52ab538d9c275ae92ff94",
+  "refreshed_at_utc": "2026-10-26T16:00:32.601669+00:00"
+}

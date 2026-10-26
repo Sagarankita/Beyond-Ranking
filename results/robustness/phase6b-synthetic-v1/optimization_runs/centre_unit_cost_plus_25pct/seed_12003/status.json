@@ -1,0 +1,11 @@
+{
+  "archive_size": 1,
+  "candidate_evaluations": 100,
+  "completed_at_utc": "2026-10-26T16:04:37.394596+00:00",
+  "config_sha256": "b94479e8d01c2559e8f05940543d82d01ac857d9b5c1286cf709e8926015785d",
+  "runtime_seconds": 0.5351921670007869,
+  "scenario_id": "centre_unit_cost_plus_25pct",
+  "seed": 12003,
+  "started_at_utc": "2026-10-26T16:04:36.859400+00:00",
+  "status": "complete"
+}

@@ -1,0 +1,36 @@
+{
+  "construction": "unique nondominated union of all successful benchmark archives",
+  "hypervolume_reference_point": [
+    1.1,
+    1.1,
+    1.1,
+    1.1
+  ],
+  "known_limitation": "This is an approximate pooled front. It can favor algorithms represented in the pool and can improve when additional successful runs are added.",
+  "objective_scaling": {
+    "clip": true,
+    "lower": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "objective_order": [
+      "research",
+      "innovation",
+      "student",
+      "societal"
+    ],
+    "status": "frozen_before_benchmark_execution",
+    "upper": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "point_count": 1,
+  "reference_front_version": "phase6-final-synthetic-pooled-v1",
+  "sha256": "486232c131114c1b0f09d109984a0b760397fd7b1fe52ab538d9c275ae92ff94",
+  "successful_runs_in_pool": 150
+}
