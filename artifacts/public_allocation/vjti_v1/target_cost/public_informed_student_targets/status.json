@@ -1,0 +1,22 @@
+{
+  "evidence_label": "public_descriptive_target_synthetic_response",
+  "interpretation": "Optimization uses synthetic response models; the target basis does not convert results into causal evidence.",
+  "matching_feasible_candidates": 93,
+  "recommendation_cost": 18035000.0,
+  "recommendation_feasible": true,
+  "status": "matched",
+  "target_basis": "2023-24 CEIT public placement and higher-study rates scaled to a 120-student annual cohort",
+  "targets": [
+    {
+      "kpi": "placements",
+      "minimum": 95,
+      "use_conservative_lower": false
+    },
+    {
+      "kpi": "higher_studies",
+      "minimum": 8,
+      "use_conservative_lower": false
+    }
+  ],
+  "track_id": "public_informed_student_targets"
+}

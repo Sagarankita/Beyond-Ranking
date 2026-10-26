@@ -1,0 +1,9 @@
+{
+  "forbidden_features_present": [],
+  "future_data_used": false,
+  "passed": true,
+  "preprocessing_inside_pipeline": true,
+  "target_derived_proxies_used": false,
+  "time_order_valid": true,
+  "unit_overlap_across_splits": false
+}

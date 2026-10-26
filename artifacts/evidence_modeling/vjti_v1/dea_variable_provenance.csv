@@ -1,0 +1,6 @@
+variable,role,synthetic_calibrated_fraction,observed_public_fraction,evidence_label
+academic_resource_expenditure,input,1.0,0.0,synthetic_scenario
+faculty_research_fte,input,1.0,0.0,synthetic_scenario
+sponsored_projects,output,1.0,0.0,synthetic_scenario
+placements,output,1.0,0.0,synthetic_scenario
+patents_granted,output,1.0,0.0,synthetic_scenario

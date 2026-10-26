@@ -1,0 +1,23 @@
+unit_id,period,field,source_id,page_table,derivation,provenance
+VJTI-CEIT,current_2026-10-26,ug_sanctioned_intake,vjti_ceit_page,HTML Programs table,60 Computer Engineering + 60 Information Technology,derived_public
+VJTI-CEIT,current_2026-10-26,ug_capacity,vjti_ceit_page,HTML Programs table,"120 annual intake * 4 programme years; capacity, not observed enrollment",derived_public
+VJTI-CEIT,current_2026-10-26,faculty_total_roster,vjti_ceit_page,HTML People > Faculty,Count of named faculty before Professor of Practice section; contractual faculty excluded,observed_public
+VJTI-CEIT,2023-24,graduating_students,vjti_placement_2023_24,page 1 placement table,B.Tech IT 87 + B.Tech Computer 89,derived_public
+VJTI-CEIT,2023-24,eligible_students,vjti_placement_2023_24,page 1 placement table,B.Tech IT 86 + B.Tech Computer 88,derived_public
+VJTI-CEIT,2023-24,placements,vjti_placement_2023_24,page 1 placement table,B.Tech IT 76 + B.Tech Computer 74; excludes higher education,derived_public
+VJTI-CEIT,2023-24,higher_studies,vjti_placement_2023_24,page 1 placement table,B.Tech IT 6 + B.Tech Computer 8,derived_public
+VJTI,2023-24,student_count,vjti_nirf_2025,page 1 Total Actual Student Strength,UG 2794 + PG 367; institute total retained at institution level,derived_public
+VJTI,2023-24,academic_resource_expenditure,vjti_nirf_2025,page 2 Financial Resources,Library 10148248 + lab equipment/software 51274464 + workshops 25082464 + other academic capital 51588335 + seminars 29843678,derived_public
+VJTI,2023-24,patents_published,vjti_nirf_2025,page 2 IPR calendar 2023,No department attribution,observed_public
+VJTI,2023-24,patents_granted,vjti_nirf_2025,page 2 IPR calendar 2023,No department attribution,observed_public
+VJTI,2023-24,sponsored_projects,vjti_nirf_2025,page 3 Sponsored Research Details,Institute total,observed_public
+VJTI,2023-24,sponsored_research_amount,vjti_nirf_2025,page 3 Sponsored Research Details,Institute total,observed_public
+VJTI,2023-24,consultancy_projects,vjti_nirf_2025,page 3 Consultancy Project Details,Institute total; unusual magnitude retained as reported,observed_public
+VJTI,2023-24,consultancy_amount,vjti_nirf_2025,page 3 Consultancy Project Details,Institute total,observed_public
+COEP,2023-24,student_count,coep_nirf_2025,page 1 Total Actual Student Strength,UG 3469 + PG 571,derived_public
+COEP,2023-24,placements,coep_nirf_2025,page 1 UG placement and higher studies,Institution UG cohort; not department-level,observed_public
+COEP,2023-24,higher_studies,coep_nirf_2025,page 1 UG placement and higher studies,Institution UG cohort,observed_public
+COEP,2023-24,patents_published,coep_nirf_2025,page 2 IPR calendar 2023,Institution total,observed_public
+COEP,2023-24,patents_granted,coep_nirf_2025,page 2 IPR calendar 2023,Institution total,observed_public
+COEP,2023-24,sponsored_projects,coep_nirf_2025,page 3 Sponsored Research Details,Institution total,observed_public
+COEP,2023-24,sponsored_research_amount,coep_nirf_2025,page 3 Sponsored Research Details,Institution total,observed_public

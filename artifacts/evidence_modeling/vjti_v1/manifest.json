@@ -1,0 +1,33 @@
+{
+  "all_checks_pass": true,
+  "analysis_id": "vjti-evidence-aware-dea-kpi-v1",
+  "artifacts": {
+    "calibrated_synthetic_model_panel.csv": "8fb63d3769fcba9b004888131affa19aca2dbbd9aa4d2a255ef2c0086d5b500c",
+    "calibrated_synthetic_peer_fixture.csv": "b87beb524c0e10ce619694cfae3b7e961a9b11959bdd734dd1b6825aeeb3cae0",
+    "dea_efficiency.csv": "53959ec46fb7f195daa7a74a6a50dc27db68a2ea67c1ddd0d00588ec2843e191",
+    "dea_peer_weights.csv": "bafa60bf9e151e70dd6530f412057837b6b3516d257aab6276f1180c85853c50",
+    "dea_sensitivity.csv": "c13220c5d14ec006b9a91dcad2a92c4185c1fe75f63252c7b9f452fb67bdb545",
+    "dea_summary.json": "c5e8398180506417138bd82b265479e9b98cb00308d6e368e7dc883aa1715d14",
+    "dea_variable_provenance.csv": "d92d4e504cdaa32a98ed5e1b924f8fa42fda7ecbb99704d0b2e912c530efaaf4",
+    "evidence_modeling_checks.csv": "1d4eb8b0c68c3d88050785e9b37fe2dbc021722d6a52adca8971689a140a6f1f",
+    "group_period_performance.csv": "5dc2d40b49884c87acedf9a614f3a9ba10a51960037a54c90070c3a91fa4f59f",
+    "interval_calibration.csv": "dbf15110fb390684b91075a7e4f92df581fdbbb08b2d017e99f2bf418acd3858",
+    "kpi_evidence_registry.csv": "f902164a8473aef4647528ea723e6ee379107175ce723036cb5258e65406bfaa",
+    "leakage_checks.json": "f419814f843c7cc9904eeefee485ecbe9a10e530ba43ca1d0fe41edebe2d89c1",
+    "model_manifest.json": "75dee2117fe9fdaaa18c5f465fe8b5570ba79afe0e4b9e565d1c3b60fa85b4a5",
+    "model_metrics.csv": "ea4e4c03d4e4b84f541f9cba97dc237139cc8e2a63b8524e9e1ed2578239b67b",
+    "model_splits.csv": "b0cab0e090a0a25ff864ee748db30ad2c6718b21ef864786d950e00301aca8f5",
+    "public_evidence_assessment.json": "00dd53b368196e693c1c34b67584c1054faf7fce8b0e6e00a3eeece3fb3965b5",
+    "report.md": "0f2b7ed7a10502d8ff5a9b38702923f3e48cddb2a6e52f77d3322a082371231b",
+    "residual_diagnostics.csv": "91e55b41355455514b2511a6cc8ad78673a606f238b2afddf9fa4788fd8c5fb3",
+    "test_predictions.csv": "27cfa4f3fd7e3020065636bccdc66ed56a238d93081c5345652f130265c6284c"
+  },
+  "config_path": "configs\\evidence_modeling\\vjti_evidence_models_v1.json",
+  "config_sha256": "4f1dcccdb870e376f5120c51e9147441b6b1bbb65c609bc970018ba4d9d1709c",
+  "dea_track": "calibrated_synthetic_peer_fixture",
+  "evidence_status": "public_descriptive_and_synthetic_scenario",
+  "model_track": "calibrated_synthetic_response_models",
+  "prompt14_manifest_sha256": "1f42890b70bcad126a7624897b07d9c140e74a3ebe0e5a2ed65acdb9c3fdc8d8",
+  "public_dea_status": "unsupported",
+  "public_prediction_status": "public_descriptive"
+}

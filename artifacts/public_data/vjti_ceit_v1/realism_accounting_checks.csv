@@ -1,0 +1,13 @@
+check,passed,detail
+source_snapshots_present,True,7/7 snapshots present
+no_public_overwrite,True,public keys take precedence
+nonnegative,True,all generated numeric values
+integer_counts,True,count-valued synthetic fields
+budget_conservation,True,cash allocation=25500000.00
+faculty_capacity,True,allocated FTE=9.600
+same_seed_reproducible,True,byte-equivalent tabular values
+alternate_seed_distinct,True,alternate seed changes stochastic values
+alternate_seed_distribution_stability,True,maximum field-mean relative change=0.333
+temporal_continuity,True,annual student changes <=10% and budget changes <=30%
+outcome_lag,True,research outputs use previous-period budget
+baseline_reconciles,True,allocation shares sum to baseline budget

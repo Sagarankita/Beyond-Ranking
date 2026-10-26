@@ -1,0 +1,422 @@
+{
+  "allocation_semantics": "totals",
+  "analysis_id": "vjti-four-family-public-plus-synthetic-v1",
+  "budget_limit": 36000000,
+  "cash_decisions": [
+    "research_seed_funding",
+    "conference_support",
+    "patent_ip_support",
+    "industry_collaboration_funding",
+    "student_research_funding",
+    "open_access_funding",
+    "outreach_sdg_funding"
+  ],
+  "conservative_kpi_services": [
+    {
+      "kpi": "placements",
+      "minimum_lower_bound": 75
+    },
+    {
+      "kpi": "outreach_participants",
+      "minimum_lower_bound": 15
+    }
+  ],
+  "currency": {
+    "base_year": "FY2023-24 nominal",
+    "code": "INR",
+    "inflation_adjusted": false
+  },
+  "decision_variables": [
+    {
+      "cost_mode": "direct_money",
+      "increment": 5000,
+      "lower": 3000000,
+      "name": "research_seed_funding",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 1,
+      "type": "continuous",
+      "unit": "INR",
+      "upper": 11000000
+    },
+    {
+      "cost_mode": "direct_money",
+      "increment": 5000,
+      "lower": 500000,
+      "name": "conference_support",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 2,
+      "type": "continuous",
+      "unit": "INR",
+      "upper": 5000000
+    },
+    {
+      "cost_mode": "direct_money",
+      "increment": 5000,
+      "lower": 500000,
+      "name": "patent_ip_support",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 3,
+      "type": "continuous",
+      "unit": "INR",
+      "upper": 4500000
+    },
+    {
+      "cost_mode": "direct_money",
+      "increment": 5000,
+      "lower": 750000,
+      "name": "industry_collaboration_funding",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 4,
+      "type": "continuous",
+      "unit": "INR",
+      "upper": 6000000
+    },
+    {
+      "cost_mode": "direct_money",
+      "increment": 5000,
+      "lower": 1000000,
+      "name": "student_research_funding",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 5,
+      "type": "continuous",
+      "unit": "INR",
+      "upper": 7000000
+    },
+    {
+      "cost_mode": "direct_money",
+      "increment": 5000,
+      "lower": 250000,
+      "name": "open_access_funding",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 6,
+      "type": "continuous",
+      "unit": "INR",
+      "upper": 3500000
+    },
+    {
+      "cost_mode": "direct_money",
+      "increment": 5000,
+      "lower": 500000,
+      "name": "outreach_sdg_funding",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 7,
+      "type": "continuous",
+      "unit": "INR",
+      "upper": 4500000
+    },
+    {
+      "cost_mode": "non_monetary",
+      "increment": 0.05,
+      "lower": 2.5,
+      "name": "research_faculty_effort",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 20,
+      "type": "continuous",
+      "unit": "annual FTE",
+      "upper": 6.0
+    },
+    {
+      "cost_mode": "non_monetary",
+      "increment": 0.05,
+      "lower": 1.5,
+      "name": "student_support_faculty_effort",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 21,
+      "type": "continuous",
+      "unit": "annual FTE",
+      "upper": 3.5
+    },
+    {
+      "cost_mode": "non_monetary",
+      "increment": 0.05,
+      "lower": 2.0,
+      "name": "service_faculty_effort",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 22,
+      "type": "continuous",
+      "unit": "annual FTE",
+      "upper": 4.0
+    },
+    {
+      "cost_mode": "unit_cost",
+      "increment": 1,
+      "lower": 2,
+      "name": "research_assistant_count",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 8,
+      "type": "integer",
+      "unit": "headcount",
+      "unit_cost": 600000,
+      "upper": 12
+    },
+    {
+      "cost_mode": "unit_cost",
+      "increment": 1,
+      "lower": 4,
+      "name": "compute_capacity_units",
+      "provenance": "synthetic_calibrated",
+      "repair_priority": 9,
+      "type": "integer",
+      "unit": "configured compute unit",
+      "unit_cost": 250000,
+      "upper": 18
+    }
+  ],
+  "dependencies": [
+    {
+      "count_variable": "research_assistant_count",
+      "funding_variable": "student_research_funding",
+      "minimum_funding_per_unit": 300000,
+      "name": "ra_student_support"
+    },
+    {
+      "count_variable": "compute_capacity_units",
+      "funding_variable": "research_seed_funding",
+      "minimum_funding_per_unit": 100000,
+      "name": "compute_research_support"
+    }
+  ],
+  "effort_decisions": [
+    "research_faculty_effort",
+    "student_support_faculty_effort",
+    "service_faculty_effort"
+  ],
+  "evidence_status": "public_plus_synthetic_scenario",
+  "extrapolation_rule": "allow_with_visible_warning; never label out-of-support predictions as public validated",
+  "fixed_context": {
+    "faculty_phd": 8,
+    "faculty_total": 15,
+    "lagged_research_budget": 23000000,
+    "student_count": 480,
+    "teaching_load_per_faculty": 12.05
+  },
+  "integer_decisions": [
+    "research_assistant_count",
+    "compute_capacity_units"
+  ],
+  "model_mapping": {
+    "research_budget_components": [
+      "research_seed_funding",
+      "conference_support",
+      "patent_ip_support",
+      "industry_collaboration_funding",
+      "open_access_funding"
+    ]
+  },
+  "objective_families": {
+    "innovation": {
+      "components": [
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "patent_applications",
+          "normalization": {
+            "maximum": 5,
+            "minimum": 0
+          },
+          "weight": 0.55
+        },
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "industry_projects",
+          "normalization": {
+            "maximum": 8,
+            "minimum": 1
+          },
+          "weight": 0.45
+        }
+      ],
+      "enabled": true
+    },
+    "research": {
+      "components": [
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "q1_publications",
+          "normalization": {
+            "maximum": 15,
+            "minimum": 5
+          },
+          "weight": 0.55
+        },
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "normalized_citation_impact",
+          "normalization": {
+            "maximum": 1.0,
+            "minimum": 0.7
+          },
+          "weight": 0.45
+        }
+      ],
+      "enabled": true
+    },
+    "societal_contribution": {
+      "components": [
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "open_access_publications",
+          "normalization": {
+            "maximum": 8,
+            "minimum": 0
+          },
+          "weight": 0.45
+        },
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "outreach_participants",
+          "normalization": {
+            "maximum": 50,
+            "minimum": 15
+          },
+          "weight": 0.55
+        }
+      ],
+      "enabled": true
+    },
+    "student_development": {
+      "components": [
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "student_research_participants",
+          "normalization": {
+            "maximum": 110,
+            "minimum": 40
+          },
+          "weight": 0.35
+        },
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "placements",
+          "normalization": {
+            "maximum": 145,
+            "minimum": 60
+          },
+          "weight": 0.45
+        },
+        {
+          "evidence_label": "synthetic_scenario",
+          "kpi": "higher_studies",
+          "normalization": {
+            "maximum": 18,
+            "minimum": 2
+          },
+          "weight": 0.2
+        }
+      ],
+      "enabled": true
+    }
+  },
+  "output_root": "artifacts/public_allocation/vjti_v1",
+  "prompt14_root": "artifacts/public_data/vjti_ceit_v1",
+  "prompt15_root": "artifacts/evidence_modeling/vjti_v1",
+  "reference_allocation": {
+    "compute_capacity_units": 12,
+    "conference_support": 3060000,
+    "industry_collaboration_funding": 3825000,
+    "open_access_funding": 1785000,
+    "outreach_sdg_funding": 2550000,
+    "patent_ip_support": 2040000,
+    "research_assistant_count": 8,
+    "research_faculty_effort": 4.35,
+    "research_seed_funding": 7650000,
+    "service_faculty_effort": 3.0,
+    "student_research_funding": 4590000,
+    "student_support_faculty_effort": 2.25
+  },
+  "reference_cash_total": 25500000,
+  "reference_total_cost": 33300000,
+  "seed": 16042,
+  "sensitivity_scenarios": [
+    {
+      "decision_deltas": {},
+      "name": "reference"
+    },
+    {
+      "decision_deltas": {
+        "patent_ip_support": 500000
+      },
+      "name": "patent_support_plus_500k"
+    },
+    {
+      "decision_deltas": {
+        "compute_capacity_units": 2
+      },
+      "name": "compute_plus_2_units"
+    },
+    {
+      "decision_deltas": {
+        "student_research_funding": 500000
+      },
+      "name": "student_support_plus_500k"
+    },
+    {
+      "decision_deltas": {
+        "outreach_sdg_funding": 250000
+      },
+      "name": "outreach_plus_250k"
+    }
+  ],
+  "service_commitments": {
+    "minimum_service_fte": 2.0,
+    "minimum_student_support_fte": 1.5,
+    "minimum_teaching_fte": 5.0
+  },
+  "synthetic_response_adjustments": {
+    "assumption": "Monotone local scenario responses centered on the Prompt 14 reference; not empirical effects.",
+    "evidence_label": "synthetic_scenario",
+    "formula_version": "category-response-adjustments-v1",
+    "higher_studies_per_inr": 5e-07,
+    "industry_projects_per_inr": 6.666666667e-07,
+    "open_access_per_inr": 2e-06,
+    "outreach_per_inr": 1e-05,
+    "outreach_per_service_fte": 3.0,
+    "participants_per_inr": 5e-06,
+    "participants_per_student_support_fte": 4.0,
+    "patents_per_compute_unit": 0.04,
+    "patents_per_inr": 5e-07,
+    "placements_per_inr": 1e-06
+  },
+  "target_cost_tracks": [
+    {
+      "evidence_label": "public_descriptive_target_synthetic_response",
+      "random_candidates": 300,
+      "target_basis": "2023-24 CEIT public placement and higher-study rates scaled to a 120-student annual cohort",
+      "targets": [
+        {
+          "kpi": "placements",
+          "minimum": 95,
+          "use_conservative_lower": false
+        },
+        {
+          "kpi": "higher_studies",
+          "minimum": 8,
+          "use_conservative_lower": false
+        }
+      ],
+      "track_id": "public_informed_student_targets"
+    },
+    {
+      "evidence_label": "synthetic_scenario",
+      "random_candidates": 300,
+      "target_basis": "documented scenario thresholds within Prompt 15 generator support",
+      "targets": [
+        {
+          "kpi": "q1_publications",
+          "minimum": 8,
+          "use_conservative_lower": false
+        },
+        {
+          "kpi": "patent_applications",
+          "minimum": 1.5,
+          "use_conservative_lower": false
+        },
+        {
+          "kpi": "outreach_participants",
+          "minimum": 24,
+          "use_conservative_lower": false
+        }
+      ],
+      "track_id": "scenario_four_family_targets"
+    }
+  ]
+}

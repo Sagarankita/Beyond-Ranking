@@ -1,0 +1,117 @@
+{
+  "analysis_id": "vjti-four-family-public-plus-synthetic-v1",
+  "prompt14_root": "artifacts/public_data/vjti_ceit_v1",
+  "prompt15_root": "artifacts/evidence_modeling/vjti_v1",
+  "output_root": "artifacts/public_allocation/vjti_v1",
+  "seed": 16042,
+  "evidence_status": "public_plus_synthetic_scenario",
+  "allocation_semantics": "totals",
+  "currency": {"code": "INR", "base_year": "FY2023-24 nominal", "inflation_adjusted": false},
+  "budget_limit": 36000000,
+  "fixed_context": {
+    "faculty_total": 15,
+    "faculty_phd": 8,
+    "student_count": 480,
+    "teaching_load_per_faculty": 12.05,
+    "lagged_research_budget": 23000000
+  },
+  "service_commitments": {
+    "minimum_teaching_fte": 5.0,
+    "minimum_student_support_fte": 1.5,
+    "minimum_service_fte": 2.0
+  },
+  "decision_variables": [
+    {"name":"research_seed_funding","type":"continuous","unit":"INR","lower":3000000,"upper":11000000,"increment":5000,"cost_mode":"direct_money","repair_priority":1,"provenance":"synthetic_calibrated"},
+    {"name":"conference_support","type":"continuous","unit":"INR","lower":500000,"upper":5000000,"increment":5000,"cost_mode":"direct_money","repair_priority":2,"provenance":"synthetic_calibrated"},
+    {"name":"patent_ip_support","type":"continuous","unit":"INR","lower":500000,"upper":4500000,"increment":5000,"cost_mode":"direct_money","repair_priority":3,"provenance":"synthetic_calibrated"},
+    {"name":"industry_collaboration_funding","type":"continuous","unit":"INR","lower":750000,"upper":6000000,"increment":5000,"cost_mode":"direct_money","repair_priority":4,"provenance":"synthetic_calibrated"},
+    {"name":"student_research_funding","type":"continuous","unit":"INR","lower":1000000,"upper":7000000,"increment":5000,"cost_mode":"direct_money","repair_priority":5,"provenance":"synthetic_calibrated"},
+    {"name":"open_access_funding","type":"continuous","unit":"INR","lower":250000,"upper":3500000,"increment":5000,"cost_mode":"direct_money","repair_priority":6,"provenance":"synthetic_calibrated"},
+    {"name":"outreach_sdg_funding","type":"continuous","unit":"INR","lower":500000,"upper":4500000,"increment":5000,"cost_mode":"direct_money","repair_priority":7,"provenance":"synthetic_calibrated"},
+    {"name":"research_faculty_effort","type":"continuous","unit":"annual FTE","lower":2.5,"upper":6.0,"increment":0.05,"cost_mode":"non_monetary","repair_priority":20,"provenance":"synthetic_calibrated"},
+    {"name":"student_support_faculty_effort","type":"continuous","unit":"annual FTE","lower":1.5,"upper":3.5,"increment":0.05,"cost_mode":"non_monetary","repair_priority":21,"provenance":"synthetic_calibrated"},
+    {"name":"service_faculty_effort","type":"continuous","unit":"annual FTE","lower":2.0,"upper":4.0,"increment":0.05,"cost_mode":"non_monetary","repair_priority":22,"provenance":"synthetic_calibrated"},
+    {"name":"research_assistant_count","type":"integer","unit":"headcount","lower":2,"upper":12,"increment":1,"cost_mode":"unit_cost","unit_cost":600000,"repair_priority":8,"provenance":"synthetic_calibrated"},
+    {"name":"compute_capacity_units","type":"integer","unit":"configured compute unit","lower":4,"upper":18,"increment":1,"cost_mode":"unit_cost","unit_cost":250000,"repair_priority":9,"provenance":"synthetic_calibrated"}
+  ],
+  "reference_allocation": {
+    "research_seed_funding":7650000,"conference_support":3060000,"patent_ip_support":2040000,
+    "industry_collaboration_funding":3825000,"student_research_funding":4590000,
+    "open_access_funding":1785000,"outreach_sdg_funding":2550000,
+    "research_faculty_effort":4.35,"student_support_faculty_effort":2.25,
+    "service_faculty_effort":3.0,"research_assistant_count":8,"compute_capacity_units":12
+  },
+  "reference_cash_total": 25500000,
+  "reference_total_cost": 33300000,
+  "cash_decisions": ["research_seed_funding","conference_support","patent_ip_support","industry_collaboration_funding","student_research_funding","open_access_funding","outreach_sdg_funding"],
+  "effort_decisions": ["research_faculty_effort","student_support_faculty_effort","service_faculty_effort"],
+  "integer_decisions": ["research_assistant_count","compute_capacity_units"],
+  "model_mapping": {
+    "research_budget_components": ["research_seed_funding","conference_support","patent_ip_support","industry_collaboration_funding","open_access_funding"]
+  },
+  "dependencies": [
+    {"name":"ra_student_support","count_variable":"research_assistant_count","funding_variable":"student_research_funding","minimum_funding_per_unit":300000},
+    {"name":"compute_research_support","count_variable":"compute_capacity_units","funding_variable":"research_seed_funding","minimum_funding_per_unit":100000}
+  ],
+  "conservative_kpi_services": [
+    {"kpi":"placements","minimum_lower_bound":75},
+    {"kpi":"outreach_participants","minimum_lower_bound":15}
+  ],
+  "extrapolation_rule": "allow_with_visible_warning; never label out-of-support predictions as public validated",
+  "synthetic_response_adjustments": {
+    "formula_version":"category-response-adjustments-v1",
+    "patents_per_inr":0.0000005,"patents_per_compute_unit":0.04,
+    "industry_projects_per_inr":0.0000006666666667,
+    "participants_per_inr":0.000005,"participants_per_student_support_fte":4.0,
+    "placements_per_inr":0.000001,"higher_studies_per_inr":0.0000005,
+    "open_access_per_inr":0.000002,
+    "outreach_per_inr":0.00001,"outreach_per_service_fte":3.0,
+    "evidence_label":"synthetic_scenario",
+    "assumption":"Monotone local scenario responses centered on the Prompt 14 reference; not empirical effects."
+  },
+  "objective_families": {
+    "research": {"enabled":true,"components":[
+      {"kpi":"q1_publications","weight":0.55,"normalization":{"minimum":5,"maximum":15},"evidence_label":"synthetic_scenario"},
+      {"kpi":"normalized_citation_impact","weight":0.45,"normalization":{"minimum":0.70,"maximum":1.00},"evidence_label":"synthetic_scenario"}]},
+    "innovation": {"enabled":true,"components":[
+      {"kpi":"patent_applications","weight":0.55,"normalization":{"minimum":0,"maximum":5},"evidence_label":"synthetic_scenario"},
+      {"kpi":"industry_projects","weight":0.45,"normalization":{"minimum":1,"maximum":8},"evidence_label":"synthetic_scenario"}]},
+    "student_development": {"enabled":true,"components":[
+      {"kpi":"student_research_participants","weight":0.35,"normalization":{"minimum":40,"maximum":110},"evidence_label":"synthetic_scenario"},
+      {"kpi":"placements","weight":0.45,"normalization":{"minimum":60,"maximum":145},"evidence_label":"synthetic_scenario"},
+      {"kpi":"higher_studies","weight":0.20,"normalization":{"minimum":2,"maximum":18},"evidence_label":"synthetic_scenario"}]},
+    "societal_contribution": {"enabled":true,"components":[
+      {"kpi":"open_access_publications","weight":0.45,"normalization":{"minimum":0,"maximum":8},"evidence_label":"synthetic_scenario"},
+      {"kpi":"outreach_participants","weight":0.55,"normalization":{"minimum":15,"maximum":50},"evidence_label":"synthetic_scenario"}]}
+  },
+  "sensitivity_scenarios": [
+    {"name":"reference","decision_deltas":{}},
+    {"name":"patent_support_plus_500k","decision_deltas":{"patent_ip_support":500000}},
+    {"name":"compute_plus_2_units","decision_deltas":{"compute_capacity_units":2}},
+    {"name":"student_support_plus_500k","decision_deltas":{"student_research_funding":500000}},
+    {"name":"outreach_plus_250k","decision_deltas":{"outreach_sdg_funding":250000}}
+  ],
+  "target_cost_tracks": [
+    {
+      "track_id":"public_informed_student_targets",
+      "evidence_label":"public_descriptive_target_synthetic_response",
+      "target_basis":"2023-24 CEIT public placement and higher-study rates scaled to a 120-student annual cohort",
+      "random_candidates":300,
+      "targets":[
+        {"kpi":"placements","minimum":95,"use_conservative_lower":false},
+        {"kpi":"higher_studies","minimum":8,"use_conservative_lower":false}
+      ]
+    },
+    {
+      "track_id":"scenario_four_family_targets",
+      "evidence_label":"synthetic_scenario",
+      "target_basis":"documented scenario thresholds within Prompt 15 generator support",
+      "random_candidates":300,
+      "targets":[
+        {"kpi":"q1_publications","minimum":8,"use_conservative_lower":false},
+        {"kpi":"patent_applications","minimum":1.5,"use_conservative_lower":false},
+        {"kpi":"outreach_participants","minimum":24,"use_conservative_lower":false}
+      ]
+    }
+  ]
+}

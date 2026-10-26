@@ -1,0 +1,19 @@
+{
+  "common_public_fields": [
+    "patents_granted",
+    "patents_published",
+    "sponsored_projects",
+    "sponsored_research_amount",
+    "student_count"
+  ],
+  "interpretation": "No public efficiency score or empirically validated response model is reported.",
+  "public_complete_dea_dmus": 0,
+  "public_dea_status": "unsupported",
+  "public_department_periods": 2,
+  "public_institution_units": 2,
+  "public_prediction_status": "public_descriptive",
+  "public_test_set_reason": "One public CE&IT outcome period cannot support split isolation or validation.",
+  "public_test_set_retained": false,
+  "reason": "The public cohort has too few complete comparable institution profiles for DEA.",
+  "required_complete_dmus": 12
+}

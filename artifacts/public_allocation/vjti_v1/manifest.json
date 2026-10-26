@@ -1,0 +1,26 @@
+{
+  "all_checks_pass": true,
+  "analysis_id": "vjti-four-family-public-plus-synthetic-v1",
+  "artifacts": {
+    "allocation_checks.csv": "3a060634bfd93bc434450220973f5cdb957defb5b221f5fafa22df8b9942d590",
+    "config_snapshot.json": "7c8606a980fd00447fc85fcc4075c132284c6cd362ad8314506e4a5c9d0c3945",
+    "decision_sensitivity.csv": "e7a61ddcf102d7f1f2eb4e9a0147e51e2cd827e4f5aae79405f81b88e9b21ca1",
+    "objective_score_components.csv": "2b554704a1803db7d534a505f0f54d901ba4f611bb086a5449dff6f49b50028c",
+    "reference_evaluation.csv": "599608fd7bb7ed9be91d5267ee88d3275ca21df5996d538a6123782a7648b765",
+    "reference_evaluation.json": "de926ee4f5d86de85def21c7de0cf30a0ac552767b66c3c70b09184845a0adee",
+    "report.md": "0c5a215b62eab4c656eac1d0fe31bfab122494f817814773f1371ed992d13111",
+    "target_cost/public_informed_student_targets/recommendation.csv": "577c4423b162923c4587b6b43d1369cad6b907d56cc4f76e75634c5a7d6c974c",
+    "target_cost/public_informed_student_targets/recommendation.json": "73a5667b18e7dd1ebdc67a15a13767ab9a9509e78b1d659134a75ae01bfbcd68",
+    "target_cost/public_informed_student_targets/status.json": "a4902fe009678582809c3d01ad8cadbc26d08671030926a3be99d2ef358bf476",
+    "target_cost/scenario_four_family_targets/recommendation.csv": "d853dace1c16a9125b7085ebeef26c04c2fcba9c1862cdeb40dcd5ebda1aa16a",
+    "target_cost/scenario_four_family_targets/recommendation.json": "7070834f08faf504cd80586b18b78bd9dc61606c762a9c528a7a6b0258b7a3f1",
+    "target_cost/scenario_four_family_targets/status.json": "71f39f50e6eeb5cb5857da2435ebf3a476b9405dc0476b76414bc54983741abf",
+    "target_cost_summary.csv": "e2510ccb4311145b060f327c966e794c9bba019b8bd1704f3158bf934e6cac37"
+  },
+  "config_path": "configs\\public_allocation\\vjti_four_family_v1.json",
+  "config_sha256": "a3de7e35e5812be7229f9235a1c1515d040ae3d32c14dc7be08bee52ac7c50f7",
+  "evidence_status": "public_plus_synthetic_scenario",
+  "prompt14_manifest_sha256": "1f42890b70bcad126a7624897b07d9c140e74a3ebe0e5a2ed65acdb9c3fdc8d8",
+  "prompt15_manifest_sha256": "5b2da0857bbbf39f56bb6924cd4d61e5b089e8b0c97da18d4ee03a61f5f01734",
+  "prompt15_model_manifest_sha256": "75dee2117fe9fdaaa18c5f465fe8b5570ba79afe0e4b9e565d1c3b60fa85b4a5"
+}

@@ -1,0 +1,319 @@
+{
+  "budget_remaining": 18310000.0,
+  "constraint_residuals": {
+    "bounds__compute_capacity_units": 0.0,
+    "bounds__conference_support": 0.0,
+    "bounds__industry_collaboration_funding": 0.0,
+    "bounds__open_access_funding": 0.0,
+    "bounds__outreach_sdg_funding": 0.0,
+    "bounds__patent_ip_support": 0.0,
+    "bounds__research_assistant_count": 0.0,
+    "bounds__research_faculty_effort": 0.0,
+    "bounds__research_seed_funding": 0.0,
+    "bounds__service_faculty_effort": 0.0,
+    "bounds__student_research_funding": 0.0,
+    "bounds__student_support_faculty_effort": 0.0,
+    "budget": 0.0,
+    "dependency__compute_research_support": 0.0,
+    "dependency__ra_student_support": 0.0,
+    "faculty_effort_conservation": 0.0,
+    "increment__compute_capacity_units": 0.0,
+    "increment__conference_support": 0.0,
+    "increment__industry_collaboration_funding": 0.0,
+    "increment__open_access_funding": 0.0,
+    "increment__outreach_sdg_funding": 0.0,
+    "increment__patent_ip_support": 0.0,
+    "increment__research_assistant_count": 0.0,
+    "increment__research_faculty_effort": 7.105427357601002e-16,
+    "increment__research_seed_funding": 0.0,
+    "increment__service_faculty_effort": 1.7763568394002506e-16,
+    "increment__student_research_funding": 0.0,
+    "increment__student_support_faculty_effort": 3.552713678800501e-16,
+    "integrality__compute_capacity_units": 0.0,
+    "integrality__research_assistant_count": 0.0,
+    "service_floor__service_faculty_effort": 0.0,
+    "service_floor__student_support_faculty_effort": 0.0,
+    "service_kpi__outreach_participants": 0.0,
+    "service_kpi__placements": 0.0
+  },
+  "cost_components": {
+    "compute_capacity_units": 2250000.0,
+    "conference_support": 3555000.0,
+    "industry_collaboration_funding": 1000000.0,
+    "open_access_funding": 795000.0,
+    "outreach_sdg_funding": 2730000.0,
+    "patent_ip_support": 1560000.0,
+    "research_assistant_count": 1200000.0,
+    "research_faculty_effort": 0.0,
+    "research_seed_funding": 3600000.0,
+    "service_faculty_effort": 0.0,
+    "student_research_funding": 1000000.0,
+    "student_support_faculty_effort": 0.0
+  },
+  "dea_status": "DEA retained as descriptive context only; not used as a causal multiplier",
+  "decoded": {
+    "compute_capacity_units": 9.0,
+    "conference_support": 3555000.0,
+    "industry_collaboration_funding": 1000000.0,
+    "open_access_funding": 795000.0,
+    "outreach_sdg_funding": 2730000.0,
+    "patent_ip_support": 1560000.0,
+    "research_assistant_count": 2.0,
+    "research_faculty_effort": 5.050000000000001,
+    "research_seed_funding": 3600000.0,
+    "service_faculty_effort": 2.2,
+    "student_research_funding": 1000000.0,
+    "student_support_faculty_effort": 2.6500000000000004
+  },
+  "feasible": true,
+  "intervals": {
+    "higher_studies": {
+      "lower": 4.8377960664687,
+      "radius": 4.087075252581478,
+      "upper": 13.011946571631656,
+      "validation_type": "synthetic_generator_validation"
+    },
+    "industry_projects": {
+      "lower": 0.48677192154405113,
+      "radius": 1.6403393446516583,
+      "upper": 3.7674506108473675,
+      "validation_type": "synthetic_generator_validation"
+    },
+    "normalized_citation_impact": {
+      "lower": 0.745968877494883,
+      "radius": 0.06289045616702948,
+      "upper": 0.871749789828942,
+      "validation_type": "synthetic_generator_validation"
+    },
+    "open_access_publications": {
+      "lower": 0.0,
+      "radius": 1.570043151644894,
+      "upper": 1.8999334944191872,
+      "validation_type": "synthetic_generator_validation"
+    },
+    "outreach_participants": {
+      "lower": 15.79070301399114,
+      "radius": 8.209661019180267,
+      "upper": 32.210025052351675,
+      "validation_type": "synthetic_generator_validation"
+    },
+    "patent_applications": {
+      "lower": 0.5124549169781208,
+      "radius": 1.0247763829155194,
+      "upper": 2.56200768280916,
+      "validation_type": "synthetic_generator_validation"
+    },
+    "placements": {
+      "lower": 83.84780632518772,
+      "radius": 8.761714893033187,
+      "upper": 101.37123611125409,
+      "validation_type": "synthetic_generator_validation"
+    },
+    "q1_publications": {
+      "lower": 10.326167701885598,
+      "radius": 0.8729378654338973,
+      "upper": 12.072043432753393,
+      "validation_type": "synthetic_generator_validation"
+    },
+    "student_research_participants": {
+      "lower": 51.879845744533235,
+      "radius": 9.004507835914083,
+      "upper": 69.88886141636141,
+      "validation_type": "synthetic_generator_validation"
+    }
+  },
+  "model_features": {
+    "faculty_phd": 8,
+    "faculty_research_fte": 5.050000000000001,
+    "lagged_research_budget": 23000000,
+    "research_budget": 10510000.0,
+    "student_count": 480,
+    "teaching_load_per_faculty": 12.05
+  },
+  "normalized_constraint_violations": {
+    "bounds__compute_capacity_units": 0.0,
+    "bounds__conference_support": 0.0,
+    "bounds__industry_collaboration_funding": 0.0,
+    "bounds__open_access_funding": 0.0,
+    "bounds__outreach_sdg_funding": 0.0,
+    "bounds__patent_ip_support": 0.0,
+    "bounds__research_assistant_count": 0.0,
+    "bounds__research_faculty_effort": 0.0,
+    "bounds__research_seed_funding": 0.0,
+    "bounds__service_faculty_effort": 0.0,
+    "bounds__student_research_funding": 0.0,
+    "bounds__student_support_faculty_effort": 0.0,
+    "budget": 0.0,
+    "dependency__compute_research_support": 0.0,
+    "dependency__ra_student_support": 0.0,
+    "faculty_effort_conservation": 0.0,
+    "increment__compute_capacity_units": 0.0,
+    "increment__conference_support": 0.0,
+    "increment__industry_collaboration_funding": 0.0,
+    "increment__open_access_funding": 0.0,
+    "increment__outreach_sdg_funding": 0.0,
+    "increment__patent_ip_support": 0.0,
+    "increment__research_assistant_count": 0.0,
+    "increment__research_faculty_effort": 1.4210854715202004e-14,
+    "increment__research_seed_funding": 0.0,
+    "increment__service_faculty_effort": 3.552713678800501e-15,
+    "increment__student_research_funding": 0.0,
+    "increment__student_support_faculty_effort": 7.105427357601002e-15,
+    "integrality__compute_capacity_units": 0.0,
+    "integrality__research_assistant_count": 0.0,
+    "service_floor__service_faculty_effort": 0.0,
+    "service_floor__student_support_faculty_effort": 0.0,
+    "service_kpi__outreach_participants": 0.0,
+    "service_kpi__placements": 0.0
+  },
+  "normalized_violation": 2.4868995751603507e-14,
+  "objective_benefits": {
+    "innovation": 0.24155259581516747,
+    "research": 0.5042398066954411,
+    "societal_contribution": 0.15999062373089043,
+    "student_development": 0.3636213011338863
+  },
+  "objective_evidence": {
+    "innovation": "synthetic_scenario",
+    "research": "synthetic_scenario",
+    "societal_contribution": "synthetic_scenario",
+    "student_development": "synthetic_scenario"
+  },
+  "objective_scores": {
+    "innovation": -0.24155259581516747,
+    "research": -0.5042398066954411,
+    "societal_contribution": -0.15999062373089043,
+    "student_development": -0.3636213011338863
+  },
+  "raw_kpis": {
+    "higher_studies": 8.924871319050178,
+    "industry_projects": 2.1271112661957092,
+    "normalized_citation_impact": 0.8088593336619125,
+    "open_access_publications": 0.3298903427742932,
+    "outreach_participants": 24.000364033171408,
+    "patent_applications": 1.5372312998936404,
+    "placements": 92.6095212182209,
+    "q1_publications": 11.199105567319496,
+    "student_research_participants": 60.88435358044732
+  },
+  "repair_actions": [],
+  "repaired": {
+    "compute_capacity_units": 9.0,
+    "conference_support": 3555000.0,
+    "industry_collaboration_funding": 1000000.0,
+    "open_access_funding": 795000.0,
+    "outreach_sdg_funding": 2730000.0,
+    "patent_ip_support": 1560000.0,
+    "research_assistant_count": 2.0,
+    "research_faculty_effort": 5.050000000000001,
+    "research_seed_funding": 3600000.0,
+    "service_faculty_effort": 2.2,
+    "student_research_funding": 1000000.0,
+    "student_support_faculty_effort": 2.6500000000000004
+  },
+  "response_adjustments": {
+    "higher_studies": -1.795,
+    "industry_projects": -1.8833333334275,
+    "open_access_publications": -1.98,
+    "outreach_participants": -0.5999999999999994,
+    "patent_applications": -0.36,
+    "placements": -3.59,
+    "student_research_participants": -16.35
+  },
+  "score_components": {
+    "innovation": [
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "patent_applications",
+        "normalized_value": 0.3074462599787281,
+        "raw_value": 1.5372312998936404,
+        "weight": 0.55,
+        "weighted_benefit": 0.16909544298830045
+      },
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "industry_projects",
+        "normalized_value": 0.1610158951708156,
+        "raw_value": 2.1271112661957092,
+        "weight": 0.45,
+        "weighted_benefit": 0.07245715282686703
+      }
+    ],
+    "research": [
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "q1_publications",
+        "normalized_value": 0.6199105567319496,
+        "raw_value": 11.199105567319496,
+        "weight": 0.55,
+        "weighted_benefit": 0.3409508062025723
+      },
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "normalized_citation_impact",
+        "normalized_value": 0.36286444553970854,
+        "raw_value": 0.8088593336619125,
+        "weight": 0.45,
+        "weighted_benefit": 0.16328900049286885
+      }
+    ],
+    "societal_contribution": [
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "open_access_publications",
+        "normalized_value": 0.04123629284678665,
+        "raw_value": 0.3298903427742932,
+        "weight": 0.45,
+        "weighted_benefit": 0.01855633178105399
+      },
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "outreach_participants",
+        "normalized_value": 0.2571532580906117,
+        "raw_value": 24.000364033171408,
+        "weight": 0.55,
+        "weighted_benefit": 0.14143429194983645
+      }
+    ],
+    "student_development": [
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "student_research_participants",
+        "normalized_value": 0.29834790829210456,
+        "raw_value": 60.88435358044732,
+        "weight": 0.35,
+        "weighted_benefit": 0.10442176790223659
+      },
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "placements",
+        "normalized_value": 0.38364142609671653,
+        "raw_value": 92.6095212182209,
+        "weight": 0.45,
+        "weighted_benefit": 0.17263864174352245
+      },
+      {
+        "evidence_label": "synthetic_scenario",
+        "kpi": "higher_studies",
+        "normalized_value": 0.4328044574406361,
+        "raw_value": 8.924871319050178,
+        "weight": 0.2,
+        "weighted_benefit": 0.08656089148812723
+      }
+    ]
+  },
+  "support_flags": {
+    "extrapolation_rule": "allow_with_visible_warning; never label out-of-support predictions as public validated",
+    "out_of_support": true,
+    "out_of_support_features": [
+      "research_budget"
+    ]
+  },
+  "synthetic_coverage": {
+    "innovation": 1.0,
+    "research": 1.0,
+    "societal_contribution": 1.0,
+    "student_development": 1.0
+  },
+  "total_cost": 17690000.0
+}

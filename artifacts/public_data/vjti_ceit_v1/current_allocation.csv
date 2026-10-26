@@ -1,0 +1,13 @@
+decision,value,unit,provenance
+research_seed_funding,7650000.0,INR,synthetic_calibrated
+conference_support,3060000.0,INR,synthetic_calibrated
+patent_ip_support,2040000.0,INR,synthetic_calibrated
+industry_collaboration_funding,3825000.0,INR,synthetic_calibrated
+student_research_funding,4590000.0,INR,synthetic_calibrated
+open_access_funding,1785000.0,INR,synthetic_calibrated
+outreach_sdg_funding,2550000.0,INR,synthetic_calibrated
+research_faculty_effort,4.35,annual FTE,synthetic_calibrated
+student_support_faculty_effort,2.25,annual FTE,synthetic_calibrated
+service_faculty_effort,3.0,annual FTE,synthetic_calibrated
+research_assistant_count,8.0,headcount,synthetic_calibrated
+compute_capacity_units,12.0,configured compute unit,synthetic_calibrated

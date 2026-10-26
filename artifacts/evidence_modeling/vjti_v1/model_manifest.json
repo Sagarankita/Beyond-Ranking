@@ -1,0 +1,363 @@
+{
+  "config_path": "configs\\evidence_modeling\\vjti_evidence_models_v1.json",
+  "config_sha256": "4f1dcccdb870e376f5120c51e9147441b6b1bbb65c609bc970018ba4d9d1709c",
+  "conformal_radii": {
+    "higher_studies": 4.087075252581478,
+    "industry_projects": 1.6403393446516583,
+    "normalized_citation_impact": 0.06289045616702948,
+    "open_access_publications": 1.570043151644894,
+    "outreach_participants": 8.209661019180267,
+    "patent_applications": 1.0247763829155194,
+    "placements": 8.761714893033187,
+    "q1_publications": 0.8729378654338973,
+    "student_research_participants": 9.004507835914083
+  },
+  "evidence_label": "synthetic_scenario",
+  "feature_columns": [
+    "research_budget",
+    "lagged_research_budget",
+    "faculty_research_fte",
+    "faculty_phd",
+    "student_count",
+    "teaching_load_per_faculty"
+  ],
+  "interpretation": "Models validate recovery of the calibrated generator only; predictions are not observed or causal effects.",
+  "library_versions": {
+    "joblib": "1.6.0",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1"
+  },
+  "prompt14_data_sha256": "47c2a160bb8ea1ec99a8a2b4f051807543e18226a96e05674c112a2e0eaa3e25",
+  "prompt14_generator_sha256": "9e6d0c0eb1d79c6aced7f65127ec0a28f5474aa34b815ce6f15395c37f681b62",
+  "prompt14_manifest_sha256": "1f42890b70bcad126a7624897b07d9c140e74a3ebe0e5a2ed65acdb9c3fdc8d8",
+  "public_test_set": null,
+  "raw_source_hashes": {
+    "coep_nirf_2025": "b35e4daa48c7b5c0c053d11ba0665f2db0082d442a86ebbe294e3abed8ba5217",
+    "vjti_ceit_page": "888247880613c56e702174f4a32a518908968f5f4def3f5fa18afe5f7eb7f9de",
+    "vjti_disclosures": "e5ef808d1485b490d0c3ccadd2110229164b9765ede342c06ce9be759e41ef29",
+    "vjti_nirf_2025": "4fc9860bb276642348565f8c7ce22c3623f4dd6df989833139443c1593068d6c",
+    "vjti_nirf_index": "7a4cafbea2a5cba6a8e20a0df4665442fb6c68361f9b945171f3a3cac1dbafcc",
+    "vjti_placement_2023_24": "b2996d87b914d8df0dde62c712e652bc30e3dffcfaf425c82df397fcb6edec42",
+    "vjti_tpo_index": "6c222fd4d3780433c666cd8bee691432e811429c5fd669dca10641c93ffb6966"
+  },
+  "selected_models": {
+    "higher_studies": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/higher_studies.joblib",
+      "model_name": "linear",
+      "model_sha256": "9117205432e1421125bb61f1f17ecdced329877de06ac5be3f91b41997a45cca"
+    },
+    "industry_projects": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/industry_projects.joblib",
+      "model_name": "linear",
+      "model_sha256": "65c675bb0c9f41b1660b4c56156fb9d189ee22608c33e281ae7cda4c2cabcf78"
+    },
+    "normalized_citation_impact": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/normalized_citation_impact.joblib",
+      "model_name": "linear",
+      "model_sha256": "c51fb87dd6e2ea24297eaa4a4fcdacc987f73cf9fa9d15b35e75610d9e447704"
+    },
+    "open_access_publications": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/open_access_publications.joblib",
+      "model_name": "linear",
+      "model_sha256": "d9be259cfb83cb89594f729a12908c21063c4c04854208623cda366f91072360"
+    },
+    "outreach_participants": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/outreach_participants.joblib",
+      "model_name": "linear",
+      "model_sha256": "55398e263cbfbd35b19964bf0c7caf5c87bdfe17a69758963c7758d9d0fb6a05"
+    },
+    "patent_applications": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/patent_applications.joblib",
+      "model_name": "linear",
+      "model_sha256": "c3f4b8812275b9eef004d1b973fdc96a98282c4b60bf9de836dc60a38c6da787"
+    },
+    "placements": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/placements.joblib",
+      "model_name": "linear",
+      "model_sha256": "112df9a734e1beda0484dd87942001bf5879b24a6fa8ac30ffa82e6542498ca1"
+    },
+    "q1_publications": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/q1_publications.joblib",
+      "model_name": "linear",
+      "model_sha256": "ab2d932caa195584464e14c7958580a46709134499b05648ea24960962784247"
+    },
+    "student_research_participants": {
+      "evidence_label": "synthetic_scenario",
+      "model_file": "models/student_research_participants.joblib",
+      "model_name": "random_forest",
+      "model_sha256": "8f1c0126f15e398b09f36b223758c7420c66d4a91a90a57f8fc1c6f6cff1d24c"
+    }
+  },
+  "source_register_sha256": "7cb12f7603c9b6e422766231891b84f81f9d5cae937ed3ae74cdd15b1f850700",
+  "split_counts": {
+    "calibration": 8,
+    "test": 8,
+    "train": 144,
+    "validation": 32
+  },
+  "split_units": {
+    "calibration": 8,
+    "test": 8,
+    "train": 36,
+    "validation": 8
+  },
+  "synthetic_share": 1.0,
+  "target_columns": [
+    "q1_publications",
+    "normalized_citation_impact",
+    "patent_applications",
+    "industry_projects",
+    "student_research_participants",
+    "placements",
+    "higher_studies",
+    "open_access_publications",
+    "outreach_participants"
+  ],
+  "track": "calibrated_synthetic_response_models_v1",
+  "training_support_by_target": {
+    "higher_studies": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    },
+    "industry_projects": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    },
+    "normalized_citation_impact": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    },
+    "open_access_publications": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    },
+    "outreach_participants": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    },
+    "patent_applications": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    },
+    "placements": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    },
+    "q1_publications": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    },
+    "student_research_participants": {
+      "faculty_phd": {
+        "maximum": 14.0,
+        "minimum": 4.0
+      },
+      "faculty_research_fte": {
+        "maximum": 6.32,
+        "minimum": 2.056
+      },
+      "lagged_research_budget": {
+        "maximum": 29040621.65,
+        "minimum": 12566946.9
+      },
+      "research_budget": {
+        "maximum": 29475622.95,
+        "minimum": 13365173.44
+      },
+      "student_count": {
+        "maximum": 589.0,
+        "minimum": 307.0
+      },
+      "teaching_load_per_faculty": {
+        "maximum": 13.916,
+        "minimum": 11.987
+      }
+    }
+  },
+  "validation_type": "synthetic_generator_validation_not_empirical_validation"
+}

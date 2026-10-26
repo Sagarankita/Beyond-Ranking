@@ -1,0 +1,27 @@
+{
+  "evidence_label": "synthetic_scenario",
+  "interpretation": "Optimization uses synthetic response models; the target basis does not convert results into causal evidence.",
+  "matching_feasible_candidates": 70,
+  "recommendation_cost": 17690000.0,
+  "recommendation_feasible": true,
+  "status": "matched",
+  "target_basis": "documented scenario thresholds within Prompt 15 generator support",
+  "targets": [
+    {
+      "kpi": "q1_publications",
+      "minimum": 8,
+      "use_conservative_lower": false
+    },
+    {
+      "kpi": "patent_applications",
+      "minimum": 1.5,
+      "use_conservative_lower": false
+    },
+    {
+      "kpi": "outreach_participants",
+      "minimum": 24,
+      "use_conservative_lower": false
+    }
+  ],
+  "track_id": "scenario_four_family_targets"
+}

@@ -381,12 +381,12 @@ same reporting definitions and must not contain another evaluator.
 ### Updated completion gates
 
 - [x] The configured 25-seed synthetic benchmark is fully executed and independently checked.
-- [ ] Public VJTI/CE&IT sources are exhaustively searched and recorded before synthetic fallback.
-- [ ] A VJTI baseline separates public, derived, and synthetic-calibrated components.
-- [ ] Public and synthetic datasets pass provenance, realism, and readiness checks.
-- [ ] KPI models report validation type and synthetic coverage without treating synthetic holdouts as empirical evidence.
-- [ ] Research, innovation, student, and societal objectives are public-supported or explicitly scenario-only.
-- [ ] Patent/compute shocks use public evidence or documented calibrated assumptions.
+- [x] Public VJTI/CE&IT sources are exhaustively searched and recorded before synthetic fallback.
+- [x] A VJTI baseline separates public, derived, and synthetic-calibrated components.
+- [x] Public and synthetic datasets pass provenance, realism, and readiness checks.
+- [x] KPI models report validation type and synthetic coverage without treating synthetic holdouts as empirical evidence.
+- [x] Research, innovation, student, and societal objectives are public-supported or explicitly scenario-only.
+- [x] Patent/compute shocks use public evidence or documented calibrated assumptions.
 - [ ] VJTI public-plus-synthetic repeated experiments and robustness scenarios are complete.
 - [ ] The final report reports synthetic coverage and is independently reproduced from saved artifacts.
 - [ ] Network DEA and multi-period planning use public evidence when supported, otherwise only separately labeled calibrated synthetic fixtures.

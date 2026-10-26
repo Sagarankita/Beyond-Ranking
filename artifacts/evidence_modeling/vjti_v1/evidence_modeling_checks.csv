@@ -1,0 +1,8 @@
+check,passed,detail
+prompt14_gate,True,audited inputs
+public_dea_not_overclaimed,True,no adequate public cohort
+dea_solver_success,True,30 solves
+dea_provenance_complete,True,all selected DEA variables synthetic_calibrated
+leakage,True,group/time/preprocessing checks
+kpi_labels_complete,True,12 KPIs
+synthetic_claim_boundary,True,generator validation only

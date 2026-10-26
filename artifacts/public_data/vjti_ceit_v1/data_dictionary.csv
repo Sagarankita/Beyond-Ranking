@@ -1,0 +1,28 @@
+field,unit,type,role,objective_family,description
+ug_sanctioned_intake,headcount/year,integer,capacity,context,Annual sanctioned undergraduate intake
+ug_capacity,headcount,integer,capacity,context,Four-year capacity; derived as annual intake times four
+student_count,headcount,integer,context,context,Department or institution students as identified by unit_level
+faculty_phd,headcount,integer,context,context,Faculty with PhD
+faculty_other,headcount,integer,context,context,Other faculty
+faculty_total_roster,headcount,integer,context,context,Named regular faculty on the department page
+faculty_research_fte,annual FTE,number,context,research,Annual research effort
+research_budget,INR nominal,number,decision,research,Department research-support envelope
+teaching_load_per_faculty,hours/week,number,context,context,Teaching load
+q1_publications,count,integer,outcome,research,Q1 publications
+normalized_citation_impact,index,number,outcome,research,Field-normalized citation index
+patent_applications,count,integer,outcome,innovation,Patent applications
+patents_published,count,integer,outcome,innovation,Published patents
+patents_granted,count,integer,outcome,innovation,Granted patents
+industry_projects,count,integer,outcome,innovation,Industry projects
+sponsored_projects,count,integer,outcome,research,Sponsored projects
+sponsored_research_amount,INR nominal,number,outcome,research,Sponsored research receipts
+consultancy_projects,count,integer,outcome,innovation,Consultancy projects
+consultancy_amount,INR nominal,number,outcome,innovation,Consultancy receipts
+academic_resource_expenditure,INR nominal,number,input,context,NIRF academic capital categories plus seminars
+student_research_participants,headcount,integer,outcome,student_development,Students participating in research
+graduating_students,headcount,integer,context,student_development,Graduating cohort
+eligible_students,headcount,integer,context,student_development,Placement-eligible cohort
+placements,headcount,integer,outcome,student_development,Placed students
+higher_studies,headcount,integer,outcome,student_development,Students entering higher study
+open_access_publications,count,integer,outcome,societal_contribution,Open access publications
+outreach_participants,headcount,integer,outcome,societal_contribution,Outreach participants

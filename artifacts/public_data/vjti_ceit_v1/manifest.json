@@ -1,0 +1,34 @@
+{
+  "all_checks_pass": true,
+  "config": "configs\\data\\vjti_public_plus_synthetic_v1.json",
+  "config_sha256": "2f567a9a1eaf7a75fde96804532104117ce141ed7b9a76fec63bd8f8f81933c0",
+  "evidence_status": "public_plus_synthetic_scenario",
+  "generated_files": {
+    "current_allocation.csv": "94f37bc44cb3c53efbeaaffacdb54303f92220d9e42502255e06fd532a9588ab",
+    "data_dictionary.csv": "09ae9d8e3cd754349dabfabb6fc871fc89d83f80282d6c16b99213521172eb4d",
+    "duplicate_conflict_report.csv": "a7c49a366127ca9efd03835284353352ec51983e5db4a828cbb3fb88b093e897",
+    "generator_assumptions.json": "9e6d0c0eb1d79c6aced7f65127ec0a28f5474aa34b815ce6f15395c37f681b62",
+    "missingness_report.csv": "d40a715947b701f9257a4cf8e37f14ac76cc374ed0b7dd78beeb0b705c4adcfb",
+    "provenance_coverage.csv": "a7750171fafe2d932424e082d9340ae67d884cae72b96c2785b24959fa5a18b1",
+    "public_only.csv": "dfc0e279b0b9b7cc027a16f21546fe5214e22b7d8594eba8dc4b91eab594a20c",
+    "public_plus_synthetic.csv": "47c2a160bb8ea1ec99a8a2b4f051807543e18226a96e05674c112a2e0eaa3e25",
+    "public_values.csv": "dfc0e279b0b9b7cc027a16f21546fe5214e22b7d8594eba8dc4b91eab594a20c",
+    "readiness_report.md": "0b4c9798e3d133c15b1a58c5b195415d7d905bc47383ed175c146f0ec5928d20",
+    "realism_accounting_checks.csv": "6d87679b70be7955ee28b556b6fa58db905229956e857b9ab044ed4e77b5c674",
+    "search_log.csv": "b32acc24bce2f8e34c4a6a7d39092c766b2d600e53c6b7fb87cc8ba2722c81cb",
+    "source_register.csv": "7cb12f7603c9b6e422766231891b84f81f9d5cae937ed3ae74cdd15b1f850700",
+    "source_to_field_traceability.csv": "b0d82c2016b7fa3c3a942df2b8f925f62953ed033e5afa24c417fec03ed86c73",
+    "synthetic_only.csv": "b74414e0cbb0d4018e48af5b3d240961f253223c5b2d921a654d8887fe487bd8",
+    "unit_conversion_log.csv": "7b9e702d9e8ad219d0abb464c3d16f24eceff9ec6d44045c2c8a5e0e34f3881b"
+  },
+  "package_id": "vjti-ceit-public-plus-synthetic-v1",
+  "raw_source_hashes": {
+    "coep_nirf_2025": "b35e4daa48c7b5c0c053d11ba0665f2db0082d442a86ebbe294e3abed8ba5217",
+    "vjti_ceit_page": "888247880613c56e702174f4a32a518908968f5f4def3f5fa18afe5f7eb7f9de",
+    "vjti_disclosures": "e5ef808d1485b490d0c3ccadd2110229164b9765ede342c06ce9be759e41ef29",
+    "vjti_nirf_2025": "4fc9860bb276642348565f8c7ce22c3623f4dd6df989833139443c1593068d6c",
+    "vjti_nirf_index": "7a4cafbea2a5cba6a8e20a0df4665442fb6c68361f9b945171f3a3cac1dbafcc",
+    "vjti_placement_2023_24": "b2996d87b914d8df0dde62c712e652bc30e3dffcfaf425c82df397fcb6edec42",
+    "vjti_tpo_index": "6c222fd4d3780433c666cd8bee691432e811429c5fd669dca10641c93ffb6966"
+  }
+}

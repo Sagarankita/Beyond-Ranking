@@ -1,0 +1,4 @@
+conversion_id,field,from_unit,to_unit,factor,base_year,reason
+u01,academic_resource_expenditure,reported INR,INR nominal,1.0,not inflation-adjusted,NIRF reports nominal rupees
+u02,ug_capacity,headcount/year,headcount,4.0,current,Four-year B.Tech capacity; explicitly not enrollment
+u03,research_budget,INR nominal,INR nominal,1.0,2023-24 calibration,Scenario values retain nominal calibration year; no CPI conversion claimed

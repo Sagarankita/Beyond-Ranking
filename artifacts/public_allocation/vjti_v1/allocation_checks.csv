@@ -1,0 +1,14 @@
+check,passed,detail
+upstream_hash_chain,True,Prompt 14 and 15 manifests pass
+reference_feasible,True,violation=7.10543e-15
+totals_semantics,True,no increment/baseline mixing
+currency_base_year,True,"{'code': 'INR', 'base_year': 'FY2023-24 nominal', 'inflation_adjusted': False}"
+cash_reconciliation,True,cash=25500000.0
+cost_reconciliation,True,total=33300000.0
+effort_conservation,True,allocated=9.6
+integer_decisions,True,"research_assistant_count,compute_capacity_units"
+objective_traceability,True,four families trace to synthetic KPI responses
+dea_not_causal,True,DEA retained as descriptive context only; not used as a causal multiplier
+patent_compute_sensitivity,True,documented monotone response shocks
+target_cost_outputs,True,2/2 matched
+recommendations_feasible,True,all saved recommendations

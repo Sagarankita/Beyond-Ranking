@@ -1,0 +1,107 @@
+{
+  "allocation_shares": {
+    "conference_support": 0.12,
+    "industry_collaboration_funding": 0.15,
+    "open_access_funding": 0.07,
+    "outreach_sdg_funding": 0.1,
+    "patent_ip_support": 0.08,
+    "research_seed_funding": 0.3,
+    "student_research_funding": 0.18
+  },
+  "alternate_seed": 14043,
+  "annual_graduating_cohort": 176,
+  "assumption": "Generated fields are calibrated scenario values and are not observed outcomes or causal effects.",
+  "baseline_budget_inr": 25500000,
+  "bounds": {
+    "counts": "integer and nonnegative",
+    "faculty_effort": "not above faculty headcount",
+    "open_access": "not above q1 publications",
+    "student_outcomes": "not above annual graduating cohort",
+    "student_participation": "not above student count"
+  },
+  "budget_targets_inr": [
+    19000000,
+    21000000,
+    23000000,
+    25500000
+  ],
+  "calibration_targets": {
+    "ceit_higher_studies_2023_24": 14,
+    "ceit_placements_2023_24": 150,
+    "department_faculty_roster": 15,
+    "department_share_reference": 0.1518506802,
+    "department_ug_capacity": 480,
+    "institution_academic_resources_2023_24_inr": 167937189,
+    "institution_students_2023_24": 3161
+  },
+  "correlations": {
+    "budget_to_research_output": "positive with one-period lag",
+    "industry_projects_to_outreach": "positive",
+    "publications_to_patents": "positive",
+    "research_fte_to_publications": "positive"
+  },
+  "faculty_phd_base": 7,
+  "faculty_total": 15,
+  "formula_version": "lagged-correlated-formulas-v1",
+  "generator_version": "vjti-ceit-calibrated-v1.0.0",
+  "initial_lagged_budget_inr": 18000000,
+  "noncash_allocation": [
+    [
+      "research_faculty_effort",
+      4.35,
+      "annual FTE"
+    ],
+    [
+      "student_support_faculty_effort",
+      2.25,
+      "annual FTE"
+    ],
+    [
+      "service_faculty_effort",
+      3.0,
+      "annual FTE"
+    ],
+    [
+      "research_assistant_count",
+      8,
+      "headcount"
+    ],
+    [
+      "compute_capacity_units",
+      12,
+      "configured compute unit"
+    ]
+  ],
+  "occupancy_rates": [
+    0.94,
+    0.97,
+    0.99,
+    1.0
+  ],
+  "periods": [
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24"
+  ],
+  "seed": 14042,
+  "sensitivity_ranges": {
+    "budget_scale": [
+      0.8,
+      1.2
+    ],
+    "open_access_share": [
+      0.25,
+      0.55
+    ],
+    "placement_rate": [
+      0.75,
+      0.95
+    ],
+    "research_fte_share": [
+      0.2,
+      0.4
+    ]
+  },
+  "ug_capacity": 480
+}

@@ -6,7 +6,16 @@ from dataclasses import asdict, dataclass
 from typing import Any
 
 
-PROVENANCE_VALUES = ("observed", "derived", "assumed", "synthetic")
+PROVENANCE_VALUES = (
+    "observed",
+    "derived",
+    "assumed",
+    "synthetic",
+    "observed_public",
+    "derived_public",
+    "synthetic_calibrated",
+    "unsupported",
+)
 VARIABLE_ROLES = (
     "identifier",
     "metadata",

@@ -1,0 +1,10 @@
+family,kpi,raw_value,normalized_value,weight,weighted_benefit,evidence_label,family_evidence,family_synthetic_coverage
+research,q1_publications,10.315754154183995,0.5315754154183996,0.55,0.2923664784801198,synthetic_scenario,synthetic_scenario,1.0
+research,normalized_citation_impact,0.8296482017134839,0.4321606723782796,0.45,0.19447230257022582,synthetic_scenario,synthetic_scenario,1.0
+innovation,patent_applications,2.072191795940615,0.414438359188123,0.55,0.22794109755346767,synthetic_scenario,synthetic_scenario,1.0
+innovation,industry_projects,4.483821820614715,0.4976888315163878,0.45,0.2239599741823745,synthetic_scenario,synthetic_scenario,1.0
+student_development,student_research_participants,74.4468538059163,0.49209791151309007,0.35,0.17223426902958153,synthetic_scenario,synthetic_scenario,1.0
+student_development,placements,100.57554972186702,0.47735940849255315,0.45,0.21481173382164892,synthetic_scenario,synthetic_scenario,1.0
+student_development,higher_studies,10.988493713611522,0.5617808571007201,0.2,0.11235617142014404,synthetic_scenario,synthetic_scenario,1.0
+societal_contribution,open_access_publications,2.921836777263023,0.3652295971578779,0.45,0.16435331872104506,synthetic_scenario,synthetic_scenario,1.0
+societal_contribution,outreach_participants,28.06784089942509,0.37336688284071684,0.55,0.20535178556239428,synthetic_scenario,synthetic_scenario,1.0

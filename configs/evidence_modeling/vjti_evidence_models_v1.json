@@ -1,0 +1,54 @@
+{
+  "analysis_id": "vjti-evidence-aware-dea-kpi-v1",
+  "prompt14_root": "artifacts/public_data/vjti_ceit_v1",
+  "output_root": "artifacts/evidence_modeling/vjti_v1",
+  "dea": {
+    "minimum_public_dmus": 12,
+    "synthetic_dmus": 30,
+    "seed": 15041,
+    "input_columns": ["academic_resource_expenditure", "faculty_research_fte"],
+    "output_columns": ["sponsored_projects", "placements", "patents_granted"],
+    "fixture_name": "calibrated_indian_public_engineering_method_fixture_v1",
+    "interpretation": "Methodological scenario only; not public-observed efficiency."
+  },
+  "models": {
+    "seed": 15042,
+    "synthetic_units": 60,
+    "periods": ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25"],
+    "feature_columns": [
+      "research_budget",
+      "lagged_research_budget",
+      "faculty_research_fte",
+      "faculty_phd",
+      "student_count",
+      "teaching_load_per_faculty"
+    ],
+    "target_columns": [
+      "q1_publications",
+      "normalized_citation_impact",
+      "patent_applications",
+      "industry_projects",
+      "student_research_participants",
+      "placements",
+      "higher_studies",
+      "open_access_publications",
+      "outreach_participants"
+    ],
+    "random_forest_trees": 160,
+    "miscoverage_alpha": 0.10,
+    "split_unit_ranges": {
+      "train": [1, 36],
+      "validation": [37, 44],
+      "calibration": [45, 52],
+      "test": [53, 60]
+    },
+    "selection_metric": "validation_rmse",
+    "split_policy": "group-disjoint units with later calibration and test periods",
+    "validation_interpretation": "synthetic generator validation, not empirical validation"
+  },
+  "unsupported_kpis": [
+    "technology_transfer_revenue",
+    "startup_survival",
+    "societal_impact_causal_effect"
+  ]
+}

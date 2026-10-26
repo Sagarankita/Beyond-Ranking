@@ -118,6 +118,12 @@ Run the reproducibility audit:
 make completion-audit
 ```
 
+Build the VJTI public-evidence and calibrated scenario package:
+
+```bash
+make public-data
+```
+
 Generated artifacts are written under `artifacts/` and `results/`. Existing saved
 outputs are retained unless a workflow's documented stable output directory is reused.
 
@@ -128,6 +134,9 @@ outputs are retained unless a workflow's documented stable output directory is r
 | `make` or `make main` | Corrected legacy RION baseline | `results/baseline_seed_42/` |
 | `make test` | Full unit and integration test suite | Terminal results |
 | `make data-audit` | Validate and classify the legacy dataset | `artifacts/data_audit/` |
+| `make public-data` | Build the VJTI public-plus-synthetic evidence package | `artifacts/public_data/vjti_ceit_v1/` |
+| `make evidence-models` | Run evidence-gated DEA and KPI generator validation | `artifacts/evidence_modeling/vjti_v1/` |
+| `make public-allocation` | Build the VJTI four-family allocation and target-cost outputs | `artifacts/public_allocation/vjti_v1/` |
 | `make generate-synthetic` | Generate a configured synthetic dataset | Configured generator path |
 | `make dea` | Run the DEA methodology fixture | `artifacts/dea/` |
 | `make train-models` | Train and validate KPI response models | `artifacts/models/` |
@@ -289,6 +298,9 @@ Department-Rank-Improver/
 ## Documentation
 
 - [Data contracts and provenance](docs/data_layer.md)
+- [VJTI public evidence and calibrated fallback](docs/public_data_vjti.md)
+- [Evidence-aware DEA and KPI models](docs/evidence_aware_models.md)
+- [Four-family public-plus-synthetic allocation](docs/public_plus_synthetic_allocation.md)
 - [DEA methodology](docs/dea_benchmark.md)
 - [KPI response models](docs/response_models.md)
 - [Shared allocation problem](docs/allocation_problem.md)
@@ -303,8 +315,9 @@ Department-Rank-Improver/
 
 ## Known limitations
 
-- Current allocation, KPI models, scenarios, and strategy outputs are synthetic or
-  illustrative rather than validated VJTI departmental evidence.
+- The VJTI package contains public programme capacity, faculty-roster, and 2023-24
+  placement evidence, but its allocation and most response fields remain calibrated
+  scenarios rather than validated departmental observations.
 - Innovation, student, and societal response models require public evidence or calibrated
   synthetic scenario models before institution-specific interpretation.
 - Patent and compute-cost shocks are not supported by the current decision schema.

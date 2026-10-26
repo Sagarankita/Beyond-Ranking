@@ -1,0 +1,81 @@
+unit_id,unit_level,period,period_start,period_end,field,value,unit,provenance,source_id,page_table,derivation,objective_family,seed
+VJTI-CEIT,department,current_2026-10-26,2026-10-26,2026-10-26,ug_sanctioned_intake,120.0,headcount/year,derived_public,vjti_ceit_page,HTML Programs table,60 Computer Engineering + 60 Information Technology,context,
+VJTI-CEIT,department,current_2026-10-26,2026-10-26,2026-10-26,ug_capacity,480.0,headcount,derived_public,vjti_ceit_page,HTML Programs table,"120 annual intake * 4 programme years; capacity, not observed enrollment",context,
+VJTI-CEIT,department,current_2026-10-26,2026-10-26,2026-10-26,faculty_total_roster,15.0,headcount,observed_public,vjti_ceit_page,HTML People > Faculty,Count of named faculty before Professor of Practice section; contractual faculty excluded,context,
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,graduating_students,176.0,headcount,derived_public,vjti_placement_2023_24,page 1 placement table,B.Tech IT 87 + B.Tech Computer 89,student_development,
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,eligible_students,174.0,headcount,derived_public,vjti_placement_2023_24,page 1 placement table,B.Tech IT 86 + B.Tech Computer 88,student_development,
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,placements,150.0,headcount,derived_public,vjti_placement_2023_24,page 1 placement table,B.Tech IT 76 + B.Tech Computer 74; excludes higher education,student_development,
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,higher_studies,14.0,headcount,derived_public,vjti_placement_2023_24,page 1 placement table,B.Tech IT 6 + B.Tech Computer 8,student_development,
+VJTI,institution,2023-24,2023-07-01,2024-06-30,student_count,3161.0,headcount,derived_public,vjti_nirf_2025,page 1 Total Actual Student Strength,UG 2794 + PG 367; institute total retained at institution level,context,
+VJTI,institution,2023-24,2023-07-01,2024-06-30,academic_resource_expenditure,167937189.0,INR nominal,derived_public,vjti_nirf_2025,page 2 Financial Resources,Library 10148248 + lab equipment/software 51274464 + workshops 25082464 + other academic capital 51588335 + seminars 29843678,context,
+VJTI,institution,2023-24,2023-07-01,2024-06-30,patents_published,12.0,count,observed_public,vjti_nirf_2025,page 2 IPR calendar 2023,No department attribution,innovation,
+VJTI,institution,2023-24,2023-07-01,2024-06-30,patents_granted,14.0,count,observed_public,vjti_nirf_2025,page 2 IPR calendar 2023,No department attribution,innovation,
+VJTI,institution,2023-24,2023-07-01,2024-06-30,sponsored_projects,15.0,count,observed_public,vjti_nirf_2025,page 3 Sponsored Research Details,Institute total,research,
+VJTI,institution,2023-24,2023-07-01,2024-06-30,sponsored_research_amount,215643556.0,INR nominal,observed_public,vjti_nirf_2025,page 3 Sponsored Research Details,Institute total,research,
+VJTI,institution,2023-24,2023-07-01,2024-06-30,consultancy_projects,1316.0,count,observed_public,vjti_nirf_2025,page 3 Consultancy Project Details,Institute total; unusual magnitude retained as reported,innovation,
+VJTI,institution,2023-24,2023-07-01,2024-06-30,consultancy_amount,174244913.0,INR nominal,observed_public,vjti_nirf_2025,page 3 Consultancy Project Details,Institute total,innovation,
+COEP,institution_peer,2023-24,2023-07-01,2024-06-30,student_count,4040.0,headcount,derived_public,coep_nirf_2025,page 1 Total Actual Student Strength,UG 3469 + PG 571,context,
+COEP,institution_peer,2023-24,2023-07-01,2024-06-30,placements,587.0,headcount,observed_public,coep_nirf_2025,page 1 UG placement and higher studies,Institution UG cohort; not department-level,student_development,
+COEP,institution_peer,2023-24,2023-07-01,2024-06-30,higher_studies,124.0,headcount,observed_public,coep_nirf_2025,page 1 UG placement and higher studies,Institution UG cohort,student_development,
+COEP,institution_peer,2023-24,2023-07-01,2024-06-30,patents_published,4.0,count,observed_public,coep_nirf_2025,page 2 IPR calendar 2023,Institution total,innovation,
+COEP,institution_peer,2023-24,2023-07-01,2024-06-30,patents_granted,14.0,count,observed_public,coep_nirf_2025,page 2 IPR calendar 2023,Institution total,innovation,
+COEP,institution_peer,2023-24,2023-07-01,2024-06-30,sponsored_projects,162.0,count,observed_public,coep_nirf_2025,page 3 Sponsored Research Details,Institution total,research,
+COEP,institution_peer,2023-24,2023-07-01,2024-06-30,sponsored_research_amount,231384775.0,INR nominal,observed_public,coep_nirf_2025,page 3 Sponsored Research Details,Institution total,research,
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,student_count,451.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,faculty_phd,7.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,faculty_other,8.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,faculty_research_fte,3.75,annual FTE,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,research_budget,18820000.0,INR nominal,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,teaching_load_per_faculty,12.5,hours/week,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,q1_publications,9.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,normalized_citation_impact,0.839,index,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,patent_applications,1.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,innovation,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,industry_projects,3.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,innovation,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,student_research_participants,78.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,placements,140.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,higher_studies,15.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,open_access_publications,3.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,societal_contribution,14042
+VJTI-CEIT,department,2020-21,2020-07-01,2021-06-30,outreach_participants,31.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,societal_contribution,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,student_count,466.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,faculty_phd,8.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,faculty_other,7.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,faculty_research_fte,3.975,annual FTE,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,research_budget,21508000.0,INR nominal,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,teaching_load_per_faculty,12.35,hours/week,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,q1_publications,7.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,normalized_citation_impact,0.795,index,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,patent_applications,2.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,innovation,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,industry_projects,3.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,innovation,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,student_research_participants,66.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,placements,142.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,higher_studies,12.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,open_access_publications,3.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,societal_contribution,14042
+VJTI-CEIT,department,2021-22,2021-07-01,2022-06-30,outreach_participants,33.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,societal_contribution,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,student_count,475.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,faculty_phd,8.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,faculty_other,7.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,faculty_research_fte,4.2,annual FTE,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,research_budget,24558000.0,INR nominal,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,teaching_load_per_faculty,12.2,hours/week,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,q1_publications,10.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,normalized_citation_impact,0.9,index,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,patent_applications,1.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,innovation,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,industry_projects,2.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,innovation,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,student_research_participants,82.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,placements,149.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,higher_studies,15.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,open_access_publications,4.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,societal_contribution,14042
+VJTI-CEIT,department,2022-23,2022-07-01,2023-06-30,outreach_participants,31.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,societal_contribution,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,student_count,480.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,faculty_phd,8.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,faculty_other,7.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,faculty_research_fte,4.425,annual FTE,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,research_budget,25445000.0,INR nominal,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,teaching_load_per_faculty,12.05,hours/week,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,context,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,q1_publications,11.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,normalized_citation_impact,0.936,index,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,research,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,patent_applications,2.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,innovation,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,industry_projects,4.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,innovation,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,student_research_participants,85.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,student_development,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,open_access_publications,4.0,count,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,societal_contribution,14042
+VJTI-CEIT,department,2023-24,2023-07-01,2024-06-30,outreach_participants,37.0,headcount,synthetic_calibrated,generator_vjti_ceit_v1,formula,lagged-correlated-formulas-v1,societal_contribution,14042
