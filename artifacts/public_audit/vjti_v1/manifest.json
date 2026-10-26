@@ -1,0 +1,23 @@
+{
+  "artifact_hashes": {
+    "audit_checks.csv": "f5c26fdb7c35cbdfd326a0ac779c78133568037d9c95a20ae3467ecd66334e5a",
+    "audit_report.md": "6ffd6fa17d467898c5c66754c42dca6829512966a286e590e029871de22c29ea",
+    "implementation_evidence_matrix.csv": "b16b07c159580532ae526ffae8b7288b1a850109b7ba828673a156fe8ccf5232",
+    "independent_constraint_check.csv": "e086b9b6990df7548459713169f6d4322b4fad4dcefad5b50ff9b8cd1e541020",
+    "independent_prediction_check.csv": "3e34498a9e49af4ea0fba72744cabfb76c1549a9f4e22d75ba769e9bc9ce4f48",
+    "independent_reproduction_metrics.csv": "c59af4c0a1f0cc007754974647bb3d9242e8087c4365e3472910e99cec605b52",
+    "reproduction_evidence.json": "4b73a9b9e7dd05ccc59c4dc9a64c861053457bfe32c3e4310a989e44fa0daa64",
+    "test_evidence.txt": "519bf63b477e5dc0c190812fd06631b53b6465b8634537d6cb9de01be9345ba2"
+  },
+  "audit_id": "vjti-public-plus-synthetic-completion-audit-v1",
+  "causal_claim": false,
+  "completed_at_utc": "2026-10-26T18:11:37.701359+00:00",
+  "completion_claim": "complete_vjti_calibrated_methodological_study",
+  "config_sha256": "c4d971647cd9b23b3652c26436f8a97ff0524516ca756b522d0803489264bd29",
+  "empirical_validation_claim": false,
+  "failed": 0,
+  "gaps": 3,
+  "passed": 20,
+  "python": "3.13.14",
+  "required_checks_pass": true
+}

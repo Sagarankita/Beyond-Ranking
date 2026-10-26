@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Program Files\\PostgreSQL\\18\\pgAdmin 4\\python\\python.exe",
+    "-c",
+    "import runpy,sys;sys.path[:0]=['C:\\\\Users\\\\adnan\\\\AppData\\\\Local\\\\Temp\\\\vjti-public-audit-p5v5w3sg', 'C:\\\\Users\\\\adnan\\\\AppData\\\\Local\\\\Temp\\\\codex-beyond-ranking-sitepackages313-clean'];sys.argv=['public_reproduce', '--config', 'configs/public_allocation/vjti_four_family_v1.json', '--model-root', 'artifacts/evidence_modeling/vjti_v1', '--output', 'reproduction', '--seed', '18001', '--evaluations', '8'];runpy.run_module('department_optimizer.audit.public_reproduce',run_name='__main__')"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "copied_source_only": [
+    "department_optimizer",
+    "libRION",
+    "configs/public_allocation/vjti_four_family_v1.json",
+    "artifacts/evidence_modeling/vjti_v1"
+  ]
+}

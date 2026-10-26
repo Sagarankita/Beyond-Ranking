@@ -1,0 +1,40 @@
+{
+  "analysis_id": "vjti_public_plus_synthetic_experiments_v1",
+  "protocol_status": "frozen_before_pilot; pilot outcomes cannot change this file",
+  "allocation_config": "configs/public_allocation/vjti_four_family_v1.json",
+  "prompt14_root": "artifacts/public_data/vjti_ceit_v1",
+  "prompt15_root": "artifacts/evidence_modeling/vjti_v1",
+  "output_root": "artifacts/public_experiments/vjti_v1",
+  "pilot_seed": 17999,
+  "comparison_seeds": [17001, 17002, 17003],
+  "matched_candidate_evaluations": 16,
+  "algorithms": {
+    "nsga2": {"population_size": 4, "generations": 3},
+    "nsga3": {"reference_partitions": 1, "generations": 3},
+    "moead": {"reference_partitions": 1, "neighborhood_size": 2, "max_replacements": 2, "generations": 3},
+    "mopso": {"population_size": 4, "generations": 3, "archive_size": 8},
+    "rion": {"population_size": 4, "generations": 1, "pso_iterations": 1},
+    "random_search": {"evaluations": 16}
+  },
+  "policy_preferences": {
+    "balanced": [0.25, 0.25, 0.25, 0.25],
+    "research_first": [0.55, 0.15, 0.15, 0.15],
+    "innovation_first": [0.15, 0.55, 0.15, 0.15],
+    "student_first": [0.15, 0.15, 0.55, 0.15],
+    "societal_first": [0.15, 0.15, 0.15, 0.55]
+  },
+  "scenarios": [
+    {"name": "budget_lean_30m", "budget_limit": 30000000},
+    {"name": "budget_reference_36m", "budget_limit": 36000000},
+    {"name": "budget_expanded_42m", "budget_limit": 42000000},
+    {"name": "faculty_time_shock", "budget_limit": 36000000, "faculty_total": 13},
+    {"name": "patent_cost_plus_25pct", "budget_limit": 36000000, "cost_multiplier": {"patent_ip_support": 1.25}},
+    {"name": "compute_cost_plus_25pct", "budget_limit": 36000000, "cost_multiplier": {"compute_capacity_units": 1.25}}
+  ],
+  "uncertainty": {"seed": 17042, "draws": 1000, "normal_interval_quantile": 1.6448536269514722},
+  "claims": {
+    "prediction": "Associational predictions from a VJTI-calibrated public-plus-synthetic methodological fixture.",
+    "causal": "No allocation is claimed to cause an outcome change.",
+    "dea": "DEA peers and efficiency are calibrated synthetic method-fixture context, not observed institutional rankings."
+  }
+}

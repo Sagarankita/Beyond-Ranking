@@ -46,6 +46,26 @@ class PublicAllocationResult:
     def to_dict(self):
         return asdict(self)
 
+    def objective_vector(self):
+        return np.asarray([self.objective_scores[name] for name in FAMILIES], dtype=float)
+
+    @property
+    def uncertainty(self):
+        return self.intervals
+
+    @property
+    def nominal_feasible(self):
+        return self.feasible
+
+    @property
+    def robust_feasible(self):
+        # Service constraints already use conservative prediction-interval bounds.
+        return self.feasible
+
+    @property
+    def cost(self):
+        return self.total_cost
+
 
 class EvidenceModelBundle:
     def __init__(self, root: Path):
@@ -79,6 +99,7 @@ class VJTIPublicAllocationProblem:
         self.config = dict(config)
         self.variables = list(self.config["decision_variables"])
         self.names = [item["name"] for item in self.variables]
+        self.variable_names = self.names
         self.model = EvidenceModelBundle(Path(model_root))
         self._validate()
 
@@ -142,9 +163,11 @@ class VJTIPublicAllocationProblem:
         for variable in self.variables:
             value = allocation[variable["name"]]
             if variable["cost_mode"] == "direct_money":
-                result[variable["name"]] = value
+                result[variable["name"]] = value * variable.get("cost_multiplier", 1.0)
             elif variable["cost_mode"] == "unit_cost":
-                result[variable["name"]] = value * variable["unit_cost"]
+                result[variable["name"]] = (
+                    value * variable["unit_cost"] * variable.get("cost_multiplier", 1.0)
+                )
             else:
                 result[variable["name"]] = 0.0
         return result
@@ -251,8 +274,7 @@ class VJTIPublicAllocationProblem:
         normalized = {name: max(0.0, value) / scales[name] for name, value in residuals.items()}
         return residuals, normalized
 
-    def evaluate(self, candidate):
-        decoded, repaired, actions = self.repair(candidate)
+    def _evaluate_allocation(self, decoded, repaired, actions):
         features = self._features(repaired)
         predictions, intervals, outside = self.model.predict(features)
         adjustments = self._adjust(repaired, predictions, intervals)
@@ -282,9 +304,19 @@ class VJTIPublicAllocationProblem:
             decoded, repaired, actions, self.cost_components(repaired), self.total_cost(repaired),
             self.config["budget_limit"] - self.total_cost(repaired), features, predictions,
             intervals, adjustments, score_components, benefits, scores, evidence,
-            {"out_of_support": bool(outside), "out_of_support_features": outside,
+            {"out_of_support": bool(outside), "out_of_model_support": bool(outside),
+             "out_of_support_features": outside,
              "extrapolation_rule": self.config["extrapolation_rule"]},
             residuals, normalized, float(sum(normalized.values())),
             bool(all(value <= 1e-9 for value in residuals.values())), coverage,
             "DEA retained as descriptive context only; not used as a causal multiplier",
         )
+
+    def evaluate(self, candidate):
+        decoded, repaired, actions = self.repair(candidate)
+        return self._evaluate_allocation(decoded, repaired, actions)
+
+    def evaluate_fixed(self, candidate):
+        """Evaluate an unchanged strategy under a scenario, without repair or reoptimization."""
+        decoded = self.decode(candidate)
+        return self._evaluate_allocation(decoded, dict(decoded), [])

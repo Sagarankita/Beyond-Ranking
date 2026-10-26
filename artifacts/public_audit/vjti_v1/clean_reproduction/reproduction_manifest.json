@@ -1,0 +1,9 @@
+{
+  "seed": 18001,
+  "evaluation_budget": 8,
+  "algorithms": [
+    "nsga2",
+    "random_search"
+  ],
+  "evidence_scope": "small public-plus-synthetic software reproduction; not empirical validation"
+}

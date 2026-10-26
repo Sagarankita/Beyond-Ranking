@@ -1,0 +1,9 @@
+{
+  "algorithm": "random_search",
+  "archive_rows": 2,
+  "archive_state": "valid",
+  "population_rows": 16,
+  "runtime_seconds": 0.5863459999673069,
+  "seed": 17999,
+  "status": "complete"
+}

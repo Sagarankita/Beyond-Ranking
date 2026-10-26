@@ -1,0 +1,43 @@
+{
+  "cohort_name": "calibrated_indian_public_engineering_method_fixture_v1",
+  "discrimination_heuristic_minimum_dmus": 15,
+  "discrimination_warnings": [
+    "40.0% of solved DMUs are strongly efficient; discrimination may be weak"
+  ],
+  "dmu_count": 30,
+  "efficiency_score_summary": {
+    "maximum": 1.0,
+    "mean": 0.934488281343631,
+    "median": 0.9557521217361372,
+    "minimum": 0.7917547778969852
+  },
+  "evidence_label": "synthetic_scenario",
+  "failed_solves": 0,
+  "input_columns": [
+    "academic_resource_expenditure",
+    "faculty_research_fte"
+  ],
+  "input_scaling_factors": {
+    "academic_resource_expenditure": 157423183.37,
+    "faculty_research_fte": 46.152
+  },
+  "interpretation": "Relative efficiency is a methodological scenario result, not observed performance or a causal multiplier.",
+  "model": "input-oriented variable-returns-to-scale DEA (BCC envelopment)",
+  "output_columns": [
+    "sponsored_projects",
+    "placements",
+    "patents_granted"
+  ],
+  "output_scaling_factors": {
+    "patents_granted": 6.0,
+    "placements": 571.0,
+    "sponsored_projects": 22.0
+  },
+  "public_dea_run": false,
+  "radially_efficient_count": 12,
+  "sensitivity_max_absolute_change": 0.08696925378703624,
+  "strongly_efficient_count": 12,
+  "strongly_efficient_share": 0.4,
+  "successful_solves": 30,
+  "track": "calibrated_synthetic_peer_fixture"
+}

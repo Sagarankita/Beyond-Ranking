@@ -1,0 +1,3 @@
+algorithm,independent_hypervolume,recorded_hypervolume,independent_igd,recorded_igd
+nsga2,0.0,0.0,,
+random_search,0.07724698419544967,0.0772469841954496,0.0,0.0

@@ -137,6 +137,8 @@ outputs are retained unless a workflow's documented stable output directory is r
 | `make public-data` | Build the VJTI public-plus-synthetic evidence package | `artifacts/public_data/vjti_ceit_v1/` |
 | `make evidence-models` | Run evidence-gated DEA and KPI generator validation | `artifacts/evidence_modeling/vjti_v1/` |
 | `make public-allocation` | Build the VJTI four-family allocation and target-cost outputs | `artifacts/public_allocation/vjti_v1/` |
+| `make public-experiments` | Run the frozen repeated VJTI experiment and scenario protocol | `artifacts/public_experiments/vjti_v1/` |
+| `make public-completion-audit` | Cleanly reproduce and independently audit the VJTI study | `artifacts/public_audit/vjti_v1/` |
 | `make generate-synthetic` | Generate a configured synthetic dataset | Configured generator path |
 | `make dea` | Run the DEA methodology fixture | `artifacts/dea/` |
 | `make train-models` | Train and validate KPI response models | `artifacts/models/` |
@@ -310,6 +312,7 @@ Department-Rank-Improver/
 - [Robustness analysis](docs/phase6b_robustness.md)
 - [Strategy reporting](docs/phase7_strategy_report.md)
 - [Completion audit](docs/phase12_completion_audit.md)
+- [VJTI public-plus-synthetic completion audit](docs/public_completion_audit.md)
 - [Reverse target-cost optimization](docs/optional_target_cost.md)
 - [Advanced-extension evidence assessment](docs/optional_advanced_extensions.md)
 
@@ -320,7 +323,8 @@ Department-Rank-Improver/
   scenarios rather than validated departmental observations.
 - Innovation, student, and societal response models require public evidence or calibrated
   synthetic scenario models before institution-specific interpretation.
-- Patent and compute-cost shocks are not supported by the current decision schema.
+- Patent and compute-cost shocks are implemented only as documented calibrated-cost
+  scenarios; they are not observed department cost effects.
 - Network DEA lacks observed stage-link variables.
 - Multi-period optimization lacks observed repeated department-period data and outcome
   lags.

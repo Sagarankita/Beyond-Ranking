@@ -1,0 +1,3 @@
+algorithm,candidate_evaluations,population_rows,archive_rows,hypervolume,igd
+nsga2,8,4,0,0.0,
+random_search,8,8,1,0.07724698419544967,0.0

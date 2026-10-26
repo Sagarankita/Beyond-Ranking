@@ -387,7 +387,8 @@ same reporting definitions and must not contain another evaluator.
 - [x] KPI models report validation type and synthetic coverage without treating synthetic holdouts as empirical evidence.
 - [x] Research, innovation, student, and societal objectives are public-supported or explicitly scenario-only.
 - [x] Patent/compute shocks use public evidence or documented calibrated assumptions.
-- [ ] VJTI public-plus-synthetic repeated experiments and robustness scenarios are complete.
-- [ ] The final report reports synthetic coverage and is independently reproduced from saved artifacts.
-- [ ] Network DEA and multi-period planning use public evidence when supported, otherwise only separately labeled calibrated synthetic fixtures.
+- [x] VJTI public-plus-synthetic repeated experiments and robustness scenarios are complete.
+- [x] The final report reports synthetic coverage and is independently reproduced from saved artifacts.
+- [x] Network DEA and multi-period planning pass evidence gates: both remain explicitly deferred because required observed public links/periods are absent.
+- [x] The final VJTI completion audit independently reproduces predictions, constraints, Pareto status, hypervolume, and IGD and publishes the evidence-status matrix.
 - [ ] Optional GP/dashboard work, if undertaken, passes its separate acceptance criteria without changing scientific results.

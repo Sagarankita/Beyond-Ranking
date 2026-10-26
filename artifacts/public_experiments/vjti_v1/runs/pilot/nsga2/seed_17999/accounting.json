@@ -1,0 +1,23 @@
+{
+  "algorithm": "nsga2",
+  "cache_hits": 0,
+  "candidate_evaluations_evolution": 12,
+  "candidate_evaluations_initialization": 4,
+  "candidate_evaluations_inner_pso": 0,
+  "candidate_evaluations_total": 16,
+  "expected_candidate_evaluations": 16,
+  "generations": 3,
+  "inner_pso_evaluations": 0,
+  "matched_budget": true,
+  "population_size": 4,
+  "requested_by_phase": {
+    "evolution": 12,
+    "initialization": 4
+  },
+  "requested_total": 16,
+  "unique_shared_evaluator_calls_by_phase": {
+    "evolution": 12,
+    "initialization": 4
+  },
+  "unique_shared_evaluator_calls_total": 16
+}

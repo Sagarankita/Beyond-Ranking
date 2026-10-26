@@ -1,0 +1,12 @@
+policy,result,duplicate_of,strategy_id,source_artifact,weighted_utility,scenario
+balanced,selected,,policy_balanced,runs/comparison/mopso/seed_17001/archive.csv#row=4,0.5621100390482893,
+research_first,selected,,policy_research_first,runs/comparison/moead/seed_17002/archive.csv#row=0,0.5695045872569178,
+innovation_first,duplicate,research_first,policy_innovation_first,runs/comparison/moead/seed_17002/archive.csv#row=0,0.5837005485599471,
+student_first,duplicate,balanced,policy_student_first,runs/comparison/mopso/seed_17001/archive.csv#row=4,0.569964481479216,
+societal_first,selected,,policy_societal_first,runs/comparison/rion/seed_17001/archive.csv#row=0,0.6560397706824113,
+balanced,selected,,budget_lean_30m__reoptimized,runs/scenario_budget_lean_30m/nsga2/seed_17001/archive.csv#row=1,0.5191614595205285,budget_lean_30m
+balanced,selected,,budget_reference_36m__reoptimized,runs/scenario_budget_reference_36m/nsga2/seed_17001/archive.csv#row=0,0.5351896728030947,budget_reference_36m
+balanced,selected,,budget_expanded_42m__reoptimized,runs/scenario_budget_expanded_42m/nsga2/seed_17001/archive.csv#row=0,0.5351896728030947,budget_expanded_42m
+balanced,selected,,faculty_time_shock__reoptimized,runs/scenario_faculty_time_shock/nsga2/seed_17001/archive.csv#row=0,0.3764293362181999,faculty_time_shock
+balanced,selected,,patent_cost_plus_25pct__reoptimized,runs/scenario_patent_cost_plus_25pct/nsga2/seed_17001/archive.csv#row=0,0.5351896728030947,patent_cost_plus_25pct
+balanced,selected,,compute_cost_plus_25pct__reoptimized,runs/scenario_compute_cost_plus_25pct/nsga2/seed_17001/archive.csv#row=0,0.5351896728030947,compute_cost_plus_25pct

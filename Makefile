@@ -56,7 +56,7 @@ allocation-small:
 allocation-phase5:
 	$(PYTHON) main.py allocation --config configs/optimization/phase5_pilot_synthetic.json
 .PHONY: benchmark-smoke benchmark-final robustness-smoke strategy-report completion-audit target-cost extension-assessment
-.PHONY: public-data evidence-models public-allocation
+.PHONY: public-data evidence-models public-allocation public-experiments public-completion-audit
 
 public-data:
 	$(PYTHON) -m department_optimizer.public_data.run --config configs/data/vjti_public_plus_synthetic_v1.json
@@ -66,6 +66,12 @@ evidence-models:
 
 public-allocation:
 	$(PYTHON) -m department_optimizer.public_allocation.run --config configs/public_allocation/vjti_four_family_v1.json
+
+public-experiments:
+	$(PYTHON) -m department_optimizer.public_experiments.run --config configs/public_experiments/vjti_experiments_v1.json
+
+public-completion-audit:
+	$(PYTHON) -m department_optimizer.audit.public_run --config configs/audit/vjti_public_completion_v1.json
 
 benchmark-smoke:
 	$(PYTHON) -m department_optimizer.benchmark.run --config configs/benchmark/smoke_synthetic.json

@@ -1,0 +1,5 @@
+analysis_track,outcome,denominator,numerator,denominator_value,rate,source_artifact,causal_claim
+public_only_descriptive,placements,eligible_students,587.0,174.0,3.3735632183908044,artifacts/public_data/vjti_ceit_v1/public_only.csv,False
+public_only_descriptive,higher_studies,eligible_students,124.0,174.0,0.7126436781609196,artifacts/public_data/vjti_ceit_v1/public_only.csv,False
+public_only_descriptive,placements,graduating_students,587.0,176.0,3.335227272727273,artifacts/public_data/vjti_ceit_v1/public_only.csv,False
+public_only_descriptive,higher_studies,graduating_students,124.0,176.0,0.7045454545454546,artifacts/public_data/vjti_ceit_v1/public_only.csv,False

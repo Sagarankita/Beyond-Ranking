@@ -1,0 +1,9 @@
+{
+  "algorithm": "moead",
+  "archive_rows": 2,
+  "archive_state": "valid",
+  "population_rows": 4,
+  "runtime_seconds": 0.715833600028418,
+  "seed": 17999,
+  "status": "complete"
+}

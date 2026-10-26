@@ -1,0 +1,14 @@
+{
+  "audit_id": "vjti-public-plus-synthetic-completion-audit-v1",
+  "public_root": "artifacts/public_data/vjti_ceit_v1",
+  "evidence_root": "artifacts/evidence_modeling/vjti_v1",
+  "allocation_root": "artifacts/public_allocation/vjti_v1",
+  "experiment_root": "artifacts/public_experiments/vjti_v1",
+  "allocation_config": "configs/public_allocation/vjti_four_family_v1.json",
+  "experiment_config": "configs/public_experiments/vjti_experiments_v1.json",
+  "final_synthetic_benchmark_root": "results/benchmarks/phase6-final-synthetic-25seeds-v1",
+  "extension_assessment": "results/extensions/optional-network-dea-multiperiod-assessment-v1/assessment.json",
+  "output_root": "artifacts/public_audit/vjti_v1",
+  "reproduction_seed": 18001,
+  "reproduction_evaluations": 8
+}

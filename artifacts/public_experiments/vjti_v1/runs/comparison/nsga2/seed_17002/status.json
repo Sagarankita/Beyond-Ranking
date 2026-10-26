@@ -1,0 +1,9 @@
+{
+  "algorithm": "nsga2",
+  "archive_rows": 3,
+  "archive_state": "valid",
+  "population_rows": 4,
+  "runtime_seconds": 0.753588099963963,
+  "seed": 17002,
+  "status": "complete"
+}

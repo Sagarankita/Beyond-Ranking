@@ -1,0 +1,9 @@
+{
+  "algorithm": "mopso",
+  "archive_rows": 4,
+  "archive_state": "valid",
+  "population_rows": 4,
+  "runtime_seconds": 0.6509186999173835,
+  "seed": 17002,
+  "status": "complete"
+}

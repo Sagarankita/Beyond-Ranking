@@ -1,0 +1,15 @@
+work_item,implementation_status,evidence_status,boundary
+Public-source acquisition and immutable snapshots,implemented,publicly_validated,Official source identities and file hashes verified; values remain descriptive.
+"CE&IT capacity, faculty roster, placement and higher-study facts",implemented,public_descriptive,Observed/derived public fields only; no causal interpretation.
+Calibrated missing-field generator,implemented,synthetic_scenario,Fixed seeds and versioned assumptions; not observed VJTI data.
+Resource-to-KPI models and intervals,implemented,synthetic_scenario,Generator validation only; no public test set.
+VRS DEA peer fixture,implemented,synthetic_scenario,Calibrated synthetic peers; not public institutional efficiency.
+Four-family allocation evaluator,implemented,synthetic_scenario,Mixed public context and synthetic response functions.
+Repeated algorithm and robustness experiments,implemented,synthetic_scenario,18/18 VJTI-calibrated runs plus legacy 25-seed software benchmark.
+Public-only placement sensitivity,implemented,public_descriptive,Rates only; no allocation effect.
+Network DEA,evidence_gate_applied,deferred,No observed comparable stage links.
+Multi-period allocation,evidence_gate_applied,deferred,No repeated observed department-period decisions and lags.
+Gaussian-process extension,not_run,optional,Optional and not needed for required completion.
+Saved-artifact dashboard,not_run,optional,Optional; static report remains reproducible.
+Causal allocation effects,not_claimed,unsupported,No intervention design or causal identification.
+Empirically validated VJTI optimization,not_claimed,unsupported,Department allocations and most outcomes are not publicly observed longitudinally.

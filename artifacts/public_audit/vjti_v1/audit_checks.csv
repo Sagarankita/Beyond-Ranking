@@ -1,0 +1,24 @@
+check,category,status,evidence,detail
+public_source_and_generated_hash_chain,provenance,pass,public manifest + source register,
+generator_model_hash_chain,provenance,pass,Prompt 14 -> Prompt 15 manifests and model files,
+split_isolation_and_leakage,model,pass,leakage_checks.json + model_splits.csv,
+model_validation_and_coverage,model,pass,model_metrics.csv + model_manifest.json,
+dea_formulation_and_evidence,dea,pass,dea_summary.json + dea_variable_provenance.csv,
+allocation_chain_units_feasibility,allocation,pass,allocation manifest + checks,
+objective_direction_and_evidence,allocation,pass,independent baseline evaluation,
+experiment_and_report_hash_chain,experiments,pass,experiment_manifest.json,
+matched_budgets_seed_and_algorithm_counts,experiments,pass,18/18 run records,
+scenario_and_fixed_reoptimized_coverage,experiments,pass,experiment config + strategy_allocations.csv,
+strategy_rules_feasibility_and_duplicates,reporting,pass,strategy artifacts,
+report_artifact_only_reproduction,reporting,pass,report.md regenerated from saved artifacts,
+final_benchmark_statistical_tests,statistics,pass,25-seed completion + paired tests + Holm correction,
+advanced_extension_evidence_gates,scope,pass,results/extensions/optional-network-dea-multiperiod-assessment-v1/assessment.json,
+clean_small_reproduction,reproduction,pass,C:\Users\adnan\Desktop\Beyond-Ranking\artifacts\public_audit\vjti_v1\clean_reproduction,
+selected_prediction_recomputed,reproduction,pass,independent_prediction_check.csv,
+constraint_residuals_recomputed,reproduction,pass,independent_constraint_check.csv,
+pareto_status_recomputed,reproduction,pass,clean_reproduction/runs/*/archive.csv,
+hypervolume_igd_recomputed,reproduction,pass,independent_reproduction_metrics.csv,
+full_python_test_suite,tests,pass,test_evidence.txt,
+network_dea_public_evidence,gap,gap,results/extensions/optional-network-dea-multiperiod-assessment-v1/assessment.json,deferred: no observed comparable stage links
+multi_period_public_evidence,gap,gap,results/extensions/optional-network-dea-multiperiod-assessment-v1/assessment.json,deferred: no observed longitudinal department decisions/outcomes
+causal_empirical_validation,gap,gap,public_evidence_assessment.json,unsupported: descriptive public fields and synthetic response models cannot identify causal effects

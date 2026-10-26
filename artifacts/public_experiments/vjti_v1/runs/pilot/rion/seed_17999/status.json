@@ -1,0 +1,9 @@
+{
+  "algorithm": "rion",
+  "archive_rows": 3,
+  "archive_state": "valid",
+  "population_rows": 4,
+  "runtime_seconds": 0.9675262999953702,
+  "seed": 17999,
+  "status": "complete"
+}

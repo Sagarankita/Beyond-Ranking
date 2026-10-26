@@ -1,0 +1,5 @@
+{
+  "config_sha256": "454c773d5b861eb183d0ed56307b2a9f090a24892e2fe12e752039643c7c32d1",
+  "decision": "no_change_allowed_or_made_after_pilot",
+  "pilot_purpose": "execution and artifact-contract check only; no performance-based tuning"
+}
