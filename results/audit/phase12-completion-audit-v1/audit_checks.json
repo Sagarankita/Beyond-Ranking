@@ -163,8 +163,8 @@
   {
     "check_id": "optional_native_backend",
     "category": "native",
-    "status": "pass",
-    "evidence": "libRION/libpso.so sha256=460ad80a2f109e9dde22199885cd5e3e08cfb1e0d97d4f822bbd1f7f6485fc4e",
-    "details": ""
+    "status": "gap",
+    "evidence": "libRION/libpso.so",
+    "details": "optional compiled library is absent; serial workflow remains available"
   }
 ]

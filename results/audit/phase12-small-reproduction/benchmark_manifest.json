@@ -17,7 +17,7 @@
   "budget_definition": "Phase 12 clean reproduction candidate budget",
   "config_path": "configs/audit-clean-benchmark.json",
   "config_sha256": "75a28159531d8392525fc7a184b0c8a52291e7679aff18f49ec73ff6c48ec6b9",
-  "created_or_refreshed_at_utc": "2026-10-26T16:36:33.076458+00:00",
+  "created_or_refreshed_at_utc": "2026-11-02T10:02:14.393825+00:00",
   "data_path": "data/department_research_data.csv",
   "data_role": "smoke",
   "data_sha256": "a7fdf37913369dbcfa3cdd754a3acfccf7707bfb64fa47ed600c30e36d0ff697",
@@ -33,13 +33,13 @@
     "packages": {
       "joblib": "1.6.0",
       "numpy": "2.5.4",
-      "pandas": "2.2.3",
+      "pandas": "2.3.3",
       "scikit_learn": "1.9.1",
       "scipy": "1.18.1"
     },
-    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
     "processor": "arm",
-    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
     "thread_environment": {
       "MKL_NUM_THREADS": null,
       "NUMEXPR_NUM_THREADS": null,

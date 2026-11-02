@@ -2,7 +2,7 @@
 
 > This audit distinguishes reproducible implementation evidence from configured, unsupported, and unexecuted work.
 
-Result: **23 passed, 0 failed, 1 explicit gaps.**
+Result: **22 passed, 0 failed, 2 explicit gaps.**
 
 ## Completion status
 
@@ -48,7 +48,7 @@ Result: **23 passed, 0 failed, 1 explicit gaps.**
 | empirical_departmental_evidence | completion | gap | data/provenance.json | only synthetic data and an illustrative reference allocation are available |
 | clean_temporary_reproduction | reproduction | pass | results/audit/phase12-small-reproduction |  |
 | full_test_suite | tests | pass | python -m unittest discover -s tests -v |  |
-| optional_native_backend | native | pass | libRION/libpso.so sha256=460ad80a2f109e9dde22199885cd5e3e08cfb1e0d97d4f822bbd1f7f6485fc4e |  |
+| optional_native_backend | native | gap | libRION/libpso.so | optional compiled library is absent; serial workflow remains available |
 
 ## Completion conclusion
 

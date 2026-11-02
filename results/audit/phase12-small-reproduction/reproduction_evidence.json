@@ -1,6 +1,6 @@
 {
   "command": [
-    "/Users/ankitasagar/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/Users/biancasawant/OT/Beyond-Ranking/.venv/bin/python3",
     "-m",
     "department_optimizer.benchmark.run",
     "--config",
