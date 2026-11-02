@@ -1,0 +1,31 @@
+strategy,allocation_group,variable,unit,current,recommended,difference
+conservative,allocation_1,research_budget,synthetic nominal INR,8000000.0,19900000.0,11900000.0
+conservative,allocation_1,frac_research_phd,fraction of annual faculty effort,0.5,0.75,0.25
+conservative,allocation_1,frac_research_other,fraction of annual faculty effort,0.25,0.48,0.22999999999999998
+conservative,allocation_1,centres_of_excellence_count,supported centre,2.0,0.0,-2.0
+conservative,allocation_1,industry_collaboration_support_count,supported collaboration,4.0,0.0,-4.0
+balanced,allocation_1,research_budget,synthetic nominal INR,8000000.0,19900000.0,11900000.0
+balanced,allocation_1,frac_research_phd,fraction of annual faculty effort,0.5,0.75,0.25
+balanced,allocation_1,frac_research_other,fraction of annual faculty effort,0.25,0.48,0.22999999999999998
+balanced,allocation_1,centres_of_excellence_count,supported centre,2.0,0.0,-2.0
+balanced,allocation_1,industry_collaboration_support_count,supported collaboration,4.0,0.0,-4.0
+research_first,allocation_1,research_budget,synthetic nominal INR,8000000.0,19900000.0,11900000.0
+research_first,allocation_1,frac_research_phd,fraction of annual faculty effort,0.5,0.75,0.25
+research_first,allocation_1,frac_research_other,fraction of annual faculty effort,0.25,0.48,0.22999999999999998
+research_first,allocation_1,centres_of_excellence_count,supported centre,2.0,0.0,-2.0
+research_first,allocation_1,industry_collaboration_support_count,supported collaboration,4.0,0.0,-4.0
+innovation_first,allocation_1,research_budget,synthetic nominal INR,8000000.0,19900000.0,11900000.0
+innovation_first,allocation_1,frac_research_phd,fraction of annual faculty effort,0.5,0.75,0.25
+innovation_first,allocation_1,frac_research_other,fraction of annual faculty effort,0.25,0.48,0.22999999999999998
+innovation_first,allocation_1,centres_of_excellence_count,supported centre,2.0,0.0,-2.0
+innovation_first,allocation_1,industry_collaboration_support_count,supported collaboration,4.0,0.0,-4.0
+student_first,allocation_1,research_budget,synthetic nominal INR,8000000.0,19900000.0,11900000.0
+student_first,allocation_1,frac_research_phd,fraction of annual faculty effort,0.5,0.75,0.25
+student_first,allocation_1,frac_research_other,fraction of annual faculty effort,0.25,0.48,0.22999999999999998
+student_first,allocation_1,centres_of_excellence_count,supported centre,2.0,0.0,-2.0
+student_first,allocation_1,industry_collaboration_support_count,supported collaboration,4.0,0.0,-4.0
+compromise,allocation_1,research_budget,synthetic nominal INR,8000000.0,19900000.0,11900000.0
+compromise,allocation_1,frac_research_phd,fraction of annual faculty effort,0.5,0.75,0.25
+compromise,allocation_1,frac_research_other,fraction of annual faculty effort,0.25,0.48,0.22999999999999998
+compromise,allocation_1,centres_of_excellence_count,supported centre,2.0,0.0,-2.0
+compromise,allocation_1,industry_collaboration_support_count,supported collaboration,4.0,0.0,-4.0

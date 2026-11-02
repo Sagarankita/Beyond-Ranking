@@ -1,0 +1,40 @@
+{
+  "allocation_config_sha256": "a3de7e35e5812be7229f9235a1c1515d040ae3d32c14dc7be08bee52ac7c50f7",
+  "analysis_id": "vjti_public_plus_synthetic_experiments_v1",
+  "artifact_hashes": {
+    "algorithm_metrics.csv": "c9370a0048a8ba95238ce8b816e5e32ab4370ce06a7f56302fd39efc3ab15071",
+    "algorithm_summary.csv": "dfb031d687b13488a5bc272e2c752fb9d430077e4fddf8aea135ccee938cadf0",
+    "common_uncertainty_draws.csv": "e703118aaec169dbdf198dbdeeceda76c8df0b85b077f29297b75723562c3801",
+    "current_vs_strategy_actions.csv": "bdf7c10f11c73147827710bdc20e71813002c40c00866b0ff4fa386f48122b1b",
+    "dea_context.json": "c5e8398180506417138bd82b265479e9b98cb00308d6e368e7dc883aa1715d14",
+    "independent_checks.csv": "8c6b35d86dcc53e44e10115650d7b0f67bcc6b1f96e64fe03ad7d6a45cdff7b1",
+    "pooled_reference_front.csv": "74f4f6187e782d72cd0feae25f90cc3475f5596cbb3d6eed6cdc6ba1bfe3ddb0",
+    "public_only_sensitivity.csv": "9e8848d14c9b61803f98f0c7c8720199e1c64eeeccad473fa677493518da6ed3",
+    "strategy_allocations.csv": "2fb864ee96603b483a02419ef84773781b67b35144d64ec581a78d03559a3800",
+    "strategy_constraints.csv": "04b59ef283cec8d05c65f7949e74daeab8f3bc1c7e85d9581a1b70f8a8aa06c2",
+    "strategy_kpis.csv": "42b593fa88aa835c9fd42c2cd491b01399b9184420cf606d5a0afbd4e0ec05c8",
+    "strategy_objectives.csv": "13de27d9d301a8be2db8ad53bc7bab866930c3aea14bd21bdaddc292aa0fddb2",
+    "strategy_resource_summary.csv": "38039e6d1903903e610aba558cc8d3c58da60330af7c3799367a18a03f7a0160",
+    "strategy_selection_log.csv": "05ff41dd18959f862a758e604e1f8c023ab198f9c2b852053152ecd5d6d746b1",
+    "strategy_uncertainty.csv": "ae0e655299c2ed05bd288e967c6a17d72ae94826a2d8dffe6aee7aa79b97d155",
+    "tradeoff_cost_benefit.svg": "01b70c1234e7adfd75a1c1446204e0ace581a5d4f43d4a7f91539b27abf13b5c",
+    "tradeoff_research_student.svg": "6f761d16114e9cccae22cee8b5dbacc5d7a2923f6db09a09a0d89bbcba40650e"
+  },
+  "checks_passed": true,
+  "claims": {
+    "causal": "No allocation is claimed to cause an outcome change.",
+    "dea": "DEA peers and efficiency are calibrated synthetic method-fixture context, not observed institutional rankings.",
+    "prediction": "Associational predictions from a VJTI-calibrated public-plus-synthetic methodological fixture."
+  },
+  "common_uncertainty_seed": 17042,
+  "completed_comparison_runs": 18,
+  "config_sha256": "454c773d5b861eb183d0ed56307b2a9f090a24892e2fe12e752039643c7c32d1",
+  "declared_comparison_runs": 18,
+  "matched_candidate_evaluations": 16,
+  "model_manifest_sha256": "75dee2117fe9fdaaa18c5f465fe8b5570ba79afe0e4b9e565d1c3b60fa85b4a5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "protocol_status": "frozen_before_pilot; pilot outcomes cannot change this file",
+  "public_manifest_sha256": "1f42890b70bcad126a7624897b07d9c140e74a3ebe0e5a2ed65acdb9c3fdc8d8",
+  "python": "3.13.14",
+  "scenario_count": 6
+}

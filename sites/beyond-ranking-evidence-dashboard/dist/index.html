@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Read-only evidence dashboard for versioned resource allocation artifacts." />
+    <title>Beyond Ranking · Evidence Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#overview" aria-label="Beyond Ranking home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><b>Beyond Ranking</b><small>Evidence dashboard</small></span>
+        </a>
+
+        <div class="sidebar-label">Artifact lens</div>
+        <div class="lens-switch" role="tablist" aria-label="Evidence lane">
+          <button class="lens active" data-mode="synthetic" role="tab">
+            <span class="lens-dot synthetic"></span><span><b>Synthetic fixture</b><small>Method validation only</small></span>
+          </button>
+          <button class="lens" data-mode="mixed" role="tab">
+            <span class="lens-dot mixed"></span><span><b>Public + synthetic</b><small>VJTI scenario package</small></span>
+          </button>
+          <button class="lens" data-mode="empirical" role="tab">
+            <span class="lens-dot empirical"></span><span><b>Empirical evidence</b><small>Descriptive sources only</small></span>
+          </button>
+        </div>
+
+        <nav class="nav" aria-label="Dashboard sections">
+          <a class="active" href="#overview"><span>01</span>Overview</a>
+          <a href="#allocations"><span>02</span>Allocations</a>
+          <a href="#kpis"><span>03</span>KPI intervals</a>
+          <a href="#constraints"><span>04</span>Constraints</a>
+          <a href="#tradeoffs"><span>05</span>Trade-offs</a>
+          <a href="#robustness"><span>06</span>Robustness</a>
+          <a href="#evidence"><span>07</span>Evidence</a>
+          <a href="#provenance"><span>08</span>Provenance</a>
+        </nav>
+
+        <div class="sidebar-foot">
+          <span class="status-pulse"></span>
+          <div><b>Read-only snapshot</b><small>No evaluator in this app</small></div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open navigation">☰</button>
+          <div>
+            <p class="eyebrow">Decision support / saved artifacts</p>
+            <h1 id="page-title">Synthetic method fixture</h1>
+          </div>
+          <div class="top-actions">
+            <label class="version-picker">Artifact version
+              <select id="version-select" aria-label="Artifact version"></select>
+            </label>
+            <a id="manifest-download" class="button secondary" download>↓ Manifest</a>
+          </div>
+        </header>
+
+        <div id="evidence-banner" class="evidence-banner"></div>
+        <div id="loading" class="loading"><span></span>Loading immutable artifact snapshot…</div>
+        <div id="error" class="error-state" hidden></div>
+
+        <div id="dashboard" hidden>
+          <section id="overview" class="section hero-section">
+            <div class="section-heading split">
+              <div><p class="eyebrow">Portfolio pulse</p><h2>At-a-glance</h2></div>
+              <div id="snapshot-meta" class="snapshot-meta"></div>
+            </div>
+            <div id="summary-cards" class="summary-grid"></div>
+            <div class="grid two-one">
+              <article class="card narrative-card">
+                <div class="card-head"><div><p class="kicker">Interpretation</p><h3>What this snapshot can support</h3></div><span class="icon-chip">◎</span></div>
+                <div id="interpretation" class="interpretation"></div>
+              </article>
+              <article class="card evidence-card">
+                <div class="card-head"><div><p class="kicker">Evidence boundary</p><h3>Claim status</h3></div><span class="icon-chip">!</span></div>
+                <div id="claim-status"></div>
+              </article>
+            </div>
+          </section>
+
+          <section id="allocations" class="section">
+            <div class="section-heading split">
+              <div><p class="eyebrow">Current → strategy</p><h2>Allocation comparison</h2></div>
+              <label id="strategy-label" class="compact-select">Strategy<select id="strategy-select"></select></label>
+            </div>
+            <div class="grid two-one">
+              <article class="card chart-card"><div id="allocation-chart" class="allocation-chart"></div></article>
+              <article class="card utilization-card">
+                <div class="card-head"><div><p class="kicker">Resource envelope</p><h3>Utilization</h3></div><span class="icon-chip">%</span></div>
+                <div id="utilization"></div>
+              </article>
+            </div>
+          </section>
+
+          <section id="kpis" class="section">
+            <div class="section-heading"><p class="eyebrow">Prediction uncertainty</p><h2>KPI intervals</h2><p>Saved model outputs only. Whiskers show the persisted lower and upper bounds.</p></div>
+            <article class="card"><div id="kpi-chart" class="kpi-chart"></div></article>
+          </section>
+
+          <section id="constraints" class="section">
+            <div class="section-heading split">
+              <div><p class="eyebrow">Feasibility ledger</p><h2>Constraints</h2></div>
+              <div id="constraint-tally" class="tally"></div>
+            </div>
+            <article class="card table-card"><div id="constraints-table" class="responsive-table"></div></article>
+          </section>
+
+          <section id="tradeoffs" class="section">
+            <div class="section-heading"><p class="eyebrow">Saved candidate frontier</p><h2>Pareto trade-offs</h2><p id="tradeoff-copy"></p></div>
+            <article class="card plot-card"><div id="pareto-chart" class="pareto-chart"></div></article>
+          </section>
+
+          <section id="robustness" class="section">
+            <div class="section-heading"><p class="eyebrow">Stress and uncertainty</p><h2>Robustness</h2><p>Feasibility probabilities and downside behavior from saved scenario artifacts.</p></div>
+            <div class="grid two-one">
+              <article class="card"><div id="robustness-chart" class="robustness-chart"></div></article>
+              <article class="card">
+                <div class="card-head"><div><p class="kicker">Assumption sensitivity</p><h3>What moves</h3></div><span class="icon-chip">↗</span></div>
+                <div id="assumptions"></div>
+              </article>
+            </div>
+          </section>
+
+          <section id="evidence" class="section">
+            <div class="section-heading"><p class="eyebrow">Model and data support</p><h2>Evidence status</h2><p>Every result is shown with its declared evidence class and claim boundary.</p></div>
+            <div id="evidence-grid" class="evidence-grid"></div>
+          </section>
+
+          <section id="provenance" class="section">
+            <div class="section-heading split">
+              <div><p class="eyebrow">Immutable source trail</p><h2>Provenance downloads</h2><p>Download the original artifacts rendered by this dashboard.</p></div>
+              <span class="read-only-pill">No transformations</span>
+            </div>
+            <article class="card"><div id="provenance-list" class="provenance-list"></div></article>
+          </section>
+        </div>
+
+        <footer>
+          <span>Beyond Ranking · artifact viewer</span>
+          <span>Results are decision support, not causal claims.</span>
+        </footer>
+      </main>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>

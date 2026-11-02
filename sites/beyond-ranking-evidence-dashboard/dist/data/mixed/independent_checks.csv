@@ -1,0 +1,7 @@
+check,passed,detail
+declared_comparison_runs_complete,True,18/18
+matched_accounting_independently_checked,True,16
+metrics_independently_recomputed,True,hypervolume from saved archives
+synthetic_coverage_complete,True,four rows per strategy
+recommendations_feasible,True,saved evaluator results
+support_warning_visible,True,columns retained

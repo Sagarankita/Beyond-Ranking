@@ -99,6 +99,57 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
+### Run the dashboard UI
+
+The read-only dashboard renders the versioned benchmark, scenario, strategy, evidence,
+and provenance artifacts already saved in this repository. It does not run an
+optimizer or introduce a second evaluator.
+
+Install the frontend dependencies and start the React decision studio:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Then open [http://127.0.0.1:5173](http://127.0.0.1:5173). The development command
+syncs the allow-listed saved artifacts, validates their contracts in the browser, and
+keeps the original viewer available at
+[http://127.0.0.1:5173/legacy/index.html](http://127.0.0.1:5173/legacy/index.html).
+Stop the server with `Ctrl+C`.
+
+Equivalent repository-root commands are available:
+
+```bash
+make frontend-install
+make frontend-dev
+```
+
+To run only the original standalone static dashboard, use:
+
+```bash
+python3 -m http.server 4173 \
+  --bind 127.0.0.1 \
+  --directory sites/beyond-ranking-evidence-dashboard/dist
+```
+
+Then open [http://127.0.0.1:4173](http://127.0.0.1:4173).
+
+The UI keeps these evidence lanes separate:
+
+- **Synthetic fixture** — method-validation benchmark, scenario, and strategy outputs.
+- **Public + synthetic** — the VJTI public-calibrated scenario package; intervention
+  responses remain synthetic and non-causal.
+- **Empirical evidence** — observed and derived public evidence only; no empirical
+  intervention-response optimization is presented.
+
+The React build creates validated copies under `frontend/public/data/`; the standalone
+viewer keeps its immutable copies under
+`sites/beyond-ranking-evidence-dashboard/dist/data/`. Refresh either only from the
+corresponding versioned `results/` and `artifacts/` packages; do not recompute values in
+the UI. Additional frontend details are in [`frontend/README.md`](frontend/README.md).
+
 Run the test suite:
 
 ```bash

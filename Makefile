@@ -10,13 +10,28 @@ endif
 NATIVE_CFLAGS ?= -O3 -fPIC -fopenmp -Wall -Wextra -Werror
 NATIVE_LDFLAGS ?= -shared -fopenmp
 
-.PHONY: main test native native-test clean-native data-audit generate-synthetic dea train-models allocation-evaluator allocation-small allocation-phase5
+.PHONY: main test native native-test clean-native data-audit generate-synthetic dea train-models allocation-evaluator allocation-small allocation-phase5 frontend-install frontend-dev frontend-test frontend-build legacy-dashboard
 
 main:
 	$(PYTHON) main.py
 
 test:
 	$(PYTHON) -m unittest discover -s tests -v
+
+frontend-install:
+	npm --prefix frontend install
+
+frontend-dev:
+	npm --prefix frontend run dev
+
+frontend-test:
+	npm --prefix frontend test
+
+frontend-build:
+	npm --prefix frontend run build
+
+legacy-dashboard:
+	$(PYTHON) -m http.server 4173 --bind 127.0.0.1 --directory sites/beyond-ranking-evidence-dashboard/dist
 
 native: libRION/libpso.so
 

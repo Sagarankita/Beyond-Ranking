@@ -11,6 +11,11 @@ __pycache__/
 build/
 develop-eggs/
 dist/
+!sites/
+!sites/beyond-ranking-evidence-dashboard/
+!sites/beyond-ranking-evidence-dashboard/dist/
+!sites/beyond-ranking-evidence-dashboard/dist/**
+sites/beyond-ranking-evidence-dashboard/.openai/
 downloads/
 eggs/
 .eggs/

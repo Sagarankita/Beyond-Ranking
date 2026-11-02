@@ -1,0 +1,8 @@
+strategy,cost,budget_limit,budget_utilization,budget_remaining,research_fte,research_fte_capacity,research_fte_utilization
+current_reference,12000000.0,20000000.0,0.6,8000000.0,50.0,80.0,0.625
+conservative,19900000.0,20000000.0,0.995,100000.0,79.2,80.0,0.99
+balanced,19900000.0,20000000.0,0.995,100000.0,79.2,80.0,0.99
+research_first,19900000.0,20000000.0,0.995,100000.0,79.2,80.0,0.99
+innovation_first,19900000.0,20000000.0,0.995,100000.0,79.2,80.0,0.99
+student_first,19900000.0,20000000.0,0.995,100000.0,79.2,80.0,0.99
+compromise,19900000.0,20000000.0,0.995,100000.0,79.2,80.0,0.99
