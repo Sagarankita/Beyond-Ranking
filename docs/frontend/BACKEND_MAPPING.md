@@ -2,7 +2,8 @@
 
 ## Governing boundary
 
-The frontend consumes outputs; Python owns computation. No TypeScript module implements
+The frontend consumes outputs; existing workflow modules own computation. No Streamlit
+module implements
 optimizer objectives, constraint repair, prediction, uncertainty generation, benchmark
 metrics, robustness simulation, or target-cost search.
 
@@ -72,7 +73,7 @@ Relevant configurations and artifacts:
 - `artifacts/public_experiments/vjti_v1/pooled_reference_front.csv`
 
 Future charts must use the benchmark package's matched candidate-evaluation budgets and
-saved metric definitions. ECharts may render saved Pareto points, but cannot recompute
+saved metric definitions. Plotly may render saved Pareto points, but cannot recompute
 dominance, hypervolume, IGD, spacing, feasibility, or statistical tests in place of
 `benchmark/metrics.py`.
 
@@ -133,6 +134,7 @@ the browser cannot mark a run reproducible merely because files load.
 
 ## Legacy viewer
 
-`sites/beyond-ranking-evidence-dashboard/dist/` remains the original static dashboard.
-The Vite build copies it verbatim to `/legacy/`. This preserves existing access while
-the React application is expanded section by section.
+`sites/beyond-ranking-evidence-dashboard/dist/` remains the original static dashboard
+and is served independently with `make legacy-dashboard`. The Streamlit sidebar points
+users to that command and local URL. The deprecated React app remains only for temporary
+rollback comparison.

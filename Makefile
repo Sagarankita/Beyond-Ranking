@@ -10,7 +10,7 @@ endif
 NATIVE_CFLAGS ?= -O3 -fPIC -fopenmp -Wall -Wextra -Werror
 NATIVE_LDFLAGS ?= -shared -fopenmp
 
-.PHONY: main test native native-test clean-native data-audit generate-synthetic dea train-models allocation-evaluator allocation-small allocation-phase5 frontend-install frontend-dev frontend-test frontend-build legacy-dashboard
+.PHONY: main test native native-test clean-native data-audit generate-synthetic dea train-models allocation-evaluator allocation-small allocation-phase5 frontend-install frontend-dev frontend-test frontend-catalog legacy-dashboard
 
 main:
 	$(PYTHON) main.py
@@ -19,16 +19,16 @@ test:
 	$(PYTHON) -m unittest discover -s tests -v
 
 frontend-install:
-	npm --prefix frontend install
+	$(PYTHON) -m pip install -r requirements-ui.txt
 
 frontend-dev:
-	npm --prefix frontend run dev
+	$(PYTHON) -m streamlit run streamlit_app/app.py --server.address 127.0.0.1 --server.port 8501
 
 frontend-test:
-	npm --prefix frontend test
+	$(PYTHON) -m unittest discover -s streamlit_app/tests -v
 
-frontend-build:
-	npm --prefix frontend run build
+frontend-catalog:
+	$(PYTHON) -m streamlit_app.data.catalog --write
 
 legacy-dashboard:
 	$(PYTHON) -m http.server 4173 --bind 127.0.0.1 --directory sites/beyond-ranking-evidence-dashboard/dist

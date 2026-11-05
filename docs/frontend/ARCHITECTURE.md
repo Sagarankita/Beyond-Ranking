@@ -2,33 +2,30 @@
 
 ## Purpose
 
-The frontend is a read-only evidence browser for versioned outputs already produced by
-the Department Resource Allocation Optimizer. It does not optimize, repair candidates,
-predict KPIs, or duplicate the Python evaluator. Its job is narrower: validate saved
-artifacts, adapt their reporting schemas, and render comparisons with explicit evidence
-boundaries.
+The supported frontend is a read-only Streamlit evidence browser for versioned outputs
+already produced by the Department Resource Allocation Optimizer. It validates saved
+artifacts, adapts reporting schemas, and renders comparisons with explicit evidence
+boundaries. It does not optimize, repair candidates, predict KPIs, or duplicate the
+Python evaluator.
 
-The React application lives in `frontend/`. The original static evidence dashboard is
-preserved in `sites/beyond-ranking-evidence-dashboard/dist/` and is copied to
-`frontend/public/legacy/` during development and production builds.
+The application lives in `streamlit_app/`. The deprecated React/Vite implementation
+remains in `frontend/` for one rollback release. The original static evidence dashboard
+remains independently runnable from `sites/beyond-ranking-evidence-dashboard/dist/`.
 
 ## Runtime shape
 
-The application is a static Vite build. It requires no backend service for Prompt 1.
+Streamlit is the Python presentation server. It reads the original repository files
+directly; there is no copied dataset and no separate read API.
 
-1. `frontend/scripts/sync-artifacts.mjs` copies an allow-listed set of repository
-   artifacts into the build's public data directory.
-2. The sync records the source path, byte count, units, required columns, numeric
-   columns, SHA-256 digest, version, evidence class, and claim boundary in
-   `data/catalog.json`.
-3. The browser loads the catalog, verifies the catalog schema, downloads the selected
-   artifact set, recomputes each SHA-256 digest, and validates the CSV/JSON contract.
-4. Evidence-specific adapters convert validated rows into the common Overview view
-   model. They do not alter optimizer results.
-5. React components render the normalized model with ECharts, accessible HTML, and
-   explicit empty/error/loading states.
-
-This boundary is intentional:
+1. `streamlit_app/data/catalog.json` provides the committed allow-list, source path,
+   byte count, units, required columns, numeric columns, SHA-256 digest, version,
+   evidence class, and claim boundary.
+2. `streamlit_app/data/loaders.py` resolves each path inside the repository root,
+   recomputes its hash, checks its byte count, parses UTF-8 CSV/JSON, and validates the
+   declared contract.
+3. Evidence-specific adapters convert validated rows into one common Overview model.
+4. Streamlit components render Plotly charts, native metrics and progress indicators,
+   explicit empty/error states, and downloads of the exact validated bytes.
 
 ```text
 Python workflows and shared evaluator
@@ -37,93 +34,86 @@ Python workflows and shared evaluator
 versioned CSV / JSON / SVG artifacts
              |
              v
-build-time allow-list + hashes + evidence metadata
+committed allow-list + hashes + evidence metadata
              |
              v
-browser validation and read-only adapters
+Python validation and read-only adapters
              |
              v
-React views and downloadable provenance
+Streamlit views and validated downloads
 ```
 
 ## Application sections
 
-- **Overview** is implemented in Prompt 1. It shows saved allocation comparisons, KPI
-  intervals, utilization, constraints, evidence boundaries, and downloadable source
-  artifacts.
-- **Scenario Studio** is reserved for Prompt 2 and is visibly non-executable now.
-- **Algorithm Lab** and **Pareto Explorer** are reserved for Prompt 3.
-- **Robustness Lab** and **Target-Cost Explorer** are reserved for Prompt 4.
-- **Evidence & Audit** is reserved for Prompt 5.
+- **Overview** is populated with authentic saved artifacts.
+- **Scenario Studio** is a non-executable Prompt 2 placeholder.
+- **Algorithm Lab** and **Pareto Explorer** are Prompt 3 placeholders.
+- **Robustness Lab** and **Target-Cost Explorer** are Prompt 4 placeholders.
+- **Evidence & Audit** is a Prompt 5 placeholder.
 
-Unimplemented sections are honest placeholders. They never imply that a scenario or
-optimizer action has executed.
+Placeholders contain no control that implies a backend run occurred.
 
 ## Source structure
 
-- `src/data/types.ts` defines evidence, catalog, artifact, and Overview view-model types.
-- `src/data/csv.ts` parses quoted CSV fields, escaped quotes, and embedded line breaks.
-- `src/data/contracts.ts` validates evidence classes, versions, required columns,
-  missing values, finite numeric values, and explicit booleans.
-- `src/data/loaders.ts` fetches files and verifies SHA-256 integrity before parsing.
-- `src/data/adapters.ts` maps the three evidence lanes to a shared Overview model.
-- `src/components/` contains presentation components and ECharts views.
-- `src/pages/` contains the populated Overview and future-section placeholders.
-- `scripts/sync-artifacts.mjs` is the only build-time artifact allow-list.
+- `streamlit_app/app.py` configures the application and native multipage navigation.
+- `streamlit_app/data/types.py` defines evidence, catalog, artifact, and Overview models.
+- `streamlit_app/data/contracts.py` validates paths, required values, finite numbers,
+  explicit booleans, versions, and evidence classes.
+- `streamlit_app/data/catalog.py` owns the source allow-list and explicit refresh command.
+- `streamlit_app/data/loaders.py` verifies SHA-256/byte count before parsing.
+- `streamlit_app/data/adapters.py` isolates the three evidence lanes.
+- `streamlit_app/components/` contains Plotly and Streamlit presentation components.
+- `streamlit_app/pages/` contains Overview and future-section placeholders.
+- `streamlit_app/tests/` covers contracts, hashes, adapters, and an application smoke run.
 
 ## Evidence isolation
 
-Evidence is separated by snapshot, not merely by a decorative badge.
+Evidence is separated by complete snapshot:
 
 - `synthetic_method_fixture` is for method validation only.
 - `public_plus_synthetic_scenario` combines a public-calibrated baseline with synthetic,
   noncausal intervention responses.
-- `empirical_descriptive` contains observed or derived public evidence and deliberately
-  exposes no optimizer strategies, allocation recommendation, KPI response interval,
-  resource utilization, or candidate constraints.
+- `empirical_descriptive` contains observed or derived public evidence and exposes no
+  optimizer strategy, recommendation, modeled utilization, candidate constraint, or
+  intervention-response interval.
 
-The browser has no operation that merges these lanes. A snapshot change replaces the
-entire loaded artifact set and its claim boundary.
+A snapshot selection replaces the whole view model and claim boundary. The application
+has no operation that merges evidence lanes.
 
 ## No second evaluator
 
 Constraint residuals, objective values, KPI predictions, uncertainty intervals,
-allocations, and costs are read from saved reporting artifacts. The only frontend
-threshold is the already documented reporting interpretation `residual <= 1e-9` for
-the VJTI constraints file, whose schema does not include a separate boolean pass field.
-The frontend never repairs a decision vector or recreates feasibility math.
+allocations, and costs come from saved artifacts. The only UI threshold is the documented
+reporting interpretation `residual <= 1e-9` for the VJTI constraints file, which has no
+persisted boolean pass field. Streamlit never repairs a vector or recreates feasibility
+math.
 
-Future interactive execution must call the existing Python workflows and shared
-allocation evaluator in `department_optimizer/allocation/problem.py` or the public VJTI
-workflow in `department_optimizer/public_allocation/problem.py`. It must return a saved,
-versioned result package before the UI renders it.
+Future execution must call the existing Python workflow and shared evaluator, then save
+a versioned result package before the UI renders it. Long optimizer work must never run
+inside Streamlit's rerender loop.
 
-## Deployment and routing
+## Caching and deployment
 
-Vite uses a relative base so the production bundle works under a subpath or a static
-file host. Navigation uses URL hashes and therefore needs no server-side route rewrite.
-The legacy viewer is linked at `./legacy/index.html` in the production bundle.
+Only the fully adapted read-only Overview is cached, keyed by snapshot ID and catalog
+modification time. Session state contains view selections only. Deployments must mount
+or package `artifacts/`, `results/`, and the catalog as read-only inputs.
 
-For a future service-backed deployment, keep the artifact catalog as the response
-contract. Add an API that lists immutable packages and returns package files by ID;
-do not expose raw filesystem paths and do not move evaluation logic into TypeScript.
+The legacy static viewer remains available through `make legacy-dashboard`; Streamlit's
+sidebar documents the local URL. It is not embedded and has no dependency on Streamlit.
 
 ## Accessibility and resilience
 
-- Navigation, controls, details, and retry actions are keyboard reachable.
-- Focus states are visible and reduced-motion preferences are respected.
-- Charts have textual headings, descriptions, exact-value tooltips, and surrounding
-  evidence context.
-- Mixed-unit allocations are normalized only for bar length; exact saved values and
-  units remain in tooltips.
-- Missing, malformed, non-finite, hash-mismatched, empty, and network-failed artifacts
-  render an explicit error rather than a plausible-looking chart.
-- Mobile navigation becomes a dismissible drawer and analytical grids collapse to one
-  column.
+- Streamlit's native navigation, selects, expanders, and downloads remain keyboard
+  reachable.
+- Charts have textual headings, descriptions, legends, and exact-value tooltips.
+- Mixed-unit allocation bars are normalized only for layout; exact values keep units.
+- Missing, malformed, non-finite, path-escaping, byte-count-mismatched, hash-mismatched,
+  empty, or invalid artifacts render an error instead of a partial chart.
+- Analytical columns collapse through Streamlit's responsive layout on narrow screens.
 
 ## Test boundary
 
-Frontend unit tests cover CSV quoting, schema failures, numeric validation, evidence
-classification, explicit booleans, and empirical/synthetic separation. The production
-build runs artifact synchronization, TypeScript checking, and Vite bundling. Existing
-Python reporting and allocation tests remain the authority for optimizer behavior.
+Frontend tests cover contract failures, boolean parsing, path confinement, hash mismatch,
+every allow-listed saved package, adapter parity, empirical/synthetic separation, and a
+Streamlit `AppTest` smoke run. Existing Python reporting and allocation tests remain the
+authority for optimizer behavior.

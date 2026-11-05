@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "description": "Allow-listed immutable artifacts for the Streamlit decision studio.",
+  "snapshots": [
+    {
+      "id": "synthetic-phase7-v1",
+      "label": "Synthetic method fixture",
+      "version": "phase7-synthetic-v1",
+      "evidenceClass": "synthetic_method_fixture",
+      "evidenceLabel": "Synthetic fixture \u00b7 not empirical",
+      "supportsInterventionClaims": false,
+      "claimBoundary": "Method-validation fixture only. Predictions are illustrative, noncausal, and not institution-specific.",
+      "files": [
+        {
+          "id": "manifest",
+          "sourcePath": "results/reporting/phase7-synthetic-v1/manifest.json",
+          "format": "json",
+          "sha256": "46d3ae70e6471c65fa1080ffd26ff63a7fa219993cbf28b8987e25224dda250c",
+          "bytes": 3544
+        },
+        {
+          "id": "allocations",
+          "sourcePath": "results/reporting/phase7-synthetic-v1/current_vs_strategy_allocations.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "strategy",
+            "variable",
+            "unit",
+            "current",
+            "recommended",
+            "difference"
+          ],
+          "numericColumns": [
+            "current",
+            "recommended",
+            "difference"
+          ],
+          "units": {
+            "current": "unit column",
+            "recommended": "unit column",
+            "difference": "unit column"
+          },
+          "sha256": "b02cee8b69d2e472554334c90a9596461cfa93dfacb2c0fb09d77348664156e6",
+          "bytes": 2968
+        },
+        {
+          "id": "kpis",
+          "sourcePath": "results/reporting/phase7-synthetic-v1/current_vs_strategy_kpis.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "strategy",
+            "kpi",
+            "current_prediction",
+            "current_lower",
+            "current_upper",
+            "recommended_prediction",
+            "recommended_lower",
+            "recommended_upper"
+          ],
+          "numericColumns": [
+            "current_prediction",
+            "current_lower",
+            "current_upper",
+            "recommended_prediction",
+            "recommended_lower",
+            "recommended_upper"
+          ],
+          "units": {
+            "current_prediction": "KPI-specific",
+            "recommended_prediction": "KPI-specific"
+          },
+          "sha256": "94ccc7c39b2efdbea43fc0bbc406e7ae84091f91b62a268b7a10b90939babec4",
+          "bytes": 2506
+        },
+        {
+          "id": "resources",
+          "sourcePath": "results/reporting/phase7-synthetic-v1/resource_utilization.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "strategy",
+            "cost",
+            "budget_limit",
+            "budget_utilization",
+            "budget_remaining",
+            "research_fte",
+            "research_fte_capacity",
+            "research_fte_utilization"
+          ],
+          "numericColumns": [
+            "cost",
+            "budget_limit",
+            "budget_utilization",
+            "budget_remaining",
+            "research_fte",
+            "research_fte_capacity",
+            "research_fte_utilization"
+          ],
+          "units": {
+            "cost": "INR",
+            "budget_limit": "INR",
+            "research_fte": "FTE"
+          },
+          "sha256": "ece44c477a2e958e06c419e829ecfe6a2037d6326614badf882a1a2db2c3d2e9",
+          "bytes": 584
+        },
+        {
+          "id": "constraints",
+          "sourcePath": "results/reporting/phase7-synthetic-v1/constraint_checks.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "strategy",
+            "constraint",
+            "residual",
+            "passed"
+          ],
+          "numericColumns": [
+            "residual"
+          ],
+          "sha256": "efe0cc632419bcb2998d43750041f5165b88064844056846f400e1fc3045d26a",
+          "bytes": 7577
+        },
+        {
+          "id": "portfolio",
+          "sourcePath": "results/reporting/phase7-synthetic-v1/strategy_portfolio.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "selection_status",
+            "allocation_group",
+            "cost",
+            "feasible",
+            "objective_benefit__research"
+          ],
+          "numericColumns": [
+            "cost",
+            "objective_benefit__research"
+          ],
+          "sha256": "22130b1aec07736aaa49f7ac0f6527dee6588ab7f701f8fd1f628469ecafa990",
+          "bytes": 7857
+        }
+      ]
+    },
+    {
+      "id": "vjti-public-synthetic-v1",
+      "label": "VJTI public + synthetic scenario",
+      "version": "vjti_public_plus_synthetic_experiments_v1",
+      "evidenceClass": "public_plus_synthetic_scenario",
+      "evidenceLabel": "Public-calibrated \u00b7 synthetic responses",
+      "supportsInterventionClaims": false,
+      "claimBoundary": "Public evidence calibrates the baseline, but intervention responses are synthetic, associational, and noncausal.",
+      "files": [
+        {
+          "id": "manifest",
+          "sourcePath": "artifacts/public_experiments/vjti_v1/experiment_manifest.json",
+          "format": "json",
+          "sha256": "5a5ef2cf364c8fd1f5a3f57c65b1a353f7a7ebb85db2691c497c97f3fe05b509",
+          "bytes": 2844
+        },
+        {
+          "id": "allocations",
+          "sourcePath": "artifacts/public_experiments/vjti_v1/strategy_allocations.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "strategy_id",
+            "strategy_type",
+            "scenario",
+            "source_artifact",
+            "feasible",
+            "total_cost",
+            "budget_remaining",
+            "decision",
+            "value"
+          ],
+          "numericColumns": [
+            "total_cost",
+            "budget_remaining",
+            "value"
+          ],
+          "units": {
+            "total_cost": "INR",
+            "budget_remaining": "INR",
+            "value": "decision-specific"
+          },
+          "sha256": "d8dd951da432018e18d85bf2df1318880624f18ab3608d538b5654e6fbdca698",
+          "bytes": 44360
+        },
+        {
+          "id": "kpis",
+          "sourcePath": "artifacts/public_experiments/vjti_v1/strategy_kpis.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "strategy_id",
+            "strategy_type",
+            "scenario",
+            "kpi",
+            "prediction",
+            "lower",
+            "upper"
+          ],
+          "numericColumns": [
+            "prediction",
+            "lower",
+            "upper"
+          ],
+          "units": {
+            "prediction": "KPI-specific",
+            "lower": "KPI-specific",
+            "upper": "KPI-specific"
+          },
+          "sha256": "cb4a6bc438aaa75fd7fb021f490dbf5a711ab28c3a3b0114f6baf3a40ef83a75",
+          "bytes": 40413
+        },
+        {
+          "id": "resources",
+          "sourcePath": "artifacts/public_experiments/vjti_v1/strategy_resource_summary.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "strategy_id",
+            "strategy_type",
+            "scenario",
+            "total_cost",
+            "budget_remaining",
+            "allocated_faculty_fte",
+            "resource_feasible"
+          ],
+          "numericColumns": [
+            "total_cost",
+            "budget_remaining",
+            "allocated_faculty_fte"
+          ],
+          "units": {
+            "total_cost": "INR",
+            "budget_remaining": "INR",
+            "allocated_faculty_fte": "FTE"
+          },
+          "sha256": "f1a4ca74354c59a62e1fc2024a7b0dfcf475d909372aebbe555bfdd4863e8d6f",
+          "bytes": 2250
+        },
+        {
+          "id": "constraints",
+          "sourcePath": "artifacts/public_experiments/vjti_v1/strategy_constraints.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "strategy_id",
+            "constraint",
+            "residual",
+            "normalized_residual"
+          ],
+          "numericColumns": [
+            "residual",
+            "normalized_residual"
+          ],
+          "sha256": "7f5c4bb54e848aa55458930711565db08bd407dc098130c45ed001965612df20",
+          "bytes": 132435
+        },
+        {
+          "id": "evidence",
+          "sourcePath": "artifacts/evidence_modeling/vjti_v1/kpi_evidence_registry.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "kpi",
+            "status",
+            "public_model_status",
+            "synthetic_model_status",
+            "claim_boundary"
+          ],
+          "sha256": "faa558024d9d35a8776ccf7536b181e074e5714431d44b54f762e5beb04d8668",
+          "bytes": 1676
+        }
+      ]
+    },
+    {
+      "id": "vjti-empirical-v1",
+      "label": "VJTI empirical public evidence",
+      "version": "vjti-ceit-public-plus-synthetic-v1",
+      "evidenceClass": "empirical_descriptive",
+      "evidenceLabel": "Observed + derived \u00b7 descriptive only",
+      "supportsInterventionClaims": false,
+      "claimBoundary": "Descriptive public evidence only. No empirical intervention-response model or empirical optimization run is available.",
+      "files": [
+        {
+          "id": "manifest",
+          "sourcePath": "artifacts/public_data/vjti_ceit_v1/manifest.json",
+          "format": "json",
+          "sha256": "ccb58111ca9c362f09881a86582148ea2c33d2ca9d3871907bd5f34b8fb1c248",
+          "bytes": 2554
+        },
+        {
+          "id": "coverage",
+          "sourcePath": "artifacts/public_data/vjti_ceit_v1/provenance_coverage.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "dimension",
+            "member",
+            "provenance",
+            "count",
+            "coverage_fraction"
+          ],
+          "numericColumns": [
+            "count",
+            "coverage_fraction"
+          ],
+          "sha256": "eb327f3dc6bf854958deb5b591c6b4ac3b5aa1f11b7cfa9d96b379fa25e05f12",
+          "bytes": 2989
+        },
+        {
+          "id": "sources",
+          "sourcePath": "artifacts/public_data/vjti_ceit_v1/source_register.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "source_id",
+            "title",
+            "url",
+            "access_date",
+            "authority",
+            "retrieval_status",
+            "sha256"
+          ],
+          "sha256": "7cae552838c1fc53280a9ba5039530b0da743f9d788b102dd4c2577165023b4b",
+          "bytes": 2323
+        },
+        {
+          "id": "publicOnly",
+          "sourcePath": "artifacts/public_experiments/vjti_v1/public_only_sensitivity.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "analysis_track",
+            "outcome",
+            "denominator",
+            "numerator",
+            "denominator_value",
+            "rate",
+            "source_artifact",
+            "causal_claim"
+          ],
+          "numericColumns": [
+            "numerator",
+            "denominator_value",
+            "rate"
+          ],
+          "sha256": "4af88614a3c9f16c47f4314dce5b25a3c22ce00e78a1615de36612c83054bee9",
+          "bytes": 672
+        },
+        {
+          "id": "evidence",
+          "sourcePath": "artifacts/evidence_modeling/vjti_v1/kpi_evidence_registry.csv",
+          "format": "csv",
+          "requiredColumns": [
+            "kpi",
+            "status",
+            "public_model_status",
+            "synthetic_model_status",
+            "claim_boundary"
+          ],
+          "sha256": "faa558024d9d35a8776ccf7536b181e074e5714431d44b54f762e5beb04d8668",
+          "bytes": 1676
+        }
+      ]
+    }
+  ]
+}

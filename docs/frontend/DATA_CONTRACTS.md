@@ -3,11 +3,11 @@
 ## Contract principles
 
 Only allow-listed, versioned repository artifacts may enter the UI. Every file is
-described by a build-time catalog entry containing its original path, public build URL,
+described by a committed catalog entry containing its repository-relative path,
 format, byte count, SHA-256 digest, required columns, numeric columns, and units where
 applicable.
 
-The browser rejects a snapshot when:
+The Streamlit loader rejects a snapshot when:
 
 - its catalog schema version is unsupported;
 - its snapshot ID is duplicated;
@@ -24,7 +24,7 @@ Validation occurs before adaptation and rendering.
 
 ## Catalog schema
 
-`data/catalog.json` has `schemaVersion: 1`, a generation timestamp, a description, and
+`streamlit_app/data/catalog.json` has `schemaVersion: 1`, a description, and
 a non-empty `snapshots` array. Each snapshot includes:
 
 - stable `id`, display `label`, and artifact `version`;
@@ -33,7 +33,7 @@ a non-empty `snapshots` array. Each snapshot includes:
 - `supportsInterventionClaims`, currently false for every available snapshot; and
 - a list of file definitions.
 
-Each file definition has stable `id`, source and output paths, browser URL, `csv` or
+Each file definition has a stable `id`, repository-relative source path, `csv` or
 `json` format, SHA-256 digest, and byte count. CSV definitions can additionally declare
 required and numeric columns plus field-unit metadata.
 
@@ -115,20 +115,16 @@ effects of a proposed allocation.
 
 ## Hash and version semantics
 
-Hashes are calculated from exact file bytes during synchronization. The browser hashes
-the decoded response text before parsing and compares it to the catalog. Source files in
-this repository are UTF-8 text artifacts; line-ending or content changes therefore
-invalidate the digest and require a fresh sync/build.
-
-The catalog generation timestamp identifies the build index, not a new scientific
-artifact version. Scientific versions are inherited from the saved package and remain
-visible in the UI.
+Hashes are calculated from exact file bytes by the explicit catalog refresh command.
+Streamlit verifies the hash and byte count before decoding or parsing. Line-ending or
+content changes invalidate the digest and require a reviewed `make frontend-catalog`.
+Scientific versions are inherited from the saved package and remain visible in the UI.
 
 ## Missing values and units
 
 Required empty cells are errors. Optional blank cells remain blank and must be handled
 by a view-specific adapter; they are never automatically converted to zero. Numeric
-columns must parse to finite JavaScript numbers. `NaN`, positive or negative infinity,
+columns must parse to finite Python floats. `NaN`, positive or negative infinity,
 and empty strings are rejected.
 
 The UI does not aggregate incompatible units. Allocation bar lengths are normalized
@@ -140,4 +136,4 @@ and bounds in tooltips.
 
 Every file backing the selected Overview snapshot appears in the provenance disclosure
 with its original repository path and abbreviated SHA-256. The download link returns the
-validated build copy used for the current visualization.
+exact validated source bytes used for the current visualization.

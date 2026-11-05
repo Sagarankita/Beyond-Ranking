@@ -1,0 +1,48 @@
+:root {
+  --br-green: #0d7257;
+  --br-ink: #17201e;
+  --br-muted: #66726e;
+  --br-line: #dfe6e1;
+}
+
+.br-hero { padding: .35rem 0 1.1rem; }
+.br-hero > span, .br-overline {
+  color: var(--br-green);
+  font-size: .69rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.br-hero h1 { margin: .35rem 0 .4rem; color: var(--br-ink); letter-spacing: -.045em; }
+.br-hero p { max-width: 760px; margin: 0; color: var(--br-muted); line-height: 1.65; }
+.br-evidence {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: .9rem;
+  align-items: center;
+  margin: 1rem 0 1.2rem;
+  padding: .8rem 1rem;
+  border: 1px solid #cfe2d8;
+  border-radius: .7rem;
+  background: #f2faf6;
+}
+.br-evidence--mixed { border-color: #eadbbe; background: #fff8ea; }
+.br-evidence--empirical { border-color: #d2e2ee; background: #eff6fb; }
+.br-evidence strong { color: var(--br-green); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.br-evidence p { margin: 0; color: #4b5e58; font-size: .82rem; }
+.br-evidence code { color: #71807b; font-size: .68rem; }
+.br-empty { min-height: 14rem; display: grid; place-content: center; padding: 2rem; text-align: center; border: 1px dashed var(--br-line); border-radius: .8rem; }
+.br-empty strong { color: var(--br-ink); }
+.br-empty p { max-width: 30rem; margin: .5rem 0 0; color: var(--br-muted); font-size: .82rem; }
+.br-value { text-align: right; font-size: 1.05rem; font-weight: 750; color: var(--br-ink); }
+.br-note { min-height: 8.5rem; margin: .4rem 0; padding: .85rem; border: 1px solid var(--br-line); border-top: 3px solid #4a8a72; border-radius: .65rem; background: #fbfcfb; }
+.br-note--unsupported { border-top-color: #8a9692; background: #f6f8f7; }
+.br-note--synthetic { border-top-color: #c58936; background: #fffcf5; }
+.br-note span { display: block; color: #75817d; font-size: .58rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.br-note strong { display: block; margin-top: .4rem; color: var(--br-ink); font-size: .85rem; }
+.br-note p { margin: .35rem 0 0; color: var(--br-muted); font-size: .72rem; line-height: 1.55; }
+
+@media (max-width: 720px) {
+  .br-evidence { grid-template-columns: 1fr; }
+  .br-evidence code { display: none; }
+}

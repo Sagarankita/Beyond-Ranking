@@ -105,25 +105,45 @@ The read-only dashboard renders the versioned benchmark, scenario, strategy, evi
 and provenance artifacts already saved in this repository. It does not run an
 optimizer or introduce a second evaluator.
 
-Install the frontend dependencies and start the React decision studio:
+Install the Streamlit UI dependencies in the active Python environment and start the
+decision studio:
 
 ```bash
-cd frontend
-npm install
-npm run dev
+python -m pip install -r requirements-ui.txt
+python -m streamlit run streamlit_app/app.py \
+  --server.address 127.0.0.1 \
+  --server.port 8501
 ```
 
-Then open [http://127.0.0.1:5173](http://127.0.0.1:5173). The development command
-syncs the allow-listed saved artifacts, validates their contracts in the browser, and
-keeps the original viewer available at
-[http://127.0.0.1:5173/legacy/index.html](http://127.0.0.1:5173/legacy/index.html).
-Stop the server with `Ctrl+C`.
+Then open [http://127.0.0.1:8501](http://127.0.0.1:8501). The app validates the
+allow-listed saved artifacts against the committed schema, byte count, and SHA-256
+catalog before rendering. Stop the server with `Ctrl+C`.
 
 Equivalent repository-root commands are available:
 
 ```bash
 make frontend-install
 make frontend-dev
+```
+
+When using the repository virtual environment, pass its interpreter explicitly:
+
+```bash
+make frontend-install PYTHON=.venv/bin/python
+make frontend-dev PYTHON=.venv/bin/python
+```
+
+Run the Streamlit contract and application smoke tests with:
+
+```bash
+make frontend-test PYTHON=.venv/bin/python
+```
+
+If a versioned source artifact is intentionally updated, review that change and refresh
+the committed UI integrity catalog:
+
+```bash
+make frontend-catalog PYTHON=.venv/bin/python
 ```
 
 To run only the original standalone static dashboard, use:
@@ -144,11 +164,14 @@ The UI keeps these evidence lanes separate:
 - **Empirical evidence** — observed and derived public evidence only; no empirical
   intervention-response optimization is presented.
 
-The React build creates validated copies under `frontend/public/data/`; the standalone
-viewer keeps its immutable copies under
-`sites/beyond-ranking-evidence-dashboard/dist/data/`. Refresh either only from the
-corresponding versioned `results/` and `artifacts/` packages; do not recompute values in
-the UI. Additional frontend details are in [`frontend/README.md`](frontend/README.md).
+Streamlit reads only the allow-listed files declared in
+`streamlit_app/data/catalog.json`; it does not copy or recompute optimizer results. The
+standalone viewer keeps immutable copies under
+`sites/beyond-ranking-evidence-dashboard/dist/data/`. Additional architecture and data
+contract details are in [`docs/frontend/ARCHITECTURE.md`](docs/frontend/ARCHITECTURE.md).
+
+The prior React/Vite implementation remains under `frontend/` for one fallback release
+and is deprecated. It is no longer the documented or Makefile-driven frontend.
 
 Run the test suite:
 
