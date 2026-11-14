@@ -115,22 +115,61 @@ python -m streamlit run streamlit_app/app.py \
   --server.port 8501
 ```
 
-Then open [http://127.0.0.1:8501](http://127.0.0.1:8501). The app validates the
-allow-listed saved artifacts against the committed schema, byte count, and SHA-256
-catalog before rendering. Stop the server with `Ctrl+C`.
+Then open [http://127.0.0.1:8501](http://127.0.0.1:8501). Keep the API below running
+in a second terminal for Department Overview, Resource Planner, Strategy Comparison,
+Experiment Lab, and Evidence & Assumptions. Stop each service with `Ctrl+C`.
+
+For live optimization runs, start the validated dashboard API in a separate terminal:
+
+```bash
+python -m uvicorn streamlit_app.api.app:app \
+  --host 127.0.0.1 \
+  --port 8000
+```
+
+The interactive API documentation is available at
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs). Run artifacts are persisted
+under `results/dashboard_runs/`. Only allowlisted VJTI scenario changes are accepted,
+and every returned archive candidate is independently re-evaluated before it is made
+available.
+
+The Streamlit app calls this API over HTTP. It never imports an optimizer or
+reimplements evaluator formulas. If either service was already running while source
+files changed, stop and restart it before testing the new interface.
+
+The Advisor also supports an optional Groq wording layer. Add the key only to the
+repository-root `.env` file, never to frontend code:
+
+```dotenv
+GROQ_API_KEY=your_server_side_key
+# Optional controls:
+LLM_EXPLANATIONS_ENABLED=true
+GROQ_MODEL=openai/gpt-oss-20b
+```
+
+No provider call is made while optimizing, selecting a recommendation, or using the
+default rule-based view. A call occurs only after selecting **AI-written wording** and
+clicking **Explain in plain language**. Only a minimal allowlisted fact packet is sent
+to Groq. The returned prose must pass local schema and grounding checks; otherwise the
+UI falls back to deterministic wording. Exact values, actions, constraints, evidence,
+and recommendation selection always come from structured backend fields.
 
 Equivalent repository-root commands are available:
 
 ```bash
 make frontend-install
+make frontend-api
 make frontend-dev
+# `make frontend` is an equivalent shortcut for `make frontend-dev`.
 ```
 
 When using the repository virtual environment, pass its interpreter explicitly:
 
 ```bash
 make frontend-install PYTHON=.venv/bin/python
+make frontend-api PYTHON=.venv/bin/python
 make frontend-dev PYTHON=.venv/bin/python
+# Or: make frontend PYTHON=.venv/bin/python
 ```
 
 Run the Streamlit contract and application smoke tests with:
@@ -138,6 +177,12 @@ Run the Streamlit contract and application smoke tests with:
 ```bash
 make frontend-test PYTHON=.venv/bin/python
 ```
+
+The frontend suite includes a live interaction test that changes the scenario budget,
+runs the API, and verifies a revalidated strategy and budget headroom are rendered.
+It also verifies the saved 150-job benchmark distributions, paired statistical results,
+public DEA evidence block, nine-KPI model evidence, held-fixed versus reoptimized
+robustness view, audit records, and professor-facing decision-summary export.
 
 If a versioned source artifact is intentionally updated, review that change and refresh
 the committed UI integrity catalog:

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="60" y="58" font-family="Arial" font-size="28" font-weight="700" fill="#111827">Held-fixed versus reoptimized feasibility</text>
+<text x="60" y="88" font-family="Arial" font-size="16" fill="#475569">Balanced synthetic strategy under structural scenarios; 1,000 common uncertainty draws</text>
+<line x1="130" y1="540.0" x2="1050" y2="540.0" stroke="#CBD5E1"/>
+<text x="118.0" y="545.0" font-family="Arial" font-size="12" font-weight="400" fill="#475569" text-anchor="end">0.0</text>
+<line x1="130" y1="462.0" x2="1050" y2="462.0" stroke="#CBD5E1"/>
+<text x="118.0" y="467.0" font-family="Arial" font-size="12" font-weight="400" fill="#475569" text-anchor="end">0.2</text>
+<line x1="130" y1="384.0" x2="1050" y2="384.0" stroke="#CBD5E1"/>
+<text x="118.0" y="389.0" font-family="Arial" font-size="12" font-weight="400" fill="#475569" text-anchor="end">0.4</text>
+<line x1="130" y1="306.0" x2="1050" y2="306.0" stroke="#CBD5E1"/>
+<text x="118.0" y="311.0" font-family="Arial" font-size="12" font-weight="400" fill="#475569" text-anchor="end">0.6</text>
+<line x1="130" y1="228.0" x2="1050" y2="228.0" stroke="#CBD5E1"/>
+<text x="118.0" y="233.0" font-family="Arial" font-size="12" font-weight="400" fill="#475569" text-anchor="end">0.8</text>
+<line x1="130" y1="150.0" x2="1050" y2="150.0" stroke="#CBD5E1"/>
+<text x="118.0" y="155.0" font-family="Arial" font-size="12" font-weight="400" fill="#475569" text-anchor="end">1.0</text>
+<rect x="175.0" y="540.0" width="38" height="0.0" fill="#D97706" rx="4"/>
+<rect x="223.0" y="150.0" width="38" height="390.0" fill="#2563EB" rx="4"/>
+<text x="222.0" y="568.0" font-family="Arial" font-size="12" font-weight="600" fill="#111827" text-anchor="middle" transform="rotate(-15 222.0 568)">Lean budget</text>
+<rect x="359.0" y="150.0" width="38" height="390.0" fill="#D97706" rx="4"/>
+<rect x="407.0" y="150.0" width="38" height="390.0" fill="#2563EB" rx="4"/>
+<text x="406.0" y="568.0" font-family="Arial" font-size="12" font-weight="600" fill="#111827" text-anchor="middle" transform="rotate(-15 406.0 568)">Base budget</text>
+<rect x="543.0" y="150.0" width="38" height="390.0" fill="#D97706" rx="4"/>
+<rect x="591.0" y="298.2" width="38" height="241.8" fill="#2563EB" rx="4"/>
+<text x="590.0" y="568.0" font-family="Arial" font-size="12" font-weight="600" fill="#111827" text-anchor="middle" transform="rotate(-15 590.0 568)">Expanded budget</text>
+<rect x="727.0" y="540.0" width="38" height="0.0" fill="#D97706" rx="4"/>
+<rect x="775.0" y="150.0" width="38" height="390.0" fill="#2563EB" rx="4"/>
+<text x="774.0" y="568.0" font-family="Arial" font-size="12" font-weight="600" fill="#111827" text-anchor="middle" transform="rotate(-15 774.0 568)">Faculty −25%</text>
+<rect x="911.0" y="150.0" width="38" height="390.0" fill="#D97706" rx="4"/>
+<rect x="959.0" y="150.0" width="38" height="390.0" fill="#2563EB" rx="4"/>
+<text x="958.0" y="568.0" font-family="Arial" font-size="12" font-weight="600" fill="#111827" text-anchor="middle" transform="rotate(-15 958.0 568)">Centre cost +25%</text>
+<rect x="330" y="650" width="18" height="18" fill="#D97706"/>
+<text x="356.0" y="664.0" font-family="Arial" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Held fixed</text>
+<rect x="540" y="650" width="18" height="18" fill="#2563EB"/>
+<text x="566.0" y="664.0" font-family="Arial" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Reoptimized</text>
+<text x="840.0" y="664.0" font-family="Arial" font-size="13" font-weight="600" fill="#B91C1C" text-anchor="start">Assessment modes are not interchangeable.</text>
+</svg>

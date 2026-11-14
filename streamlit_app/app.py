@@ -11,7 +11,14 @@ if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
 from streamlit_app.components.ui import load_css  # noqa: E402
-from streamlit_app.pages import overview, placeholders  # noqa: E402
+from streamlit_app.pages import (  # noqa: E402
+    advisor,
+    department_overview,
+    evidence_assumptions,
+    experiment_lab,
+    resource_planner,
+    strategy_comparison,
+)
 
 
 st.set_page_config(
@@ -23,51 +30,43 @@ st.set_page_config(
 load_css()
 
 st.sidebar.markdown("## Beyond Ranking")
-st.sidebar.caption("Decision Studio")
-st.sidebar.success("Read-only artifact interface", icon="🔒")
+st.sidebar.caption("Department Decision Studio")
+st.sidebar.info("Public plus synthetic model fixture")
 
-
-def scenario_page() -> None:
-    placeholders.render("scenario")
-
-
-def algorithm_page() -> None:
-    placeholders.render("algorithm")
-
-
-def pareto_page() -> None:
-    placeholders.render("pareto")
-
-
-def robustness_page() -> None:
-    placeholders.render("robustness")
-
-
-def target_cost_page() -> None:
-    placeholders.render("target")
-
-
-def evidence_audit_page() -> None:
-    placeholders.render("evidence")
+overview_page = st.Page(
+    department_overview.render,
+    title="Department Overview",
+    icon=":material/dashboard:",
+    default=True,
+    url_path="overview",
+)
+planner_page = st.Page(
+    resource_planner.render,
+    title="Resource Planner",
+    icon=":material/tune:",
+    url_path="planner",
+)
+st.session_state["_planner_page"] = planner_page
 
 
 navigation = st.navigation(
     {
-        "Workspace": [
-            st.Page(overview.render, title="Overview", icon=":material/dashboard:", default=True),
-            st.Page(scenario_page, title="Scenario Studio", icon=":material/tune:"),
-            st.Page(algorithm_page, title="Algorithm Lab", icon=":material/account_tree:"),
-            st.Page(pareto_page, title="Pareto Explorer", icon=":material/scatter_plot:"),
-            st.Page(robustness_page, title="Robustness Lab", icon=":material/shield:"),
-            st.Page(target_cost_page, title="Target-Cost Explorer", icon=":material/target:"),
-            st.Page(evidence_audit_page, title="Evidence & Audit", icon=":material/fact_check:"),
-        ]
+        "Plan": [overview_page, planner_page],
+        "Understand": [
+            st.Page(advisor.render, title="Improvement Advisor", icon=":material/lightbulb:", url_path="advisor"),
+            st.Page(strategy_comparison.render, title="Strategy Comparison", icon=":material/compare_arrows:", url_path="compare"),
+        ],
+        "Research & evidence": [
+            st.Page(experiment_lab.render, title="Experiment Lab", icon=":material/science:", url_path="experiments"),
+            st.Page(evidence_assumptions.render, title="Evidence & Assumptions", icon=":material/fact_check:", url_path="evidence"),
+        ],
     },
     position="sidebar",
 )
 
 st.sidebar.divider()
-st.sidebar.markdown("**Legacy artifact viewer**")
-st.sidebar.caption("Run `make legacy-dashboard`, then open http://127.0.0.1:4173.")
+st.sidebar.caption("Live optimizer service")
+st.sidebar.code("127.0.0.1:8000", language=None)
+st.sidebar.caption("All live candidates are independently revalidated by the canonical backend evaluator.")
 
 navigation.run()

@@ -10,7 +10,7 @@ endif
 NATIVE_CFLAGS ?= -O3 -fPIC -fopenmp -Wall -Wextra -Werror
 NATIVE_LDFLAGS ?= -shared -fopenmp
 
-.PHONY: main test native native-test clean-native data-audit generate-synthetic dea train-models allocation-evaluator allocation-small allocation-phase5 frontend-install frontend-dev frontend-test frontend-catalog legacy-dashboard
+.PHONY: main test native native-test clean-native data-audit generate-synthetic dea train-models allocation-evaluator allocation-small allocation-phase5 frontend frontend-install frontend-dev frontend-api frontend-test frontend-catalog legacy-dashboard
 
 main:
 	$(PYTHON) main.py
@@ -21,8 +21,13 @@ test:
 frontend-install:
 	$(PYTHON) -m pip install -r requirements-ui.txt
 
+frontend: frontend-dev
+
 frontend-dev:
 	$(PYTHON) -m streamlit run streamlit_app/app.py --server.address 127.0.0.1 --server.port 8501
+
+frontend-api:
+	$(PYTHON) -m uvicorn streamlit_app.api.app:app --host 127.0.0.1 --port 8000
 
 frontend-test:
 	$(PYTHON) -m unittest discover -s streamlit_app/tests -v

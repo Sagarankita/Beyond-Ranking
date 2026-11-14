@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="60" y="58" font-family="Arial" font-size="28" font-weight="700" fill="#111827">Public-calibrated scenario algorithm comparison</text>
+<text x="60" y="88" font-family="Arial" font-size="16" fill="#475569">Three seeds per method; responses remain synthetic and non-causal</text>
+<text x="122.0" y="174.0" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">RANDOM SEARCH</text>
+<rect x="140" y="150" width="787.0" height="34" rx="5" fill="#2563EB"/>
+<text x="939.0" y="173.0" font-family="Arial" font-size="13" font-weight="600" fill="#2563EB" text-anchor="start">HV 0.118</text>
+<text x="1110.0" y="173.0" font-family="Arial" font-size="13" font-weight="400" fill="#475569" text-anchor="end">IGD 0.171 | feasible 29%</text>
+<text x="122.0" y="250.0" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">MOPSO</text>
+<rect x="140" y="226" width="744.9" height="34" rx="5" fill="#0F766E"/>
+<text x="896.9" y="249.0" font-family="Arial" font-size="13" font-weight="600" fill="#0F766E" text-anchor="start">HV 0.111</text>
+<text x="1110.0" y="249.0" font-family="Arial" font-size="13" font-weight="400" fill="#475569" text-anchor="end">IGD 0.141 | feasible 92%</text>
+<text x="122.0" y="326.0" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">MOEAD</text>
+<rect x="140" y="302" width="705.1" height="34" rx="5" fill="#D97706"/>
+<text x="857.1" y="325.0" font-family="Arial" font-size="13" font-weight="600" fill="#D97706" text-anchor="start">HV 0.105</text>
+<text x="1110.0" y="325.0" font-family="Arial" font-size="13" font-weight="400" fill="#475569" text-anchor="end">IGD 0.198 | feasible 92%</text>
+<text x="122.0" y="402.0" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">RION</text>
+<rect x="140" y="378" width="591.7" height="34" rx="5" fill="#6D28D9"/>
+<text x="743.7" y="401.0" font-family="Arial" font-size="13" font-weight="600" fill="#6D28D9" text-anchor="start">HV 0.088</text>
+<text x="1110.0" y="401.0" font-family="Arial" font-size="13" font-weight="400" fill="#475569" text-anchor="end">IGD 0.267 | feasible 42%</text>
+<text x="122.0" y="478.0" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">NSGA3</text>
+<rect x="140" y="454" width="564.7" height="34" rx="5" fill="#15803D"/>
+<text x="716.7" y="477.0" font-family="Arial" font-size="13" font-weight="600" fill="#15803D" text-anchor="start">HV 0.084</text>
+<text x="1110.0" y="477.0" font-family="Arial" font-size="13" font-weight="400" fill="#475569" text-anchor="end">IGD 0.170 | feasible 100%</text>
+<text x="122.0" y="554.0" font-family="Arial" font-size="14" font-weight="600" fill="#111827" text-anchor="end">NSGA2</text>
+<rect x="140" y="530" width="535.0" height="34" rx="5" fill="#B91C1C"/>
+<text x="687.0" y="553.0" font-family="Arial" font-size="13" font-weight="600" fill="#B91C1C" text-anchor="start">HV 0.080</text>
+<text x="1110.0" y="553.0" font-family="Arial" font-size="13" font-weight="400" fill="#475569" text-anchor="end">IGD 0.180 | feasible 100%</text>
+<text x="600.0" y="665.0" font-family="Arial" font-size="14" font-weight="400" fill="#475569" text-anchor="middle">Descriptive medians only. Three seeds are insufficient for the final benchmark&#x27;s paired test protocol.</text>
+</svg>

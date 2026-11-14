@@ -1,0 +1,27 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Implemented Beyond Ranking architecture. The canonical evaluator is shared by all six algorithms and live dashboard runs.\relax }}{4}{figure.caption.6}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Authentic running Streamlit Department Overview showing the public-plus-synthetic evidence label, budget, headroom, feasibility, and utilization.\relax }}{10}{figure.caption.10}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Final synthetic benchmark hypervolume and IGD medians with interquartile ranges.\relax }}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Final benchmark runtime and feasibility. Runtime is descriptive and machine-dependent.\relax }}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Algorithm summaries for the 18-run public-calibrated scenario protocol.\relax }}{14}{figure.caption.13}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Modeled four-family objective benefits for the reference and selected public-calibrated strategies.\relax }}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Balanced-policy direct funding changes relative to the public-calibrated reference.\relax }}{17}{figure.caption.15}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Held-fixed and reoptimized feasibility probabilities for the balanced synthetic strategy.\relax }}{18}{figure.caption.16}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {13.1}{\ignorespaces Exact final lines rendered from the captured backend and Streamlit/API test logs.\relax }}{19}{figure.caption.17}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{deb2002nsga2}
+K.~Deb, A.~Pratap, S.~Agarwal, and T.~Meyarivan, ``A fast and elitist
+  multiobjective genetic algorithm: Nsga-ii,'' {\em IEEE Transactions on
+  Evolutionary Computation}, vol.~6, no.~2, pp.~182--197, 2002.
+
+\bibitem{deb2014nsga3}
+K.~Deb and H.~Jain, ``An evolutionary many-objective optimization algorithm
+  using reference-point-based nondominated sorting approach, part i,'' {\em
+  IEEE Transactions on Evolutionary Computation}, vol.~18, no.~4, pp.~577--601,
+  2014.
+
+\bibitem{zhang2007moead}
+Q.~Zhang and H.~Li, ``Moea/d: A multiobjective evolutionary algorithm based on
+  decomposition,'' {\em IEEE Transactions on Evolutionary Computation},
+  vol.~11, no.~6, pp.~712--731, 2007.
+
+\bibitem{coello2004mopso}
+C.~A. Coello~Coello, G.~T. Pulido, and M.~S. Lechuga, ``Handling multiple
+  objectives with particle swarm optimization,'' in {\em IEEE Transactions on
+  Evolutionary Computation}, vol.~8, pp.~256--279, 2004.
+
+\bibitem{banker1984dea}
+R.~D. Banker, A.~Charnes, and W.~W. Cooper, ``Some models for estimating
+  technical and scale inefficiencies in data envelopment analysis,'' {\em
+  Management Science}, vol.~30, no.~9, pp.~1078--1092, 1984.
+
+\bibitem{charnes1978dea}
+A.~Charnes, W.~W. Cooper, and E.~Rhodes, ``Measuring the efficiency of decision
+  making units,'' {\em European Journal of Operational Research}, vol.~2,
+  no.~6, pp.~429--444, 1978.
+
+\bibitem{wilcoxon1945}
+F.~Wilcoxon, ``Individual comparisons by ranking methods,'' {\em Biometrics
+  Bulletin}, vol.~1, no.~6, pp.~80--83, 1945.
+
+\bibitem{holm1979}
+S.~Holm, ``A simple sequentially rejective multiple test procedure,'' {\em
+  Scandinavian Journal of Statistics}, vol.~6, no.~2, pp.~65--70, 1979.
+
+\end{thebibliography}
